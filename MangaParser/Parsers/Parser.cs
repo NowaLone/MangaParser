@@ -1,21 +1,35 @@
 ﻿using HtmlAgilityPack;
-using MangaParser.Models;
-using System.Collections.Generic;
+using System;
 
 namespace MangaParser.Parsers
 {
     public abstract class Parser
     {
-        public Parser(HtmlWeb web)
+        public Parser(Uri baseUri)
         {
-            Web = web;
+            BaseUri = baseUri;
         }
 
-        protected abstract HtmlWeb Web { get; set; }
-        public abstract string BaseUrl { get; protected set; }
+        public Parser(string baseUri)
+        {
+            if (Uri.IsWellFormedUriString(baseUri, UriKind.Absolute))
+                BaseUri = new Uri(baseUri);
+        }
 
-        public abstract MangaObject GetManga(string link);
-        public abstract MangaObject GetManga(MangaTile manga);
-        public abstract IEnumerable<MangaTile> SearchManga(string query);
+        public static HtmlWeb Web { get; } = new HtmlWeb();
+        public Uri BaseUri { get; }
+
+        protected virtual string Decode(string htmlText)
+        {
+            if (!String.IsNullOrEmpty(htmlText))
+            {
+                var text = System.Net.WebUtility.HtmlDecode(htmlText).Trim();
+
+                // Remove all whitespaces
+                return String.Join(" ", text.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
+            }
+            else
+                return String.Empty;
+        }
     }
 }

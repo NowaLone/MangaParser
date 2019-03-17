@@ -1,7 +1,9 @@
-﻿using MangaParser.Client;
-using MangaParser.Models;
-using MangaParser.Models.MangaData;
+﻿using MangaParser.Core.Client;
+using MangaParser.Core.Interfaces;
+using MangaParser.Parsers.MintManga;
+using MangaParser.Parsers.ReadManga;
 using System;
+using System.Linq;
 
 namespace MangaParserTest
 {
@@ -13,6 +15,9 @@ namespace MangaParserTest
         {
             mangaClient = new MangaClient();
 
+            mangaClient.AddParser(new ReadMangaParser());
+            mangaClient.AddParser(new MintMangaParser());
+
             while (true)
             {
                 var command = Console.ReadLine().Split(' ');
@@ -22,6 +27,7 @@ namespace MangaParserTest
                     case "get":
                         GetByLink(command[1]);
                         break;
+
                     case "search":
                         {
                             if (command.Length == 2)
@@ -32,6 +38,7 @@ namespace MangaParserTest
                             }
                         }
                         break;
+
                     case "pages":
                         {
                             if (command.Length == 2)
@@ -40,14 +47,15 @@ namespace MangaParserTest
                                 GetPages(command[1], int.Parse(command[2]));
                         }
                         break;
+
                     case "test":
                         Test();
                         break;
+
                     default:
                         Console.WriteLine("Wrong command");
                         break;
                 }
-
             }
         }
 
@@ -59,22 +67,24 @@ namespace MangaParserTest
             {
                 case "read":
                     {
-                        foreach (var item in mangaClient.ReadManga.SearchManga(query))
+                        foreach (var item in mangaClient.GetParser<ReadMangaParser>().SearchManga(query))
                         {
                             Console.WriteLine("\n" + GetSeparator('#') + "\n");
                             Console.WriteLine(item);
                         }
                     }
                     break;
+
                 case "mint":
                     {
-                        foreach (var item in mangaClient.MintManga.SearchManga(query))
+                        foreach (var item in mangaClient.GetParser<MintMangaParser>().SearchManga(query))
                         {
                             Console.WriteLine("\n" + GetSeparator('#') + "\n");
                             Console.WriteLine(item);
                         }
                     }
                     break;
+
                 default:
                     {
                         foreach (var item in mangaClient.SearchManga(query))
@@ -89,13 +99,13 @@ namespace MangaParserTest
             Console.Write(GetSeparator('#') + "\n");
         }
 
-        private static MangaObject GetByLink(string url)
+        private static IManga GetByLink(string url)
         {
             if (Uri.IsWellFormedUriString(url, UriKind.Absolute))
             {
                 Console.Write("\n" + GetSeparator('-') + "\n");
 
-                var manga = mangaClient.GetMangaByLink(url);
+                var manga = mangaClient.GetManga(url);
 
                 Console.WriteLine(manga);
 
@@ -113,24 +123,25 @@ namespace MangaParserTest
             {
                 Console.Write("\n" + GetSeparator('*'));
 
-                var manga = mangaClient.GetMangaByLink(url);
+                var chapters = mangaClient.GetChapters(url);
 
-                for (int j = 0; j < manga.Chapters.Count; j++)
+                foreach (var item in chapters)
                 {
-                    Console.WriteLine($"\n---\nChapter: {manga.Chapters[j].Value}\n---\n");
+                    Console.WriteLine($"\n---\nChapter: {item.Name}\n---\n");
 
                     int i = 0;
 
-                    foreach (Uri page in mangaClient.GetChapterPages(manga.Chapters[j]))
+                    foreach (var page in mangaClient.GetChapterPages(item.ChapterUri))
                     {
-                        Console.WriteLine($"\nPage {++i}: {page.OriginalString}");
+                        Console.WriteLine($"\nPage {++i}: {page.PageUri}");
                     }
                 }
 
                 Console.Write("\n" + GetSeparator('*') + "\n");
             }
         }
-        private static void GetPages(MangaObject manga)
+
+        private static void GetPages(IManga manga)
         {
             if (manga == null)
             {
@@ -139,37 +150,42 @@ namespace MangaParserTest
 
             Console.Write("\n" + GetSeparator('*'));
 
-            for (int j = 0; j < manga.Chapters.Count; j++)
+            var chapters = mangaClient.GetChapters(manga.MangaUri).ToArray();
+
+            foreach (var item in chapters)
             {
-                Console.WriteLine($"\n---\nChapter: {manga.Chapters[j].Value}\n---\n");
+                Console.WriteLine($"\n---\nChapter: {item.Name}\n---\n");
 
                 int i = 0;
 
-                foreach (Uri page in mangaClient.GetChapterPages(manga.Chapters[j]))
+                foreach (var page in mangaClient.GetChapterPages(item.ChapterUri))
                 {
-                    Console.WriteLine($"\nPage {++i}: {page.OriginalString}");
+                    Console.WriteLine($"\nPage {++i}: {page.PageUri}");
                 }
             }
 
             Console.Write("\n" + GetSeparator('*') + "\n");
         }
+
         private static void GetPages(string url, int chapterNumber)
         {
             if (Uri.IsWellFormedUriString(url, UriKind.Absolute))
             {
                 Console.Write("\n" + GetSeparator('*'));
 
-                var manga = mangaClient.GetMangaByLink(url);
+                var manga = mangaClient.GetManga(url);
 
-                if (chapterNumber > 0 && chapterNumber <= manga.Chapters.Count)
+                var chapters = mangaClient.GetChapters(manga.MangaUri).ToArray();
+
+                if (chapterNumber > 0 && chapterNumber <= chapters.Length)
                 {
-                    Console.WriteLine($"\n---\nChapter: {manga.Chapters[manga.Chapters.Count - chapterNumber].Value}\n---\n");
+                    Console.WriteLine($"\n---\nChapter: {chapters[chapterNumber-1].Name}\nLink: {chapters[chapterNumber - 1].ChapterUri}\n---\n");
 
                     int i = 0;
 
-                    foreach (var page in mangaClient.GetChapterPages(manga.Chapters[manga.Chapters.Count - chapterNumber]))
+                    foreach (var page in mangaClient.GetChapterPages(chapters[chapterNumber-1].ChapterUri))
                     {
-                        Console.WriteLine($"\nPage {++i}: {page.OriginalString}");
+                        Console.WriteLine($"\nPage {++i}: {page.PageUri}");
                     }
 
                     Console.Write("\n" + GetSeparator('*') + "\n");
@@ -181,17 +197,18 @@ namespace MangaParserTest
                 }
             }
         }
-        private static void GetPages(ChapterData chapter)
+
+        private static void GetPages(IChapter chapter)
         {
             Console.Write("\n" + GetSeparator('*'));
 
-            Console.WriteLine($"\n---\nChapter: {chapter.Value}\n---\n");
+            Console.WriteLine($"\n---\nChapter: {chapter.Name}\n---\n");
 
             int i = 0;
 
-            foreach (Uri page in mangaClient.GetChapterPages(chapter))
+            foreach (var page in mangaClient.GetChapterPages(chapter.ChapterUri))
             {
-                Console.WriteLine($"\nPage {++i}: {page.OriginalString}");
+                Console.WriteLine($"\nPage {++i}: {page.PageUri}");
             }
 
             Console.Write("\n" + GetSeparator('*') + "\n");
@@ -209,17 +226,19 @@ namespace MangaParserTest
 
             Console.Write(GetSeparator('#') + "\n");
 
-            foreach (MangaTile item in mangaClient.SearchManga("a"))
+            foreach (var item in mangaClient.SearchManga("a"))
             {
                 TimeSeparate('.', 5000);
 
-                var manga = GetByLink(item.MangaUrl);
+                var manga = GetByLink(item.MangaUri.OriginalString);
 
-                for (int j = 0; j < manga.Chapters.Count; j++)
+                var chapters = mangaClient.GetChapters(manga.MangaUri);
+
+                foreach (var chapter in chapters)
                 {
                     TimeSeparate('.', 2000);
 
-                    GetPages(manga.Chapters[j]);
+                    GetPages(chapter);
                 }
             }
         }
