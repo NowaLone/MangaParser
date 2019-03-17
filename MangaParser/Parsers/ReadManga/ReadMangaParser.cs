@@ -183,11 +183,11 @@ namespace MangaParser.Parsers.ReadManga
                 {
                     var manga = new ReadMangaObject
                     {
-                        Name = new Name(null, Decode(thumbs[i].SelectSingleNode("./div[@class='desc']/h4")?.InnerText), Decode(thumbs[i].SelectSingleNode("./div[@class='desc']/h3/a")?.InnerText)),
+                        Name = new MangaName(null, Decode(thumbs[i].SelectSingleNode("./div[@class='desc']/h4")?.InnerText), Decode(thumbs[i].SelectSingleNode("./div[@class='desc']/h3/a")?.InnerText)),
                         MangaUri = new Uri(BaseUri, thumbs[i].SelectSingleNode("./div[@class='desc']/h3/a")?.Attributes["href"]?.Value),
                         Autors = GetThumbAutors(thumbs[i]),
                         Genres = GetThumbGenres(thumbs[i]),
-                        Covers = new Cover[] { new Cover(thumbs[i].SelectSingleNode(".//img")?.Attributes["data-original"]?.Value) }
+                        Covers = new MangaCover[] { new MangaCover(thumbs[i].SelectSingleNode(".//img")?.Attributes["data-original"]?.Value) }
                     };
 
                     yield return manga;
@@ -195,47 +195,47 @@ namespace MangaParser.Parsers.ReadManga
             }
         }
 
-        private DataBase[] GetThumbAutors(HtmlNode tileNode)
+        private MangaDataBase[] GetThumbAutors(HtmlNode tileNode)
         {
             var autors = tileNode.SelectNodes(".//a[@class='person-link']");
 
-            DataBase[] Autors;
+            MangaDataBase[] Autors;
 
             if (autors != null)
             {
-                Autors = new DataBase[autors.Count];
+                Autors = new MangaDataBase[autors.Count];
 
                 for (int i = 0; i < autors.Count; i++)
                 {
-                    Autors[i] = new DataBase(Decode(autors[i].InnerText), BaseUri + autors[i].Attributes["href"]?.Value);
+                    Autors[i] = new MangaDataBase(Decode(autors[i].InnerText), BaseUri + autors[i].Attributes["href"]?.Value);
                 }
             }
             else
             {
-                Autors = new DataBase[0];
+                Autors = new MangaDataBase[0];
             }
 
             return Autors;
         }
 
-        private DataBase[] GetThumbGenres(HtmlNode tileNode)
+        private MangaDataBase[] GetThumbGenres(HtmlNode tileNode)
         {
             var genres = tileNode.SelectNodes(".//a[@class='element-link']");
 
-            DataBase[] Genres;
+            MangaDataBase[] Genres;
 
             if (genres != null)
             {
-                Genres = new DataBase[genres.Count];
+                Genres = new MangaDataBase[genres.Count];
 
                 for (int i = 0; i < genres.Count; i++)
                 {
-                    Genres[i] = new DataBase(Decode(genres[i].InnerText), BaseUri + genres[i].Attributes["href"]?.Value);
+                    Genres[i] = new MangaDataBase(Decode(genres[i].InnerText), BaseUri + genres[i].Attributes["href"]?.Value);
                 }
             }
             else
             {
-                Genres = new DataBase[0];
+                Genres = new MangaDataBase[0];
             }
 
             return Genres;
@@ -267,7 +267,7 @@ namespace MangaParser.Parsers.ReadManga
             return manga;
         }
 
-        private IEnumerable<Page> GetMangaPages(string scriptText)
+        private IEnumerable<MangaPage> GetMangaPages(string scriptText)
         {
             var index = scriptText.IndexOf(jsArrayVar);
 
@@ -285,20 +285,20 @@ namespace MangaParser.Parsers.ReadManga
                     {
                         for (int i = 0; i < matchs.Count; i++)
                         {
-                            yield return new Page(matchs[i].Groups[1].Value + matchs[i].Groups[2].Value);
+                            yield return new MangaPage(matchs[i].Groups[1].Value + matchs[i].Groups[2].Value);
                         }
                     }
                 }
             }
         }
 
-        private Name GetName(HtmlNode mainNode)
+        private MangaName GetName(HtmlNode mainNode)
         {
             var namesNodes = mainNode.SelectNodes("./h1[@class='names']/span");
 
             string local = default(string), eng = default(string), orig = default(string);
 
-            Name name;
+            MangaName name;
 
             if (namesNodes != null)
             {
@@ -321,7 +321,7 @@ namespace MangaParser.Parsers.ReadManga
                 }
             }
 
-            name = new Name(orig, eng, local);
+            name = new MangaName(orig, eng, local);
 
             return name;
         }
@@ -346,56 +346,56 @@ namespace MangaParser.Parsers.ReadManga
                 return null;
         }
 
-        private Cover[] GetCovers(HtmlNode mainNode)
+        private MangaCover[] GetCovers(HtmlNode mainNode)
         {
             var imagesNode = mainNode.SelectSingleNode(".//div[@class='flex-row']/div[@class='subject-cower col-sm-5']");
 
             var images = imagesNode?.SelectNodes(".//img");
 
-            Cover[] Images;
+            MangaCover[] Images;
 
             if (images != null)
             {
-                Images = new Cover[images.Count];
+                Images = new MangaCover[images.Count];
 
                 for (int i = 0; i < images.Count; i++)
                 {
-                    Images[i] = new Cover(images[i].Attributes["data-thumb"]?.Value, images[i].Attributes["src"]?.Value, images[i].Attributes["data-full"]?.Value);
+                    Images[i] = new MangaCover(images[i].Attributes["data-thumb"]?.Value, images[i].Attributes["src"]?.Value, images[i].Attributes["data-full"]?.Value);
                 }
             }
             else
             {
-                Images = new Cover[0];
+                Images = new MangaCover[0];
             }
 
             return Images;
         }
 
-        private DataBase[] GetInfoData(HtmlNode infoNode, string elemName, bool isPublisher = false)
+        private MangaDataBase[] GetInfoData(HtmlNode infoNode, string elemName, bool isPublisher = false)
         {
             var data = infoNode.SelectNodes($".//span[contains(@class, '{elemName}')]");
 
-            DataBase[] Data;
+            MangaDataBase[] Data;
 
             if (data != null)
             {
-                Data = new DataBase[data.Count];
+                Data = new MangaDataBase[data.Count];
 
                 for (int i = 0; i < data.Count; i++)
                 {
                     if (isPublisher)
                     {
-                        Data[i] = new DataBase(Decode(data[i].InnerText), BaseUri + $"/list/publisher/{Decode(data[i].InnerText)}");
+                        Data[i] = new MangaDataBase(Decode(data[i].InnerText), BaseUri + $"/list/publisher/{Decode(data[i].InnerText)}");
                     }
                     else
                     {
-                        Data[i] = new DataBase(Decode(data[i].SelectSingleNode("./a")?.InnerText), BaseUri + data[i].SelectSingleNode("./a")?.Attributes["href"]?.Value);
+                        Data[i] = new MangaDataBase(Decode(data[i].SelectSingleNode("./a")?.InnerText), BaseUri + data[i].SelectSingleNode("./a")?.Attributes["href"]?.Value);
                     }
                 }
             }
             else
             {
-                Data = new DataBase[0];
+                Data = new MangaDataBase[0];
             }
 
             return Data;
