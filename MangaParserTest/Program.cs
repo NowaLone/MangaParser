@@ -1,5 +1,6 @@
 ﻿using MangaParser.Core.Client;
 using MangaParser.Core.Interfaces;
+using MangaParser.Parsers.MangaFox;
 using MangaParser.Parsers.MintManga;
 using MangaParser.Parsers.ReadManga;
 using System;
@@ -17,6 +18,7 @@ namespace MangaParserTest
 
             mangaClient.AddParser(new ReadMangaParser());
             mangaClient.AddParser(new MintMangaParser());
+            mangaClient.AddParser(new MangaFoxParser());
 
             while (true)
             {
@@ -85,6 +87,16 @@ namespace MangaParserTest
                     }
                     break;
 
+                case "fox":
+                    {
+                        foreach (var item in mangaClient.GetParser<MangaFoxParser>().SearchManga(query))
+                        {
+                            Console.WriteLine("\n" + GetSeparator('#') + "\n");
+                            Console.WriteLine(item);
+                        }
+                    }
+                    break;
+
                 default:
                     {
                         foreach (var item in mangaClient.SearchManga(query))
@@ -131,7 +143,7 @@ namespace MangaParserTest
 
                     int i = 0;
 
-                    foreach (var page in mangaClient.GetChapterPages(item.ChapterUri))
+                    foreach (var page in mangaClient.GetPages(item.ChapterUri))
                     {
                         Console.WriteLine($"\nPage {++i}: {page.PageUri}");
                     }
@@ -158,7 +170,7 @@ namespace MangaParserTest
 
                 int i = 0;
 
-                foreach (var page in mangaClient.GetChapterPages(item.ChapterUri))
+                foreach (var page in mangaClient.GetPages(item.ChapterUri))
                 {
                     Console.WriteLine($"\nPage {++i}: {page.PageUri}");
                 }
@@ -183,7 +195,7 @@ namespace MangaParserTest
 
                     int i = 0;
 
-                    foreach (var page in mangaClient.GetChapterPages(chapters[chapterNumber-1].ChapterUri))
+                    foreach (var page in mangaClient.GetPages(chapters[chapterNumber-1].ChapterUri))
                     {
                         Console.WriteLine($"\nPage {++i}: {page.PageUri}");
                     }
@@ -206,7 +218,7 @@ namespace MangaParserTest
 
             int i = 0;
 
-            foreach (var page in mangaClient.GetChapterPages(chapter.ChapterUri))
+            foreach (var page in mangaClient.GetPages(chapter.ChapterUri))
             {
                 Console.WriteLine($"\nPage {++i}: {page.PageUri}");
             }

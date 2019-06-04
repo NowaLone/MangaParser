@@ -15,7 +15,12 @@
 
         public override string ToString()
         {
-            return $"Original name: {Original}\n" + $"\nEnglish name: {English}\n" + $"\nLocalized name: {Localized}";
+            if (!string.IsNullOrEmpty(Localized))
+                return Localized;
+            else if (!string.IsNullOrEmpty(English))
+                return English;
+            else
+                return Original;
         }
     }
 }

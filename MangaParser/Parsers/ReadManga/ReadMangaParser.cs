@@ -1,10 +1,11 @@
 ﻿using HtmlAgilityPack;
 using MangaParser.Core.Interfaces;
 using MangaParser.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using System;
+using System.Threading.Tasks;
 
 namespace MangaParser.Parsers.ReadManga
 {
@@ -26,66 +27,18 @@ namespace MangaParser.Parsers.ReadManga
 
         #region Public Methods
 
-        public virtual IEnumerable<IMangaThumb> SearchManga(string query)
+        #region Synchronous Methods
+
+        public virtual IEnumerable<IChapter> GetChapters(IMangaThumb manga)
         {
-            query = query.Replace(' ', '+');
-
-            var htmlDoc = Web.Load(BaseUri + $"/search/advanced?q={query}", "POST");
-
-            var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//body/div[@class='pageBlock container']/div[@class='leftContent']/div[@id='mangaResults']");
-
-            foreach (var item in GetSearchResult(mainNode))
-            {
-                yield return item;
-            }
-        }
-
-        public virtual IManga GetManga(string mangaUri)
-        {
-            if (!mangaUri.Contains(BaseUri.Host))
+            if (!manga.MangaUri.OriginalString.Contains(BaseUri.Host))
                 return null;
 
-            var htmlDoc = Web.Load(mangaUri);
+            var htmlDoc = Web.Load(manga.MangaUri);
 
             var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//body/div[@class='pageBlock container']/div[@class='leftContent']");
 
-            var manga = GetMangaData(mainNode);
-
-            manga.MangaUri = new Uri(mangaUri);
-
-            return manga;
-        }
-
-        public virtual IManga GetManga(IMangaThumb mangaThumb)
-        {
-            if (!mangaThumb.MangaUri.OriginalString.Contains(BaseUri.Host))
-                return null;
-
-            var htmlDoc = Web.Load(mangaThumb.MangaUri);
-
-            var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//body/div[@class='pageBlock container']/div[@class='leftContent']");
-
-            var manga = GetMangaData(mainNode);
-
-            manga.MangaUri = mangaThumb.MangaUri;
-
-            return manga;
-        }
-
-        public virtual IManga GetManga(Uri mangaUri)
-        {
-            if (!mangaUri.OriginalString.Contains(BaseUri.Host))
-                return null;
-
-            var htmlDoc = Web.Load(mangaUri);
-
-            var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//body/div[@class='pageBlock container']/div[@class='leftContent']");
-
-            var manga = GetMangaData(mainNode);
-
-            manga.MangaUri = mangaUri;
-
-            return manga;
+            return GetChapters(mainNode);
         }
 
         public virtual IEnumerable<IChapter> GetChapters(string mangaUri)
@@ -94,18 +47,6 @@ namespace MangaParser.Parsers.ReadManga
                 return null;
 
             var htmlDoc = Web.Load(mangaUri);
-
-            var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//body/div[@class='pageBlock container']/div[@class='leftContent']");
-
-            return GetChapters(mainNode);
-        }
-
-        public virtual IEnumerable<IChapter> GetChapters(IMangaThumb manga)
-        {
-            if (!manga.MangaUri.OriginalString.Contains(BaseUri.Host))
-                return null;
-
-            var htmlDoc = Web.Load(manga.MangaUri);
 
             var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//body/div[@class='pageBlock container']/div[@class='leftContent']");
 
@@ -124,16 +65,15 @@ namespace MangaParser.Parsers.ReadManga
             return GetChapters(mainNode);
         }
 
-        public virtual IEnumerable<IPage> GetPages(string chapterUri)
+        public virtual IEnumerable<IMangaThumb> SearchManga(string query)
         {
-            if (!chapterUri.Contains(BaseUri.Host))
-                yield return null;
+            query = query.Replace(' ', '+');
 
-            var htmlDoc = Web.Load(chapterUri);
+            var htmlDoc = Web.Load(BaseUri + $"/search/advanced?q={query}", "POST");
 
-            var scriptText = htmlDoc.DocumentNode.Descendants()?.Where(n => n.Name == "script" && n.InnerText.Contains(jsArrayVar)).First().InnerText;
+            var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//body/div[@class='pageBlock container']/div[@class='leftContent']/div[@id='mangaResults']");
 
-            foreach (var item in GetMangaPages(scriptText))
+            foreach (var item in GetSearchResult(mainNode))
             {
                 yield return item;
             }
@@ -145,6 +85,21 @@ namespace MangaParser.Parsers.ReadManga
                 yield return null;
 
             var htmlDoc = Web.Load(chapter.ChapterUri);
+
+            var scriptText = htmlDoc.DocumentNode.Descendants()?.Where(n => n.Name == "script" && n.InnerText.Contains(jsArrayVar)).First().InnerText;
+
+            foreach (var item in GetMangaPages(scriptText))
+            {
+                yield return item;
+            }
+        }
+
+        public virtual IEnumerable<IPage> GetPages(string chapterUri)
+        {
+            if (!chapterUri.Contains(BaseUri.Host))
+                yield return null;
+
+            var htmlDoc = Web.Load(chapterUri);
 
             var scriptText = htmlDoc.DocumentNode.Descendants()?.Where(n => n.Name == "script" && n.InnerText.Contains(jsArrayVar)).First().InnerText;
 
@@ -169,7 +124,197 @@ namespace MangaParser.Parsers.ReadManga
             }
         }
 
+        public virtual IManga GetManga(IMangaThumb mangaThumb)
+        {
+            if (!mangaThumb.MangaUri.OriginalString.Contains(BaseUri.Host))
+                return null;
+
+            var htmlDoc = Web.Load(mangaThumb.MangaUri);
+
+            var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//body/div[@class='pageBlock container']/div[@class='leftContent']");
+
+            var manga = GetMangaData(mainNode);
+
+            manga.MangaUri = mangaThumb.MangaUri;
+
+            return manga;
+        }
+
+        public virtual IManga GetManga(string mangaUri)
+        {
+            if (!mangaUri.Contains(BaseUri.Host))
+                return null;
+
+            var htmlDoc = Web.Load(mangaUri);
+
+            var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//body/div[@class='pageBlock container']/div[@class='leftContent']");
+
+            var manga = GetMangaData(mainNode);
+
+            manga.MangaUri = new Uri(mangaUri);
+
+            return manga;
+        }
+
+        public virtual IManga GetManga(Uri mangaUri)
+        {
+            if (!mangaUri.OriginalString.Contains(BaseUri.Host))
+                return null;
+
+            var htmlDoc = Web.Load(mangaUri);
+
+            var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//body/div[@class='pageBlock container']/div[@class='leftContent']");
+
+            var manga = GetMangaData(mainNode);
+
+            manga.MangaUri = mangaUri;
+
+            return manga;
+        }
+
+        #endregion Synchronous Methods
+
+        #region Asynchronous Methods
+
+        public async Task<IEnumerable<IChapter>> GetChaptersAsync(IMangaThumb manga)
+        {
+            if (!manga.MangaUri.OriginalString.Contains(BaseUri.Host))
+                return null;
+
+            var htmlDoc = await Web.LoadFromWebAsync(manga.MangaUri.OriginalString);
+
+            var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//body/div[@class='pageBlock container']/div[@class='leftContent']");
+
+            return GetChapters(mainNode);
+        }
+
+        public async Task<IEnumerable<IChapter>> GetChaptersAsync(string mangaUri)
+        {
+            if (!mangaUri.Contains(BaseUri.Host))
+                return null;
+
+            var htmlDoc = await Web.LoadFromWebAsync(mangaUri);
+
+            var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//body/div[@class='pageBlock container']/div[@class='leftContent']");
+
+            return  GetChapters(mainNode);
+        }
+
+        public async Task<IEnumerable<IChapter>> GetChaptersAsync(Uri mangaUri)
+        {
+            if (!mangaUri.OriginalString.Contains(BaseUri.Host))
+                return null;
+
+            var htmlDoc = await Web.LoadFromWebAsync(mangaUri.OriginalString);
+
+            var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//body/div[@class='pageBlock container']/div[@class='leftContent']");
+
+            return  GetChapters(mainNode);
+        }
+
+        public async Task<IEnumerable<IMangaThumb>> SearchMangaAsync(string query)
+        {
+            return await Task.Run(() =>
+            {
+                query = query.Replace(' ', '+');
+
+                var htmlDoc = Web.Load(BaseUri + $"/search/advanced?q={query}", "POST");
+
+                var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//body/div[@class='pageBlock container']/div[@class='leftContent']/div[@id='mangaResults']");
+
+                return GetSearchResult(mainNode);
+            });
+        }
+
+        public async Task<IEnumerable<IPage>> GetPagesAsync(IChapter chapter)
+        {
+            if (!chapter.ChapterUri.OriginalString.Contains(BaseUri.Host))
+                return null;
+
+            var htmlDoc = await Web.LoadFromWebAsync(chapter.ChapterUri.OriginalString);
+
+            var scriptText = htmlDoc.DocumentNode.Descendants()?.Where(n => n.Name == "script" && n.InnerText.Contains(jsArrayVar)).First().InnerText;
+
+            return GetMangaPages(scriptText);
+        }
+
+        public async Task<IEnumerable<IPage>> GetPagesAsync(string chapterUri)
+        {
+            if (!chapterUri.Contains(BaseUri.Host))
+                return null;
+
+            var htmlDoc = await Web.LoadFromWebAsync(chapterUri);
+
+            var scriptText = htmlDoc.DocumentNode.Descendants()?.Where(n => n.Name == "script" && n.InnerText.Contains(jsArrayVar)).First().InnerText;
+
+            return GetMangaPages(scriptText);
+        }
+
+        public async Task<IEnumerable<IPage>> GetPagesAsync(Uri chapterUri)
+        {
+            if (!chapterUri.OriginalString.Contains(BaseUri.Host))
+                return null;
+
+            var htmlDoc = await Web.LoadFromWebAsync(chapterUri.OriginalString);
+
+            var scriptText = htmlDoc.DocumentNode.Descendants()?.Where(n => n.Name == "script" && n.InnerText.Contains(jsArrayVar)).First().InnerText;
+
+            return GetMangaPages(scriptText);
+        }
+
+        public async Task<IManga> GetMangaAsync(IMangaThumb mangaThumb)
+        {
+            if (!mangaThumb.MangaUri.OriginalString.Contains(BaseUri.Host))
+                return null;
+
+            var htmlDoc = await Web.LoadFromWebAsync(mangaThumb.MangaUri.OriginalString);
+
+            var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//body/div[@class='pageBlock container']/div[@class='leftContent']");
+
+            var manga =  GetMangaData(mainNode);
+
+            manga.MangaUri = mangaThumb.MangaUri;
+
+            return manga;
+        }
+
+        public async Task<IManga> GetMangaAsync(string mangaUri)
+        {
+            if (!mangaUri.Contains(BaseUri.Host))
+                return null;
+
+            var htmlDoc = await Web.LoadFromWebAsync(mangaUri);
+
+            var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//body/div[@class='pageBlock container']/div[@class='leftContent']");
+
+            var manga = GetMangaData(mainNode);
+
+            manga.MangaUri = new Uri(mangaUri);
+
+            return manga;
+        }
+
+        public async Task<IManga> GetMangaAsync(Uri mangaUri)
+        {
+            if (!mangaUri.OriginalString.Contains(BaseUri.Host))
+                return null;
+
+            var htmlDoc = await Web.LoadFromWebAsync(mangaUri.OriginalString);
+
+            var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//body/div[@class='pageBlock container']/div[@class='leftContent']");
+
+            var manga = GetMangaData(mainNode);
+
+            manga.MangaUri = mangaUri;
+
+            return manga;
+        }
+
+        #endregion Asynchronous Methods
+
         #endregion Public Methods
+
+        #region Private Methods
 
         #region Search methods
 
@@ -427,5 +572,7 @@ namespace MangaParser.Parsers.ReadManga
         }
 
         #endregion Data getting methods
+
+        #endregion Private Methods
     }
 }

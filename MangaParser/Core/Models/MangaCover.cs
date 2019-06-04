@@ -50,7 +50,14 @@ namespace MangaParser.Core.Models
 
         public override string ToString()
         {
-            return $"Small: {Small?.OriginalString}\nMedium: {Medium?.OriginalString}\nLarge: {Large?.OriginalString}";
+            if (Large != null)
+                return Large.OriginalString;
+            else if (Medium != null)
+                return Medium.OriginalString;
+            else if (Small != null)
+                return Small.OriginalString;
+            return
+                null;
         }
     }
 }

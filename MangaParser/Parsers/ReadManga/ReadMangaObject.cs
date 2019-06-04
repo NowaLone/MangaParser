@@ -16,7 +16,6 @@ namespace MangaParser.Parsers.ReadManga
         {
         }
 
-        public MangaCover[] Covers { get; set; }
         public IData[] Autors { get; set; }
         public IData[] Genres { get; set; }
         public IData[] Illustrators { get; set; }
@@ -24,6 +23,7 @@ namespace MangaParser.Parsers.ReadManga
         public IData[] Publishers { get; set; }
         public IData[] ReleaseDate { get; set; }
         public IData[] Writers { get; set; }
+        public MangaCover[] Covers { get; set; }
         public MangaName Name { get; set; }
         public string Description { get; set; }
         public string Volumes { get; set; }
