@@ -7,8 +7,19 @@ namespace MangaParser.Core.Interfaces
     /// </summary>
     public interface IChapter
     {
+        /// <summary>
+        /// Date when the chapter was added.
+        /// </summary>
         DateTime AddedDate { get; }
+        
+        /// <summary>
+        /// The chapter title.
+        /// </summary>
         string Name { get; }
+
+        /// <summary>
+        /// A link to the chapter page.
+        /// </summary>
         Uri ChapterUri { get; }
     }
 }

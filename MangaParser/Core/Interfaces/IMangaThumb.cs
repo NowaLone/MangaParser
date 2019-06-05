@@ -8,7 +8,14 @@ namespace MangaParser.Core.Interfaces
     /// </summary>
     public interface IMangaThumb
     {
+        /// <summary>
+        /// The manga title.
+        /// </summary>
         MangaName Name { get; }
+
+        /// <summary>
+        /// A link to the manga page.
+        /// </summary>
         Uri MangaUri { get; }
     }
 }

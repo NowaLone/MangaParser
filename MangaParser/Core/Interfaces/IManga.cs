@@ -7,9 +7,24 @@ namespace MangaParser.Core.Interfaces
     /// </summary>
     public interface IManga : IMangaThumb
     {
+        /// <summary>
+        /// The manga covers collection.
+        /// </summary>
         MangaCover[] Covers { get; }
+
+        /// <summary>
+        /// The manga autors collection.
+        /// </summary>
         IData[] Autors { get; }
+
+        /// <summary>
+        /// The manga genres collection.
+        /// </summary>
         IData[] Genres { get; }
+
+        /// <summary>
+        /// The manga description.
+        /// </summary>
         string Description { get; }
     }
 }

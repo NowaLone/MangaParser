@@ -8,12 +8,12 @@ namespace MangaParser.Core.Interfaces
     public interface IData
     {
         /// <summary>
-        /// Gets the data value.
+        /// The data value.
         /// </summary>
         string Value { get; }
 
         /// <summary>
-        /// Gets the data URI.
+        /// The data URI.
         /// </summary>
         Uri Link { get; }
     }
