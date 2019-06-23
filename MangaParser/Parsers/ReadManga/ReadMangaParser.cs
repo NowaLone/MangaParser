@@ -352,7 +352,7 @@ namespace MangaParser.Parsers.ReadManga
 
                 for (int i = chapters.Count - 1; i >= 0; i--)
                 {
-                    DateTime.TryParseExact(Decode(chapters[i].SelectSingleNode("./td[2]")?.InnerText), "dd.mm.yy", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out DateTime date);
+                    DateTime.TryParseExact(Decode(chapters[i].SelectSingleNode("./td[2]")?.InnerText), "dd.MM.yy", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out DateTime date);
 
                     Chapters[chapters.Count - 1 - i] = new MangaChapter(Decode(chapters[i].SelectSingleNode("./td/a")?.InnerText), BaseUri + chapters[i].SelectSingleNode("./td/a")?.Attributes["href"]?.Value + "?mtr=1", date);
                 }
