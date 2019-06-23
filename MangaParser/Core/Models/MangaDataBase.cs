@@ -15,10 +15,10 @@ namespace MangaParser.Core.Models
         /// <param name="dataUri">Data URI.</param>
         public MangaDataBase(string value, string dataUri)
         {
-            Value = value;
+            this.Value = value;
 
             if (Uri.IsWellFormedUriString(dataUri, UriKind.Absolute))
-                Link = new Uri(dataUri);
+                this.Link = new Uri(dataUri);
         }
 
         /// <summary>
@@ -28,19 +28,19 @@ namespace MangaParser.Core.Models
         /// <param name="dataUri">Data URI.</param>
         public MangaDataBase(string value, Uri dataUri)
         {
-            Value = value;
-            Link = dataUri;
+            this.Value = value;
+            this.Link = dataUri;
         }
-
-        /// <summary>
-        /// Gets the data value.
-        /// </summary>
-        public string Value { get; }
 
         /// <summary>
         /// Gets the data URI.
         /// </summary>
         public Uri Link { get; }
+
+        /// <summary>
+        /// Gets the data value.
+        /// </summary>
+        public string Value { get; }
 
         public override string ToString()
         {

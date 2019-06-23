@@ -51,7 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MangaParser\MangaParser.csproj">
-      <Project>{326bea76-8ae1-451e-823d-a02b39a62ea3}</Project>
+      <Project>{f562c2cc-2602-4ced-96f6-dacbec65e9c1}</Project>
       <Name>MangaParser</Name>
     </ProjectReference>
   </ItemGroup>

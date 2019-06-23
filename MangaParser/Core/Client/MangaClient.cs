@@ -16,7 +16,18 @@ namespace MangaParser.Core.Client
 
         public void AddParser(IParser parser)
         {
+            if (parser == null)
+                return;
+
             parsersList.Add(parser);
+        }
+
+        public void RemoveParser(IParser parser)
+        {
+            if (parser == null)
+                return;
+
+            parsersList.Remove(parser);
         }
 
         public IParser GetParser(string uri)
@@ -65,65 +76,87 @@ namespace MangaParser.Core.Client
 
         public IEnumerable<IChapter> GetChapters(IMangaThumb manga)
         {
-            foreach (IChapter chapter in GetParser(manga.MangaUri.OriginalString)?.GetChapters(manga))
-            {
-                yield return chapter;
-            }
+            if (manga != null)
+                foreach (var item in GetChapters(manga.MangaUri.OriginalString))
+                    yield return item;
+            else
+                throw new ArgumentNullException(nameof(manga));
         }
 
         public IEnumerable<IChapter> GetChapters(string mangaUri)
         {
-            foreach (IChapter chapter in GetParser(mangaUri)?.GetChapters(mangaUri))
-            {
-                yield return chapter;
-            }
+            var parser = GetParser(mangaUri);
+
+            if (parser != null)
+                foreach (IChapter chapter in parser.GetChapters(mangaUri))
+                {
+                    yield return chapter;
+                }
+            else
+                yield return null;
         }
 
         public IEnumerable<IChapter> GetChapters(Uri mangaUri)
         {
-            foreach (IChapter chapter in GetParser(mangaUri.OriginalString)?.GetChapters(mangaUri))
-            {
-                yield return chapter;
-            }
+            if (mangaUri != null)
+                foreach (var item in GetChapters(mangaUri.OriginalString))
+                    yield return item;
+            else
+                throw new ArgumentNullException(nameof(mangaUri));
         }
 
         public IEnumerable<IPage> GetPages(IChapter chapter)
         {
-            foreach (IPage page in GetParser(chapter.ChapterUri.OriginalString)?.GetPages(chapter))
-            {
-                yield return page;
-            }
+            if (chapter != null)
+                foreach (var item in GetPages(chapter.ChapterUri.OriginalString))
+                    yield return item;
+            else
+                throw new ArgumentNullException(nameof(chapter));
         }
 
         public IEnumerable<IPage> GetPages(string chapterUri)
         {
-            foreach (IPage page in GetParser(chapterUri)?.GetPages(chapterUri))
-            {
-                yield return page;
-            }
+            var parser = GetParser(chapterUri);
+
+            if (parser != null)
+                foreach (IPage page in parser.GetPages(chapterUri))
+                {
+                    yield return page;
+                }
+            else
+                yield return null;
         }
 
         public IEnumerable<IPage> GetPages(Uri chapterUri)
         {
-            foreach (IPage page in GetParser(chapterUri.OriginalString)?.GetPages(chapterUri))
-            {
-                yield return page;
-            }
+            if (chapterUri != null)
+                foreach (var item in GetPages(chapterUri.OriginalString))
+                    yield return item;
+            else
+                throw new ArgumentNullException(nameof(chapterUri));
         }
 
         public IManga GetManga(IMangaThumb mangaThumb)
         {
-            return GetParser(mangaThumb.MangaUri.OriginalString)?.GetManga(mangaThumb);
+            if (mangaThumb != null)
+                return GetManga(mangaThumb.MangaUri.OriginalString);
+            else
+                throw new ArgumentNullException(nameof(mangaThumb));
         }
 
         public IManga GetManga(string mangaUri)
         {
-            return GetParser(mangaUri)?.GetManga(mangaUri);
+            var parser = GetParser(mangaUri);
+
+            return parser != null ? parser.GetManga(mangaUri) : null;
         }
 
         public IManga GetManga(Uri mangaUri)
         {
-            return GetParser(mangaUri.OriginalString)?.GetManga(mangaUri);
+            if (mangaUri != null)
+                return GetManga(mangaUri.OriginalString);
+            else
+                throw new ArgumentNullException(nameof(mangaUri));
         }
 
         #endregion Synchronous Methods
@@ -147,47 +180,71 @@ namespace MangaParser.Core.Client
 
         public async Task<IEnumerable<IChapter>> GetChaptersAsync(IMangaThumb manga)
         {
-            return await GetParser(manga.MangaUri.OriginalString)?.GetChaptersAsync(manga);
+            if (manga != null)
+                return await GetChaptersAsync(manga.MangaUri.OriginalString);
+            else
+                throw new ArgumentNullException(nameof(manga));
         }
 
         public async Task<IEnumerable<IChapter>> GetChaptersAsync(string mangaUri)
         {
-            return await GetParser(mangaUri)?.GetChaptersAsync(mangaUri);
+            var parser = GetParser(mangaUri);
+
+            return parser != null ? await parser.GetChaptersAsync(mangaUri) : null;
         }
 
         public async Task<IEnumerable<IChapter>> GetChaptersAsync(Uri mangaUri)
         {
-            return await GetParser(mangaUri.OriginalString)?.GetChaptersAsync(mangaUri);
+            if (mangaUri != null)
+                return await GetChaptersAsync(mangaUri.OriginalString);
+            else
+                throw new ArgumentNullException(nameof(mangaUri));
         }
 
         public async Task<IEnumerable<IPage>> GetPagesAsync(IChapter chapter)
         {
-            return await GetParser(chapter.ChapterUri.OriginalString)?.GetPagesAsync(chapter);
+            if (chapter != null)
+                return await GetPagesAsync(chapter.ChapterUri.OriginalString);
+            else
+                throw new ArgumentNullException(nameof(chapter));
         }
 
         public async Task<IEnumerable<IPage>> GetPagesAsync(string chapterUri)
         {
-            return await GetParser(chapterUri)?.GetPagesAsync(chapterUri);
+            var parser = GetParser(chapterUri);
+
+            return parser != null ? await parser.GetPagesAsync(chapterUri) : null;
         }
 
         public async Task<IEnumerable<IPage>> GetPagesAsync(Uri chapterUri)
         {
-            return await GetParser(chapterUri.OriginalString)?.GetPagesAsync(chapterUri);
+            if (chapterUri != null)
+                return await GetPagesAsync(chapterUri.OriginalString);
+            else
+                throw new ArgumentNullException(nameof(chapterUri));
         }
 
         public async Task<IManga> GetMangaAsync(IMangaThumb mangaThumb)
         {
-            return await GetParser(mangaThumb.MangaUri.OriginalString)?.GetMangaAsync(mangaThumb);
+            if (mangaThumb != null)
+                return await GetMangaAsync(mangaThumb.MangaUri.OriginalString);
+            else
+                throw new ArgumentNullException(nameof(mangaThumb));
         }
 
         public async Task<IManga> GetMangaAsync(string mangaUri)
         {
-            return await GetParser(mangaUri)?.GetMangaAsync(mangaUri);
+            var parser = GetParser(mangaUri);
+
+            return parser != null ? await parser.GetMangaAsync(mangaUri) : null;
         }
 
         public async Task<IManga> GetMangaAsync(Uri mangaUri)
         {
-            return await GetParser(mangaUri.OriginalString)?.GetMangaAsync(mangaUri);
+            if (mangaUri != null)
+                return await GetMangaAsync(mangaUri.OriginalString);
+            else
+                throw new ArgumentNullException(nameof(mangaUri));
         }
 
         #endregion Asynchronous Methods

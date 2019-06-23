@@ -2,16 +2,16 @@
 {
     public class MangaName
     {
-        public MangaName(string original = default(string), string english = default(string), string localized = default(string))
+        public MangaName(string english = default(string), string localized = default(string), string original = default(string))
         {
-            Original = original;
-            English = english;
-            Localized = localized;
+            this.English = english;
+            this.Localized = localized;
+            this.Original = original;
         }
-
-        public string Original { get; }
+        
         public string English { get; }
         public string Localized { get; }
+        public string Original { get; }
 
         public override string ToString()
         {
