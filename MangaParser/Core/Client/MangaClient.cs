@@ -1,17 +1,22 @@
 ﻿using MangaParser.Core.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace MangaParser.Core.Client
 {
     public class MangaClient
     {
-        private readonly List<IParser> parsersList;
+        private readonly List<IParser> parsers;
 
-        public MangaClient()
+        public MangaClient() : this(new List<IParser>())
         {
-            parsersList = new List<IParser>();
+        }
+
+        public MangaClient(ICollection<IParser> parsers)
+        {
+            this.parsers = parsers.ToList();
         }
 
         public void AddParser(IParser parser)
@@ -19,7 +24,7 @@ namespace MangaParser.Core.Client
             if (parser == null)
                 return;
 
-            parsersList.Add(parser);
+            parsers.Add(parser);
         }
 
         public void RemoveParser(IParser parser)
@@ -27,16 +32,16 @@ namespace MangaParser.Core.Client
             if (parser == null)
                 return;
 
-            parsersList.Remove(parser);
+            parsers.Remove(parser);
         }
 
         public IParser GetParser(string uri)
         {
-            for (int i = 0; i < parsersList.Count; i++)
+            for (int i = 0; i < parsers.Count; i++)
             {
-                if (uri.Contains(parsersList[i].BaseUri.Host))
+                if (uri.Contains(parsers[i].BaseUri.Host))
                 {
-                    return parsersList[i];
+                    return parsers[i];
                 }
             }
 
@@ -45,11 +50,11 @@ namespace MangaParser.Core.Client
 
         public IParser GetParser<T>() where T : IParser
         {
-            for (int i = 0; i < parsersList.Count; i++)
+            for (int i = 0; i < parsers.Count; i++)
             {
-                if (parsersList[i].GetType() == typeof(T))
+                if (parsers[i].GetType() == typeof(T))
                 {
-                    return parsersList[i];
+                    return parsers[i];
                 }
             }
 
@@ -58,16 +63,16 @@ namespace MangaParser.Core.Client
 
         public IEnumerable<IParser> GetParserEnumerable()
         {
-            return parsersList;
+            return parsers;
         }
 
         #region Synchronous Methods
 
         public IEnumerable<IMangaThumb> SearchManga(string query)
         {
-            for (int i = 0; i < parsersList.Count; i++)
+            for (int i = 0; i < parsers.Count; i++)
             {
-                foreach (IMangaThumb manga in parsersList[i].SearchManga(query))
+                foreach (IMangaThumb manga in parsers[i].SearchManga(query))
                 {
                     yield return manga;
                 }
@@ -169,9 +174,9 @@ namespace MangaParser.Core.Client
             {
                 List<IMangaThumb> result = new List<IMangaThumb>();
 
-                for (int i = 0; i < parsersList.Count; i++)
+                for (int i = 0; i < parsers.Count; i++)
                 {
-                    result.AddRange(await parsersList[i].SearchMangaAsync(query));
+                    result.AddRange(await parsers[i].SearchMangaAsync(query));
                 }
 
                 return result;
