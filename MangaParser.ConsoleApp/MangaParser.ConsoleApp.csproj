@@ -6,16 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Properties\launchSettings.json" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\MangaParser.Core\MangaParser.Core.csproj" />
     <ProjectReference Include="..\MangaParser.Parsers\MangaParser.Parsers.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Properties\" />
   </ItemGroup>
 
 </Project>

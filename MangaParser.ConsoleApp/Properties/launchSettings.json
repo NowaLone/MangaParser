@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "MangaParser.ConsoleApp": {
-      "commandName": "Project",
-      "commandLineArgs": "pages https://www.mangareader.net/sakamoto-desu-ga 2"
-    }
-  }
-}
