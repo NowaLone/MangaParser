@@ -8,7 +8,13 @@ namespace MangaParser.Core.Client
 {
     public class MangaClient
     {
+        #region Fields
+
         private readonly List<IParser> parsers;
+
+        #endregion Fields
+
+        #region Constructors
 
         public MangaClient() : this(new List<IParser>())
         {
@@ -19,19 +25,17 @@ namespace MangaParser.Core.Client
             this.parsers = parsers.ToList();
         }
 
+        #endregion Constructors
+
+        #region Methods
+
         public void AddParser(IParser parser)
         {
-            if (parser == null)
-                return;
-
             parsers.Add(parser);
         }
 
         public void RemoveParser(IParser parser)
         {
-            if (parser == null)
-                return;
-
             parsers.Remove(parser);
         }
 
@@ -65,6 +69,8 @@ namespace MangaParser.Core.Client
         {
             return parsers;
         }
+
+        #endregion Methods
 
         #region Synchronous Methods
 

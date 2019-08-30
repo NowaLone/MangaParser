@@ -7,25 +7,21 @@ using System.Threading.Tasks;
 
 namespace MangaParser.Parsers.MangaFox
 {
-    public class MangaFoxParser : Parser, IParser
+    public class MangaFoxParser : Parser
     {
+        #region Constructors
+
         public MangaFoxParser(string baseUri = "http://fanfox.net") : base(baseUri)
         {
         }
+
+        #endregion Constructors
 
         #region Public Methods
 
         #region Synchronous Methods
 
-        public IEnumerable<IChapter> GetChapters(IMangaThumb manga)
-        {
-            if (manga != null)
-                return GetChapters(manga.MangaUri.OriginalString);
-            else
-                throw new ArgumentNullException(nameof(manga));
-        }
-
-        public IEnumerable<IChapter> GetChapters(string mangaUri)
+        public override IEnumerable<IChapter> GetChapters(string mangaUri)
         {
             if (!Uri.IsWellFormedUriString(mangaUri, UriKind.Absolute))
                 throw new UriFormatException($"Manga uri is wrong: {mangaUri}");
@@ -49,23 +45,7 @@ namespace MangaParser.Parsers.MangaFox
             return GetChapters(mainNode);
         }
 
-        public IEnumerable<IChapter> GetChapters(Uri mangaUri)
-        {
-            if (mangaUri != null)
-                return GetChapters(mangaUri.OriginalString);
-            else
-                throw new ArgumentNullException(nameof(mangaUri));
-        }
-
-        public IManga GetManga(IMangaThumb mangaThumb)
-        {
-            if (mangaThumb != null)
-                return GetManga(mangaThumb.MangaUri.OriginalString);
-            else
-                throw new ArgumentNullException(nameof(mangaThumb));
-        }
-
-        public IManga GetManga(string mangaUri)
+        public override IManga GetManga(string mangaUri)
         {
             if (!Uri.IsWellFormedUriString(mangaUri, UriKind.Absolute))
                 throw new UriFormatException($"Manga uri is wrong: {mangaUri}");
@@ -84,24 +64,7 @@ namespace MangaParser.Parsers.MangaFox
             return manga;
         }
 
-        public IManga GetManga(Uri mangaUri)
-        {
-            if (mangaUri != null)
-                return GetManga(mangaUri.OriginalString);
-            else
-                throw new ArgumentNullException(nameof(mangaUri));
-        }
-
-        public IEnumerable<IPage> GetPages(IChapter chapter)
-        {
-            if (chapter != null)
-                foreach (var item in GetPages(chapter.ChapterUri.OriginalString))
-                    yield return item;
-            else
-                throw new ArgumentNullException(nameof(chapter));
-        }
-
-        public IEnumerable<IPage> GetPages(string chapterUri)
+        public override IEnumerable<IPage> GetPages(string chapterUri)
         {
             if (!Uri.IsWellFormedUriString(chapterUri, UriKind.Absolute))
                 throw new UriFormatException($"Chapter uri is wrong: {chapterUri}");
@@ -126,16 +89,7 @@ namespace MangaParser.Parsers.MangaFox
             }
         }
 
-        public IEnumerable<IPage> GetPages(Uri chapterUri)
-        {
-            if (chapterUri != null)
-                foreach (var item in GetPages(chapterUri.OriginalString))
-                    yield return item;
-            else
-                throw new ArgumentNullException(nameof(chapterUri));
-        }
-
-        public IEnumerable<IMangaThumb> SearchManga(string query)
+        public override IEnumerable<IMangaThumb> SearchManga(string query)
         {
             query = query.Replace(' ', '+');
 
@@ -153,15 +107,7 @@ namespace MangaParser.Parsers.MangaFox
 
         #region Asynchronous Methods
 
-        public async Task<IEnumerable<IChapter>> GetChaptersAsync(IMangaThumb manga)
-        {
-            if (manga != null)
-                return await GetChaptersAsync(manga.MangaUri.OriginalString);
-            else
-                throw new ArgumentNullException(nameof(manga));
-        }
-
-        public async Task<IEnumerable<IChapter>> GetChaptersAsync(string mangaUri)
+        public override async Task<IEnumerable<IChapter>> GetChaptersAsync(string mangaUri)
         {
             if (!Uri.IsWellFormedUriString(mangaUri, UriKind.Absolute))
                 throw new UriFormatException($"Manga uri is wrong: {mangaUri}");
@@ -185,23 +131,7 @@ namespace MangaParser.Parsers.MangaFox
             return GetChapters(mainNode);
         }
 
-        public async Task<IEnumerable<IChapter>> GetChaptersAsync(Uri mangaUri)
-        {
-            if (mangaUri != null)
-                return await GetChaptersAsync(mangaUri.OriginalString);
-            else
-                throw new ArgumentNullException(nameof(mangaUri));
-        }
-
-        public async Task<IManga> GetMangaAsync(IMangaThumb mangaThumb)
-        {
-            if (mangaThumb != null)
-                return await GetMangaAsync(mangaThumb.MangaUri.OriginalString);
-            else
-                throw new ArgumentNullException(nameof(mangaThumb));
-        }
-
-        public async Task<IManga> GetMangaAsync(string mangaUri)
+        public override async Task<IManga> GetMangaAsync(string mangaUri)
         {
             if (!Uri.IsWellFormedUriString(mangaUri, UriKind.Absolute))
                 throw new UriFormatException($"Manga uri is wrong: {mangaUri}");
@@ -220,23 +150,7 @@ namespace MangaParser.Parsers.MangaFox
             return manga;
         }
 
-        public async Task<IManga> GetMangaAsync(Uri mangaUri)
-        {
-            if (mangaUri != null)
-                return await GetMangaAsync(mangaUri.OriginalString);
-            else
-                throw new ArgumentNullException(nameof(mangaUri));
-        }
-
-        public async Task<IEnumerable<IPage>> GetPagesAsync(IChapter chapter)
-        {
-            if (chapter != null)
-                return await GetPagesAsync(chapter.ChapterUri.OriginalString);
-            else
-                throw new ArgumentNullException(nameof(chapter));
-        }
-
-        public async Task<IEnumerable<IPage>> GetPagesAsync(string chapterUri)
+        public override async Task<IEnumerable<IPage>> GetPagesAsync(string chapterUri)
         {
             if (!Uri.IsWellFormedUriString(chapterUri, UriKind.Absolute))
                 throw new UriFormatException($"Chapter uri is wrong: {chapterUri}");
@@ -258,15 +172,7 @@ namespace MangaParser.Parsers.MangaFox
             return await GetMangaPagesAsync(mainNode);
         }
 
-        public async Task<IEnumerable<IPage>> GetPagesAsync(Uri chapterUri)
-        {
-            if (chapterUri != null)
-                return await GetPagesAsync(chapterUri.OriginalString);
-            else
-                throw new ArgumentNullException(nameof(chapterUri));
-        }
-
-        public async Task<IEnumerable<IMangaThumb>> SearchMangaAsync(string query)
+        public override async Task<IEnumerable<IMangaThumb>> SearchMangaAsync(string query)
         {
             query = query.Replace(' ', '+');
 

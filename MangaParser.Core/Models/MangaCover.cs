@@ -7,6 +7,8 @@ namespace MangaParser.Core.Models
     /// </summary>
     public class MangaCover
     {
+        #region Constructors
+
         /// <summary>
         ///  Initializes a new instance of the <see cref="MangaCover"/> class with the specified URIs.
         /// </summary>
@@ -33,6 +35,10 @@ namespace MangaParser.Core.Models
             Small = Uri.IsWellFormedUriString(smallSize, UriKind.Absolute) ? new Uri(smallSize) : null;
         }
 
+        #endregion Constructors
+
+        #region Properties
+
         /// <summary>
         /// Gets a high resolution cover URI.
         /// </summary>
@@ -48,6 +54,10 @@ namespace MangaParser.Core.Models
         /// </summary>
         public Uri Small { get; }
 
+        #endregion Properties
+
+        #region Methods
+
         public override string ToString()
         {
             if (Large != null)
@@ -59,5 +69,7 @@ namespace MangaParser.Core.Models
             return
                 null;
         }
+
+        #endregion Methods
     }
 }

@@ -9,12 +9,18 @@ namespace MangaParser.Parsers.ReadManga
     /// </summary>
     public class ReadMangaObject : IReadManga
     {
+        #region Constructors
+
         /// <summary>
         ///  Initializes a new instance of the <see cref="ReadMangaObject"/> class with the empty parameters.
         /// </summary>
         public ReadMangaObject()
         {
         }
+
+        #endregion Constructors
+
+        #region Properties
 
         public IData[] Autors { get; set; }
         public IData[] Genres { get; set; }
@@ -28,6 +34,10 @@ namespace MangaParser.Parsers.ReadManga
         public string Description { get; set; }
         public string Volumes { get; set; }
         public Uri MangaUri { get; set; }
+
+        #endregion Properties
+
+        #region Methods
 
         public override string ToString()
         {
@@ -44,5 +54,7 @@ namespace MangaParser.Parsers.ReadManga
                 $"\nCovers:\n{String.Join("\n---\n", Covers != null ? Covers : new object[0])}\n" +
                 $"\nLink: {MangaUri}\n";
         }
+
+        #endregion Methods
     }
 }

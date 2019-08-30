@@ -8,6 +8,8 @@ namespace MangaParser.Core.Models
     /// </summary>
     public class MangaChapter : MangaDataBase, IChapter
     {
+        #region Constructors
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MangaChapter"/> class with the specified parameters.
         /// </summary>
@@ -30,6 +32,10 @@ namespace MangaParser.Core.Models
             AddedDate = date;
         }
 
+        #endregion Constructors
+
+        #region Properties
+
         /// <summary>
         /// Gets the chapter added date.
         /// </summary>
@@ -45,9 +51,15 @@ namespace MangaParser.Core.Models
         /// </summary>
         public Uri ChapterUri => Link;
 
+        #endregion Properties
+
+        #region Methods
+
         public override string ToString()
         {
             return Name + "\t\tAdded date: " + AddedDate.ToShortDateString();
         }
+
+        #endregion Methods
     }
 }

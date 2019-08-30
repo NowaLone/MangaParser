@@ -8,6 +8,8 @@ namespace MangaParser.Core.Models
     /// </summary>
     public class MangaDataBase : IData
     {
+        #region Constructors
+
         /// <summary>
         /// Initializes a new instance of the <see cref="MangaDataBase"/> class with the specified parameters.
         /// </summary>
@@ -32,6 +34,10 @@ namespace MangaParser.Core.Models
             this.Link = dataUri;
         }
 
+        #endregion Constructors
+
+        #region Properties
+
         /// <summary>
         /// Gets the data URI.
         /// </summary>
@@ -42,9 +48,15 @@ namespace MangaParser.Core.Models
         /// </summary>
         public string Value { get; }
 
+        #endregion Properties
+
+        #region Methods
+
         public override string ToString()
         {
             return Value;
         }
+
+        #endregion Methods
     }
 }

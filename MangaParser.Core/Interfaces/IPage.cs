@@ -7,9 +7,13 @@ namespace MangaParser.Core.Interfaces
     /// </summary>
     public interface IPage
     {
+        #region Properties
+
         /// <summary>
         /// A manga page URI.
         /// </summary>
         Uri PageUri { get; }
+
+        #endregion Properties
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -9,7 +10,11 @@ namespace MangaParser.Core.Interfaces
     /// </summary>
     public interface IParser
     {
+        #region Properties
+
         Uri BaseUri { get; }
+
+        #endregion Properties
 
         #region Synchronous Methods
 

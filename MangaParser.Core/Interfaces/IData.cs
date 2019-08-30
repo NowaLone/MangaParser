@@ -7,6 +7,8 @@ namespace MangaParser.Core.Interfaces
     /// </summary>
     public interface IData
     {
+        #region Properties
+
         /// <summary>
         /// The data value.
         /// </summary>
@@ -16,5 +18,7 @@ namespace MangaParser.Core.Interfaces
         /// The data URI.
         /// </summary>
         Uri Link { get; }
+
+        #endregion Properties
     }
 }

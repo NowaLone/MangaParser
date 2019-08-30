@@ -2,16 +2,26 @@
 {
     public class MangaName
     {
+        #region Constructors
+
         public MangaName(string english = default(string), string localized = default(string), string original = default(string))
         {
             this.English = english;
             this.Localized = localized;
             this.Original = original;
         }
-        
+
+        #endregion Constructors
+
+        #region Properties
+
         public string English { get; }
         public string Localized { get; }
         public string Original { get; }
+
+        #endregion Properties
+
+        #region Methods
 
         public override string ToString()
         {
@@ -22,5 +32,7 @@
             else
                 return Original;
         }
+
+        #endregion Methods
     }
 }

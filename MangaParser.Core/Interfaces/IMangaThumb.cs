@@ -8,6 +8,8 @@ namespace MangaParser.Core.Interfaces
     /// </summary>
     public interface IMangaThumb
     {
+        #region Properties
+
         /// <summary>
         /// The manga title.
         /// </summary>
@@ -17,5 +19,7 @@ namespace MangaParser.Core.Interfaces
         /// A link to the manga page.
         /// </summary>
         Uri MangaUri { get; }
+
+        #endregion Properties
     }
 }

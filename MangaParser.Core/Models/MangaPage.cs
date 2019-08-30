@@ -5,6 +5,8 @@ namespace MangaParser.Core.Models
 {
     public class MangaPage : IPage
     {
+        #region Constructors
+
         public MangaPage(Uri pageUri)
         {
             PageUri = pageUri;
@@ -16,9 +18,15 @@ namespace MangaParser.Core.Models
                 PageUri = new Uri(pageUri);
         }
 
+        #endregion Constructors
+
+        #region Properties
+
         /// <summary>
         /// A manga page URI.
         /// </summary>
         public Uri PageUri { get; }
+
+        #endregion Properties
     }
 }

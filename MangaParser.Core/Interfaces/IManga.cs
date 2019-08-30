@@ -7,6 +7,8 @@ namespace MangaParser.Core.Interfaces
     /// </summary>
     public interface IManga : IMangaThumb
     {
+        #region Properties
+
         /// <summary>
         /// The manga covers collection.
         /// </summary>
@@ -26,5 +28,7 @@ namespace MangaParser.Core.Interfaces
         /// The manga description.
         /// </summary>
         string Description { get; }
+
+        #endregion Properties
     }
 }

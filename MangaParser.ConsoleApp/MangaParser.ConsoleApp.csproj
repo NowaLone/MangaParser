@@ -6,7 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MangaParser\MangaParser.csproj" />
+    <ProjectReference Include="..\MangaParser.Core\MangaParser.Core.csproj" />
+    <ProjectReference Include="..\MangaParser.Parsers\MangaParser.Parsers.csproj" />
   </ItemGroup>
 
 </Project>

@@ -9,6 +9,8 @@ namespace MangaParser.Parsers.MangaFox
     /// </summary>
     public class MangaFoxObject : IManga
     {
+        #region Constructors
+
         /// <summary>
         ///  Initializes a new instance of the <see cref="MangaFoxObject"/> class with the empty parameters.
         /// </summary>
@@ -16,12 +18,20 @@ namespace MangaParser.Parsers.MangaFox
         {
         }
 
+        #endregion Constructors
+
+        #region Properties
+
         public IData[] Autors { get; set; }
         public IData[] Genres { get; set; }
         public MangaCover[] Covers { get; set; }
         public MangaName Name { get; set; }
         public string Description { get; set; }
         public Uri MangaUri { get; set; }
+
+        #endregion Properties
+
+        #region Methods
 
         public override string ToString()
         {
@@ -32,5 +42,7 @@ namespace MangaParser.Parsers.MangaFox
                 $"\nCovers:\n{String.Join("\n---\n", Covers != null ? Covers : new object[0])}\n" +
                 $"\nLink: {MangaUri}\n";
         }
+
+        #endregion Methods
     }
 }
