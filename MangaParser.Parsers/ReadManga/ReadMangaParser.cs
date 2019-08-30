@@ -180,7 +180,7 @@ namespace MangaParser.Parsers.ReadManga
 
         private IEnumerable<ReadMangaObject> GetSearchResult(HtmlNode mainNode)
         {
-            var thumbs = mainNode.SelectNodes("./div[@class='tiles row']/div[@class='tile col-sm-6 ']");
+            var thumbs = mainNode?.SelectNodes("./div[@class='tiles row']/div[@class='tile col-sm-6 ']");
 
             if (thumbs != null)
             {
@@ -202,7 +202,7 @@ namespace MangaParser.Parsers.ReadManga
 
         private MangaDataBase[] GetThumbAutors(HtmlNode tileNode)
         {
-            var autors = tileNode.SelectNodes(".//a[@class='person-link']");
+            var autors = tileNode?.SelectNodes(".//a[@class='person-link']");
 
             MangaDataBase[] Autors;
 
@@ -225,7 +225,7 @@ namespace MangaParser.Parsers.ReadManga
 
         private MangaDataBase[] GetThumbGenres(HtmlNode tileNode)
         {
-            var genres = tileNode.SelectNodes(".//a[@class='element-link']");
+            var genres = tileNode?.SelectNodes(".//a[@class='element-link']");
 
             MangaDataBase[] Genres;
 
@@ -252,7 +252,7 @@ namespace MangaParser.Parsers.ReadManga
 
         private MangaChapter[] GetChapters(HtmlNode mainNode)
         {
-            var chapters = mainNode.SelectNodes("./div[contains(@class, 'chapters-link')]/table/tr");
+            var chapters = mainNode?.SelectNodes("./div[contains(@class, 'chapters-link')]/table/tr");
 
             MangaChapter[] Chapters;
 
@@ -277,7 +277,7 @@ namespace MangaParser.Parsers.ReadManga
 
         private MangaCover[] GetCovers(HtmlNode mainNode)
         {
-            var imagesNode = mainNode.SelectSingleNode(".//div[@class='flex-row']/div[@class='subject-cower col-sm-5']");
+            var imagesNode = mainNode?.SelectSingleNode(".//div[@class='flex-row']/div[@class='subject-cower col-sm-5']");
 
             var images = imagesNode?.SelectNodes(".//img");
 
@@ -302,7 +302,7 @@ namespace MangaParser.Parsers.ReadManga
 
         private string GetDescription(HtmlNode mainNode)
         {
-            var descNode = mainNode.SelectSingleNode("./meta[@itemprop='description']");
+            var descNode = mainNode?.SelectSingleNode("./meta[@itemprop='description']");
 
             if (descNode != null)
                 return Decode(descNode.Attributes["content"]?.Value);
@@ -312,7 +312,7 @@ namespace MangaParser.Parsers.ReadManga
 
         private MangaDataBase[] GetInfoData(HtmlNode infoNode, string elemName, bool isPublisher = false)
         {
-            var data = infoNode.SelectNodes($".//span[contains(@class, '{elemName}')]");
+            var data = infoNode?.SelectNodes($".//span[contains(@class, '{elemName}')]");
 
             MangaDataBase[] Data;
 
@@ -342,7 +342,7 @@ namespace MangaParser.Parsers.ReadManga
 
         private ReadMangaObject GetMangaData(HtmlNode mainNode)
         {
-            var infoNode = mainNode.SelectSingleNode(".//div[@class='flex-row']/div[@class='subject-meta col-sm-7']");
+            var infoNode = mainNode?.SelectSingleNode(".//div[@class='flex-row']/div[@class='subject-meta col-sm-7']");
 
             var manga = new ReadMangaObject
             {
@@ -389,7 +389,7 @@ namespace MangaParser.Parsers.ReadManga
 
         private MangaName GetName(HtmlNode mainNode)
         {
-            var namesNodes = mainNode.SelectNodes("./h1[@class='names']/span");
+            var namesNodes = mainNode?.SelectNodes("./h1[@class='names']/span");
 
             string local = default(string), eng = default(string), orig = default(string);
 
@@ -423,7 +423,7 @@ namespace MangaParser.Parsers.ReadManga
 
         private string GetVolumes(HtmlNode infoNode)
         {
-            var volumesNode = infoNode.SelectSingleNode("./p/text()[2]");
+            var volumesNode = infoNode?.SelectSingleNode("./p/text()[2]");
 
             if (volumesNode != null)
                 return Decode(volumesNode.InnerText);

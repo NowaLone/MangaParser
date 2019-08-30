@@ -141,24 +141,19 @@ namespace MangaParser.ConsoleApp
 
         private static void Pages(Uri uri)
         {
-            try
-            {
-                IManga manga = Get(uri);
+            IManga manga = client.GetManga(uri);
 
-                if (manga != null)
-                {
-                    Pages(manga);
-                    return;
-                }
+            if (manga?.Name.ToString() != null)
+            {
+                Pages(manga);
+                return;
             }
-            catch (NullReferenceException)
-            {
-                int i = 0;
 
-                foreach (var page in client.GetPages(uri))
-                {
-                    Console.WriteLine($"Page {++i}: {page.PageUri}");
-                }
+            int i = 0;
+
+            foreach (var page in client.GetPages(uri))
+            {
+                Console.WriteLine($"Page {++i}: {page.PageUri}");
             }
         }
 
@@ -191,7 +186,7 @@ namespace MangaParser.ConsoleApp
             if (manga == null)
                 return;
 
-            IChapter chapter = client.GetChapters(manga.MangaUri).ElementAt(chapterNumber);
+            IChapter chapter = client.GetChapters(manga.MangaUri).ElementAt(chapterNumber - 1);
 
             Console.WriteLine("Chapter: " + chapter.Name);
 

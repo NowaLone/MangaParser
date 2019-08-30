@@ -177,7 +177,7 @@ namespace MangaParser.Parsers.Mangareader
 
         private async Task<MangaPage[]> GetMangaPagesAsync(HtmlNode mainNode)
         {
-            string imgNodePath = mainNode.XPath + "//img[@id='img']";
+            string imgNodePath = mainNode?.XPath + "//img[@id='img']";
 
             var Counters = mainNode.SelectNodes("./div[@id='topchapter']/div[@id='navi']/div[@id='selectpage']/select/option");
 
@@ -206,7 +206,7 @@ namespace MangaParser.Parsers.Mangareader
 
         private IEnumerable<MangaPage> GetMangaPages(HtmlNode mainNode)
         {
-            string imgNodePath = mainNode.XPath + "//img[@id='img']";
+            string imgNodePath = mainNode?.XPath + "//img[@id='img']";
 
             var Counters = mainNode.SelectNodes("./div[@id='topchapter']/div[@id='navi']/div[@id='selectpage']/select/option");
 
@@ -279,7 +279,7 @@ namespace MangaParser.Parsers.Mangareader
 
         private MangaChapter[] GetChapters(HtmlNode mainNode)
         {
-            var chapters = mainNode.SelectNodes("//div[@id='chapterlist']/table/tr");
+            var chapters = mainNode?.SelectNodes("//div[@id='chapterlist']/table/tr");
 
             MangaChapter[] Chapters;
 
@@ -381,7 +381,7 @@ namespace MangaParser.Parsers.Mangareader
 
             if (orName != null || engName != null)
             {
-                return new MangaName(engName, null, orName);
+                return new MangaName(engName == String.Empty ? null : engName, null, orName == String.Empty ? null : orName);
             }
             else
                 return new MangaName();

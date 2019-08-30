@@ -53,6 +53,13 @@ namespace MangaParser.Parsers.MangaFox
             if (!mangaUri.Contains(BaseUri.Host))
                 return null;
 
+            UriBuilder uriBuilder = new UriBuilder(mangaUri);
+
+            if (uriBuilder.Uri.Host.Contains("m."))
+                uriBuilder.Host = uriBuilder.Host.Replace("m.", String.Empty);
+
+            mangaUri = uriBuilder.Uri.OriginalString;
+
             var htmlDoc = Web.Load(mangaUri);
 
             var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//body/div[@class='container']/div[@class='detail-info']");
