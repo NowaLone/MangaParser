@@ -5,12 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Mangareader\**" />
-    <EmbeddedResource Remove="Mangareader\**" />
-    <None Remove="Mangareader\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="HtmlAgilityPack" Version="1.11.12" />
   </ItemGroup>
 
