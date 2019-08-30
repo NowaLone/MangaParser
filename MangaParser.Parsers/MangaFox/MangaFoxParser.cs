@@ -267,6 +267,8 @@ namespace MangaParser.Parsers.MangaFox
 
             if (Counters != null)
             {
+                yield return new MangaPage(mainNode.SelectSingleNode("./div[@class='mangaread-img']/a/img")?.Attributes["src"]?.Value);
+
                 HtmlDocument htmlDoc;
 
                 for (int i = 1; i < Counters.Count; i++)
