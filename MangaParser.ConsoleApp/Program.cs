@@ -1,6 +1,7 @@
 ﻿using MangaParser.Core.Client;
 using MangaParser.Core.Interfaces;
 using MangaParser.Parsers.MangaFox;
+using MangaParser.Parsers.Mangapanda;
 using MangaParser.Parsers.Mangareader;
 using MangaParser.Parsers.MintManga;
 using MangaParser.Parsers.ReadManga;
@@ -16,7 +17,8 @@ namespace MangaParser.ConsoleApp
             new ReadMangaParser(),
             new MintMangaParser(),
             new MangaFoxParser(),
-            new MangareaderParser()
+            new MangareaderParser(),
+            new MangapandaParser(),
         });
 
         private static void Main(string[] args)
@@ -60,6 +62,10 @@ namespace MangaParser.ConsoleApp
 
                                 case "reader":
                                     Search(args[2], client.GetParser<MangareaderParser>());
+                                    break;
+
+                                case "panda":
+                                    Search(args[2], client.GetParser<MangapandaParser>());
                                     break;
 
                                 default:
