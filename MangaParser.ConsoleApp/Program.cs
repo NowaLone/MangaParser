@@ -3,6 +3,7 @@ using MangaParser.Core.Interfaces;
 using MangaParser.Parsers.MangaFox;
 using MangaParser.Parsers.Mangapanda;
 using MangaParser.Parsers.Mangareader;
+using MangaParser.Parsers.Mangatown;
 using MangaParser.Parsers.MintManga;
 using MangaParser.Parsers.ReadManga;
 using System;
@@ -19,6 +20,7 @@ namespace MangaParser.ConsoleApp
             new MangaFoxParser(),
             new MangareaderParser(),
             new MangapandaParser(),
+            new MangatownParser(),
         });
 
         private static void Main(string[] args)
@@ -66,6 +68,10 @@ namespace MangaParser.ConsoleApp
 
                                 case "panda":
                                     Search(args[2], client.GetParser<MangapandaParser>());
+                                    break;
+
+                                case "town":
+                                    Search(args[2], client.GetParser<MangatownParser>());
                                     break;
 
                                 default:
