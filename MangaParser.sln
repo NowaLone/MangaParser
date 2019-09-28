@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MangaParser.ConsoleApp", "MangaParser.ConsoleApp\MangaParser.ConsoleApp.csproj", "{80CD9B08-2416-47DA-8CD6-D73ACB6A06BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MangaParser.Core", "MangaParser.Core\MangaParser.Core.csproj", "{74BFBA4B-E4F2-4549-AD17-DD85686562CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MangaParser.Core", "MangaParser.Core\MangaParser.Core.csproj", "{74BFBA4B-E4F2-4549-AD17-DD85686562CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MangaParser.Parsers", "MangaParser.Parsers\MangaParser.Parsers.csproj", "{06F6182B-30AC-43E2-BCB2-AD364BD16A37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MangaParser.Parsers", "MangaParser.Parsers\MangaParser.Parsers.csproj", "{785DC7B7-9658-437C-9175-B980EE1C5C95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{74BFBA4B-E4F2-4549-AD17-DD85686562CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74BFBA4B-E4F2-4549-AD17-DD85686562CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74BFBA4B-E4F2-4549-AD17-DD85686562CE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{06F6182B-30AC-43E2-BCB2-AD364BD16A37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{06F6182B-30AC-43E2-BCB2-AD364BD16A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{06F6182B-30AC-43E2-BCB2-AD364BD16A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{06F6182B-30AC-43E2-BCB2-AD364BD16A37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{785DC7B7-9658-437C-9175-B980EE1C5C95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{785DC7B7-9658-437C-9175-B980EE1C5C95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{785DC7B7-9658-437C-9175-B980EE1C5C95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{785DC7B7-9658-437C-9175-B980EE1C5C95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

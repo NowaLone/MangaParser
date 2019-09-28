@@ -1,10 +1,9 @@
-﻿using HtmlAgilityPack;
-using MangaParser.Core.Interfaces;
+﻿using MangaParser.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace MangaParser.Parsers
+namespace MangaParser.Core.Models
 {
     public abstract class Parser : IParser
     {
@@ -26,7 +25,6 @@ namespace MangaParser.Parsers
         #region Properties
 
         public Uri BaseUri { get; }
-        protected static HtmlWeb Web { get; } = new HtmlWeb();
 
         #endregion Properties
 

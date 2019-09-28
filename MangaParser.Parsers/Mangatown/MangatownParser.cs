@@ -18,6 +18,12 @@ namespace MangaParser.Parsers.Mangatown
 
         #endregion Constructors
 
+        #region Properties
+
+        protected static HtmlWeb Web { get; } = new HtmlWeb();
+
+        #endregion Properties
+
         #region Public Methods
 
         #region Synchronous Methods

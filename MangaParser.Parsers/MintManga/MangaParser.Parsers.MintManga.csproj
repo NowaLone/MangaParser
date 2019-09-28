@@ -4,16 +4,13 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <DefaultItemExcludes>$(DefaultItemExcludes);*\bin\**;*\obj\**</DefaultItemExcludes>
-  </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="HtmlAgilityPack" Version="1.11.12" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MangaParser.Core\MangaParser.Core.csproj" />
+    <ProjectReference Include="..\..\MangaParser.Core\MangaParser.Core.csproj" />
+    <ProjectReference Include="..\ReadManga\MangaParser.Parsers.ReadManga.csproj" />
   </ItemGroup>
 
 </Project>
