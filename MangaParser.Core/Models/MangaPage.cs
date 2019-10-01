@@ -3,6 +3,7 @@ using System;
 
 namespace MangaParser.Core.Models
 {
+    [Serializable]
     public class MangaPage : IPage
     {
         #region Constructors

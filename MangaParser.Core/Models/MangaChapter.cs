@@ -6,6 +6,7 @@ namespace MangaParser.Core.Models
     /// <summary>
     ///  Provides an object representation of a manga chapter.
     /// </summary>
+    [Serializable]
     public class MangaChapter : MangaDataBase, IChapter
     {
         #region Constructors

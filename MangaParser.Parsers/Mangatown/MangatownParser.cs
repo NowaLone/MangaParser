@@ -164,11 +164,11 @@ namespace MangaParser.Parsers.Mangatown
 
         #region Private Methods
 
-        private MangatownObject GetMangaData(HtmlNode mainNode)
+        private MangaObject GetMangaData(HtmlNode mainNode)
         {
             var infoNode = mainNode?.SelectSingleNode(".//div[@class='detail_info clearfix']/ul");
 
-            var manga = new MangatownObject
+            var manga = new MangaObject
             {
                 Name = GetName(mainNode),
                 Description = GetDescription(mainNode),
@@ -229,7 +229,7 @@ namespace MangaParser.Parsers.Mangatown
 
         #region Search methods
 
-        private IEnumerable<MangatownObject> GetSearchResult(HtmlNode mainNode)
+        private IEnumerable<MangaObject> GetSearchResult(HtmlNode mainNode)
         {
             var thumbs = mainNode?.SelectNodes("./li");
 
@@ -237,7 +237,7 @@ namespace MangaParser.Parsers.Mangatown
             {
                 for (int i = 0; i < thumbs.Count; i++)
                 {
-                    var manga = new MangatownObject
+                    var manga = new MangaObject
                     {
                         Autors = new MangaDataBase[] { new MangaDataBase(Decode(thumbs[i].SelectSingleNode("./p[4]/a")?.InnerText), thumbs[i].SelectSingleNode("./p[4]/a")?.Attributes["href"]?.Value) },
                         Genres = GetThumbGenres(thumbs[i].SelectSingleNode("./p[3]")),

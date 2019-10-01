@@ -163,11 +163,11 @@ namespace MangaParser.Parsers.Mangareader
 
         #region Private Methods
 
-        private MangareaderObject GetMangaData(HtmlNode mainNode)
+        private MangaObject GetMangaData(HtmlNode mainNode)
         {
             var infoNode = mainNode?.SelectSingleNode("//div[@id='mangaproperties']/table");
 
-            var manga = new MangareaderObject
+            var manga = new MangaObject
             {
                 Name = GetName(infoNode),
                 Description = GetDescription(mainNode),
@@ -233,7 +233,7 @@ namespace MangaParser.Parsers.Mangareader
 
         #region Search methods
 
-        private IEnumerable<MangareaderObject> GetSearchResult(HtmlNode mainNode)
+        private IEnumerable<MangaObject> GetSearchResult(HtmlNode mainNode)
         {
             var thumbs = mainNode?.SelectNodes("//div[@class='mangaresultinner']");
 
@@ -243,7 +243,7 @@ namespace MangaParser.Parsers.Mangareader
                 {
                     string coverstr = thumbs[i].SelectSingleNode("./div[@class='imgsearchresults']")?.Attributes["style"]?.Value;
 
-                    var manga = new MangareaderObject
+                    var manga = new MangaObject
                     {
                         Genres = GetThumbGenres(thumbs[i].SelectSingleNode("./div[@class='result_info c5']/div[@class='manga_genre']")),
                         Covers = new MangaCover[] { new MangaCover(coverstr.Substring(coverstr.IndexOf("('") + 2, coverstr.IndexOf("')") - coverstr.IndexOf("('") - 2)) },

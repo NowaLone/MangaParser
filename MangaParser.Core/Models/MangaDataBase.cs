@@ -6,6 +6,7 @@ namespace MangaParser.Core.Models
     /// <summary>
     /// Provides an object representation of a manga parameter with its own URI.
     /// </summary>
+    [Serializable]
     public class MangaDataBase : IData
     {
         #region Constructors

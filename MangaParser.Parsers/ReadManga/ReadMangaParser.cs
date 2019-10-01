@@ -184,7 +184,7 @@ namespace MangaParser.Parsers.ReadManga
 
         #region Search methods
 
-        private IEnumerable<ReadMangaObject> GetSearchResult(HtmlNode mainNode)
+        private IEnumerable<MangaObject> GetSearchResult(HtmlNode mainNode)
         {
             var thumbs = mainNode?.SelectNodes("./div[@class='tiles row']/div[@class='tile col-sm-6 ']");
 
@@ -192,7 +192,7 @@ namespace MangaParser.Parsers.ReadManga
             {
                 for (int i = 0; i < thumbs.Count; i++)
                 {
-                    var manga = new ReadMangaObject
+                    var manga = new MangaObject
                     {
                         Name = new MangaName(Decode(thumbs[i].SelectSingleNode("./div[@class='desc']/h4")?.InnerText), Decode(thumbs[i].SelectSingleNode("./div[@class='desc']/h3/a")?.InnerText), null),
                         MangaUri = new Uri(BaseUri, thumbs[i].SelectSingleNode("./div[@class='desc']/h3/a")?.Attributes["href"]?.Value),
@@ -346,11 +346,11 @@ namespace MangaParser.Parsers.ReadManga
             return Data;
         }
 
-        private ReadMangaObject GetMangaData(HtmlNode mainNode)
+        private MangaObject GetMangaData(HtmlNode mainNode)
         {
             var infoNode = mainNode?.SelectSingleNode(".//div[@class='flex-row']/div[@class='subject-meta col-sm-7']");
 
-            var manga = new ReadMangaObject
+            var manga = new MangaObject
             {
                 Name = GetName(mainNode),
                 Description = GetDescription(mainNode),

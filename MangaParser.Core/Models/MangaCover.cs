@@ -5,6 +5,7 @@ namespace MangaParser.Core.Models
     /// <summary>
     /// Provides an object representation of a manga cover.
     /// </summary>
+    [Serializable]
     public class MangaCover
     {
         #region Constructors
