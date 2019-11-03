@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace MangaParser.Core.Client
 {
-    public class MangaClient
+    public class MangaClient : IClient
     {
-        #region Fields
+        #region Readonly Fields
 
         private readonly List<IParser> parsers;
 
-        #endregion Fields
+        #endregion Readonly Fields
 
         #region Constructors
 
@@ -29,52 +29,19 @@ namespace MangaParser.Core.Client
 
         #region Methods
 
-        public void AddParser(IParser parser)
-        {
-            parsers.Add(parser);
-        }
+        public void AddParser(IParser parser) => parsers.Add(parser);
 
-        public void RemoveParser(IParser parser)
-        {
-            parsers.Remove(parser);
-        }
+        public void RemoveParser(IParser parser) => parsers.Remove(parser);
 
-        public IParser GetParser(string uri)
-        {
-            for (int i = 0; i < parsers.Count; i++)
-            {
-                if (uri.Contains(parsers[i].BaseUri.Host))
-                {
-                    return parsers[i];
-                }
-            }
+        public IParser GetParser(string uri) => parsers.FirstOrDefault(parser => uri.Contains(parser.BaseUri.Host));
 
-            return null;
-        }
+        public IParser GetParser<T>() where T : IParser => parsers.FirstOrDefault(parser => parser.GetType() == typeof(T));
 
-        public IParser GetParser<T>() where T : IParser
-        {
-            for (int i = 0; i < parsers.Count; i++)
-            {
-                if (parsers[i].GetType() == typeof(T))
-                {
-                    return parsers[i];
-                }
-            }
-
-            return null;
-        }
-
-        public IEnumerable<IParser> GetParserEnumerable()
-        {
-            return parsers;
-        }
-
-        #endregion Methods
+        #region IClient Methods
 
         #region Synchronous Methods
 
-        public IEnumerable<IMangaThumb> SearchManga(string query)
+        public virtual IEnumerable<IMangaThumb> SearchManga(string query)
         {
             for (int i = 0; i < parsers.Count; i++)
             {
@@ -94,7 +61,7 @@ namespace MangaParser.Core.Client
                 throw new ArgumentNullException(nameof(manga));
         }
 
-        public IEnumerable<IChapter> GetChapters(string mangaUri)
+        public virtual IEnumerable<IChapter> GetChapters(string mangaUri)
         {
             var parser = GetParser(mangaUri);
 
@@ -125,7 +92,7 @@ namespace MangaParser.Core.Client
                 throw new ArgumentNullException(nameof(chapter));
         }
 
-        public IEnumerable<IPage> GetPages(string chapterUri)
+        public virtual IEnumerable<IPage> GetPages(string chapterUri)
         {
             var parser = GetParser(chapterUri);
 
@@ -155,7 +122,7 @@ namespace MangaParser.Core.Client
                 throw new ArgumentNullException(nameof(mangaThumb));
         }
 
-        public IManga GetManga(string mangaUri)
+        public virtual IManga GetManga(string mangaUri)
         {
             var parser = GetParser(mangaUri);
 
@@ -174,7 +141,7 @@ namespace MangaParser.Core.Client
 
         #region Asynchronous Methods
 
-        public async Task<IEnumerable<IMangaThumb>> SearchMangaAsync(string query)
+        public virtual async Task<IEnumerable<IMangaThumb>> SearchMangaAsync(string query)
         {
             return await Task.Run(async () =>
             {
@@ -197,7 +164,7 @@ namespace MangaParser.Core.Client
                 throw new ArgumentNullException(nameof(manga));
         }
 
-        public async Task<IEnumerable<IChapter>> GetChaptersAsync(string mangaUri)
+        public virtual async Task<IEnumerable<IChapter>> GetChaptersAsync(string mangaUri)
         {
             var parser = GetParser(mangaUri);
 
@@ -220,7 +187,7 @@ namespace MangaParser.Core.Client
                 throw new ArgumentNullException(nameof(chapter));
         }
 
-        public async Task<IEnumerable<IPage>> GetPagesAsync(string chapterUri)
+        public virtual async Task<IEnumerable<IPage>> GetPagesAsync(string chapterUri)
         {
             var parser = GetParser(chapterUri);
 
@@ -243,7 +210,7 @@ namespace MangaParser.Core.Client
                 throw new ArgumentNullException(nameof(mangaThumb));
         }
 
-        public async Task<IManga> GetMangaAsync(string mangaUri)
+        public virtual async Task<IManga> GetMangaAsync(string mangaUri)
         {
             var parser = GetParser(mangaUri);
 
@@ -259,5 +226,9 @@ namespace MangaParser.Core.Client
         }
 
         #endregion Asynchronous Methods
+
+        #endregion IClient Methods
+
+        #endregion Methods
     }
 }
