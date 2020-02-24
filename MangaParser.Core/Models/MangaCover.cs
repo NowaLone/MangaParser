@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MangaParser.Core.Interfaces;
+using System;
 
 namespace MangaParser.Core.Models
 {
@@ -6,7 +7,7 @@ namespace MangaParser.Core.Models
     /// Provides an object representation of a manga cover.
     /// </summary>
     [Serializable]
-    public class MangaCover
+    public class MangaCover : IMangaCover
     {
         #region Constructors
 

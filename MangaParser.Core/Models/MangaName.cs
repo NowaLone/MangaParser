@@ -1,9 +1,10 @@
-﻿using System;
+﻿using MangaParser.Core.Interfaces;
+using System;
 
 namespace MangaParser.Core.Models
 {
     [Serializable]
-    public class MangaName
+    public class MangaName : IMangaName
     {
         #region Constructors
 

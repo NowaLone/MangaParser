@@ -7,7 +7,7 @@ namespace MangaParser.Core.Models
     /// Provides an object representation of a manga with some information.
     /// </summary>
     [Serializable]
-    public class MangaObject : IManga
+    public class MangaObject : IMangaObject
     {
         #region Constructors
 
@@ -34,6 +34,7 @@ namespace MangaParser.Core.Models
         public string Description { get; set; }
         public string Volumes { get; set; }
         public Uri MangaUri { get; set; }
+        public string Source => MangaUri != null ? MangaUri.Host : "Unknown";
 
         #endregion Properties
 
