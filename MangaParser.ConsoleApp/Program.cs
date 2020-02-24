@@ -13,7 +13,7 @@ namespace MangaParser.ConsoleApp
 {
     public class Program
     {
-        private static readonly IClient client = new MangaClient(new IParser[]
+        private static readonly MangaClient client = new MangaClient(new IParser[]
         {
             new ReadMangaParser(),
             new MintMangaParser(),
