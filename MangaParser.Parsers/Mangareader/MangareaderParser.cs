@@ -11,7 +11,7 @@ namespace MangaParser.Parsers.Mangareader
     {
         #region Constructors
 
-        public MangareaderParser(string baseUri = "https://www.mangareader.net") : base(baseUri)
+        public MangareaderParser(string baseUri = "http://www.mangareader.net") : base(baseUri)
         {
         }
 
@@ -246,7 +246,7 @@ namespace MangaParser.Parsers.Mangareader
                     var manga = new MangaObject
                     {
                         Genres = GetThumbGenres(thumbs[i].SelectSingleNode("./div[@class='result_info c5']/div[@class='manga_genre']")),
-                        Covers = new MangaCover[] { new MangaCover(coverstr.Substring(coverstr.IndexOf("('") + 2, coverstr.IndexOf("')") - coverstr.IndexOf("('") - 2)) },
+                        Covers = new MangaCover[] { new MangaCover(FixCoverProtocol(coverstr.Substring(coverstr.IndexOf("('") + 2, coverstr.IndexOf("')") - coverstr.IndexOf("('") - 2))) },
                         MangaUri = new Uri(BaseUri, thumbs[i].SelectSingleNode("./div[@class='result_info c5']/div[@class='manga_name']/div/h3/a")?.Attributes["href"]?.Value),
                         Name = new MangaName(null, null, thumbs[i].SelectSingleNode("./div[@class='result_info c5']/div[@class='manga_name']/div/h3/a")?.InnerText),
                     };
@@ -339,7 +339,7 @@ namespace MangaParser.Parsers.Mangareader
 
             if (imageNode != null)
             {
-                images = new MangaCover[] { new MangaCover(null, null, imageNode.Attributes["src"]?.Value) };
+                images = new MangaCover[] { new MangaCover(null, null, FixCoverProtocol(imageNode.Attributes["src"]?.Value)) };
             }
             else
                 images = new MangaCover[0];
@@ -394,6 +394,16 @@ namespace MangaParser.Parsers.Mangareader
         }
 
         #endregion Data Getting Methods
+
+        /// <summary>
+        /// Cause mangareader/mangapanda redirect from https to http image
+        /// </summary>
+        /// <param name="coverUri">Cover link</param>
+        /// <returns></returns>
+        private string FixCoverProtocol(string coverUri)
+        {
+            return coverUri.Contains("https") ? coverUri.Replace("https", "http") : coverUri;
+        }
 
         #endregion Private Methods
     }
