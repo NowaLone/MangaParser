@@ -6,7 +6,7 @@ namespace MangaParser.Parsers.MintManga
     {
         #region Constructors
 
-        public MintMangaParser(string baseUri = "http://mintmanga.com") : base(baseUri)
+        public MintMangaParser(string baseUri = "http://mintmanga.live") : base(baseUri)
         {
         }
 

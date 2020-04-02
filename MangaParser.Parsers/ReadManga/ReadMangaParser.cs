@@ -21,7 +21,7 @@ namespace MangaParser.Parsers.ReadManga
         /// <summary>
         /// Pattern for js array scraping.
         /// </summary>
-        private const string pattern = "\\[.*?'(http.*?)'\\,\\\"(.*?)\\\"";
+        private const string pattern = "\\[.*?'(http.*?)'\\,'(http.*?)'\\,\\\"(.*?)\\\"";
 
         #endregion Fields
 
@@ -386,7 +386,7 @@ namespace MangaParser.Parsers.ReadManga
                     {
                         for (int i = 0; i < matchs.Count; i++)
                         {
-                            yield return new MangaPage(matchs[i].Groups[1].Value + matchs[i].Groups[2].Value);
+                            yield return new MangaPage(matchs[i].Groups[1].Value + matchs[i].Groups[3].Value);
                         }
                     }
                 }
