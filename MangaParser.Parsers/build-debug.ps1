@@ -1,1 +1,0 @@
-dotnet build -property:Configuration=Debug
