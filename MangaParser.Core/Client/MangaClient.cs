@@ -10,7 +10,7 @@ namespace MangaParser.Core.Client
     {
         #region Readonly Fields
 
-        private readonly ICollection<IParser> parsers;
+        protected readonly ICollection<IParser> parsers;
 
         #endregion Readonly Fields
 
@@ -137,7 +137,7 @@ namespace MangaParser.Core.Client
 
         #region GetManga
 
-        public IManga GetManga(IMangaThumb manga)
+        public virtual IManga GetManga(IMangaThumb manga)
         {
             var parser = GetParser(manga.MangaUri);
 
@@ -161,7 +161,7 @@ namespace MangaParser.Core.Client
             return parser.GetManga(url);
         }
 
-        public IManga GetManga(Uri url)
+        public virtual IManga GetManga(Uri url)
         {
             var parser = GetParser(url);
 
@@ -177,7 +177,7 @@ namespace MangaParser.Core.Client
 
         #region GetChapters
 
-        public IEnumerable<IChapter> GetChapters(IMangaThumb manga)
+        public virtual IEnumerable<IChapter> GetChapters(IMangaThumb manga)
         {
             var parser = GetParser(manga.MangaUri);
 
@@ -201,7 +201,7 @@ namespace MangaParser.Core.Client
             return parser.GetChapters(url);
         }
 
-        public IEnumerable<IChapter> GetChapters(Uri url)
+        public virtual IEnumerable<IChapter> GetChapters(Uri url)
         {
             var parser = GetParser(url);
 
@@ -217,7 +217,7 @@ namespace MangaParser.Core.Client
 
         #region GetPages
 
-        public IEnumerable<IPage> GetPages(IChapter chapter)
+        public virtual IEnumerable<IPage> GetPages(IChapter chapter)
         {
             var parser = GetParser(chapter.ChapterUri);
 
@@ -241,7 +241,7 @@ namespace MangaParser.Core.Client
             return parser.GetPages(url);
         }
 
-        public IEnumerable<IPage> GetPages(Uri url)
+        public virtual IEnumerable<IPage> GetPages(Uri url)
         {
             var parser = GetParser(url);
 
