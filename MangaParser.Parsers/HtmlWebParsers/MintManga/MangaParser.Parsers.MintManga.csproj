@@ -5,11 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="HtmlAgilityPack" Version="1.11.12" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.24" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\MangaParser.Core\MangaParser.Core.csproj" />
+    <ProjectReference Include="..\..\..\MangaParser.Core\MangaParser.Core.csproj" />
+    <ProjectReference Include="..\..\MangaParser.Parsers.csproj" />
     <ProjectReference Include="..\ReadManga\MangaParser.Parsers.ReadManga.csproj" />
   </ItemGroup>
 
