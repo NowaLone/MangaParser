@@ -33,7 +33,7 @@ namespace MangaParser.Core.Client
 
         public void RemoveParser(IParser parser) => parsers.Remove(parser);
 
-        public IParser GetParser(string uri) => parsers.FirstOrDefault(parser => uri.Contains(parser.BaseUri.Host));
+        public IParser GetParser(string uri) => parsers.FirstOrDefault(parser => uri.Contains(parser.BaseUrl.Host));
 
         public IParser GetParser<T>() where T : IParser => parsers.FirstOrDefault(parser => parser.GetType() == typeof(T));
 
