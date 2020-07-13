@@ -1,52 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace MangaParser.Core.Interfaces
 {
-    public interface IClient
+    public interface IClient : IParserSync, IParserAsync
     {
         #region Methods
 
-        IEnumerable<IMangaThumb> SearchManga(string query);
+        #region AddParser
 
-        Task<IEnumerable<IMangaThumb>> SearchMangaAsync(string query);
+        public void AddParser(IParser parser);
 
-        IEnumerable<IChapter> GetChapters(IMangaThumb manga);
+        #endregion AddParser
 
-        IEnumerable<IChapter> GetChapters(string mangaUri);
+        #region RemoveParser
 
-        IEnumerable<IChapter> GetChapters(Uri mangaUri);
+        public bool RemoveParser(string url);
 
-        Task<IEnumerable<IChapter>> GetChaptersAsync(IMangaThumb manga);
+        public bool RemoveParser(Uri url);
 
-        Task<IEnumerable<IChapter>> GetChaptersAsync(string mangaUri);
+        public bool RemoveParser(IParser parser);
 
-        Task<IEnumerable<IChapter>> GetChaptersAsync(Uri mangaUri);
+        public bool RemoveParser<T>() where T : IParser;
 
-        IManga GetManga(IMangaThumb mangaThumb);
+        #endregion RemoveParser
 
-        IManga GetManga(string mangaUri);
+        #region GetParser
 
-        IManga GetManga(Uri mangaUri);
+        public IParser GetParser(string url);
 
-        Task<IManga> GetMangaAsync(IMangaThumb mangaThumb);
+        public IParser GetParser(Uri url);
 
-        Task<IManga> GetMangaAsync(string mangaUri);
+        public IParser GetParser<T>() where T : IParser;
 
-        Task<IManga> GetMangaAsync(Uri mangaUri);
-
-        IEnumerable<IPage> GetPages(IChapter chapter);
-
-        IEnumerable<IPage> GetPages(string chapterUri);
-
-        IEnumerable<IPage> GetPages(Uri chapterUri);
-
-        Task<IEnumerable<IPage>> GetPagesAsync(IChapter chapter);
-
-        Task<IEnumerable<IPage>> GetPagesAsync(string chapterUri);
-
-        Task<IEnumerable<IPage>> GetPagesAsync(Uri chapterUri);
+        #endregion GetParser
 
         #endregion Methods
     }

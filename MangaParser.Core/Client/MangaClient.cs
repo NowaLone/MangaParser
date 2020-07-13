@@ -10,7 +10,7 @@ namespace MangaParser.Core.Client
     {
         #region Readonly Fields
 
-        private readonly List<IParser> parsers;
+        private readonly ICollection<IParser> parsers;
 
         #endregion Readonly Fields
 
@@ -22,212 +22,373 @@ namespace MangaParser.Core.Client
 
         public MangaClient(ICollection<IParser> parsers)
         {
-            this.parsers = parsers.ToList();
+            this.parsers = parsers;
         }
 
         #endregion Constructors
 
         #region Methods
 
-        public void AddParser(IParser parser) => parsers.Add(parser);
+        #region IClient
 
-        public void RemoveParser(IParser parser) => parsers.Remove(parser);
+        #region AddParser
 
-        public IParser GetParser(string uri) => parsers.FirstOrDefault(parser => uri.Contains(parser.BaseUrl.Host));
+        public virtual void AddParser(IParser parser)
+        {
+            if (!parsers.Contains(parser))
+            {
+                parsers.Add(parser);
+            }
+        }
 
-        public IParser GetParser<T>() where T : IParser => parsers.FirstOrDefault(parser => parser.GetType() == typeof(T));
+        #endregion AddParser
 
-        #region IClient Methods
+        #region RemoveParser
 
-        #region Synchronous Methods
+        public virtual bool RemoveParser(string url)
+        {
+            var parser = GetParser(url);
+
+            return parser != null && RemoveParser(parser);
+        }
+
+        public virtual bool RemoveParser(Uri url)
+        {
+            var parser = GetParser(url);
+
+            return parser != null && RemoveParser(parser);
+        }
+
+        public virtual bool RemoveParser(IParser parser)
+        {
+            return parsers.Remove(parser);
+        }
+
+        public virtual bool RemoveParser<T>() where T : IParser
+        {
+            var parser = GetParser<T>();
+
+            return parser != null && RemoveParser(parser);
+        }
+
+        #endregion RemoveParser
+
+        #region GetParser
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        /// <exception cref="UriFormatException"></exception>
+        public virtual IParser GetParser(string url)
+        {
+            if (Uri.TryCreate(url, UriKind.Absolute, out var result))
+            {
+                return GetParser(result);
+            }
+            else
+            {
+                throw new UriFormatException($"{nameof(url)} is an invalid url.");
+            }
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
+        public virtual IParser GetParser(Uri url)
+        {
+            if (url is null)
+            {
+                throw new ArgumentNullException(nameof(url));
+            }
+
+            return parsers.FirstOrDefault(parser => parser.BaseUrl.Equals(url));
+        }
+
+        public virtual IParser GetParser<T>() where T : IParser
+        {
+            return parsers.FirstOrDefault(parser => parser.GetType() == typeof(T));
+        }
+
+        #endregion GetParser
+
+        #endregion IClient
+
+        #region IParserSync
+
+        #region Search
 
         public virtual IEnumerable<IMangaThumb> SearchManga(string query)
         {
-            for (int i = 0; i < parsers.Count; i++)
+            foreach (var parser in parsers)
             {
-                foreach (IMangaThumb manga in parsers[i].SearchManga(query))
+                foreach (var result in parser.SearchManga(query))
                 {
-                    yield return manga;
+                    yield return result;
                 }
             }
         }
 
+        #endregion Search
+
+        #region GetManga
+
+        public IManga GetManga(IMangaThumb manga)
+        {
+            var parser = GetParser(manga.MangaUri);
+
+            if (parser is null)
+            {
+                throw new ArgumentException("Can't find a suitable parser.", nameof(manga));
+            }
+
+            return parser.GetManga(manga);
+        }
+
+        public virtual IManga GetManga(string url)
+        {
+            var parser = GetParser(url);
+
+            if (parser is null)
+            {
+                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+            }
+
+            return parser.GetManga(url);
+        }
+
+        public IManga GetManga(Uri url)
+        {
+            var parser = GetParser(url);
+
+            if (parser is null)
+            {
+                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+            }
+
+            return parser.GetManga(url);
+        }
+
+        #endregion GetManga
+
+        #region GetChapters
+
         public IEnumerable<IChapter> GetChapters(IMangaThumb manga)
         {
-            if (manga != null)
-                foreach (var item in GetChapters(manga.MangaUri.OriginalString))
-                    yield return item;
-            else
-                throw new ArgumentNullException(nameof(manga));
+            var parser = GetParser(manga.MangaUri);
+
+            if (parser is null)
+            {
+                throw new ArgumentException("Can't find a suitable parser.", nameof(manga));
+            }
+
+            return parser.GetChapters(manga);
         }
 
-        public virtual IEnumerable<IChapter> GetChapters(string mangaUri)
+        public virtual IEnumerable<IChapter> GetChapters(string url)
         {
-            var parser = GetParser(mangaUri);
+            var parser = GetParser(url);
 
-            if (parser != null)
-                foreach (IChapter chapter in parser.GetChapters(mangaUri))
-                {
-                    yield return chapter;
-                }
-            else
-                yield return null;
+            if (parser is null)
+            {
+                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+            }
+
+            return parser.GetChapters(url);
         }
 
-        public IEnumerable<IChapter> GetChapters(Uri mangaUri)
+        public IEnumerable<IChapter> GetChapters(Uri url)
         {
-            if (mangaUri != null)
-                foreach (var item in GetChapters(mangaUri.OriginalString))
-                    yield return item;
-            else
-                throw new ArgumentNullException(nameof(mangaUri));
+            var parser = GetParser(url);
+
+            if (parser is null)
+            {
+                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+            }
+
+            return parser.GetChapters(url);
         }
+
+        #endregion GetChapters
+
+        #region GetPages
 
         public IEnumerable<IPage> GetPages(IChapter chapter)
         {
-            if (chapter != null)
-                foreach (var item in GetPages(chapter.ChapterUri.OriginalString))
-                    yield return item;
-            else
-                throw new ArgumentNullException(nameof(chapter));
-        }
+            var parser = GetParser(chapter.ChapterUri);
 
-        public virtual IEnumerable<IPage> GetPages(string chapterUri)
-        {
-            var parser = GetParser(chapterUri);
-
-            if (parser != null)
-                foreach (IPage page in parser.GetPages(chapterUri))
-                {
-                    yield return page;
-                }
-            else
-                yield return null;
-        }
-
-        public IEnumerable<IPage> GetPages(Uri chapterUri)
-        {
-            if (chapterUri != null)
-                foreach (var item in GetPages(chapterUri.OriginalString))
-                    yield return item;
-            else
-                throw new ArgumentNullException(nameof(chapterUri));
-        }
-
-        public IManga GetManga(IMangaThumb mangaThumb)
-        {
-            if (mangaThumb != null)
-                return GetManga(mangaThumb.MangaUri.OriginalString);
-            else
-                throw new ArgumentNullException(nameof(mangaThumb));
-        }
-
-        public virtual IManga GetManga(string mangaUri)
-        {
-            var parser = GetParser(mangaUri);
-
-            return parser != null ? parser.GetManga(mangaUri) : null;
-        }
-
-        public IManga GetManga(Uri mangaUri)
-        {
-            if (mangaUri != null)
-                return GetManga(mangaUri.OriginalString);
-            else
-                throw new ArgumentNullException(nameof(mangaUri));
-        }
-
-        #endregion Synchronous Methods
-
-        #region Asynchronous Methods
-
-        public virtual async Task<IEnumerable<IMangaThumb>> SearchMangaAsync(string query)
-        {
-            return await Task.Run(async () =>
+            if (parser is null)
             {
-                List<IMangaThumb> result = new List<IMangaThumb>();
+                throw new ArgumentException("Can't find a suitable parser.", nameof(chapter));
+            }
 
-                for (int i = 0; i < parsers.Count; i++)
-                {
-                    result.AddRange(await parsers[i].SearchMangaAsync(query));
-                }
-
-                return result;
-            });
+            return parser.GetPages(chapter);
         }
 
-        public async Task<IEnumerable<IChapter>> GetChaptersAsync(IMangaThumb manga)
+        public virtual IEnumerable<IPage> GetPages(string url)
         {
-            if (manga != null)
-                return await GetChaptersAsync(manga.MangaUri.OriginalString);
-            else
-                throw new ArgumentNullException(nameof(manga));
+            var parser = GetParser(url);
+
+            if (parser is null)
+            {
+                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+            }
+
+            return parser.GetPages(url);
         }
 
-        public virtual async Task<IEnumerable<IChapter>> GetChaptersAsync(string mangaUri)
+        public IEnumerable<IPage> GetPages(Uri url)
         {
-            var parser = GetParser(mangaUri);
+            var parser = GetParser(url);
 
-            return parser != null ? await parser.GetChaptersAsync(mangaUri) : null;
+            if (parser is null)
+            {
+                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+            }
+
+            return parser.GetPages(url);
         }
 
-        public async Task<IEnumerable<IChapter>> GetChaptersAsync(Uri mangaUri)
+        #endregion GetPages
+
+        #endregion IParserSync
+
+        #region IParserAsync
+
+        #region Search
+
+        public virtual Task<IEnumerable<IMangaThumb>> SearchMangaAsync(string query)
         {
-            if (mangaUri != null)
-                return await GetChaptersAsync(mangaUri.OriginalString);
-            else
-                throw new ArgumentNullException(nameof(mangaUri));
+            return Task.Run(() => SearchManga(query));
         }
 
-        public async Task<IEnumerable<IPage>> GetPagesAsync(IChapter chapter)
+        #endregion Search
+
+        #region GetManga
+
+        public virtual Task<IManga> GetMangaAsync(IMangaThumb manga)
         {
-            if (chapter != null)
-                return await GetPagesAsync(chapter.ChapterUri.OriginalString);
-            else
-                throw new ArgumentNullException(nameof(chapter));
+            var parser = GetParser(manga.MangaUri);
+
+            if (parser is null)
+            {
+                throw new ArgumentException("Can't find a suitable parser.", nameof(manga));
+            }
+
+            return parser.GetMangaAsync(manga);
         }
 
-        public virtual async Task<IEnumerable<IPage>> GetPagesAsync(string chapterUri)
+        public virtual Task<IManga> GetMangaAsync(string url)
         {
-            var parser = GetParser(chapterUri);
+            var parser = GetParser(url);
 
-            return parser != null ? await parser.GetPagesAsync(chapterUri) : null;
+            if (parser is null)
+            {
+                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+            }
+
+            return parser.GetMangaAsync(url);
         }
 
-        public async Task<IEnumerable<IPage>> GetPagesAsync(Uri chapterUri)
+        public virtual Task<IManga> GetMangaAsync(Uri url)
         {
-            if (chapterUri != null)
-                return await GetPagesAsync(chapterUri.OriginalString);
-            else
-                throw new ArgumentNullException(nameof(chapterUri));
+            var parser = GetParser(url);
+
+            if (parser is null)
+            {
+                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+            }
+
+            return parser.GetMangaAsync(url);
         }
 
-        public async Task<IManga> GetMangaAsync(IMangaThumb mangaThumb)
+        #endregion GetManga
+
+        #region GetChapters
+
+        public virtual Task<IEnumerable<IChapter>> GetChaptersAsync(IMangaThumb manga)
         {
-            if (mangaThumb != null)
-                return await GetMangaAsync(mangaThumb.MangaUri.OriginalString);
-            else
-                throw new ArgumentNullException(nameof(mangaThumb));
+            var parser = GetParser(manga.MangaUri);
+
+            if (parser is null)
+            {
+                throw new ArgumentException("Can't find a suitable parser.", nameof(manga));
+            }
+
+            return parser.GetChaptersAsync(manga);
         }
 
-        public virtual async Task<IManga> GetMangaAsync(string mangaUri)
+        public virtual Task<IEnumerable<IChapter>> GetChaptersAsync(string url)
         {
-            var parser = GetParser(mangaUri);
+            var parser = GetParser(url);
 
-            return parser != null ? await parser.GetMangaAsync(mangaUri) : null;
+            if (parser is null)
+            {
+                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+            }
+
+            return parser.GetChaptersAsync(url);
         }
 
-        public async Task<IManga> GetMangaAsync(Uri mangaUri)
+        public virtual Task<IEnumerable<IChapter>> GetChaptersAsync(Uri url)
         {
-            if (mangaUri != null)
-                return await GetMangaAsync(mangaUri.OriginalString);
-            else
-                throw new ArgumentNullException(nameof(mangaUri));
+            var parser = GetParser(url);
+
+            if (parser is null)
+            {
+                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+            }
+
+            return parser.GetChaptersAsync(url);
         }
 
-        #endregion Asynchronous Methods
+        #endregion GetChapters
 
-        #endregion IClient Methods
+        #region GetPages
+
+        public virtual Task<IEnumerable<IPage>> GetPagesAsync(IChapter chapter)
+        {
+            var parser = GetParser(chapter.ChapterUri);
+
+            if (parser is null)
+            {
+                throw new ArgumentException("Can't find a suitable parser.", nameof(chapter));
+            }
+
+            return parser.GetPagesAsync(chapter);
+        }
+
+        public virtual Task<IEnumerable<IPage>> GetPagesAsync(string url)
+        {
+            var parser = GetParser(url);
+
+            if (parser is null)
+            {
+                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+            }
+
+            return parser.GetPagesAsync(url);
+        }
+
+        public virtual Task<IEnumerable<IPage>> GetPagesAsync(Uri url)
+        {
+            var parser = GetParser(url);
+
+            if (parser is null)
+            {
+                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+            }
+
+            return parser.GetPagesAsync(url);
+        }
+
+        #endregion GetPages
+
+        #endregion IParserAsync
 
         #endregion Methods
     }
