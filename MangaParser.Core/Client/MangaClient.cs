@@ -1,4 +1,5 @@
-﻿using MangaParser.Core.Interfaces;
+﻿using MangaParser.Core.Exceptions;
+using MangaParser.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -143,7 +144,7 @@ namespace MangaParser.Core.Client
 
             if (parser is null)
             {
-                throw new ArgumentException("Can't find a suitable parser.", nameof(manga));
+                throw new ParserNotFoundException(manga.Url);
             }
 
             return parser.GetManga(manga);
@@ -155,7 +156,7 @@ namespace MangaParser.Core.Client
 
             if (parser is null)
             {
-                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+                throw new ParserNotFoundException(url);
             }
 
             return parser.GetManga(url);
@@ -167,7 +168,7 @@ namespace MangaParser.Core.Client
 
             if (parser is null)
             {
-                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+                throw new ParserNotFoundException(url);
             }
 
             return parser.GetManga(url);
@@ -183,7 +184,7 @@ namespace MangaParser.Core.Client
 
             if (parser is null)
             {
-                throw new ArgumentException("Can't find a suitable parser.", nameof(manga));
+                throw new ParserNotFoundException(manga.Url);
             }
 
             return parser.GetChapters(manga);
@@ -195,7 +196,7 @@ namespace MangaParser.Core.Client
 
             if (parser is null)
             {
-                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+                throw new ParserNotFoundException(url);
             }
 
             return parser.GetChapters(url);
@@ -207,7 +208,7 @@ namespace MangaParser.Core.Client
 
             if (parser is null)
             {
-                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+                throw new ParserNotFoundException(url);
             }
 
             return parser.GetChapters(url);
@@ -223,7 +224,7 @@ namespace MangaParser.Core.Client
 
             if (parser is null)
             {
-                throw new ArgumentException("Can't find a suitable parser.", nameof(chapter));
+                throw new ParserNotFoundException(chapter.Url);
             }
 
             return parser.GetPages(chapter);
@@ -235,7 +236,7 @@ namespace MangaParser.Core.Client
 
             if (parser is null)
             {
-                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+                throw new ParserNotFoundException(url);
             }
 
             return parser.GetPages(url);
@@ -247,7 +248,7 @@ namespace MangaParser.Core.Client
 
             if (parser is null)
             {
-                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+                throw new ParserNotFoundException(url);
             }
 
             return parser.GetPages(url);
@@ -276,7 +277,7 @@ namespace MangaParser.Core.Client
 
             if (parser is null)
             {
-                throw new ArgumentException("Can't find a suitable parser.", nameof(manga));
+                throw new ParserNotFoundException(manga.Url);
             }
 
             return parser.GetMangaAsync(manga);
@@ -288,7 +289,7 @@ namespace MangaParser.Core.Client
 
             if (parser is null)
             {
-                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+                throw new ParserNotFoundException(url);
             }
 
             return parser.GetMangaAsync(url);
@@ -300,7 +301,7 @@ namespace MangaParser.Core.Client
 
             if (parser is null)
             {
-                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+                throw new ParserNotFoundException(url);
             }
 
             return parser.GetMangaAsync(url);
@@ -316,7 +317,7 @@ namespace MangaParser.Core.Client
 
             if (parser is null)
             {
-                throw new ArgumentException("Can't find a suitable parser.", nameof(manga));
+                throw new ParserNotFoundException(manga.Url);
             }
 
             return parser.GetChaptersAsync(manga);
@@ -328,7 +329,7 @@ namespace MangaParser.Core.Client
 
             if (parser is null)
             {
-                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+                throw new ParserNotFoundException(url);
             }
 
             return parser.GetChaptersAsync(url);
@@ -340,7 +341,7 @@ namespace MangaParser.Core.Client
 
             if (parser is null)
             {
-                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+                throw new ParserNotFoundException(url);
             }
 
             return parser.GetChaptersAsync(url);
@@ -356,7 +357,7 @@ namespace MangaParser.Core.Client
 
             if (parser is null)
             {
-                throw new ArgumentException("Can't find a suitable parser.", nameof(chapter));
+                throw new ParserNotFoundException(chapter.Url);
             }
 
             return parser.GetPagesAsync(chapter);
@@ -368,7 +369,7 @@ namespace MangaParser.Core.Client
 
             if (parser is null)
             {
-                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+                throw new ParserNotFoundException(url);
             }
 
             return parser.GetPagesAsync(url);
@@ -380,7 +381,7 @@ namespace MangaParser.Core.Client
 
             if (parser is null)
             {
-                throw new ArgumentException("Can't find a suitable parser.", nameof(url));
+                throw new ParserNotFoundException(url);
             }
 
             return parser.GetPagesAsync(url);

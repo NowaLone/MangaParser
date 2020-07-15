@@ -1,4 +1,5 @@
-﻿using MangaParser.Core.Interfaces;
+﻿using MangaParser.Core.Exceptions;
+using MangaParser.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -97,7 +98,7 @@ namespace MangaParser.Core.Models
                 }
                 else
                 {
-                    throw new ArgumentException($"Base url host and parameter host don't match.", nameof(url));
+                    throw new BaseHostNotMatchException(BaseUrl.Host, result.Host, nameof(url));
                 }
             }
             else
@@ -146,7 +147,7 @@ namespace MangaParser.Core.Models
                 }
                 else
                 {
-                    throw new ArgumentException($"Base url host and parameter host don't match.", nameof(url));
+                    throw new BaseHostNotMatchException(BaseUrl.Host, result.Host, nameof(url));
                 }
             }
             else
@@ -195,7 +196,7 @@ namespace MangaParser.Core.Models
                 }
                 else
                 {
-                    throw new ArgumentException($"Base url host and parameter host don't match.", nameof(url));
+                    throw new BaseHostNotMatchException(BaseUrl.Host, result.Host, nameof(url));
                 }
             }
             else
@@ -251,7 +252,7 @@ namespace MangaParser.Core.Models
                 }
                 else
                 {
-                    throw new ArgumentException($"Base url host and parameter host don't match.", nameof(url));
+                    throw new BaseHostNotMatchException(BaseUrl.Host, result.Host, nameof(url));
                 }
             }
             else
@@ -291,7 +292,7 @@ namespace MangaParser.Core.Models
                 }
                 else
                 {
-                    throw new ArgumentException($"Base url host and parameter host don't match.", nameof(url));
+                    throw new BaseHostNotMatchException(BaseUrl.Host, result.Host, nameof(url));
                 }
             }
             else
@@ -331,7 +332,7 @@ namespace MangaParser.Core.Models
                 }
                 else
                 {
-                    throw new ArgumentException($"Base url host and parameter host don't match.", nameof(url));
+                    throw new BaseHostNotMatchException(BaseUrl.Host, result.Host, nameof(url));
                 }
             }
             else
