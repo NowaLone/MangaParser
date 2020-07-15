@@ -3,26 +3,23 @@
 namespace MangaParser.Core.Interfaces
 {
     /// <summary>
-    /// Defines a minimum information about a manga chapter.
+    /// Defines a minimum information about the manga chapter.
     /// </summary>
-    public interface IChapter
+    public interface IChapter : IDataBase<IName>
     {
         #region Properties
 
         /// <summary>
-        /// Date when the chapter was added.
+        /// Gets date when the chapter was added.
         /// </summary>
+        /// <returns>Date when the chapter was added.</returns>
         DateTime AddedDate { get; }
-        
-        /// <summary>
-        /// The chapter title.
-        /// </summary>
-        string Name { get; }
 
         /// <summary>
-        /// A link to the chapter page.
+        /// Gets the chapter cover.
         /// </summary>
-        Uri ChapterUri { get; }
+        /// <returns>The chapter cover.</returns>
+        ICover Cover { get; }
 
         #endregion Properties
     }

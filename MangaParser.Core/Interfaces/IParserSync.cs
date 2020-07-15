@@ -12,23 +12,23 @@ namespace MangaParser.Core.Interfaces
 
         #region Search
 
-        IEnumerable<IMangaThumb> SearchManga(string query);
+        IEnumerable<IMangaObject> SearchManga(string query);
 
         #endregion Search
 
         #region GetManga
 
-        IManga GetManga(IMangaThumb manga);
+        IMangaObject GetManga(IMangaObject manga);
 
-        IManga GetManga(string url);
+        IMangaObject GetManga(string url);
 
-        IManga GetManga(Uri url);
+        IMangaObject GetManga(Uri url);
 
         #endregion GetManga
 
         #region GetChapters
 
-        IEnumerable<IChapter> GetChapters(IMangaThumb manga);
+        IEnumerable<IChapter> GetChapters(IMangaObject manga);
 
         IEnumerable<IChapter> GetChapters(string url);
 
@@ -38,11 +38,11 @@ namespace MangaParser.Core.Interfaces
 
         #region GetPages
 
-        IEnumerable<IPage> GetPages(IChapter chapter);
+        IEnumerable<IDataBase> GetPages(IChapter chapter);
 
-        IEnumerable<IPage> GetPages(string url);
+        IEnumerable<IDataBase> GetPages(string url);
 
-        IEnumerable<IPage> GetPages(Uri url);
+        IEnumerable<IDataBase> GetPages(Uri url);
 
         #endregion GetPages
 

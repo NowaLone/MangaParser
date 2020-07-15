@@ -122,7 +122,7 @@ namespace MangaParser.Core.Client
 
         #region Search
 
-        public virtual IEnumerable<IMangaThumb> SearchManga(string query)
+        public virtual IEnumerable<IMangaObject> SearchManga(string query)
         {
             foreach (var parser in parsers)
             {
@@ -137,9 +137,9 @@ namespace MangaParser.Core.Client
 
         #region GetManga
 
-        public virtual IManga GetManga(IMangaThumb manga)
+        public virtual IMangaObject GetManga(IMangaObject manga)
         {
-            var parser = GetParser(manga.MangaUri);
+            var parser = GetParser(manga.Url);
 
             if (parser is null)
             {
@@ -149,7 +149,7 @@ namespace MangaParser.Core.Client
             return parser.GetManga(manga);
         }
 
-        public virtual IManga GetManga(string url)
+        public virtual IMangaObject GetManga(string url)
         {
             var parser = GetParser(url);
 
@@ -161,7 +161,7 @@ namespace MangaParser.Core.Client
             return parser.GetManga(url);
         }
 
-        public virtual IManga GetManga(Uri url)
+        public virtual IMangaObject GetManga(Uri url)
         {
             var parser = GetParser(url);
 
@@ -177,9 +177,9 @@ namespace MangaParser.Core.Client
 
         #region GetChapters
 
-        public virtual IEnumerable<IChapter> GetChapters(IMangaThumb manga)
+        public virtual IEnumerable<IChapter> GetChapters(IMangaObject manga)
         {
-            var parser = GetParser(manga.MangaUri);
+            var parser = GetParser(manga.Url);
 
             if (parser is null)
             {
@@ -217,9 +217,9 @@ namespace MangaParser.Core.Client
 
         #region GetPages
 
-        public virtual IEnumerable<IPage> GetPages(IChapter chapter)
+        public virtual IEnumerable<IDataBase> GetPages(IChapter chapter)
         {
-            var parser = GetParser(chapter.ChapterUri);
+            var parser = GetParser(chapter.Url);
 
             if (parser is null)
             {
@@ -229,7 +229,7 @@ namespace MangaParser.Core.Client
             return parser.GetPages(chapter);
         }
 
-        public virtual IEnumerable<IPage> GetPages(string url)
+        public virtual IEnumerable<IDataBase> GetPages(string url)
         {
             var parser = GetParser(url);
 
@@ -241,7 +241,7 @@ namespace MangaParser.Core.Client
             return parser.GetPages(url);
         }
 
-        public virtual IEnumerable<IPage> GetPages(Uri url)
+        public virtual IEnumerable<IDataBase> GetPages(Uri url)
         {
             var parser = GetParser(url);
 
@@ -261,7 +261,7 @@ namespace MangaParser.Core.Client
 
         #region Search
 
-        public virtual Task<IEnumerable<IMangaThumb>> SearchMangaAsync(string query)
+        public virtual Task<IEnumerable<IMangaObject>> SearchMangaAsync(string query)
         {
             return Task.Run(() => SearchManga(query));
         }
@@ -270,9 +270,9 @@ namespace MangaParser.Core.Client
 
         #region GetManga
 
-        public virtual Task<IManga> GetMangaAsync(IMangaThumb manga)
+        public virtual Task<IMangaObject> GetMangaAsync(IMangaObject manga)
         {
-            var parser = GetParser(manga.MangaUri);
+            var parser = GetParser(manga.Url);
 
             if (parser is null)
             {
@@ -282,7 +282,7 @@ namespace MangaParser.Core.Client
             return parser.GetMangaAsync(manga);
         }
 
-        public virtual Task<IManga> GetMangaAsync(string url)
+        public virtual Task<IMangaObject> GetMangaAsync(string url)
         {
             var parser = GetParser(url);
 
@@ -294,7 +294,7 @@ namespace MangaParser.Core.Client
             return parser.GetMangaAsync(url);
         }
 
-        public virtual Task<IManga> GetMangaAsync(Uri url)
+        public virtual Task<IMangaObject> GetMangaAsync(Uri url)
         {
             var parser = GetParser(url);
 
@@ -310,9 +310,9 @@ namespace MangaParser.Core.Client
 
         #region GetChapters
 
-        public virtual Task<IEnumerable<IChapter>> GetChaptersAsync(IMangaThumb manga)
+        public virtual Task<IEnumerable<IChapter>> GetChaptersAsync(IMangaObject manga)
         {
-            var parser = GetParser(manga.MangaUri);
+            var parser = GetParser(manga.Url);
 
             if (parser is null)
             {
@@ -350,9 +350,9 @@ namespace MangaParser.Core.Client
 
         #region GetPages
 
-        public virtual Task<IEnumerable<IPage>> GetPagesAsync(IChapter chapter)
+        public virtual Task<IEnumerable<IDataBase>> GetPagesAsync(IChapter chapter)
         {
-            var parser = GetParser(chapter.ChapterUri);
+            var parser = GetParser(chapter.Url);
 
             if (parser is null)
             {
@@ -362,7 +362,7 @@ namespace MangaParser.Core.Client
             return parser.GetPagesAsync(chapter);
         }
 
-        public virtual Task<IEnumerable<IPage>> GetPagesAsync(string url)
+        public virtual Task<IEnumerable<IDataBase>> GetPagesAsync(string url)
         {
             var parser = GetParser(url);
 
@@ -374,7 +374,7 @@ namespace MangaParser.Core.Client
             return parser.GetPagesAsync(url);
         }
 
-        public virtual Task<IEnumerable<IPage>> GetPagesAsync(Uri url)
+        public virtual Task<IEnumerable<IDataBase>> GetPagesAsync(Uri url)
         {
             var parser = GetParser(url);
 

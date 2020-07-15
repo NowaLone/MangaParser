@@ -47,7 +47,7 @@ namespace MangaParser.Parsers.HtmlWebParsers
         /// <summary>
         /// Abstract logic, must be overriden.
         /// </summary>
-        public override IEnumerable<IMangaThumb> SearchManga(string query)
+        public override IEnumerable<IMangaObject> SearchManga(string query)
         {
             query = query is null ? String.Empty : query.Replace(' ', '+');
 
@@ -60,7 +60,7 @@ namespace MangaParser.Parsers.HtmlWebParsers
 
         #region GetManga
 
-        public override IManga GetManga(Uri url)
+        public override IMangaObject GetManga(Uri url)
         {
             if (url is null)
             {
@@ -69,7 +69,7 @@ namespace MangaParser.Parsers.HtmlWebParsers
 
             var htmlDoc = Web.Load(url);
 
-            return GetMangaCore(htmlDoc);
+            return GetMangaCore(htmlDoc, url);
         }
 
         #endregion GetManga
@@ -85,14 +85,14 @@ namespace MangaParser.Parsers.HtmlWebParsers
 
             var htmlDoc = Web.Load(url);
 
-            return GetChaptersCore(htmlDoc);
+            return GetChaptersCore(htmlDoc, url);
         }
 
         #endregion GetChapters
 
         #region GetPages
 
-        public override IEnumerable<IPage> GetPages(Uri url)
+        public override IEnumerable<IDataBase> GetPages(Uri url)
         {
             if (url is null)
             {
@@ -101,7 +101,7 @@ namespace MangaParser.Parsers.HtmlWebParsers
 
             var htmlDoc = Web.Load(url);
 
-            return GetPagesCore(htmlDoc);
+            return GetPagesCore(htmlDoc, url);
         }
 
         #endregion GetPages
@@ -112,7 +112,7 @@ namespace MangaParser.Parsers.HtmlWebParsers
 
         #region Search
 
-        public override Task<IEnumerable<IMangaThumb>> SearchMangaAsync(string query)
+        public override Task<IEnumerable<IMangaObject>> SearchMangaAsync(string query)
         {
             // HtmlAgilityPack does't support async load with custom method (?)
             return Task.Run(() => SearchManga(query));
@@ -122,7 +122,7 @@ namespace MangaParser.Parsers.HtmlWebParsers
 
         #region GetManga
 
-        public override async Task<IManga> GetMangaAsync(Uri url)
+        public override async Task<IMangaObject> GetMangaAsync(Uri url)
         {
             if (url is null)
             {
@@ -131,7 +131,7 @@ namespace MangaParser.Parsers.HtmlWebParsers
 
             var htmlDoc = await Web.LoadFromWebAsync(url.OriginalString).ConfigureAwait(false);
 
-            return GetMangaCore(htmlDoc);
+            return GetMangaCore(htmlDoc, url);
         }
 
         #endregion GetManga
@@ -147,14 +147,14 @@ namespace MangaParser.Parsers.HtmlWebParsers
 
             var htmlDoc = await Web.LoadFromWebAsync(url.OriginalString).ConfigureAwait(false);
 
-            return GetChaptersCore(htmlDoc);
+            return GetChaptersCore(htmlDoc, url);
         }
 
         #endregion GetChapters
 
         #region GetPages
 
-        public override async Task<IEnumerable<IPage>> GetPagesAsync(Uri url)
+        public override async Task<IEnumerable<IDataBase>> GetPagesAsync(Uri url)
         {
             if (url is null)
             {
@@ -163,7 +163,7 @@ namespace MangaParser.Parsers.HtmlWebParsers
 
             var htmlDoc = await Web.LoadFromWebAsync(url.OriginalString).ConfigureAwait(false);
 
-            return GetPagesCore(htmlDoc);
+            return GetPagesCore(htmlDoc, url);
         }
 
         #endregion GetPages
@@ -172,13 +172,13 @@ namespace MangaParser.Parsers.HtmlWebParsers
 
         #region Abstract Methods
 
-        protected abstract IEnumerable<IMangaThumb> SearchMangaCore(HtmlDocument htmlDoc);
+        protected abstract IEnumerable<IMangaObject> SearchMangaCore(HtmlDocument htmlDoc);
 
-        protected abstract IManga GetMangaCore(HtmlDocument htmlDoc);
+        protected abstract IMangaObject GetMangaCore(HtmlDocument htmlDoc, Uri url);
 
-        protected abstract IEnumerable<IChapter> GetChaptersCore(HtmlDocument htmlDoc);
+        protected abstract IEnumerable<IChapter> GetChaptersCore(HtmlDocument htmlDoc, Uri url);
 
-        protected abstract IEnumerable<IPage> GetPagesCore(HtmlDocument htmlDoc);
+        protected abstract IEnumerable<IDataBase> GetPagesCore(HtmlDocument htmlDoc, Uri url);
 
         #endregion Abstract Methods
 

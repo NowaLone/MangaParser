@@ -63,7 +63,7 @@ namespace MangaParser.Core.Models
         /// </summary>
         /// <param name="query"></param>
         /// <returns></returns>
-        public abstract IEnumerable<IMangaThumb> SearchManga(string query);
+        public abstract IEnumerable<IMangaObject> SearchManga(string query);
 
         #endregion Search
 
@@ -72,7 +72,7 @@ namespace MangaParser.Core.Models
         /// <param name="manga"></param>
         ///<inheritdoc cref="GetManga(Uri)"/>
         ///<exception cref="ArgumentNullException"></exception>
-        public virtual IManga GetManga(IMangaThumb manga)
+        public virtual IMangaObject GetManga(IMangaObject manga)
         {
             if (manga is null)
             {
@@ -80,14 +80,14 @@ namespace MangaParser.Core.Models
             }
             else
             {
-                return GetManga(manga.MangaUri);
+                return GetManga(manga.Url);
             }
         }
 
         /// <inheritdoc cref="GetManga(Uri)"/>
         /// <exception cref="UriFormatException"></exception>
         /// <exception cref="ArgumentException"></exception>
-        public virtual IManga GetManga(string url)
+        public virtual IMangaObject GetManga(string url)
         {
             if (Uri.TryCreate(url, UriKind.Absolute, out var result))
             {
@@ -112,7 +112,7 @@ namespace MangaParser.Core.Models
         /// <param name="url"></param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"></exception>
-        public abstract IManga GetManga(Uri url);
+        public abstract IMangaObject GetManga(Uri url);
 
         #endregion GetManga
 
@@ -121,7 +121,7 @@ namespace MangaParser.Core.Models
         /// <param name="manga"></param>
         /// <inheritdoc cref="GetChapters(Uri)"/>
         /// <exception cref="ArgumentNullException"></exception>
-        public virtual IEnumerable<IChapter> GetChapters(IMangaThumb manga)
+        public virtual IEnumerable<IChapter> GetChapters(IMangaObject manga)
         {
             if (manga is null)
             {
@@ -129,7 +129,7 @@ namespace MangaParser.Core.Models
             }
             else
             {
-                return GetChapters(manga.MangaUri);
+                return GetChapters(manga.Url);
             }
         }
 
@@ -170,7 +170,7 @@ namespace MangaParser.Core.Models
         /// <param name="chapter"></param>
         /// <inheritdoc cref="GetPages(Uri)"/>
         /// <exception cref="ArgumentNullException"></exception>
-        public virtual IEnumerable<IPage> GetPages(IChapter chapter)
+        public virtual IEnumerable<IDataBase> GetPages(IChapter chapter)
         {
             if (chapter is null)
             {
@@ -178,14 +178,14 @@ namespace MangaParser.Core.Models
             }
             else
             {
-                return GetPages(chapter.ChapterUri);
+                return GetPages(chapter.Url);
             }
         }
 
         /// <inheritdoc cref="GetPages(Uri)"/>
         /// <exception cref="UriFormatException"></exception>
         /// <exception cref="ArgumentException"></exception>
-        public virtual IEnumerable<IPage> GetPages(string url)
+        public virtual IEnumerable<IDataBase> GetPages(string url)
         {
             if (Uri.TryCreate(url, UriKind.Absolute, out var result))
             {
@@ -210,7 +210,7 @@ namespace MangaParser.Core.Models
         /// <param name="url"></param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"></exception>
-        public abstract IEnumerable<IPage> GetPages(Uri url);
+        public abstract IEnumerable<IDataBase> GetPages(Uri url);
 
         #endregion GetPages
 
@@ -221,14 +221,14 @@ namespace MangaParser.Core.Models
         #region Search
 
         /// <inheritdoc cref="SearchManga(string)"/>
-        public abstract Task<IEnumerable<IMangaThumb>> SearchMangaAsync(string query);
+        public abstract Task<IEnumerable<IMangaObject>> SearchMangaAsync(string query);
 
         #endregion Search
 
         #region GetManga
 
-        ///<inheritdoc cref="GetManga(IMangaThumb)"/>
-        public virtual Task<IManga> GetMangaAsync(IMangaThumb mangaThumb)
+        ///<inheritdoc cref="GetManga(IMangaObject)"/>
+        public virtual Task<IMangaObject> GetMangaAsync(IMangaObject mangaThumb)
         {
             if (mangaThumb is null)
             {
@@ -236,12 +236,12 @@ namespace MangaParser.Core.Models
             }
             else
             {
-                return GetMangaAsync(mangaThumb.MangaUri);
+                return GetMangaAsync(mangaThumb.Url);
             }
         }
 
         ///<inheritdoc cref="GetManga(string)"/>
-        public virtual Task<IManga> GetMangaAsync(string url)
+        public virtual Task<IMangaObject> GetMangaAsync(string url)
         {
             if (Uri.TryCreate(url, UriKind.Absolute, out var result))
             {
@@ -261,14 +261,14 @@ namespace MangaParser.Core.Models
         }
 
         ///<inheritdoc cref="GetManga(Uri)"/>
-        public abstract Task<IManga> GetMangaAsync(Uri url);
+        public abstract Task<IMangaObject> GetMangaAsync(Uri url);
 
         #endregion GetManga
 
         #region GetChapters
 
-        ///<inheritdoc cref="GetChapters(IMangaThumb)"/>
-        public virtual Task<IEnumerable<IChapter>> GetChaptersAsync(IMangaThumb manga)
+        ///<inheritdoc cref="GetChapters(IMangaObject)"/>
+        public virtual Task<IEnumerable<IChapter>> GetChaptersAsync(IMangaObject manga)
         {
             if (manga is null)
             {
@@ -276,7 +276,7 @@ namespace MangaParser.Core.Models
             }
             else
             {
-                return GetChaptersAsync(manga.MangaUri);
+                return GetChaptersAsync(manga.Url);
             }
         }
 
@@ -308,7 +308,7 @@ namespace MangaParser.Core.Models
         #region GetPages
 
         ///<inheritdoc cref="GetPages(IChapter)"/>
-        public virtual Task<IEnumerable<IPage>> GetPagesAsync(IChapter chapter)
+        public virtual Task<IEnumerable<IDataBase>> GetPagesAsync(IChapter chapter)
         {
             if (chapter is null)
             {
@@ -316,12 +316,12 @@ namespace MangaParser.Core.Models
             }
             else
             {
-                return GetPagesAsync(chapter.ChapterUri);
+                return GetPagesAsync(chapter.Url);
             }
         }
 
         ///<inheritdoc cref="GetPages(string)"/>
-        public virtual Task<IEnumerable<IPage>> GetPagesAsync(string url)
+        public virtual Task<IEnumerable<IDataBase>> GetPagesAsync(string url)
         {
             if (Uri.TryCreate(url, UriKind.Absolute, out var result))
             {
@@ -341,7 +341,7 @@ namespace MangaParser.Core.Models
         }
 
         ///<inheritdoc cref="GetPages(Uri)"/>
-        public abstract Task<IEnumerable<IPage>> GetPagesAsync(Uri url);
+        public abstract Task<IEnumerable<IDataBase>> GetPagesAsync(Uri url);
 
         #endregion GetPages
 

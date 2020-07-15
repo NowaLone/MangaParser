@@ -1,20 +1,27 @@
 ﻿using MangaParser.Core.Interfaces;
 using System;
+using System.Collections.Generic;
 
 namespace MangaParser.Core.Models
 {
     /// <summary>
     /// Provides an object representation of a manga with some information.
     /// </summary>
-    [Serializable]
-    public class MangaObject : IMangaObject
+    public class MangaObject : DataBase<IName>, IMangaObject
     {
         #region Constructors
 
+        /// <inheritdoc cref="MangaObject(IName, Uri)"/>
+        public MangaObject(IName value, string url) : base(value, url)
+        {
+        }
+
         /// <summary>
-        ///  Initializes a new instance of the <see cref="MangaObject"/> class with the empty parameters.
+        /// Initializes a new instance of the <see cref="MangaObject"/> class with a minimum parameters.
         /// </summary>
-        public MangaObject()
+        /// <param name="value">A data with a manga name.</param>
+        /// <param name="url">An url to the manga.</param>
+        public MangaObject(IName value, Uri url) : base(value, url)
         {
         }
 
@@ -22,40 +29,19 @@ namespace MangaParser.Core.Models
 
         #region Properties
 
-        public IData[] Autors { get; set; }
-        public IData[] Genres { get; set; }
-        public IData[] Illustrators { get; set; }
-        public IData[] Magazines { get; set; }
-        public IData[] Publishers { get; set; }
-        public IData[] ReleaseDate { get; set; }
-        public IData[] Writers { get; set; }
-        public MangaCover[] Covers { get; set; }
-        public MangaName Name { get; set; }
-        public string Description { get; set; }
-        public string Volumes { get; set; }
-        public Uri MangaUri { get; set; }
-        public string Source => MangaUri != null ? MangaUri.Host : "Unknown";
+        public ICollection<ICover> Covers { get; set; }
+        public ICollection<IDataBase<IName>> Autors { get; set; }
+        public ICollection<IDataBase<IName>> Genres { get; set; }
+        public IDataBase<string> Description { get; set; }
+        public ICollection<IDataBase<IName>> Illustrators { get; set; }
+        public ICollection<IDataBase<IName>> Writers { get; set; }
+        public ICollection<IDataBase<IName>> Magazines { get; set; }
+        public ICollection<IDataBase<IName>> Publishers { get; set; }
+        public IDataBase<DateTime> ReleaseDate { get; set; }
+        public IDataBase<int> Volumes { get; set; }
+
+        public string Source => Url != null ? Url.Host : "Unknown";
 
         #endregion Properties
-
-        #region Methods
-
-        public override string ToString()
-        {
-            return $"Name: {Name}\n" +
-                $"\nDescription: {Description}\n" +
-                $"\nAutor: {String.Join(", ", Autors ?? (new object[0]))}\n" +
-                $"\nWriter: {String.Join(", ", Writers ?? (new object[0]))}\n" +
-                $"\nIllustrator: {String.Join(", ", Illustrators ?? (new object[0]))}\n" +
-                $"\nPublisher: {String.Join(", ", Publishers ?? (new object[0]))}\n" +
-                $"\nMagazine: {String.Join(", ", Magazines ?? (new object[0]))}\n" +
-                $"\nGenres: {String.Join(", ", Genres ?? (new object[0]))}\n" +
-                $"\nVolumes: {Volumes}\n" +
-                $"\nRelease date: {String.Join(", ", ReleaseDate ?? (new object[0]))}\n" +
-                $"\nCovers:\n{String.Join(Environment.NewLine, Covers ?? (new object[0]))}\n" +
-                $"\nLink: {MangaUri}\n";
-        }
-
-        #endregion Methods
     }
 }
