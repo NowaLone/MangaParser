@@ -21,7 +21,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.MangaFox
 
         #region Search
 
-        public override IEnumerable<IMangaThumb> SearchManga(string query)
+        public override IEnumerable<IMangaBase> SearchManga(string query)
         {
             query = query is null ? String.Empty : query.Replace(' ', '+');
 
@@ -30,7 +30,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.MangaFox
             return SearchMangaCore(htmlDoc);
         }
 
-        protected override IEnumerable<IMangaThumb> SearchMangaCore(HtmlDocument htmlDoc)
+        protected override IEnumerable<IMangaBase> SearchMangaCore(HtmlDocument htmlDoc)
         {
             if (htmlDoc is null)
             {
@@ -59,7 +59,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.MangaFox
 
             var manga = GetMangaCore(htmlDoc);
 
-            (manga as MangaObject).MangaUri = url;
+            (manga as MangaObject).Url = url;
 
             return manga;
         }
@@ -87,7 +87,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.MangaFox
 
             var manga = GetMangaCore(htmlDoc);
 
-            (manga as MangaObject).MangaUri = url;
+            (manga as MangaObject).Url = url;
 
             return manga;
         }
@@ -188,26 +188,26 @@ namespace MangaParser.Parsers.HtmlWebParsers.MangaFox
 
         #region Private Methods
 
-        private MangaChapter[] GetChapters(HtmlNode mainNode)
+        private Chapter[] GetChapters(HtmlNode mainNode)
         {
             var chapters = mainNode?.SelectNodes(".//a");
 
-            MangaChapter[] Chapters;
+            Chapter[] Chapters;
 
             if (chapters != null)
             {
-                Chapters = new MangaChapter[chapters.Count];
+                Chapters = new Chapter[chapters.Count];
 
                 for (int i = chapters.Count - 1; i >= 0; i--)
                 {
                     DateTime.TryParse(Decode(chapters[i].SelectSingleNode("./span")?.InnerText), out DateTime date);
 
-                    Chapters[chapters.Count - 1 - i] = new MangaChapter(Decode(chapters[i].InnerText), "http:" + chapters[i].Attributes["href"]?.Value, date);
+                    Chapters[chapters.Count - 1 - i] = new Chapter(Decode(chapters[i].InnerText), "http:" + chapters[i].Attributes["href"]?.Value, date);
                 }
             }
             else
             {
-                Chapters = new MangaChapter[0];
+                Chapters = new Chapter[0];
             }
 
             return Chapters;
@@ -289,12 +289,12 @@ namespace MangaParser.Parsers.HtmlWebParsers.MangaFox
                 {
                     var manga = new MangaObject
                     {
-                        Autors = new MangaDataBase[] { new MangaDataBase(thumbs[i].SelectSingleNode("./p[@class='manga-list-4-item-tip']/a")?.Attributes["title"]?.Value, thumbs[i].SelectSingleNode("./p[@class='manga-list-4-item-tip']/a")?.Attributes["href"]?.Value) },
-                        Genres = new MangaDataBase[] { new MangaDataBase(Decode(thumbs[i].SelectSingleNode("./p[@class='manga-list-4-show-tag-list-2']/a")?.InnerText), default(Uri)) },
-                        Covers = new MangaCover[] { new MangaCover(null, null, thumbs[i].SelectSingleNode("./a/img")?.Attributes["src"]?.Value) },
-                        MangaUri = new Uri(BaseUrl, thumbs[i].SelectSingleNode("./a")?.Attributes["href"]?.Value),
+                        Autors = new DataBase[] { new DataBase(thumbs[i].SelectSingleNode("./p[@class='manga-list-4-item-tip']/a")?.Attributes["title"]?.Value, thumbs[i].SelectSingleNode("./p[@class='manga-list-4-item-tip']/a")?.Attributes["href"]?.Value) },
+                        Genres = new DataBase[] { new DataBase(Decode(thumbs[i].SelectSingleNode("./p[@class='manga-list-4-show-tag-list-2']/a")?.InnerText), default(Uri)) },
+                        Covers = new Cover[] { new Cover(thumbs[i].SelectSingleNode("./a/img")?.Attributes["src"]?.Value, null, null) },
+                        Url = new Uri(BaseUrl, thumbs[i].SelectSingleNode("./a")?.Attributes["href"]?.Value),
                         Description = Decode(thumbs[i].LastChild?.InnerText),
-                        Name = new MangaName(thumbs[i].SelectSingleNode("./a")?.Attributes["title"]?.Value, null, null),
+                        Name = new Name(null, thumbs[i].SelectSingleNode("./a")?.Attributes["title"]?.Value, null),
                     };
 
                     yield return manga;
@@ -304,39 +304,39 @@ namespace MangaParser.Parsers.HtmlWebParsers.MangaFox
 
         #region Data Getting Methods
 
-        private MangaDataBase[] GetAutors(HtmlNode infoNode)
+        private DataBase[] GetAutors(HtmlNode infoNode)
         {
             var autorsNode = infoNode?.SelectNodes("./p[@class='detail-info-right-say']/a");
 
-            MangaDataBase[] autors;
+            DataBase[] autors;
 
             if (autorsNode != null)
             {
-                autors = new MangaDataBase[autorsNode.Count];
+                autors = new DataBase[autorsNode.Count];
 
                 for (int i = 0; i < autorsNode.Count; i++)
                 {
-                    autors[i] = new MangaDataBase(autorsNode[i].Attributes["title"]?.Value, autorsNode[i].Attributes["href"]?.Value);
+                    autors[i] = new DataBase(autorsNode[i].Attributes["title"]?.Value, autorsNode[i].Attributes["href"]?.Value);
                 }
             }
             else
-                autors = new MangaDataBase[0];
+                autors = new DataBase[0];
 
             return autors;
         }
 
-        private MangaCover[] GetCovers(HtmlNode mainNode)
+        private Cover[] GetCovers(HtmlNode mainNode)
         {
             var imageNode = mainNode?.SelectSingleNode("./div[@class='detail-info-cover']/img");
 
-            MangaCover[] images;
+            Cover[] images;
 
             if (imageNode != null)
             {
-                images = new MangaCover[] { new MangaCover(null, null, imageNode.Attributes["src"]?.Value) };
+                images = new Cover[] { new Cover(imageNode.Attributes["src"]?.Value, null, null) };
             }
             else
-                images = new MangaCover[0];
+                images = new Cover[0];
 
             return images;
         }
@@ -353,37 +353,37 @@ namespace MangaParser.Parsers.HtmlWebParsers.MangaFox
                 return null;
         }
 
-        private MangaDataBase[] GetGenres(HtmlNode infoNode)
+        private DataBase[] GetGenres(HtmlNode infoNode)
         {
             var genreNode = infoNode?.SelectNodes("./p[@class='detail-info-right-tag-list']/a");
 
-            MangaDataBase[] genres;
+            DataBase[] genres;
 
             if (genreNode != null)
             {
-                genres = new MangaDataBase[genreNode.Count];
+                genres = new DataBase[genreNode.Count];
 
                 for (int i = 0; i < genreNode.Count; i++)
                 {
-                    genres[i] = new MangaDataBase(genreNode[i].Attributes["title"]?.Value, genreNode[i].Attributes["href"]?.Value);
+                    genres[i] = new DataBase(genreNode[i].Attributes["title"]?.Value, genreNode[i].Attributes["href"]?.Value);
                 }
             }
             else
-                genres = new MangaDataBase[0];
+                genres = new DataBase[0];
 
             return genres;
         }
 
-        private MangaName GetName(HtmlNode infoNode)
+        private Name GetName(HtmlNode infoNode)
         {
             var nameNode = infoNode?.SelectSingleNode("./p[@class='detail-info-right-title']/span[@class='detail-info-right-title-font']");
 
             if (nameNode != null)
             {
-                return new MangaName(Decode(nameNode.InnerText), null, null);
+                return new Name(null, Decode(nameNode.InnerText), null);
             }
             else
-                return new MangaName();
+                return new Name();
         }
 
         #endregion Data Getting Methods

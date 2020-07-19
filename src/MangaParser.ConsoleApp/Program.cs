@@ -176,7 +176,7 @@ namespace MangaParser.ConsoleApp
 
         private static void Pages(IManga manga)
         {
-            foreach (var item in client.GetChapters(manga.MangaUri))
+            foreach (var item in client.GetChapters(manga.Url))
             {
                 Console.WriteLine("Chapter: " + item.Name);
 
@@ -198,7 +198,7 @@ namespace MangaParser.ConsoleApp
             if (manga == null)
                 return;
 
-            IChapter chapter = client.GetChapters(manga.MangaUri).ElementAt(chapterNumber - 1);
+            IChapter chapter = client.GetChapters(manga.Url).ElementAt(chapterNumber - 1);
 
             Console.WriteLine("Chapter: " + chapter.Name);
 
@@ -221,9 +221,9 @@ namespace MangaParser.ConsoleApp
             {
                 TimeSeparate('.', 5000);
 
-                var manga = Get(item.MangaUri);
+                var manga = Get(item.Url);
 
-                var chapters = client.GetChapters(manga.MangaUri);
+                var chapters = client.GetChapters(manga.Url);
 
                 foreach (var chapter in chapters)
                 {

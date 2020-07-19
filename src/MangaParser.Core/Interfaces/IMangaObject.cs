@@ -18,10 +18,10 @@ namespace MangaParser.Core.Interfaces
         ICollection<ICover> Covers { get; set; }
 
         /// <summary>
-        /// Gets the manga autors collection.
+        /// Gets the manga authors collection.
         /// </summary>
-        /// <returns>The manga autors collection.</returns>
-        ICollection<IDataBase<IName>> Autors { get; set; }
+        /// <returns>The manga authors collection.</returns>
+        ICollection<IDataBase<IName>> Authors { get; set; }
 
         /// <summary>
         /// Gets the manga genres collection.

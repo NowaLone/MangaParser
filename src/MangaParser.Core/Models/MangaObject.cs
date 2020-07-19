@@ -30,7 +30,7 @@ namespace MangaParser.Core.Models
         #region Properties
 
         public ICollection<ICover> Covers { get; set; }
-        public ICollection<IDataBase<IName>> Autors { get; set; }
+        public ICollection<IDataBase<IName>> Authors { get; set; }
         public ICollection<IDataBase<IName>> Genres { get; set; }
         public IDataBase<string> Description { get; set; }
         public ICollection<IDataBase<IName>> Illustrators { get; set; }
