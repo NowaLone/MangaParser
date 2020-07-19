@@ -10,13 +10,6 @@ namespace MangaParser.Core.Models
     {
         #region Constructors
 
-        /// <inheritdoc cref="Chapter(IName, Uri, DateTime, ICover)"/>
-        public Chapter(IName value, string url, DateTime addedDate, ICover cover = default) : base(value, url)
-        {
-            AddedDate = addedDate;
-            Cover = cover;
-        }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="Chapter"/> class with the specified parameters.
         /// </summary>
@@ -25,6 +18,13 @@ namespace MangaParser.Core.Models
         /// <param name="addedDate">A chapter added date.</param>
         /// <param name="cover">A data with a chapter cover.</param>
         public Chapter(IName value, Uri url, DateTime addedDate, ICover cover = default) : base(value, url)
+        {
+            AddedDate = addedDate;
+            Cover = cover;
+        }
+
+        /// <inheritdoc cref="Chapter(IName, Uri, DateTime, ICover)"/>
+        public Chapter(IName value, string url, DateTime addedDate, ICover cover = default) : base(value, url)
         {
             AddedDate = addedDate;
             Cover = cover;

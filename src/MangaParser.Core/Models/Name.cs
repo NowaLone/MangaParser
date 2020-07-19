@@ -23,6 +23,23 @@ namespace MangaParser.Core.Models
             Original = original;
         }
 
+        /// <param name="localized">A string that represent the localized name.</param>
+        /// <param name="english">A string that represent the english name.</param>
+        /// <param name="original">A string that represent the original name.</param>
+        /// <param name="url">An url for <see cref="IDataBase{T}.Url"/>.</param>
+        /// <inheritdoc cref="Name(IDataBase{string}, IDataBase{string}, IDataBase{string})"/>
+        public Name(string localized = default, string english = default, string original = default, Uri url = default)
+        {
+            Localized = localized != default ? new DataBase<string>(localized, url) : null;
+            English = english != default ? new DataBase<string>(english, url) : null;
+            Original = original != default ? new DataBase<string>(original, url) : null;
+        }
+
+        /// <inheritdoc cref="Name(string, string, string, Uri)"/>
+        public Name(string localized = default, string english = default, string original = default, string url = default) : this(localized, english, original, Uri.TryCreate(url, UriKind.Absolute, out var result) ? result : null)
+        {
+        }
+
         #endregion Constructors
 
         #region Properties

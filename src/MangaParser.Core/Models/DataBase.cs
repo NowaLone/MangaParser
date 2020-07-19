@@ -12,17 +12,6 @@ namespace MangaParser.Core.Models
     {
         #region Constructors
 
-        /// <inheritdoc cref="DataBase{T}(T, Uri)"/>
-        public DataBase(T value, string url)
-        {
-            Value = value;
-
-            if (Uri.IsWellFormedUriString(url, UriKind.Absolute))
-            {
-                Url = new Uri(url);
-            }
-        }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="DataBase{T}"/> class with the specified parameters.
         /// </summary>
@@ -32,6 +21,17 @@ namespace MangaParser.Core.Models
         {
             Value = value;
             Url = url;
+        }
+
+        /// <inheritdoc cref="DataBase{T}(T, Uri)"/>
+        public DataBase(T value, string url)
+        {
+            Value = value;
+
+            if (Uri.IsWellFormedUriString(url, UriKind.Absolute))
+            {
+                Url = new Uri(url);
+            }
         }
 
         #endregion Constructors

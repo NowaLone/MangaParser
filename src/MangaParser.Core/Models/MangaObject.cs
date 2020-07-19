@@ -11,17 +11,17 @@ namespace MangaParser.Core.Models
     {
         #region Constructors
 
-        /// <inheritdoc cref="MangaObject(IName, Uri)"/>
-        public MangaObject(IName value, string url) : base(value, url)
-        {
-        }
-
         /// <summary>
         /// Initializes a new instance of the <see cref="MangaObject"/> class with a minimum parameters.
         /// </summary>
         /// <param name="value">A data with a manga name.</param>
         /// <param name="url">An url to the manga.</param>
         public MangaObject(IName value, Uri url) : base(value, url)
+        {
+        }
+
+        /// <inheritdoc cref="MangaObject(IName, Uri)"/>
+        public MangaObject(IName value, string url) : base(value, url)
         {
         }
 

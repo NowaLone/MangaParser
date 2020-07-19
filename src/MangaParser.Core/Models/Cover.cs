@@ -27,6 +27,17 @@ namespace MangaParser.Core.Models
         /// <param name="medium">A mid-res cover url.</param>
         /// <param name="small">A low-res cover url.</param>
         /// <inheritdoc cref="Cover(IDataBase, IDataBase, IDataBase)"/>
+        public Cover(Uri large = default, Uri medium = default, Uri small = default)
+        {
+            Large = large != default ? new DataBase(default, large) : null;
+            Medium = medium != default ? new DataBase(default, medium) : null;
+            Small = small != default ? new DataBase(default, small) : null;
+        }
+
+        /// <param name="large">A hi-res cover url.</param>
+        /// <param name="medium">A mid-res cover url.</param>
+        /// <param name="small">A low-res cover url.</param>
+        /// <inheritdoc cref="Cover(IDataBase, IDataBase, IDataBase)"/>
         public Cover(string large = default, string medium = default, string small = default)
         {
             if (Uri.TryCreate(large, UriKind.Absolute, out Uri result))
@@ -43,17 +54,6 @@ namespace MangaParser.Core.Models
             {
                 Small = new DataBase(default, result);
             }
-        }
-
-        /// <param name="large">A hi-res cover url.</param>
-        /// <param name="medium">A mid-res cover url.</param>
-        /// <param name="small">A low-res cover url.</param>
-        /// <inheritdoc cref="Cover(IDataBase, IDataBase, IDataBase)"/>
-        public Cover(Uri large = default, Uri medium = default, Uri small = default)
-        {
-            Large = large != default ? new DataBase(default, large) : null;
-            Medium = medium != default ? new DataBase(default, medium) : null;
-            Small = small != default ? new DataBase(default, small) : null;
         }
 
         #endregion Constructors
