@@ -60,11 +60,11 @@ namespace MangaParser.Core.Models
 
         #region Properties
 
-        public IDataBase Large { get; }
+        public virtual IDataBase Large { get; }
 
-        public IDataBase Medium { get; }
+        public virtual IDataBase Medium { get; }
 
-        public IDataBase Small { get; }
+        public virtual IDataBase Small { get; }
 
         #endregion Properties
 

@@ -29,18 +29,18 @@ namespace MangaParser.Core.Models
 
         #region Properties
 
-        public ICollection<ICover> Covers { get; set; }
-        public ICollection<IDataBase<IName>> Authors { get; set; }
-        public ICollection<IDataBase<IName>> Genres { get; set; }
-        public IDataBase<string> Description { get; set; }
-        public ICollection<IDataBase<IName>> Illustrators { get; set; }
-        public ICollection<IDataBase<IName>> Writers { get; set; }
-        public ICollection<IDataBase<IName>> Magazines { get; set; }
-        public ICollection<IDataBase<IName>> Publishers { get; set; }
-        public IDataBase<DateTime> ReleaseDate { get; set; }
-        public IDataBase<int> Volumes { get; set; }
+        public virtual ICollection<ICover> Covers { get; set; }
+        public virtual ICollection<IDataBase<IName>> Authors { get; set; }
+        public virtual ICollection<IDataBase<IName>> Genres { get; set; }
+        public virtual IDataBase<string> Description { get; set; }
+        public virtual ICollection<IDataBase<IName>> Illustrators { get; set; }
+        public virtual ICollection<IDataBase<IName>> Writers { get; set; }
+        public virtual ICollection<IDataBase<IName>> Magazines { get; set; }
+        public virtual ICollection<IDataBase<IName>> Publishers { get; set; }
+        public virtual IDataBase<DateTime> ReleaseDate { get; set; }
+        public virtual IDataBase<int> Volumes { get; set; }
 
-        public string Source => Url != null ? Url.Host : "Unknown";
+        public virtual string Source => Url != null ? Url.Host : "Unknown";
 
         #endregion Properties
     }

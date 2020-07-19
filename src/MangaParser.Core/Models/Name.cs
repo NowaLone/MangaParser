@@ -27,9 +27,9 @@ namespace MangaParser.Core.Models
 
         #region Properties
 
-        public IDataBase<string> Localized { get; }
-        public IDataBase<string> English { get; }
-        public IDataBase<string> Original { get; }
+        public virtual IDataBase<string> Localized { get; }
+        public virtual IDataBase<string> English { get; }
+        public virtual IDataBase<string> Original { get; }
 
         #endregion Properties
 

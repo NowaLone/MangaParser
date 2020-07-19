@@ -34,8 +34,8 @@ namespace MangaParser.Core.Models
 
         #region Properties
 
-        public DateTime AddedDate { get; }
-        public ICover Cover { get; }
+        public virtual DateTime AddedDate { get; }
+        public virtual ICover Cover { get; }
 
         #endregion Properties
     }

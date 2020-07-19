@@ -38,9 +38,9 @@ namespace MangaParser.Core.Models
 
         #region Properties
 
-        public Uri Url { get; }
+        public virtual Uri Url { get; }
 
-        public T Value { get; }
+        public virtual T Value { get; }
 
         #endregion Properties
 
