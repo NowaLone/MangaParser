@@ -18,11 +18,25 @@ namespace MangaParser.Core.Models
         /// <param name="url">An url to the manga.</param>
         public MangaObject(IName value, Uri url) : base(value, url)
         {
+            Covers = new List<ICover>();
+            Authors = new List<IDataBase<IName>>();
+            Genres = new List<IDataBase<IName>>();
+            Illustrators = new List<IDataBase<IName>>();
+            Writers = new List<IDataBase<IName>>();
+            Magazines = new List<IDataBase<IName>>();
+            Publishers = new List<IDataBase<IName>>();
         }
 
         /// <inheritdoc cref="MangaObject(IName, Uri)"/>
         public MangaObject(IName value, string url) : base(value, url)
         {
+            Covers = new List<ICover>();
+            Authors = new List<IDataBase<IName>>();
+            Genres = new List<IDataBase<IName>>();
+            Illustrators = new List<IDataBase<IName>>();
+            Writers = new List<IDataBase<IName>>();
+            Magazines = new List<IDataBase<IName>>();
+            Publishers = new List<IDataBase<IName>>();
         }
 
         #endregion Constructors
