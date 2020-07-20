@@ -11,6 +11,13 @@ namespace MangaParser.Core.Models
         #region Constructors
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="Name"/> class with the <see langword="null"/> parameters.
+        /// </summary>
+        public Name()
+        {
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="Name"/> class with the specified parameters.
         /// </summary>
         /// <param name="localized">A data with a string that represent the localized name.</param>

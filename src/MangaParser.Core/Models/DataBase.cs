@@ -13,6 +13,13 @@ namespace MangaParser.Core.Models
         #region Constructors
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="DataBase{T}"/> class with <see langword="null"/> parameters.
+        /// </summary>
+        public DataBase()
+        {
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="DataBase{T}"/> class with the specified parameters.
         /// </summary>
         /// <param name="value">Data value.</param>
@@ -84,8 +91,10 @@ namespace MangaParser.Core.Models
     {
         #region Constructors
 
-        /// <inheritdoc cref="DataBase(object, Uri)"/>
-        public DataBase(object value, string url) : base(value, url)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DataBase"/> class with <see langword="null"/> parameters.
+        /// </summary>
+        public DataBase() : base()
         {
         }
 
@@ -94,6 +103,11 @@ namespace MangaParser.Core.Models
         /// </summary>
         /// <inheritdoc cref="DataBase{T}(T, Uri)"/>
         public DataBase(object value, Uri url) : base(value, url)
+        {
+        }
+
+        /// <inheritdoc cref="DataBase(object, Uri)"/>
+        public DataBase(object value, string url) : base(value, url)
         {
         }
 

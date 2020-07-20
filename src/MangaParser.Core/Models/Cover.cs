@@ -11,6 +11,13 @@ namespace MangaParser.Core.Models
         #region Constructors
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="Cover"/> class with the <see langword="null"/> urls.
+        /// </summary>
+        public Cover()
+        {
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="Cover"/> class with the specified urls.
         /// </summary>
         /// <param name="large">A data with a hi-res cover url.</param>

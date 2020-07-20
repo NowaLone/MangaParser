@@ -11,6 +11,13 @@ namespace MangaParser.Core.Models
         #region Constructors
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="Chapter"/> class with the <see langword="null"/> parameters.
+        /// </summary>
+        public Chapter() : base()
+        {
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="Chapter"/> class with the specified parameters.
         /// </summary>
         /// <param name="value">A data with a chapter name.</param>

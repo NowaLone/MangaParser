@@ -12,6 +12,20 @@ namespace MangaParser.Core.Models
         #region Constructors
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="MangaObject"/> class with a <see langword="null"/> parameters.
+        /// </summary>
+        public MangaObject() : base()
+        {
+            Covers = new List<ICover>();
+            Authors = new List<IDataBase<IName>>();
+            Genres = new List<IDataBase<IName>>();
+            Illustrators = new List<IDataBase<IName>>();
+            Writers = new List<IDataBase<IName>>();
+            Magazines = new List<IDataBase<IName>>();
+            Publishers = new List<IDataBase<IName>>();
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="MangaObject"/> class with a minimum parameters.
         /// </summary>
         /// <param name="value">A data with a manga name.</param>
