@@ -361,6 +361,27 @@ namespace MangaParser.Core.Models
                 return String.Empty;
         }
 
+        /// <summary>
+        /// Returns a full url with a <see cref="BaseUrl"/> part.
+        /// </summary>
+        /// <example>Call this method if you want to get a full url if you only have a relative path, for example from a href attribute:
+        /// <code>
+        /// Uri fullUrl = GetFullUrl("/list/genre/comedy");
+        /// </code>
+        /// </example>
+        /// <param name="path">A relative path from a href attribute.</param>
+        /// <returns>A full url with a <see cref="BaseUrl"/> part.</returns>
+        protected virtual Uri GetFullUrl(string path)
+        {
+            UriBuilder uriBuilder = new UriBuilder(BaseUrl)
+            {
+                Path = path ?? String.Empty,
+                Port = -1
+            };
+
+            return uriBuilder.Uri;
+        }
+
         #region Default overrides
 
         public override bool Equals(object obj)
