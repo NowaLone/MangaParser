@@ -1,12 +1,13 @@
 ﻿using MangaParser.Core.Interfaces;
 using System;
+using System.Collections.Generic;
 
 namespace MangaParser.Core.Models
 {
     /// <summary>
     ///  Provides an object representation of the name of a manga, chapter, etc.
     /// </summary>
-    public class Name : IName
+    public class Name : IName, IEquatable<Name>
     {
         #region Constructors
 
@@ -59,6 +60,26 @@ namespace MangaParser.Core.Models
 
         #region Methods
 
+        #region Default overrides
+
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as Name);
+        }
+
+        public bool Equals(Name other)
+        {
+            return other != null &&
+                   EqualityComparer<IDataBase<string>>.Default.Equals(Localized, other.Localized) &&
+                   EqualityComparer<IDataBase<string>>.Default.Equals(English, other.English) &&
+                   EqualityComparer<IDataBase<string>>.Default.Equals(Original, other.Original);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Localized, English, Original);
+        }
+
         /// <summary>
         /// Returns a first non-empty or whitespace name.
         /// </summary>
@@ -71,6 +92,8 @@ namespace MangaParser.Core.Models
                 ? English.Value
                 : Original?.Value;
         }
+
+        #endregion Default overrides
 
         #endregion Methods
     }

@@ -1,12 +1,13 @@
 ﻿using MangaParser.Core.Interfaces;
 using System;
+using System.Collections.Generic;
 
 namespace MangaParser.Core.Models
 {
     /// <summary>
     /// Provides an object representation of a cover of a manga, chapter, etc.
     /// </summary>
-    public class Cover : ICover
+    public class Cover : ICover, IEquatable<Cover>
     {
         #region Constructors
 
@@ -77,6 +78,26 @@ namespace MangaParser.Core.Models
 
         #region Methods
 
+        #region Default overrides
+
+        public override bool Equals(object obj)
+        {
+            return Equals(obj as Cover);
+        }
+
+        public bool Equals(Cover other)
+        {
+            return other != null &&
+                   EqualityComparer<IDataBase>.Default.Equals(Large, other.Large) &&
+                   EqualityComparer<IDataBase>.Default.Equals(Medium, other.Medium) &&
+                   EqualityComparer<IDataBase>.Default.Equals(Small, other.Small);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Large, Medium, Small);
+        }
+
         /// <summary>
         /// Returns a first non-null cover url.
         /// </summary>
@@ -91,6 +112,8 @@ namespace MangaParser.Core.Models
                 ? Small.Url.OriginalString
                 : default;
         }
+
+        #endregion Default overrides
 
         #endregion Methods
     }
