@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using MangaParser.Core.Exceptions;
 using MangaParser.Core.Interfaces;
 using MangaParser.Core.Models;
 using System;
@@ -67,6 +68,11 @@ namespace MangaParser.Parsers.HtmlWebParsers
                 throw new ArgumentNullException(nameof(url));
             }
 
+            if (BaseUrl.Host != url.Host)
+            {
+                throw new BaseHostNotMatchException(BaseUrl.Host, url.Host, nameof(url));
+            }
+
             var htmlDoc = Web.Load(url);
 
             return GetMangaCore(htmlDoc, url);
@@ -83,6 +89,11 @@ namespace MangaParser.Parsers.HtmlWebParsers
                 throw new ArgumentNullException(nameof(url));
             }
 
+            if (BaseUrl.Host != url.Host)
+            {
+                throw new BaseHostNotMatchException(BaseUrl.Host, url.Host, nameof(url));
+            }
+
             var htmlDoc = Web.Load(url);
 
             return GetChaptersCore(htmlDoc, url);
@@ -97,6 +108,12 @@ namespace MangaParser.Parsers.HtmlWebParsers
             if (url is null)
             {
                 throw new ArgumentNullException(nameof(url));
+            }
+
+
+            if (BaseUrl.Host != url.Host)
+            {
+                throw new BaseHostNotMatchException(BaseUrl.Host, url.Host, nameof(url));
             }
 
             var htmlDoc = Web.Load(url);
@@ -129,6 +146,11 @@ namespace MangaParser.Parsers.HtmlWebParsers
                 throw new ArgumentNullException(nameof(url));
             }
 
+            if (BaseUrl.Host != url.Host)
+            {
+                throw new BaseHostNotMatchException(BaseUrl.Host, url.Host, nameof(url));
+            }
+
             var htmlDoc = await Web.LoadFromWebAsync(url.OriginalString).ConfigureAwait(false);
 
             return GetMangaCore(htmlDoc, url);
@@ -145,6 +167,11 @@ namespace MangaParser.Parsers.HtmlWebParsers
                 throw new ArgumentNullException(nameof(url));
             }
 
+            if (BaseUrl.Host != url.Host)
+            {
+                throw new BaseHostNotMatchException(BaseUrl.Host, url.Host, nameof(url));
+            }
+
             var htmlDoc = await Web.LoadFromWebAsync(url.OriginalString).ConfigureAwait(false);
 
             return GetChaptersCore(htmlDoc, url);
@@ -159,6 +186,11 @@ namespace MangaParser.Parsers.HtmlWebParsers
             if (url is null)
             {
                 throw new ArgumentNullException(nameof(url));
+            }
+
+            if (BaseUrl.Host != url.Host)
+            {
+                throw new BaseHostNotMatchException(BaseUrl.Host, url.Host, nameof(url));
             }
 
             var htmlDoc = await Web.LoadFromWebAsync(url.OriginalString).ConfigureAwait(false);

@@ -87,19 +87,11 @@ namespace MangaParser.Core.Models
 
         /// <inheritdoc cref="GetManga(Uri)"/>
         /// <exception cref="UriFormatException"></exception>
-        /// <exception cref="ArgumentException"></exception>
         public virtual IMangaObject GetManga(string url)
         {
             if (Uri.TryCreate(url, UriKind.Absolute, out var result))
             {
-                if (BaseUrl.Host == result.Host)
-                {
-                    return GetManga(result);
-                }
-                else
-                {
-                    throw new BaseHostNotMatchException(BaseUrl.Host, result.Host, nameof(url));
-                }
+                return GetManga(result);
             }
             else
             {
@@ -113,6 +105,7 @@ namespace MangaParser.Core.Models
         /// <param name="url"></param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="BaseHostNotMatchException"></exception>
         public abstract IMangaObject GetManga(Uri url);
 
         #endregion GetManga
@@ -136,19 +129,11 @@ namespace MangaParser.Core.Models
 
         /// <inheritdoc cref="GetChapters(Uri)"/>
         /// <exception cref="UriFormatException"></exception>
-        /// <exception cref="ArgumentException"></exception>
         public virtual IEnumerable<IChapter> GetChapters(string url)
         {
             if (Uri.TryCreate(url, UriKind.Absolute, out var result))
             {
-                if (BaseUrl.Host == result.Host)
-                {
-                    return GetChapters(result);
-                }
-                else
-                {
-                    throw new BaseHostNotMatchException(BaseUrl.Host, result.Host, nameof(url));
-                }
+                return GetChapters(result);
             }
             else
             {
@@ -162,6 +147,7 @@ namespace MangaParser.Core.Models
         /// <param name="url"></param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="BaseHostNotMatchException"></exception>
         public abstract IEnumerable<IChapter> GetChapters(Uri url);
 
         #endregion GetChapters
@@ -185,19 +171,11 @@ namespace MangaParser.Core.Models
 
         /// <inheritdoc cref="GetPages(Uri)"/>
         /// <exception cref="UriFormatException"></exception>
-        /// <exception cref="ArgumentException"></exception>
         public virtual IEnumerable<IDataBase> GetPages(string url)
         {
             if (Uri.TryCreate(url, UriKind.Absolute, out var result))
             {
-                if (BaseUrl.Host == result.Host)
-                {
-                    return GetPages(result);
-                }
-                else
-                {
-                    throw new BaseHostNotMatchException(BaseUrl.Host, result.Host, nameof(url));
-                }
+                return GetPages(result);
             }
             else
             {
@@ -211,6 +189,7 @@ namespace MangaParser.Core.Models
         /// <param name="url"></param>
         /// <returns></returns>
         /// <exception cref="ArgumentNullException"></exception>
+        /// <exception cref="BaseHostNotMatchException"></exception>
         public abstract IEnumerable<IDataBase> GetPages(Uri url);
 
         #endregion GetPages
@@ -246,14 +225,7 @@ namespace MangaParser.Core.Models
         {
             if (Uri.TryCreate(url, UriKind.Absolute, out var result))
             {
-                if (BaseUrl.Host == result.Host)
-                {
-                    return GetMangaAsync(result);
-                }
-                else
-                {
-                    throw new BaseHostNotMatchException(BaseUrl.Host, result.Host, nameof(url));
-                }
+                return GetMangaAsync(result);
             }
             else
             {
@@ -286,14 +258,7 @@ namespace MangaParser.Core.Models
         {
             if (Uri.TryCreate(url, UriKind.Absolute, out var result))
             {
-                if (BaseUrl.Host == result.Host)
-                {
-                    return GetChaptersAsync(result);
-                }
-                else
-                {
-                    throw new BaseHostNotMatchException(BaseUrl.Host, result.Host, nameof(url));
-                }
+                return GetChaptersAsync(result);
             }
             else
             {
@@ -326,14 +291,7 @@ namespace MangaParser.Core.Models
         {
             if (Uri.TryCreate(url, UriKind.Absolute, out var result))
             {
-                if (BaseUrl.Host == result.Host)
-                {
-                    return GetPagesAsync(result);
-                }
-                else
-                {
-                    throw new BaseHostNotMatchException(BaseUrl.Host, result.Host, nameof(url));
-                }
+                return GetPagesAsync(result);
             }
             else
             {
