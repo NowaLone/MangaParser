@@ -3,6 +3,7 @@ using MangaParser.Core.Interfaces;
 using MangaParser.Core.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -21,6 +22,8 @@ namespace MangaParser.Parsers.HtmlWebParsers.ReadManga
         /// Pattern for js array scraping.
         /// </summary>
         private const string pattern = "\\[.*?'(http.*?)'\\,'(http.*?)'\\,\\\"(.*?)\\\"";
+
+        private readonly Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
 
         #endregion Fields
 
@@ -91,7 +94,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.ReadManga
                 throw new ArgumentNullException(nameof(htmlDoc));
             }
 
-            var scriptText = htmlDoc.DocumentNode.Descendants()?.Where(n => n.Name == "script" && n.InnerText.Contains(jsArrayVar)).First().InnerText;
+            string scriptText = htmlDoc.DocumentNode?.Descendants()?.Where(n => n.Name == "script" && n.InnerText.Contains(jsArrayVar)).FirstOrDefault()?.InnerText;
 
             return GetMangaPages(scriptText);
         }
@@ -106,30 +109,37 @@ namespace MangaParser.Parsers.HtmlWebParsers.ReadManga
         {
             var thumbs = mainNode?.SelectNodes("./div[@class='tiles row']/div[@class='tile col-sm-6 ']");
 
-            if (thumbs != null)
+            if (thumbs?.Count > 0)
             {
                 for (int i = 0; i < thumbs.Count; i++)
                 {
                     string nameL = Decode(thumbs[i].SelectSingleNode("./div[@class='desc']/h3/a")?.InnerText);
-                    string nameE = base.Decode(thumbs[i].SelectSingleNode("./div[@class='desc']/h4")?.InnerText);
+                    string nameE = Decode(thumbs[i].SelectSingleNode("./div[@class='desc']/h4")?.InnerText);
 
-                    Uri url = new Uri(BaseUrl, thumbs[i].SelectSingleNode("./div[@class='desc']/h3/a")?.Attributes["href"]?.Value);
+                    string description = GetThumbDescription(thumbs[i]);
+
+                    Uri url = GetFullUrl(thumbs[i].SelectSingleNode("./div[@class='desc']/h3/a")?.Attributes["href"]?.Value);
 
                     IDataBase<string> nameDataL = new DataBase<string>(nameL, url);
                     IDataBase<string> nameDataE = new DataBase<string>(nameE, url);
 
                     IName name = new Name(nameDataL, nameDataE);
 
-                    IDataBase<IName>[] authors = GetThumbAuthors(thumbs[i]);
-                    IDataBase<IName>[] genres = GetThumbGenres(thumbs[i]);
+                    ICollection<IDataBase<IName>> authors = GetThumbItems(thumbs[i], "person");
+                    ICollection<IDataBase<IName>> genres = GetThumbItems(thumbs[i], "element");
 
-                    ICover[] covers = new Cover[] { new Cover(small: thumbs[i].SelectSingleNode(".//img")?.Attributes["data-original"]?.Value) };
+                    ICover cover = new Cover(small: thumbs[i].SelectSingleNode(".//img")?.Attributes["data-original"]?.Value);
+
+                    ICollection<ICover> covers = new ICover[] { cover };
+
+                    IDataBase<string> descriptionData = new DataBase<string>(description, url);
 
                     var manga = new MangaObject(name, url)
                     {
                         Authors = authors,
                         Genres = genres,
-                        Covers = covers
+                        Covers = covers,
+                        Description = descriptionData
                     };
 
                     yield return manga;
@@ -137,207 +147,110 @@ namespace MangaParser.Parsers.HtmlWebParsers.ReadManga
             }
         }
 
-        private IDataBase<IName>[] GetThumbAuthors(HtmlNode tileNode)
+        private ICollection<IDataBase<IName>> GetThumbItems(HtmlNode tileNode, string key)
         {
-            var authors = tileNode?.SelectNodes(".//a[@class='person-link']");
+            var items = tileNode?.SelectNodes($".//a[@class='{key}-link']");
 
-            DataBase<IName>[] Authors;
+            IDataBase<IName>[] data;
 
-            if (authors?.Count > 0)
+            if (items?.Count > 0)
             {
-                Authors = new DataBase<IName>[authors.Count];
+                data = new IDataBase<IName>[items.Count];
 
-                for (int i = 0; i < authors.Count; i++)
+                for (int i = 0; i < items.Count; i++)
                 {
-                    string url = BaseUrl + authors[i].Attributes["href"]?.Value;
+                    Uri url = base.GetFullUrl(items[i].Attributes["href"]?.Value);
 
-                    string nameL = base.Decode(authors[i].InnerText);
-                    string nameE = System.IO.Path.GetFileName(url);
+                    string nameL = base.Decode(items[i].InnerText);
+                    string nameE = Path.GetFileName(url.OriginalString);
 
-                    Name nameData = new Name(new DataBase<string>(nameL, url), new DataBase<string>(nameE, url));
+                    IDataBase<string> nameDataL = new DataBase<string>(nameL, url);
+                    IDataBase<string> nameDataE = new DataBase<string>(nameE, url);
 
-                    Authors[i] = new DataBase<IName>(nameData, url);
+                    IName nameData = new Name(nameDataL, nameDataE);
+
+                    data[i] = new DataBase<IName>(nameData, url);
                 }
             }
             else
             {
-                Authors = Array.Empty<DataBase<IName>>();
+                data = Array.Empty<IDataBase<IName>>();
             }
 
-            return Authors;
+            return data;
         }
 
-        private IDataBase<IName>[] GetThumbGenres(HtmlNode tileNode)
+        private string GetThumbDescription(HtmlNode tileNode)
         {
-            var genres = tileNode?.SelectNodes(".//a[@class='element-link']");
+            HtmlNode descriptionNode = tileNode.SelectSingleNode("./div[@class='desc']/div[@class='hidden long-description-holder']");
 
-            DataBase<IName>[] Genres;
-
-            if (genres?.Count > 0)
+            if (descriptionNode is null)
             {
-                Genres = new DataBase<IName>[genres.Count];
+                return String.Empty;
+            }
 
-                for (int i = 0; i < genres.Count; i++)
-                {
-                    string url = BaseUrl + genres[i].Attributes["href"]?.Value;
+            HtmlNode excludedTitleNode = tileNode.SelectSingleNode("./div[@class='desc']/div[@class='hidden long-description-holder']/h5");
 
-                    string nameL = Decode(genres[i].InnerText);
-                    string nameE = System.IO.Path.GetFileName(url);
-
-                    Name nameData = new Name(new DataBase<string>(nameL, url), new DataBase<string>(nameE, url));
-
-                    Genres[i] = new DataBase<IName>(nameData, url);
-                }
+            if (excludedTitleNode is null)
+            {
+                return Decode(descriptionNode.InnerText);
             }
             else
             {
-                Genres = Array.Empty<DataBase<IName>>();
+                descriptionNode.RemoveChild(excludedTitleNode);
+                return Decode(descriptionNode.InnerText);
             }
-
-            return Genres;
         }
 
         #endregion Search methods
 
-        #region Data getting methods
+        #region Chapters methods
 
-        private IChapter[] GetChapters(HtmlNode mainNode)
+        private IEnumerable<IChapter> GetChapters(HtmlNode mainNode)
         {
             var chapters = mainNode?.SelectNodes("./div[contains(@class, 'chapters-link')]/table/tr");
 
-            Chapter[] Chapters;
-
             if (chapters?.Count > 0)
             {
-                Chapters = new Chapter[chapters.Count];
-
                 for (int i = chapters.Count - 1; i >= 0; i--)
                 {
-                    DateTime.TryParseExact(Decode(chapters[i].SelectSingleNode("./td[2]")?.InnerText), "dd.MM.yy", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out DateTime date);
+                    string nameL = Decode(chapters[i].SelectSingleNode("./td/a")?.InnerText);
 
-                    string name = Decode(chapters[i].SelectSingleNode("./td/a")?.InnerText);
-                    string url = BaseUrl + chapters[i].SelectSingleNode("./td/a")?.Attributes["href"]?.Value + "?mtr=1";
+                    Uri url = GetFullUrl(chapters[i].SelectSingleNode("./td/a")?.Attributes["href"]?.Value + "?mtr=1");
 
-                    Name nameData = new Name(new DataBase<string>(name, url));
+                    IDataBase<string> nameDataL = new DataBase<string>(nameL, url);
 
-                    Chapters[chapters.Count - 1 - i] = new Chapter(nameData, url, date);
+                    IName nameData = new Name(nameDataL);
+
+                    string dateString = Decode(chapters[i].SelectSingleNode("./td[2]")?.InnerText);
+                    DateTime.TryParseExact(dateString, "dd.MM.yy", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out DateTime date);
+
+                    IChapter chapter = new Chapter(nameData, url, date);
+
+                    yield return chapter;
                 }
             }
-            else
-            {
-                Chapters = Array.Empty<Chapter>();
-            }
-
-            return Chapters;
         }
 
-        private ICover[] GetCovers(HtmlNode mainNode)
-        {
-            var imagesNode = mainNode?.SelectSingleNode(".//div[@class='flex-row']/div[@class='subject-cower col-sm-5']");
+        #endregion Chapters methods
 
-            var images = imagesNode?.SelectNodes(".//img");
-
-            Cover[] Images;
-
-            if (images?.Count > 0)
-            {
-                Images = new Cover[images.Count];
-
-                for (int i = 0; i < images.Count; i++)
-                {
-                    Images[i] = new Cover(images[i].Attributes["data-full"]?.Value, images[i].Attributes["src"]?.Value, images[i].Attributes["data-thumb"]?.Value);
-                }
-            }
-            else
-            {
-                Images = Array.Empty<Cover>();
-            }
-
-            return Images;
-        }
-
-        private IDataBase<string> GetDescription(HtmlNode mainNode, Uri uri = default)
-        {
-            var descNode = mainNode?.SelectSingleNode("./meta[@itemprop='description']");
-
-            if (descNode != null)
-            {
-                return new DataBase<string>(Decode(descNode.Attributes["content"]?.Value), uri);
-            }
-            else
-            {
-                return null;
-            }
-        }
-
-        private IDataBase<T>[] GetInfoData<T>(HtmlNode infoNode, string elemName)
-        {
-            var data = infoNode?.SelectNodes($".//span[contains(@class, '{elemName}')]");
-
-            IDataBase<T>[] Data;
-
-            if (data?.Count > 0)
-            {
-                Data = new DataBase<T>[data.Count];
-
-                for (int i = 0; i < data.Count; i++)
-                {
-                    if (elemName == "elem_publisher ")
-                    {
-                        string name = Decode(data[i].InnerText);
-                        string url = BaseUrl + $"/list/publisher/{base.Decode(data[i].InnerText)}";
-
-                        IName nameData = new Name(new DataBase<string>(name, url));
-
-                        Data[i] = new DataBase<T>((T)nameData, url);
-                    }
-                    else
-                    {
-                        string name = Decode(data[i].SelectSingleNode("./a")?.InnerText);
-                        string url = BaseUrl + data[i].SelectSingleNode("./a")?.Attributes["href"]?.Value;
-
-                        if (typeof(T) == typeof(IName))
-                        {
-                            IName nameData = new Name(new DataBase<string>(name, url));
-
-                            Data[i] = new DataBase<T>((T)nameData, url);
-                        }
-                        else if (typeof(T) == typeof(DateTime))
-                        {
-                            DateTime.TryParseExact(name, "YYYY", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out var result);
-
-                            Data[i] = new DataBase<T>((T)(object)result, url);
-                        }
-                        else
-                        {
-                            Data[i] = new DataBase<T>((T)(object)name, url);
-                        }
-                    }
-                }
-            }
-            else
-            {
-                Data = Array.Empty<DataBase<T>>();
-            }
-
-            return Data;
-        }
+        #region Data getting methods
 
         private IMangaObject GetMangaData(HtmlNode mainNode, Uri uri)
         {
             var infoNode = mainNode?.SelectSingleNode(".//div[@class='flex-row']/div[@class='subject-meta col-sm-7']");
 
-            IName name = GetName(mainNode);
+            IName name = GetName(mainNode, uri);
 
-            IDataBase<string> description = GetDescription(mainNode);
+            IDataBase<string> description = GetDescription(mainNode, uri);
             IDataBase<int> volumes = GetVolumes(infoNode);
-            ICover[] covers = GetCovers(mainNode);
-            IDataBase<IName>[] genres = GetInfoData<IName>(infoNode, "elem_genre ");
-            IDataBase<IName>[] authors = GetInfoData<IName>(infoNode, "elem_author ");
-            IDataBase<IName>[] writers = GetInfoData<IName>(infoNode, "elem_screenwriter ");
-            IDataBase<IName>[] illustrators = GetInfoData<IName>(infoNode, "elem_illustrator ");
-            IDataBase<IName>[] publishers = GetInfoData<IName>(infoNode, "elem_publisher ");
-            IDataBase<IName>[] magazines = GetInfoData<IName>(infoNode, "elem_magazine ");
+            ICollection<ICover> covers = GetCovers(mainNode);
+            ICollection<IDataBase<IName>> genres = GetInfoData<IName>(infoNode, "elem_genre ");
+            ICollection<IDataBase<IName>> authors = GetInfoData<IName>(infoNode, "elem_author ");
+            ICollection<IDataBase<IName>> writers = GetInfoData<IName>(infoNode, "elem_screenwriter ");
+            ICollection<IDataBase<IName>> illustrators = GetInfoData<IName>(infoNode, "elem_illustrator ");
+            ICollection<IDataBase<IName>> publishers = GetInfoData<IName>(infoNode, "elem_publisher ");
+            ICollection<IDataBase<IName>> magazines = GetInfoData<IName>(infoNode, "elem_magazine ");
             IDataBase<DateTime> releasedate = GetInfoData<DateTime>(infoNode, "elem_year ").FirstOrDefault();
 
             var manga = new MangaObject(name, uri)
@@ -357,76 +270,41 @@ namespace MangaParser.Parsers.HtmlWebParsers.ReadManga
             return manga;
         }
 
-        private IEnumerable<IDataBase> GetMangaPages(string scriptText)
+        private ICollection<ICover> GetCovers(HtmlNode mainNode)
         {
-            var index = scriptText.IndexOf(jsArrayVar);
+            var data = mainNode?.SelectNodes(".//div[@class='flex-row']/div[@class='subject-cower col-sm-5']//img");
 
-            if (index != -1)
+            ICover[] covers;
+
+            if (data?.Count > 0)
             {
-                string array = scriptText.Substring(index + jsArrayVar.Length);
+                covers = new ICover[data.Count];
 
-                if (array.Length > 0)
+                for (int i = 0; i < data.Count; i++)
                 {
-                    Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
+                    string large = data[i].Attributes["data-full"]?.Value;
+                    string medium = data[i].Attributes["src"]?.Value;
+                    string small = data[i].Attributes["data-thumb"]?.Value;
 
-                    MatchCollection matchs = regex.Matches(array);
-
-                    if (matchs.Count > 0)
-                    {
-                        for (int i = 0; i < matchs.Count; i++)
-                        {
-                            yield return new DataBase(default, matchs[i].Groups[1].Value + matchs[i].Groups[3].Value);
-                        }
-                    }
+                    covers[i] = new Cover(large, medium, small);
                 }
             }
-        }
-
-        private IName GetName(HtmlNode mainNode, Uri uri = default)
-        {
-            var namesNodes = mainNode?.SelectNodes("./h1[@class='names']/span");
-
-            DataBase<string> local = default, eng = default, orig = default;
-
-            Name name;
-
-            if (namesNodes?.Count > 0)
+            else
             {
-                for (int i = 0; i < namesNodes.Count; i++)
-                {
-                    switch (namesNodes[i].Attributes["class"]?.Value)
-                    {
-                        case "name":
-                            local = new DataBase<string>(Decode(namesNodes[i].InnerText), uri);
-                            break;
-
-                        case "eng-name":
-                            eng = new DataBase<string>(Decode(namesNodes[i].InnerText), uri);
-                            break;
-
-                        case "original-name":
-                            orig = new DataBase<string>(Decode(namesNodes[i].InnerText), uri);
-                            break;
-                    }
-                }
+                covers = Array.Empty<ICover>();
             }
 
-            name = new Name(local, eng, orig);
-
-            return name;
+            return covers;
         }
 
-        private IDataBase<int> GetVolumes(HtmlNode infoNode, Uri uri = default)
+        private IDataBase<string> GetDescription(HtmlNode mainNode, Uri uri = default)
         {
-            var volumesNode = infoNode?.SelectSingleNode("./p/text()[2]");
+            var descNode = mainNode?.SelectSingleNode("./meta[@itemprop='description']");
 
-            if (volumesNode != null)
+            if (descNode != null)
             {
-                IDataBase<int> data;
-                var volumes = Decode(volumesNode.InnerText);
-                int.TryParse(volumes, out var result);
-                data = new DataBase<int>(result, uri);
-                return data;
+                string description = Decode(descNode.Attributes["content"]?.Value);
+                return new DataBase<string>(description, uri);
             }
             else
             {
@@ -434,7 +312,161 @@ namespace MangaParser.Parsers.HtmlWebParsers.ReadManga
             }
         }
 
+        private ICollection<IDataBase<T>> GetInfoData<T>(HtmlNode infoNode, string elemName)
+        {
+            var dataNode = infoNode?.SelectNodes($".//span[contains(@class, '{elemName}')]");
+
+            IDataBase<T>[] data;
+
+            if (dataNode?.Count > 0)
+            {
+                data = new DataBase<T>[dataNode.Count];
+
+                for (int i = 0; i < dataNode.Count; i++)
+                {
+                    if (elemName == "elem_publisher ")
+                    {
+                        string nameE = Decode(dataNode[i].InnerText);
+
+                        IDataBase<string> nameDataE = new DataBase<string>(nameE, default(Uri));
+
+                        IName name = new Name(english: nameDataE);
+
+                        data[i] = new DataBase<T>((T)name, default(Uri));
+                    }
+                    else
+                    {
+                        Uri url = GetFullUrl(dataNode[i].SelectSingleNode("./a")?.Attributes["href"]?.Value);
+
+                        string value = Decode(dataNode[i].SelectSingleNode("./a")?.InnerText);
+
+                        if (typeof(T) == typeof(IName))
+                        {
+                            string nameL = value;
+                            string nameE = Path.GetFileName(url.OriginalString);
+
+                            IDataBase<string> nameDataL = new DataBase<string>(nameL, url);
+                            IDataBase<string> nameDataE = new DataBase<string>(nameE, url);
+
+                            // Skip english-only magazine names
+                            IName nameData = elemName == "elem_magazine " ? new Name(english: nameDataL) : new Name(nameDataL, nameDataE);
+
+                            data[i] = new DataBase<T>((T)nameData, url);
+                        }
+                        else if (typeof(T) == typeof(DateTime))
+                        {
+                            if (DateTime.TryParseExact(value, "yyyy", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out var result))
+                            {
+                                // Oh no! boxing! What to do? Nothing!
+                                data[i] = new DataBase<T>((T)(object)result, url);
+                            }
+                            else
+                            {
+                                data[i] = new DataBase<T>(default, url);
+                            }
+                        }
+                        else
+                        {
+                            data[i] = new DataBase<T>((T)(object)value, url);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                data = Array.Empty<DataBase<T>>();
+            }
+
+            return data;
+        }
+
+        private IName GetName(HtmlNode mainNode, Uri uri = default)
+        {
+            var namesNodes = mainNode?.SelectNodes("./h1[@class='names']/span");
+
+            IDataBase<string> local = default, eng = default, orig = default;
+
+            if (namesNodes?.Count > 0)
+            {
+                foreach (HtmlNode node in namesNodes)
+                {
+                    switch (node.Attributes["class"]?.Value)
+                    {
+                        case "name":
+                            {
+                                string nameL = Decode(node.InnerText);
+                                local = new DataBase<string>(nameL, uri);
+                            }
+                            break;
+
+                        case "eng-name":
+                            {
+                                string nameE = Decode(node.InnerText);
+                                eng = new DataBase<string>(nameE, uri);
+                            }
+                            break;
+
+                        case "original-name":
+                            {
+                                string nameO = Decode(node.InnerText);
+                                orig = new DataBase<string>(nameO, uri);
+                            }
+                            break;
+                    }
+                }
+            }
+
+            return new Name(local, eng, orig);
+        }
+
+        private IDataBase<int> GetVolumes(HtmlNode infoNode)
+        {
+            var volumesNode = infoNode?.SelectSingleNode("./p/text()[2]");
+
+            if (volumesNode != null)
+            {
+                var volumes = Decode(volumesNode.InnerText);
+
+                if (Int32.TryParse(volumes, out int result))
+                {
+                    return new DataBase<int>(result, default(Uri));
+                }
+            }
+
+            return null;
+        }
+
         #endregion Data getting methods
+
+        #region Pages methods
+
+        private IEnumerable<IDataBase> GetMangaPages(string scriptText)
+        {
+            int index = scriptText.IndexOf(jsArrayVar);
+            int arrayPosition = index + jsArrayVar.Length;
+
+            if (index != -1 && (arrayPosition < scriptText.Length))
+            {
+                string array = scriptText.Substring(arrayPosition);
+
+                if (array.Length > 0)
+                {
+                    MatchCollection matchs = regex.Matches(array);
+
+                    if (matchs.Count > 0)
+                    {
+                        for (int i = 0; i < matchs.Count; i++)
+                        {
+                            string url = matchs[i].Groups[1].Value + matchs[i].Groups[3].Value;
+
+                            yield return new DataBase(default, url);
+                        }
+                    }
+                }
+            }
+        }
+
+        #endregion Pages methods
 
         #endregion Private Methods
 
