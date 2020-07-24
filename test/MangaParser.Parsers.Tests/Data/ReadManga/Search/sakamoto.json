@@ -1,0 +1,195 @@
+[
+    {
+        "Covers": [
+            {
+                "Large": null,
+                "Medium": null,
+                "Small": {
+                    "Url": "https://static.readmanga.live/uploads/pics/00/94/278_p.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [
+            {
+                "Url": "https://readmanga.live/list/person/sano_nami",
+                "Value": {
+                    "Localized": {
+                        "Url": "https://readmanga.live/list/person/sano_nami",
+                        "Value": "Сано Нами"
+                    },
+                    "English": {
+                        "Url": "https://readmanga.live/list/person/sano_nami",
+                        "Value": "sano_nami"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Genres": [
+            {
+                "Url": "https://readmanga.live/list/genre/natural",
+                "Value": {
+                    "Localized": {
+                        "Url": "https://readmanga.live/list/genre/natural",
+                        "Value": "повседневность"
+                    },
+                    "English": {
+                        "Url": "https://readmanga.live/list/genre/natural",
+                        "Value": "natural"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "https://readmanga.live/list/genre/seinen",
+                "Value": {
+                    "Localized": {
+                        "Url": "https://readmanga.live/list/genre/seinen",
+                        "Value": "сэйнэн"
+                    },
+                    "English": {
+                        "Url": "https://readmanga.live/list/genre/seinen",
+                        "Value": "seinen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "https://readmanga.live/list/genre/school",
+                "Value": {
+                    "Localized": {
+                        "Url": "https://readmanga.live/list/genre/school",
+                        "Value": "школа"
+                    },
+                    "English": {
+                        "Url": "https://readmanga.live/list/genre/school",
+                        "Value": "school"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": {
+            "Value": "Сакамото – первогодка в старшей школе. Он не просто крутой, а самый крутой! Почти сразу после поступления в школу он стал привлекать к себе всеобщее внимание. Девчонки от него без ума, а большинство парней недолюбливают его. В классе даже есть мальчик, который работает моделью, и даже он сдаёт позиции по популярности Сакамото. И как бы одноклассники не старались навредить Сакамото, ему всегда удаётся с легкостью и изяществом помешать им. Хотя со стороны Сакамото выглядит прохладным и отчуждённым, он помогает другим, если его попросят, например, тому парнишке, над которым издеваются в классе. И какими ни были трудности на пути Сакамото, он всё преодолеет!",
+            "Url": "https://readmanga.live/haven_t_you_heard__i_m_sakamoto"
+        },
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "readmanga.live",
+        "Url": "https://readmanga.live/haven_t_you_heard__i_m_sakamoto",
+        "Value": {
+            "Localized": {
+                "Url": "https://readmanga.live/haven_t_you_heard__i_m_sakamoto",
+                "Value": "Да, я Сакамото, а что?"
+            },
+            "English": {
+                "Url": "https://readmanga.live/haven_t_you_heard__i_m_sakamoto",
+                "Value": "Haven't You Heard? I'm Sakamoto"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": null,
+                "Medium": null,
+                "Small": {
+                    "Url": "https://static.readmanga.live/uploads/pics/00/26/092_p.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [
+            {
+                "Url": "https://readmanga.live/list/person/watanabe_yoshitomo",
+                "Value": {
+                    "Localized": {
+                        "Url": "https://readmanga.live/list/person/watanabe_yoshitomo",
+                        "Value": "Ватанабэ Ёситомо"
+                    },
+                    "English": {
+                        "Url": "https://readmanga.live/list/person/watanabe_yoshitomo",
+                        "Value": "watanabe_yoshitomo"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Genres": [
+            {
+                "Url": "https://readmanga.live/list/genre/school",
+                "Value": {
+                    "Localized": {
+                        "Url": "https://readmanga.live/list/genre/school",
+                        "Value": "школа"
+                    },
+                    "English": {
+                        "Url": "https://readmanga.live/list/genre/school",
+                        "Value": "school"
+                    },
+                    "Original": {
+                        "Url": "https://readmanga.live/list/genre/school",
+                        "Value": ""
+                    }
+                }
+            },
+            {
+                "Url": "https://readmanga.live/list/genre/comedy",
+                "Value": {
+                    "Localized": {
+                        "Url": "https://readmanga.live/list/genre/comedy",
+                        "Value": "комедия"
+                    },
+                    "English": {
+                        "Url": "https://readmanga.live/list/genre/comedy",
+                        "Value": "comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "https://readmanga.live/list/genre/shoujo",
+                "Value": {
+                    "Localized": {
+                        "Url": "https://readmanga.live/list/genre/shoujo",
+                        "Value": "сёдзё"
+                    },
+                    "English": {
+                        "Url": "https://readmanga.live/list/genre/shoujo",
+                        "Value": "shoujo"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": {
+            "Value": "После расставания с любимой девушкой Окита Харуто решил, что с него хватит! Закрыв свое сердце на замок, он переводится в школу для мальчиков, чтобы взять в любовных делах небольшой тайм-аут. Но не тут то было!",
+            "Url": "https://readmanga.live/ot_liubvi_ne_ubejish"
+        },
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "readmanga.live",
+        "Url": "https://readmanga.live/ot_liubvi_ne_ubejish",
+        "Value": {
+            "Localized": {
+                "Url": "https://readmanga.live/ot_liubvi_ne_ubejish",
+                "Value": "От любви не убежишь"
+            },
+            "English": {
+                "Url": "https://readmanga.live/ot_liubvi_ne_ubejish",
+                "Value": ""
+            },
+            "Original": null
+        }
+    }
+]

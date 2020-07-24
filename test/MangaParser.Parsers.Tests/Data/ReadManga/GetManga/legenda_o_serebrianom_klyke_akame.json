@@ -1,0 +1,176 @@
+{
+    "Covers": [
+        {
+            "Large": {
+                "Url": "https://static.readmanga.live/uploads/pics/01/14/173_o.jpg",
+                "Value": null
+            },
+            "Medium": {
+                "Url": "https://static.readmanga.live/uploads/pics/01/14/173.jpg",
+                "Value": null
+            },
+            "Small": {
+                "Url": "https://static.readmanga.live/uploads/pics/01/14/173_p.jpg",
+                "Value": null
+            }
+        },
+        {
+            "Large": {
+                "Url": "https://static.readmanga.live/uploads/pics/01/14/174_o.jpg",
+                "Value": null
+            },
+            "Medium": {
+                "Url": "https://static.readmanga.live/uploads/pics/01/14/174.jpg",
+                "Value": null
+            },
+            "Small": {
+                "Url": "https://static.readmanga.live/uploads/pics/01/14/174_p.jpg",
+                "Value": null
+            }
+        },
+        {
+            "Large": {
+                "Url": "https://static.readmanga.live/uploads/pics/01/14/175_o.jpg",
+                "Value": null
+            },
+            "Medium": {
+                "Url": "https://static.readmanga.live/uploads/pics/01/14/175.jpg",
+                "Value": null
+            },
+            "Small": {
+                "Url": "https://static.readmanga.live/uploads/pics/01/14/175_p.jpg",
+                "Value": null
+            }
+        },
+        {
+            "Large": {
+                "Url": "https://static.readmanga.live/uploads/pics/01/14/176_o.jpg",
+                "Value": null
+            },
+            "Medium": {
+                "Url": "https://static.readmanga.live/uploads/pics/01/14/176.jpg",
+                "Value": null
+            },
+            "Small": {
+                "Url": "https://static.readmanga.live/uploads/pics/01/14/176_p.jpg",
+                "Value": null
+            }
+        },
+        {
+            "Large": {
+                "Url": "https://static.readmanga.live/uploads/pics/01/14/177_o.jpg",
+                "Value": null
+            },
+            "Medium": {
+                "Url": "https://static.readmanga.live/uploads/pics/01/14/177.jpg",
+                "Value": null
+            },
+            "Small": {
+                "Url": "https://static.readmanga.live/uploads/pics/01/14/177_p.jpg",
+                "Value": null
+            }
+        }
+    ],
+    "Authors": [
+        {
+            "Url": "https://readmanga.live/list/person/takahashi_yoshihiro",
+            "Value": {
+                "Localized": {
+                    "Url": "https://readmanga.live/list/person/takahashi_yoshihiro",
+                    "Value": "Такахаси Ёсихиро"
+                },
+                "English": {
+                    "Url": "https://readmanga.live/list/person/takahashi_yoshihiro",
+                    "Value": "takahashi_yoshihiro"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Genres": [
+        {
+            "Url": "https://readmanga.live/list/genre/action",
+            "Value": {
+                "Localized": {
+                    "Url": "https://readmanga.live/list/genre/action",
+                    "Value": "боевик"
+                },
+                "English": {
+                    "Url": "https://readmanga.live/list/genre/action",
+                    "Value": "action"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://readmanga.live/list/genre/shounen",
+            "Value": {
+                "Localized": {
+                    "Url": "https://readmanga.live/list/genre/shounen",
+                    "Value": "сёнэн"
+                },
+                "English": {
+                    "Url": "https://readmanga.live/list/genre/shounen",
+                    "Value": "shounen"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Description": {
+        "Url": "https://readmanga.live/legenda_o_serebrianom_klyke_akame",
+        "Value": "История происхождения семьи Акаме восходит ко временам начала конфликта между Ига и Кога."
+    },
+    "Illustrators": [],
+    "Writers": [],
+    "Magazines": [
+        {
+            "Url": "https://readmanga.live/list/magazine/weekly_manga_goraku",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://readmanga.live/list/magazine/weekly_manga_goraku",
+                    "Value": "Manga Goraku"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Publishers": [
+        {
+            "Url": null,
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": null,
+                    "Value": "Nihon Bungeisha"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "ReleaseDate": {
+        "Url": "https://readmanga.live/list/year/2014",
+        "Value": "2014-01-01T00:00:00"
+    },
+    "Volumes": {
+        "Url": null,
+        "Value": 5
+    },
+    "Source": "readmanga.live",
+    "Url": "https://readmanga.live/legenda_o_serebrianom_klyke_akame",
+    "Value": {
+        "Localized": {
+            "Url": "https://readmanga.live/legenda_o_serebrianom_klyke_akame",
+            "Value": "Легенда о Серебряном Клыке Акаме"
+        },
+        "English": {
+            "Url": "https://readmanga.live/legenda_o_serebrianom_klyke_akame",
+            "Value": "Legend of Silver Fang Akame"
+        },
+        "Original": {
+            "Url": "https://readmanga.live/legenda_o_serebrianom_klyke_akame",
+            "Value": "Ginga Densetsu Akame"
+        }
+    }
+}

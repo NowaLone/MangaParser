@@ -1,0 +1,54 @@
+[
+    {
+        "AddedDate": "2016-11-22T00:00:00",
+        "Cover": null,
+        "Url": "https://readmanga.live/castle_town_dandelion/vol1/1%3Fmtr=1",
+        "Value": {
+            "Localized": {
+                "Url": "https://readmanga.live/castle_town_dandelion/vol1/1%3Fmtr=1",
+                "Value": "Город-замок Данделион 1 - 1 Апрель, Аканэ"
+            },
+            "English": null,
+            "Original": null
+        }
+    },
+    {
+        "AddedDate": "2016-11-26T00:00:00",
+        "Cover": null,
+        "Url": "https://readmanga.live/castle_town_dandelion/vol1/2%3Fmtr=1",
+        "Value": {
+            "Localized": {
+                "Url": "https://readmanga.live/castle_town_dandelion/vol1/2%3Fmtr=1",
+                "Value": "Город-замок Данделион 1 - 2 Май, Хикари."
+            },
+            "English": null,
+            "Original": null
+        }
+    },
+    {
+        "AddedDate": "2016-11-30T00:00:00",
+        "Cover": null,
+        "Url": "https://readmanga.live/castle_town_dandelion/vol1/3%3Fmtr=1",
+        "Value": {
+            "Localized": {
+                "Url": "https://readmanga.live/castle_town_dandelion/vol1/3%3Fmtr=1",
+                "Value": "Город-замок Данделион 1 - 3 Июнь, Мисаки."
+            },
+            "English": null,
+            "Original": null
+        }
+    },
+    {
+        "AddedDate": "2016-12-04T00:00:00",
+        "Cover": null,
+        "Url": "https://readmanga.live/castle_town_dandelion/vol1/4%3Fmtr=1",
+        "Value": {
+            "Localized": {
+                "Url": "https://readmanga.live/castle_town_dandelion/vol1/4%3Fmtr=1",
+                "Value": "Город-замок Данделион 1 - 4 Июль, Харука."
+            },
+            "English": null,
+            "Original": null
+        }
+    }
+]

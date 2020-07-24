@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2D261140-7F1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{74468534-9B9F-4EB5-A9DC-16A4F06EC79F}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MangaParser.Parsers.Tests", "test\MangaParser.Parsers.Tests\MangaParser.Parsers.Tests.csproj", "{3E815991-DC90-4757-9CBD-C8E6839C57F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{785DC7B7-9658-437C-9175-B980EE1C5C95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{785DC7B7-9658-437C-9175-B980EE1C5C95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{785DC7B7-9658-437C-9175-B980EE1C5C95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E815991-DC90-4757-9CBD-C8E6839C57F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E815991-DC90-4757-9CBD-C8E6839C57F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E815991-DC90-4757-9CBD-C8E6839C57F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E815991-DC90-4757-9CBD-C8E6839C57F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{80CD9B08-2416-47DA-8CD6-D73ACB6A06BF} = {2D261140-7F11-46C9-B551-EA9C40B1B28C}
 		{74BFBA4B-E4F2-4549-AD17-DD85686562CE} = {2D261140-7F11-46C9-B551-EA9C40B1B28C}
 		{785DC7B7-9658-437C-9175-B980EE1C5C95} = {2D261140-7F11-46C9-B551-EA9C40B1B28C}
+		{3E815991-DC90-4757-9CBD-C8E6839C57F1} = {74468534-9B9F-4EB5-A9DC-16A4F06EC79F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {03AE4F1F-225E-496A-888A-8CF08B0689C9}
