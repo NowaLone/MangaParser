@@ -4,7 +4,6 @@ using MangaParser.Core.Interfaces;
 using MangaParser.Core.Models;
 using System;
 using System.Collections.Generic;
-using System.Net;
 using System.Threading.Tasks;
 
 namespace MangaParser.Parsers.HtmlWebParsers
@@ -16,19 +15,13 @@ namespace MangaParser.Parsers.HtmlWebParsers
         ///<inheritdoc cref="Parser(Uri)"/>
         protected CoreParser(Uri baseUrl) : base(baseUrl)
         {
-            Web = new HtmlWeb
-            {
-                PreRequest = OnPreRequest
-            };
+            Web = new HtmlWeb();
         }
 
         ///<inheritdoc cref="Parser(string)"/>
         protected CoreParser(string baseUrl) : base(baseUrl)
         {
-            Web = new HtmlWeb
-            {
-                PreRequest = OnPreRequest
-            };
+            Web = new HtmlWeb();
         }
 
         #endregion Constructors
@@ -109,7 +102,6 @@ namespace MangaParser.Parsers.HtmlWebParsers
             {
                 throw new ArgumentNullException(nameof(url));
             }
-
 
             if (BaseUrl.Host != url.Host)
             {
@@ -213,13 +205,6 @@ namespace MangaParser.Parsers.HtmlWebParsers
         protected abstract IEnumerable<IDataBase> GetPagesCore(HtmlDocument htmlDoc, Uri url);
 
         #endregion Abstract Methods
-
-        private static bool OnPreRequest(HttpWebRequest request)
-        {
-            request.AllowAutoRedirect = true;
-            request.MaximumAutomaticRedirections = 1;
-            return true;
-        }
 
         #endregion Methods
     }
