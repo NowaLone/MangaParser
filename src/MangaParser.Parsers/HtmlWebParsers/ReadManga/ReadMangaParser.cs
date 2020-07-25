@@ -272,7 +272,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.ReadManga
 
         private ICollection<ICover> GetCovers(HtmlNode mainNode)
         {
-            var data = mainNode?.SelectNodes(".//div[@class='flex-row']/div[@class='subject-cower col-sm-5']//img");
+            var data = mainNode?.SelectNodes(".//div[@class='flex-row']/div[@class='subject-cower col-sm-5']//img | .//div[@class='flex-row']/div[@class='subject-cower col-sm-5']//a");
 
             ICover[] covers;
 
@@ -283,7 +283,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.ReadManga
                 for (int i = 0; i < data.Count; i++)
                 {
                     string large = data[i].Attributes["data-full"]?.Value;
-                    string medium = data[i].Attributes["src"]?.Value;
+                    string medium = data[i].Attributes["src"]?.Value ?? data[i].Attributes["href"]?.Value;
                     string small = data[i].Attributes["data-thumb"]?.Value;
 
                     covers[i] = new Cover(large, medium, small);
