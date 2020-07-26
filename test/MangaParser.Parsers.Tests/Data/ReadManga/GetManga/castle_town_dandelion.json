@@ -209,7 +209,10 @@
         "Url": "https://readmanga.live/list/year/2012",
         "Value": "2012-01-01T00:00:00"
     },
-    "Volumes": null,
+    "Volumes": {
+        "Url": null,
+        "Value": 5
+    },
     "Source": "readmanga.live",
     "Url": "https://readmanga.live/castle_town_dandelion",
     "Value": {

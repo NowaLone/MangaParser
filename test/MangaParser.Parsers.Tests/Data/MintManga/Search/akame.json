@@ -1,0 +1,162 @@
+[
+    {
+        "Covers": [
+            {
+                "Large": null,
+                "Medium": null,
+                "Small": {
+                    "Url": "https://static.mintmanga.live/uploads/pics/00/28/283_p.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "https://mintmanga.live/list/genre/shounen",
+                "Value": {
+                    "Localized": {
+                        "Url": "https://mintmanga.live/list/genre/shounen",
+                        "Value": "сёнэн"
+                    },
+                    "English": {
+                        "Url": "https://mintmanga.live/list/genre/shounen",
+                        "Value": "shounen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "https://mintmanga.live/list/genre/adventure",
+                "Value": {
+                    "Localized": {
+                        "Url": "https://mintmanga.live/list/genre/adventure",
+                        "Value": "приключения"
+                    },
+                    "English": {
+                        "Url": "https://mintmanga.live/list/genre/adventure",
+                        "Value": "adventure"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "https://mintmanga.live/list/genre/drama",
+                "Value": {
+                    "Localized": {
+                        "Url": "https://mintmanga.live/list/genre/drama",
+                        "Value": "драма"
+                    },
+                    "English": {
+                        "Url": "https://mintmanga.live/list/genre/drama",
+                        "Value": "drama"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": {
+            "Url": "https://mintmanga.live/akame_ga_kill",
+            "Value": "Тернист путь к славе... Но что же делать, если ты обычный деревенский парень?.. Правильно! Идти в столицу, зарабатывать себе имя. Но не всегда все идёт по плану: в армию не берут, деньги украли. А милашка-тян, приютившая нашего героя, оказывается латентным чикатилой в юбке, порешившим его друзей. Но не все потеряно. Ведь есть вакантное место в ассасинской организации - \"Ночной Рейд\". И экзамен туда - всего лишь художественное кромсание неугодных буржуев. (c) Hanabi, yoshi manga Team"
+        },
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "mintmanga.live",
+        "Url": "https://mintmanga.live/akame_ga_kill",
+        "Value": {
+            "Localized": {
+                "Url": "https://mintmanga.live/akame_ga_kill",
+                "Value": "Убийца Акаме!"
+            },
+            "English": {
+                "Url": "https://mintmanga.live/akame_ga_kill",
+                "Value": "Akame ga KILL!"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": null,
+                "Medium": null,
+                "Small": {
+                    "Url": "https://static.mintmanga.live/uploads/pics/00/39/022_p.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "https://mintmanga.live/list/genre/adventure",
+                "Value": {
+                    "Localized": {
+                        "Url": "https://mintmanga.live/list/genre/adventure",
+                        "Value": "приключения"
+                    },
+                    "English": {
+                        "Url": "https://mintmanga.live/list/genre/adventure",
+                        "Value": "adventure"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "https://mintmanga.live/list/genre/erotica",
+                "Value": {
+                    "Localized": {
+                        "Url": "https://mintmanga.live/list/genre/erotica",
+                        "Value": "эротика"
+                    },
+                    "English": {
+                        "Url": "https://mintmanga.live/list/genre/erotica",
+                        "Value": "erotica"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "https://mintmanga.live/list/genre/action",
+                "Value": {
+                    "Localized": {
+                        "Url": "https://mintmanga.live/list/genre/action",
+                        "Value": "боевик"
+                    },
+                    "English": {
+                        "Url": "https://mintmanga.live/list/genre/action",
+                        "Value": "action"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": {
+            "Url": "https://mintmanga.live/akame_ga_kill__zero",
+            "Value": "Спустя тысячу лет со дня своего основания, империя погрязла в коррупции своего правительства, породив огромное количество повстанческих организаций по всей стране. Обеспокоенные таким положением дел, её секретные спецслужбы создали группу убийц, членами которой стали невинные дети, из которых вырастили идеальные орудия для убийств. Им внушили, что, отнимая жизни одних людей, они тем самым несут счастье и радость другим. Эти дети даже не ожидали, какие подарки преподнесёт им судьба..."
+        },
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "mintmanga.live",
+        "Url": "https://mintmanga.live/akame_ga_kill__zero",
+        "Value": {
+            "Localized": {
+                "Url": "https://mintmanga.live/akame_ga_kill__zero",
+                "Value": "Убийца Акаме! Zero"
+            },
+            "English": {
+                "Url": "https://mintmanga.live/akame_ga_kill__zero",
+                "Value": "Akame ga KILL! Zero"
+            },
+            "Original": null
+        }
+    }
+]
