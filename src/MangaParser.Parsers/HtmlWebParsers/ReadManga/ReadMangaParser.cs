@@ -214,7 +214,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.ReadManga
             {
                 for (int i = chapters.Count - 1; i >= 0; i--)
                 {
-                    string nameL = Decode(chapters[i].SelectSingleNode("./td/a")?.InnerText);
+                    string nameL = Decode(chapters[i].SelectSingleNode("./td/a/text()")?.InnerText);
 
                     Uri url = GetFullUrl(chapters[i].SelectSingleNode("./td/a")?.Attributes["href"]?.Value + "?mtr=1");
 
@@ -328,6 +328,9 @@ namespace MangaParser.Parsers.HtmlWebParsers.ReadManga
                     {
                         string nameE = Decode(dataNode[i].InnerText);
 
+                        // Removing that strange separator
+                        nameE = nameE.Replace(", ", String.Empty);
+
                         IDataBase<string> nameDataE = new DataBase<string>(nameE, default(Uri));
 
                         IName name = new Name(english: nameDataE);
@@ -427,7 +430,11 @@ namespace MangaParser.Parsers.HtmlWebParsers.ReadManga
             {
                 var volumes = Decode(volumesNode.InnerText);
 
-                if (Int32.TryParse(volumes, out int result))
+                // Search ',' index if there is another text
+                var index = volumes.IndexOf(',');
+                string count = index > 0 ? volumes.Substring(0, index) : volumes;
+
+                if (Int32.TryParse(count, out int result))
                 {
                     return new DataBase<int>(result, default(Uri));
                 }
