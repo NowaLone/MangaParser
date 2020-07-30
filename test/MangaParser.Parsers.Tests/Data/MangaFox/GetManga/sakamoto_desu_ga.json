@@ -1,0 +1,80 @@
+{
+    "Covers": [
+        {
+            "Large": {
+                "Url": "http://fmcdn.mfcdn.net/store/manga/12104/cover.jpg?token=2eb811638f067cc02e3fe2900d66db69b9139b3e&ttl=1595966400&v=1545116244",
+                "Value": null
+            },
+            "Medium": null,
+            "Small": null
+        }
+    ],
+    "Authors": [
+        {
+            "Url": "https://fanfox.net/search/author/SANO+Nami/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/search/author/SANO+Nami/",
+                    "Value": "SANO Nami"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Genres": [
+        {
+            "Url": "https://fanfox.net/directory/comedy/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/directory/comedy/",
+                    "Value": "Comedy"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://fanfox.net/directory/school-life/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/directory/school-life/",
+                    "Value": "School Life"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://fanfox.net/directory/seinen/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/directory/seinen/",
+                    "Value": "Seinen"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Description": {
+        "Url": "https://fanfox.net/manga/sakamoto_desu_ga",
+        "Value": "First-year high-school student Sakamoto isn’t just cool, he’s the coolest! Almost immediately after starting school, he began attracting everyone’s attention. The girls love him, and most of the boys resent him. There’s even a boy in the class who works as a model, but who is constantly upstaged by Sakamoto! No matter what tricks the other boys try to play on him, Sakamoto always manages to foil them with ease and grace. Though Sakamoto may seem cool and aloof, he helps others when asked, such as in the case of the boy in his class who was being constantly bullied. No matter what difficulties Sakamoto encounters, he moves through his high-school life with confidence and class! [tethysdust] In volume 1 is included the one-shot: Katahaba Hiroshi."
+    },
+    "Illustrators": [],
+    "Writers": [],
+    "Magazines": [],
+    "Publishers": [],
+    "ReleaseDate": null,
+    "Volumes": null,
+    "Source": "fanfox.net",
+    "Url": "https://fanfox.net/manga/sakamoto_desu_ga",
+    "Value": {
+        "Localized": null,
+        "English": {
+            "Url": "https://fanfox.net/manga/sakamoto_desu_ga",
+            "Value": "Sakamoto desu ga?"
+        },
+        "Original": null
+    }
+}

@@ -1,0 +1,135 @@
+{
+    "Covers": [
+        {
+            "Large": {
+                "Url": "http://fmcdn.mfcdn.net/store/manga/10416/cover.jpg?token=787f2b75a71575253d55ad6264642b008738f2b6&ttl=1595966400&v=1592915280",
+                "Value": null
+            },
+            "Medium": null,
+            "Small": null
+        }
+    ],
+    "Authors": [
+        {
+            "Url": "https://fanfox.net/search/author/Takahiro+(%e3%82%bf%e3%82%ab%e3%83%92%e3%83%ad)/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/search/author/Takahiro+(%e3%82%bf%e3%82%ab%e3%83%92%e3%83%ad)/",
+                    "Value": "Takahiro (タカヒロ)"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Genres": [
+        {
+            "Url": "https://fanfox.net/directory/action/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/directory/action/",
+                    "Value": "Action"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://fanfox.net/directory/drama/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/directory/drama/",
+                    "Value": "Drama"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://fanfox.net/directory/fantasy/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/directory/fantasy/",
+                    "Value": "Fantasy"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://fanfox.net/directory/shounen/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/directory/shounen/",
+                    "Value": "Shounen"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://fanfox.net/directory/psychological/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/directory/psychological/",
+                    "Value": "Psychological"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://fanfox.net/directory/romance/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/directory/romance/",
+                    "Value": "Romance"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://fanfox.net/directory/tragedy/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/directory/tragedy/",
+                    "Value": "Tragedy"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://fanfox.net/directory/mature/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/directory/mature/",
+                    "Value": "Mature"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Description": {
+        "Url": "https://fanfox.net/manga/akame_ga_kill",
+        "Value": "Teenage country bumpkin Tatsumi dreams of earning enough money for his impoverished village by working in the Capital - but his short-lived plans go awry when he’s robbed by a buxom beauty upon arrival! Penniless, Tatsumi is taken in by the lovely Lady Aria, but just when his Capital dreams seem in reach yet again, Lady Aria’s mansion is besieged by Night Raid - a team of ruthless assassins who targets high-ranking members of the upper class! As Tatsumi is quick to learn, appearances can be deceiving in the Capital, and this team of assassins just might be… the good guys?!"
+    },
+    "Illustrators": [],
+    "Writers": [],
+    "Magazines": [],
+    "Publishers": [],
+    "ReleaseDate": null,
+    "Volumes": null,
+    "Source": "fanfox.net",
+    "Url": "https://fanfox.net/manga/akame_ga_kill",
+    "Value": {
+        "Localized": null,
+        "English": {
+            "Url": "https://fanfox.net/manga/akame_ga_kill",
+            "Value": "Akame ga Kill!"
+        },
+        "Original": null
+    }
+}
