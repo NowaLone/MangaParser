@@ -40,7 +40,7 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.MangaFox
             IParser parser = GetNewParser;
             List<IMangaObject> data = new List<IMangaObject>();
 
-            string dataPath = GetDataPath(ParserPath, "Search", string.IsNullOrEmpty(query) ? "empty" : query is null ? "null" : query);
+            string dataPath = GetDataPath(ParserPath, "Search", String.IsNullOrEmpty(query) ? "empty" : query);
 
             if (File.Exists(dataPath))
             {
@@ -102,7 +102,7 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.MangaFox
             IParser parser = GetNewParser;
             List<IMangaObject> data = new List<IMangaObject>();
 
-            string dataPath = GetDataPath(ParserPath, "Search", string.IsNullOrEmpty(query) ? "empty" : query is null ? "null" : query);
+            string dataPath = GetDataPath(ParserPath, "Search", String.IsNullOrEmpty(query) ? "empty" : query);
 
             if (File.Exists(dataPath))
             {
