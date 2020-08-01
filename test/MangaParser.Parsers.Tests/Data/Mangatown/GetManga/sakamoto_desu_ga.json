@@ -1,0 +1,95 @@
+{
+    "Covers": [
+        {
+            "Large": {
+                "Url": "http://fmcdn.mangahere.com/store/manga/12615/ocover.jpg?token=520f9c69fc363ccfdbc21555feec2013adc3a2b0&ttl=1596394800&v=1466574628",
+                "Value": null
+            },
+            "Medium": null,
+            "Small": null
+        }
+    ],
+    "Authors": [
+        {
+            "Url": "https://www.mangatown.com//www.mangatown.com/author/SANO+Nami",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com//www.mangatown.com/author/SANO+Nami",
+                    "Value": "SANO Nami"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Genres": [
+        {
+            "Url": "https://www.mangatown.com/directory/seinen-0-0-0-0-0/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com/directory/seinen-0-0-0-0-0/",
+                    "Value": "Seinen"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://www.mangatown.com/directory/0-comedy-0-0-0-0/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com/directory/0-comedy-0-0-0-0/",
+                    "Value": "Comedy"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://www.mangatown.com/directory/0-school_life-0-0-0-0/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com/directory/0-school_life-0-0-0-0/",
+                    "Value": "School Life"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Description": {
+        "Url": "https://www.mangatown.com/manga/sakamoto_desu_ga",
+        "Value": "First year high school student Sakamoto isn't just cool, he's the coolest! Almost immediately after starting school, he began attracting everyone's attention. The girls love him, and most of the boys resent him. There's even a boy in the class who works as a model, but who is constantly upstaged by Sakamoto! No matter what tricks the other boys try to play on him, Sakamoto always manages to foil them with ease and grace. Though Sakamoto may seem cool and aloof, he helps others when asked, such as in the case of the boy in his class who was being constantly bullied. No matter what difficulties Sakamoto encounters, he moves through his high school life with confidence and class! In volume 1 is included a one-shot: Katahaba Hiroshi."
+    },
+    "Illustrators": [
+        {
+            "Url": "https://www.mangatown.com//www.mangatown.com/artist/SANO+Nami",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com//www.mangatown.com/artist/SANO+Nami",
+                    "Value": "SANO Nami"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Writers": [],
+    "Magazines": [],
+    "Publishers": [],
+    "ReleaseDate": null,
+    "Volumes": null,
+    "Source": "www.mangatown.com",
+    "Url": "https://www.mangatown.com/manga/sakamoto_desu_ga",
+    "Value": {
+        "Localized": null,
+        "English": {
+            "Url": "https://www.mangatown.com/manga/sakamoto_desu_ga",
+            "Value": "Sakamoto desu ga?"
+        },
+        "Original": {
+            "Url": "https://www.mangatown.com/manga/sakamoto_desu_ga",
+            "Value": "坂本ですが?"
+        }
+    }
+}
