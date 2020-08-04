@@ -1,0 +1,325 @@
+[
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s5.mangareader.net/cover/akame-ga-kiru/akame-ga-kiru-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s5.mangareader.net/cover/akame-ga-kiru/akame-ga-kiru-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s5.mangareader.net/cover/akame-ga-kiru/akame-ga-kiru-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/adventure",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/adventure",
+                        "Value": "Adventure"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/romance",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/romance",
+                        "Value": "Romance"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/tragedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/tragedy",
+                        "Value": "Tragedy"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/akame-ga-kiru",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/akame-ga-kiru",
+                "Value": "Akame ga Kiru!"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s5.mangareader.net/cover/akame-ga-kiru-zero/akame-ga-kiru-zero-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s5.mangareader.net/cover/akame-ga-kiru-zero/akame-ga-kiru-zero-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s5.mangareader.net/cover/akame-ga-kiru-zero/akame-ga-kiru-zero-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/adventure",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/adventure",
+                        "Value": "Adventure"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/mature",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/mature",
+                        "Value": "Mature"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/tragedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/tragedy",
+                        "Value": "Tragedy"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/akame-ga-kiru-zero",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/akame-ga-kiru-zero",
+                "Value": "Akame ga Kiru! Zero"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s1.mangareader.net/cover/akame-ga-kill-zero/akame-ga-kill-zero-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s1.mangareader.net/cover/akame-ga-kill-zero/akame-ga-kill-zero-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s1.mangareader.net/cover/akame-ga-kill-zero/akame-ga-kill-zero-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/adventure",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/adventure",
+                        "Value": "Adventure"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/mature",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/mature",
+                        "Value": "Mature"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/seinen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/seinen",
+                        "Value": "Seinen"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/akame-ga-kill-zero",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/akame-ga-kill-zero",
+                "Value": "Akame ga KILL! Zero"
+            },
+            "Original": null
+        }
+    }
+]

@@ -1,0 +1,84 @@
+[
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s2.mangareader.net/cover/sakamoto-desu-ga/sakamoto-desu-ga-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s2.mangareader.net/cover/sakamoto-desu-ga/sakamoto-desu-ga-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s2.mangareader.net/cover/sakamoto-desu-ga/sakamoto-desu-ga-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/school-life",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/school-life",
+                        "Value": "School Life"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/seinen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/seinen",
+                        "Value": "Seinen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/slice-of-life",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/slice-of-life",
+                        "Value": "Slice of Life"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/sakamoto-desu-ga",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/sakamoto-desu-ga",
+                "Value": "Sakamoto desu ga?"
+            },
+            "Original": null
+        }
+    }
+]
