@@ -6,7 +6,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.Mangapanda
     {
         #region Constructors
 
-        public MangapandaParser(string baseUri = "https://www.mangapanda.com") : base(baseUri)
+        public MangapandaParser(string baseUri = "http://www.mangapanda.com") : base(baseUri)
         {
         }
 
