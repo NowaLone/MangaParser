@@ -1,0 +1,2651 @@
+[
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s2.mangapanda.com/cover/naruto/naruto-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s2.mangapanda.com/cover/naruto/naruto-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s2.mangapanda.com/cover/naruto/naruto-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/martial-arts",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/martial-arts",
+                        "Value": "Martial Arts"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/super-power",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/super-power",
+                        "Value": "Super Power"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/naruto",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/naruto",
+                "Value": "Naruto"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s2.mangapanda.com/cover/bleach/bleach-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s2.mangapanda.com/cover/bleach/bleach-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s2.mangapanda.com/cover/bleach/bleach-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/super-power",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/super-power",
+                        "Value": "Super Power"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/bleach",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/bleach",
+                "Value": "Bleach"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s2.mangapanda.com/cover/berserk/berserk-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s2.mangapanda.com/cover/berserk/berserk-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s2.mangapanda.com/cover/berserk/berserk-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/horror",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/horror",
+                        "Value": "Horror"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/berserk",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/berserk",
+                "Value": "Berserk"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s3.mangapanda.com/cover/gantz/gantz-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s3.mangapanda.com/cover/gantz/gantz-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s3.mangapanda.com/cover/gantz/gantz-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/sci-fi",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/sci-fi",
+                        "Value": "Sci-Fi"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/seinen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/seinen",
+                        "Value": "Seinen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/gantz",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/gantz",
+                "Value": "Gantz"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s3.mangapanda.com/cover/monster/monster-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s3.mangapanda.com/cover/monster/monster-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s3.mangapanda.com/cover/monster/monster-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/mystery",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/mystery",
+                        "Value": "Mystery"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/monster",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/monster",
+                "Value": "Monster"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s3.mangapanda.com/cover/vagabond/vagabond-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s3.mangapanda.com/cover/vagabond/vagabond-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s3.mangapanda.com/cover/vagabond/vagabond-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/historical",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/historical",
+                        "Value": "Historical"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/martial-arts",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/martial-arts",
+                        "Value": "Martial Arts"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/mature",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/mature",
+                        "Value": "Mature"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/seinen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/seinen",
+                        "Value": "Seinen"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/vagabond",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/vagabond",
+                "Value": "Vagabond"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s4.mangapanda.com/cover/akira/akira-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s4.mangapanda.com/cover/akira/akira-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s4.mangapanda.com/cover/akira/akira-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/sci-fi",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/sci-fi",
+                        "Value": "Sci-Fi"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/akira",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/akira",
+                "Value": "Akira"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s4.mangapanda.com/cover/kuroshitsuji/kuroshitsuji-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s4.mangapanda.com/cover/kuroshitsuji/kuroshitsuji-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s4.mangapanda.com/cover/kuroshitsuji/kuroshitsuji-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/kuroshitsuji",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/kuroshitsuji",
+                "Value": "Kuroshitsuji"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": null,
+                "Medium": null,
+                "Small": null
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/adventure",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/adventure",
+                        "Value": "Adventure"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/one-piece",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/one-piece",
+                "Value": "One Piece"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s5.mangapanda.com/cover/vampire-knight/vampire-knight-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s5.mangapanda.com/cover/vampire-knight/vampire-knight-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s5.mangapanda.com/cover/vampire-knight/vampire-knight-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/mystery",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/mystery",
+                        "Value": "Mystery"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/romance",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/romance",
+                        "Value": "Romance"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/shoujo",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/shoujo",
+                        "Value": "Shoujo"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/vampire-knight",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/vampire-knight",
+                "Value": "Vampire Knight"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s5.mangapanda.com/cover/dragon-ball/dragon-ball-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s5.mangapanda.com/cover/dragon-ball/dragon-ball-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s5.mangapanda.com/cover/dragon-ball/dragon-ball-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/adventure",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/adventure",
+                        "Value": "Adventure"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/historical",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/historical",
+                        "Value": "Historical"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/martial-arts",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/martial-arts",
+                        "Value": "Martial Arts"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/dragon-ball",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/dragon-ball",
+                "Value": "Dragon Ball"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s5.mangapanda.com/cover/blade-of-the-immortal/blade-of-the-immortal-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s5.mangapanda.com/cover/blade-of-the-immortal/blade-of-the-immortal-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s5.mangapanda.com/cover/blade-of-the-immortal/blade-of-the-immortal-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/historical",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/historical",
+                        "Value": "Historical"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/horror",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/horror",
+                        "Value": "Horror"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/blade-of-the-immortal",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/blade-of-the-immortal",
+                "Value": "Blade of the Immortal"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s1.mangapanda.com/cover/the-bride-of-the-water-god/the-bride-of-the-water-god-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s1.mangapanda.com/cover/the-bride-of-the-water-god/the-bride-of-the-water-god-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s1.mangapanda.com/cover/the-bride-of-the-water-god/the-bride-of-the-water-god-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/romance",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/romance",
+                        "Value": "Romance"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/shoujo",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/shoujo",
+                        "Value": "Shoujo"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/the-bride-of-the-water-god",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/the-bride-of-the-water-god",
+                "Value": "The Bride of the Water God"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s1.mangapanda.com/cover/20th-century-boys/20th-century-boys-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s1.mangapanda.com/cover/20th-century-boys/20th-century-boys-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s1.mangapanda.com/cover/20th-century-boys/20th-century-boys-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/historical",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/historical",
+                        "Value": "Historical"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/mystery",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/mystery",
+                        "Value": "Mystery"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/sci-fi",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/sci-fi",
+                        "Value": "Sci-Fi"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/seinen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/seinen",
+                        "Value": "Seinen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/20th-century-boys",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/20th-century-boys",
+                "Value": "20th Century Boys"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s1.mangapanda.com/cover/yokohama-kaidashi-kikou/yokohama-kaidashi-kikou-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s1.mangapanda.com/cover/yokohama-kaidashi-kikou/yokohama-kaidashi-kikou-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s1.mangapanda.com/cover/yokohama-kaidashi-kikou/yokohama-kaidashi-kikou-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/sci-fi",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/sci-fi",
+                        "Value": "Sci-Fi"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/seinen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/seinen",
+                        "Value": "Seinen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/slice-of-life",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/slice-of-life",
+                        "Value": "Slice of Life"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/yokohama-kaidashi-kikou",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/yokohama-kaidashi-kikou",
+                "Value": "Yokohama Kaidashi Kikou"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s2.mangapanda.com/cover/death-note/death-note-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s2.mangapanda.com/cover/death-note/death-note-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s2.mangapanda.com/cover/death-note/death-note-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/mystery",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/mystery",
+                        "Value": "Mystery"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/death-note",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/death-note",
+                "Value": "Death Note"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s2.mangapanda.com/cover/great-teacher-onizuka/great-teacher-onizuka-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s2.mangapanda.com/cover/great-teacher-onizuka/great-teacher-onizuka-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s2.mangapanda.com/cover/great-teacher-onizuka/great-teacher-onizuka-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/ecchi",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/ecchi",
+                        "Value": "Ecchi"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/great-teacher-onizuka",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/great-teacher-onizuka",
+                "Value": "Great Teacher Onizuka"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s2.mangapanda.com/cover/hajime-no-ippo/hajime-no-ippo-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s2.mangapanda.com/cover/hajime-no-ippo/hajime-no-ippo-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s2.mangapanda.com/cover/hajime-no-ippo/hajime-no-ippo-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/sports",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/sports",
+                        "Value": "Sports"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/hajime-no-ippo",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/hajime-no-ippo",
+                "Value": "Hajime no Ippo"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s3.mangapanda.com/cover/full-metal-alchemist/full-metal-alchemist-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s3.mangapanda.com/cover/full-metal-alchemist/full-metal-alchemist-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s3.mangapanda.com/cover/full-metal-alchemist/full-metal-alchemist-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/adventure",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/adventure",
+                        "Value": "Adventure"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/tragedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/tragedy",
+                        "Value": "Tragedy"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/full-metal-alchemist",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/full-metal-alchemist",
+                "Value": "Full Metal Alchemist"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s3.mangapanda.com/cover/skip-beat/skip-beat-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s3.mangapanda.com/cover/skip-beat/skip-beat-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s3.mangapanda.com/cover/skip-beat/skip-beat-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/shoujo",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/shoujo",
+                        "Value": "Shoujo"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/slice-of-life",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/slice-of-life",
+                        "Value": "Slice of Life"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/skip-beat",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/skip-beat",
+                "Value": "Skip Beat"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s3.mangapanda.com/cover/rurouni-kenshin/rurouni-kenshin-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s3.mangapanda.com/cover/rurouni-kenshin/rurouni-kenshin-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s3.mangapanda.com/cover/rurouni-kenshin/rurouni-kenshin-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/historical",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/historical",
+                        "Value": "Historical"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/rurouni-kenshin",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/rurouni-kenshin",
+                "Value": "Rurouni Kenshin"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s4.mangapanda.com/cover/slam-dunk/slam-dunk-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s4.mangapanda.com/cover/slam-dunk/slam-dunk-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s4.mangapanda.com/cover/slam-dunk/slam-dunk-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/sports",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/sports",
+                        "Value": "Sports"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/slam-dunk",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/slam-dunk",
+                "Value": "Slam Dunk"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s4.mangapanda.com/cover/the-world-god-only-knows/the-world-god-only-knows-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s4.mangapanda.com/cover/the-world-god-only-knows/the-world-god-only-knows-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s4.mangapanda.com/cover/the-world-god-only-knows/the-world-god-only-knows-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/romance",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/romance",
+                        "Value": "Romance"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/the-world-god-only-knows",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/the-world-god-only-knows",
+                "Value": "The World God Only Knows"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s4.mangapanda.com/cover/i-accept-you/i-accept-you-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s4.mangapanda.com/cover/i-accept-you/i-accept-you-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s4.mangapanda.com/cover/i-accept-you/i-accept-you-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/romance",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/romance",
+                        "Value": "Romance"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/shoujo",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/shoujo",
+                        "Value": "Shoujo"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/i-accept-you",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/i-accept-you",
+                "Value": "I Accept You"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s5.mangapanda.com/cover/gakuen-alice/gakuen-alice-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s5.mangapanda.com/cover/gakuen-alice/gakuen-alice-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s5.mangapanda.com/cover/gakuen-alice/gakuen-alice-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/romance",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/romance",
+                        "Value": "Romance"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/shoujo",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/shoujo",
+                        "Value": "Shoujo"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/gakuen-alice",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/gakuen-alice",
+                "Value": "Gakuen Alice"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s5.mangapanda.com/cover/dengeki-daisy/dengeki-daisy-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s5.mangapanda.com/cover/dengeki-daisy/dengeki-daisy-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s5.mangapanda.com/cover/dengeki-daisy/dengeki-daisy-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/romance",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/romance",
+                        "Value": "Romance"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/shoujo",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/shoujo",
+                        "Value": "Shoujo"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/slice-of-life",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/slice-of-life",
+                        "Value": "Slice of Life"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/dengeki-daisy",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/dengeki-daisy",
+                "Value": "Dengeki Daisy"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s5.mangapanda.com/cover/21st-century-boys/21st-century-boys-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s5.mangapanda.com/cover/21st-century-boys/21st-century-boys-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s5.mangapanda.com/cover/21st-century-boys/21st-century-boys-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/mystery",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/mystery",
+                        "Value": "Mystery"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/sci-fi",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/sci-fi",
+                        "Value": "Sci-Fi"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/seinen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/seinen",
+                        "Value": "Seinen"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/21st-century-boys",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/21st-century-boys",
+                "Value": "21st Century Boys"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s1.mangapanda.com/cover/vinland-saga/vinland-saga-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s1.mangapanda.com/cover/vinland-saga/vinland-saga-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s1.mangapanda.com/cover/vinland-saga/vinland-saga-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/adventure",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/adventure",
+                        "Value": "Adventure"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/historical",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/historical",
+                        "Value": "Historical"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/seinen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/seinen",
+                        "Value": "Seinen"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/vinland-saga",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/vinland-saga",
+                "Value": "Vinland Saga"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s1.mangapanda.com/cover/pluto/pluto-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s1.mangapanda.com/cover/pluto/pluto-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s1.mangapanda.com/cover/pluto/pluto-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/mecha",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/mecha",
+                        "Value": "Mecha"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/mystery",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/mystery",
+                        "Value": "Mystery"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/sci-fi",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/sci-fi",
+                        "Value": "Sci-Fi"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/seinen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/seinen",
+                        "Value": "Seinen"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/pluto",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/pluto",
+                "Value": "Pluto"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s1.mangapanda.com/cover/nodame-cantabile/nodame-cantabile-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s1.mangapanda.com/cover/nodame-cantabile/nodame-cantabile-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s1.mangapanda.com/cover/nodame-cantabile/nodame-cantabile-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/josei",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/josei",
+                        "Value": "Josei"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/romance",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/romance",
+                        "Value": "Romance"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/slice-of-life",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/slice-of-life",
+                        "Value": "Slice of Life"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/nodame-cantabile",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/nodame-cantabile",
+                "Value": "Nodame Cantabile"
+            },
+            "Original": null
+        }
+    }
+]

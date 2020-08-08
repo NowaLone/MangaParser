@@ -1,0 +1,232 @@
+{
+    "Covers": [
+        {
+            "Large": {
+                "Url": "https://static.readmanga.live/uploads/pics/00/88/959_o.jpg",
+                "Value": null
+            },
+            "Medium": {
+                "Url": "https://static.readmanga.live/uploads/pics/00/88/959.jpg",
+                "Value": null
+            },
+            "Small": {
+                "Url": "https://static.readmanga.live/uploads/pics/00/88/959_p.jpg",
+                "Value": null
+            }
+        },
+        {
+            "Large": {
+                "Url": "https://static.readmanga.live/uploads/pics/00/88/960_o.jpg",
+                "Value": null
+            },
+            "Medium": {
+                "Url": "https://static.readmanga.live/uploads/pics/00/88/960.jpg",
+                "Value": null
+            },
+            "Small": {
+                "Url": "https://static.readmanga.live/uploads/pics/00/88/960_p.jpg",
+                "Value": null
+            }
+        },
+        {
+            "Large": {
+                "Url": "https://static.readmanga.live/uploads/pics/01/02/522_o.jpg",
+                "Value": null
+            },
+            "Medium": {
+                "Url": "https://static.readmanga.live/uploads/pics/01/02/522.jpg",
+                "Value": null
+            },
+            "Small": {
+                "Url": "https://static.readmanga.live/uploads/pics/01/02/522_p.jpg",
+                "Value": null
+            }
+        },
+        {
+            "Large": {
+                "Url": "https://static.readmanga.live/uploads/pics/01/02/523_o.jpg",
+                "Value": null
+            },
+            "Medium": {
+                "Url": "https://static.readmanga.live/uploads/pics/01/02/523.jpg",
+                "Value": null
+            },
+            "Small": {
+                "Url": "https://static.readmanga.live/uploads/pics/01/02/523_p.jpg",
+                "Value": null
+            }
+        }
+    ],
+    "Authors": [
+        {
+            "Url": "https://readmanga.live/list/person/kasuga_ayumu",
+            "Value": {
+                "Localized": {
+                    "Url": "https://readmanga.live/list/person/kasuga_ayumu",
+                    "Value": "Касуга Аюму"
+                },
+                "English": {
+                    "Url": "https://readmanga.live/list/person/kasuga_ayumu",
+                    "Value": "kasuga_ayumu"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Genres": [
+        {
+            "Url": "https://readmanga.live/list/genre/school",
+            "Value": {
+                "Localized": {
+                    "Url": "https://readmanga.live/list/genre/school",
+                    "Value": "школа"
+                },
+                "English": {
+                    "Url": "https://readmanga.live/list/genre/school",
+                    "Value": "school"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://readmanga.live/list/genre/ecchi",
+            "Value": {
+                "Localized": {
+                    "Url": "https://readmanga.live/list/genre/ecchi",
+                    "Value": "этти"
+                },
+                "English": {
+                    "Url": "https://readmanga.live/list/genre/ecchi",
+                    "Value": "ecchi"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://readmanga.live/list/genre/seinen",
+            "Value": {
+                "Localized": {
+                    "Url": "https://readmanga.live/list/genre/seinen",
+                    "Value": "сэйнэн"
+                },
+                "English": {
+                    "Url": "https://readmanga.live/list/genre/seinen",
+                    "Value": "seinen"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://readmanga.live/list/genre/comedy",
+            "Value": {
+                "Localized": {
+                    "Url": "https://readmanga.live/list/genre/comedy",
+                    "Value": "комедия"
+                },
+                "English": {
+                    "Url": "https://readmanga.live/list/genre/comedy",
+                    "Value": "comedy"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://readmanga.live/list/genre/natural",
+            "Value": {
+                "Localized": {
+                    "Url": "https://readmanga.live/list/genre/natural",
+                    "Value": "повседневность"
+                },
+                "English": {
+                    "Url": "https://readmanga.live/list/genre/natural",
+                    "Value": "natural"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://readmanga.live/list/genre/fantasy",
+            "Value": {
+                "Localized": {
+                    "Url": "https://readmanga.live/list/genre/fantasy",
+                    "Value": "фэнтези"
+                },
+                "English": {
+                    "Url": "https://readmanga.live/list/genre/fantasy",
+                    "Value": "fantasy"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://readmanga.live/list/genre/romance",
+            "Value": {
+                "Localized": {
+                    "Url": "https://readmanga.live/list/genre/romance",
+                    "Value": "романтика"
+                },
+                "English": {
+                    "Url": "https://readmanga.live/list/genre/romance",
+                    "Value": "romance"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Description": {
+        "Url": "https://readmanga.live/castle_town_dandelion",
+        "Value": "Аканэ девушка, живущая в обычном городке, в обычном доме, вместе со своей семьей, состоящей из 9 братьев и сестер мамы и папы. Необычно многодетное семейство, правда? Но это не самое необычное; помимо этого её семья ещё и королевская. И за всей семьей повсеместно наблюдают 200 камер, которые транслируют это всё на телевидение, благодаря которому жители могут смотреть и голосовать за потенциальных монархов. Кажется, куда уж страннее? А нет, есть ещё один классный момент, а именно: каждый в их семействе обладает сверх способностями, как символом их принадлежности к королевской крови. Сама Аканэ обладает способностью лишать массы всего, чего коснется (остановите кто-нибудь вертящегося в гробу Эйнштейна!), которой она нередко пользуется, чтобы избежать попадания в ненавистные камеры, ведь она одна из семьи, кто стесняется их. Вот такая вот манга, описывающая повседневные деньки бедняжки, за авторством Аюмы Касуги (полной тёзке героини Адзуманги)."
+    },
+    "Illustrators": [],
+    "Writers": [],
+    "Magazines": [
+        {
+            "Url": "https://readmanga.live/list/magazine/manga_time_kirara_miracle_",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://readmanga.live/list/magazine/manga_time_kirara_miracle_",
+                    "Value": "Manga Time Kirara Miracle!"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Publishers": [
+        {
+            "Url": null,
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": null,
+                    "Value": "Houbunsha"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "ReleaseDate": {
+        "Url": "https://readmanga.live/list/year/2012",
+        "Value": "2012-01-01T00:00:00"
+    },
+    "Volumes": {
+        "Url": null,
+        "Value": 5
+    },
+    "Source": "readmanga.live",
+    "Url": "https://readmanga.live/castle_town_dandelion",
+    "Value": {
+        "Localized": {
+            "Url": "https://readmanga.live/castle_town_dandelion",
+            "Value": "Город-замок Данделион"
+        },
+        "English": {
+            "Url": "https://readmanga.live/castle_town_dandelion",
+            "Value": "Castle Town Dandelion"
+        },
+        "Original": {
+            "Url": "https://readmanga.live/castle_town_dandelion",
+            "Value": "Joukamachi no Dandelion"
+        }
+    }
+}

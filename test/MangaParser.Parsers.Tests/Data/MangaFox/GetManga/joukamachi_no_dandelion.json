@@ -1,0 +1,91 @@
+{
+    "Covers": [
+        {
+            "Large": {
+                "Url": "http://fmcdn.mfcdn.net/store/manga/16183/cover.jpg?token=2ac0a71187fdfaeca2acc32fb94cfc0b4e7e54d1&ttl=1595966400&v=1592915280",
+                "Value": null
+            },
+            "Medium": null,
+            "Small": null
+        }
+    ],
+    "Authors": [
+        {
+            "Url": "https://fanfox.net/search/author/KASUGA+Ayumu/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/search/author/KASUGA+Ayumu/",
+                    "Value": "KASUGA Ayumu"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Genres": [
+        {
+            "Url": "https://fanfox.net/directory/comedy/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/directory/comedy/",
+                    "Value": "Comedy"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://fanfox.net/directory/school-life/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/directory/school-life/",
+                    "Value": "School Life"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://fanfox.net/directory/seinen/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/directory/seinen/",
+                    "Value": "Seinen"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://fanfox.net/directory/ecchi/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/directory/ecchi/",
+                    "Value": "Ecchi"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Description": {
+        "Url": "https://fanfox.net/manga/joukamachi_no_dandelion",
+        "Value": "In the manga’s story, the everyday lives of the nine super-powered siblings of the royal family are monitored by more than 200 surveillance cameras and broadcast nationwide. The people of the nation who are watching the broadcast will have the ability to elect the next monarch. The story focuses on Akane, the third-oldest sister who can manipulate gravity. She is shy and desperately does not want to be caught on camera."
+    },
+    "Illustrators": [],
+    "Writers": [],
+    "Magazines": [],
+    "Publishers": [],
+    "ReleaseDate": null,
+    "Volumes": null,
+    "Source": "fanfox.net",
+    "Url": "https://fanfox.net/manga/joukamachi_no_dandelion",
+    "Value": {
+        "Localized": null,
+        "English": {
+            "Url": "https://fanfox.net/manga/joukamachi_no_dandelion",
+            "Value": "Joukamachi no Dandelion"
+        },
+        "Original": null
+    }
+}

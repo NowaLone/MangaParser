@@ -1,0 +1,2651 @@
+[
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s2.mangareader.net/cover/naruto/naruto-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s2.mangareader.net/cover/naruto/naruto-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s2.mangareader.net/cover/naruto/naruto-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/martial-arts",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/martial-arts",
+                        "Value": "Martial Arts"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/super-power",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/super-power",
+                        "Value": "Super Power"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/naruto",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/naruto",
+                "Value": "Naruto"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s2.mangareader.net/cover/bleach/bleach-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s2.mangareader.net/cover/bleach/bleach-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s2.mangareader.net/cover/bleach/bleach-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/super-power",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/super-power",
+                        "Value": "Super Power"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/bleach",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/bleach",
+                "Value": "Bleach"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s2.mangareader.net/cover/berserk/berserk-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s2.mangareader.net/cover/berserk/berserk-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s2.mangareader.net/cover/berserk/berserk-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/horror",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/horror",
+                        "Value": "Horror"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/berserk",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/berserk",
+                "Value": "Berserk"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s3.mangareader.net/cover/gantz/gantz-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s3.mangareader.net/cover/gantz/gantz-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s3.mangareader.net/cover/gantz/gantz-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/sci-fi",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/sci-fi",
+                        "Value": "Sci-Fi"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/seinen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/seinen",
+                        "Value": "Seinen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/gantz",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/gantz",
+                "Value": "Gantz"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s3.mangareader.net/cover/monster/monster-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s3.mangareader.net/cover/monster/monster-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s3.mangareader.net/cover/monster/monster-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/mystery",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/mystery",
+                        "Value": "Mystery"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/monster",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/monster",
+                "Value": "Monster"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s3.mangareader.net/cover/vagabond/vagabond-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s3.mangareader.net/cover/vagabond/vagabond-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s3.mangareader.net/cover/vagabond/vagabond-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/historical",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/historical",
+                        "Value": "Historical"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/martial-arts",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/martial-arts",
+                        "Value": "Martial Arts"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/mature",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/mature",
+                        "Value": "Mature"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/seinen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/seinen",
+                        "Value": "Seinen"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/vagabond",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/vagabond",
+                "Value": "Vagabond"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s4.mangareader.net/cover/akira/akira-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s4.mangareader.net/cover/akira/akira-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s4.mangareader.net/cover/akira/akira-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/sci-fi",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/sci-fi",
+                        "Value": "Sci-Fi"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/akira",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/akira",
+                "Value": "Akira"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s4.mangareader.net/cover/kuroshitsuji/kuroshitsuji-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s4.mangareader.net/cover/kuroshitsuji/kuroshitsuji-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s4.mangareader.net/cover/kuroshitsuji/kuroshitsuji-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/kuroshitsuji",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/kuroshitsuji",
+                "Value": "Kuroshitsuji"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": null,
+                "Medium": null,
+                "Small": null
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/adventure",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/adventure",
+                        "Value": "Adventure"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/one-piece",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/one-piece",
+                "Value": "One Piece"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s5.mangareader.net/cover/vampire-knight/vampire-knight-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s5.mangareader.net/cover/vampire-knight/vampire-knight-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s5.mangareader.net/cover/vampire-knight/vampire-knight-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/mystery",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/mystery",
+                        "Value": "Mystery"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/romance",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/romance",
+                        "Value": "Romance"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/shoujo",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/shoujo",
+                        "Value": "Shoujo"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/vampire-knight",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/vampire-knight",
+                "Value": "Vampire Knight"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s5.mangareader.net/cover/dragon-ball/dragon-ball-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s5.mangareader.net/cover/dragon-ball/dragon-ball-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s5.mangareader.net/cover/dragon-ball/dragon-ball-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/adventure",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/adventure",
+                        "Value": "Adventure"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/historical",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/historical",
+                        "Value": "Historical"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/martial-arts",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/martial-arts",
+                        "Value": "Martial Arts"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/dragon-ball",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/dragon-ball",
+                "Value": "Dragon Ball"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s5.mangareader.net/cover/blade-of-the-immortal/blade-of-the-immortal-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s5.mangareader.net/cover/blade-of-the-immortal/blade-of-the-immortal-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s5.mangareader.net/cover/blade-of-the-immortal/blade-of-the-immortal-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/historical",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/historical",
+                        "Value": "Historical"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/horror",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/horror",
+                        "Value": "Horror"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/blade-of-the-immortal",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/blade-of-the-immortal",
+                "Value": "Blade of the Immortal"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s1.mangareader.net/cover/the-bride-of-the-water-god/the-bride-of-the-water-god-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s1.mangareader.net/cover/the-bride-of-the-water-god/the-bride-of-the-water-god-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s1.mangareader.net/cover/the-bride-of-the-water-god/the-bride-of-the-water-god-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/romance",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/romance",
+                        "Value": "Romance"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/shoujo",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/shoujo",
+                        "Value": "Shoujo"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/the-bride-of-the-water-god",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/the-bride-of-the-water-god",
+                "Value": "The Bride of the Water God"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s1.mangareader.net/cover/20th-century-boys/20th-century-boys-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s1.mangareader.net/cover/20th-century-boys/20th-century-boys-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s1.mangareader.net/cover/20th-century-boys/20th-century-boys-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/historical",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/historical",
+                        "Value": "Historical"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/mystery",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/mystery",
+                        "Value": "Mystery"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/sci-fi",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/sci-fi",
+                        "Value": "Sci-Fi"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/seinen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/seinen",
+                        "Value": "Seinen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/20th-century-boys",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/20th-century-boys",
+                "Value": "20th Century Boys"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s1.mangareader.net/cover/yokohama-kaidashi-kikou/yokohama-kaidashi-kikou-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s1.mangareader.net/cover/yokohama-kaidashi-kikou/yokohama-kaidashi-kikou-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s1.mangareader.net/cover/yokohama-kaidashi-kikou/yokohama-kaidashi-kikou-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/sci-fi",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/sci-fi",
+                        "Value": "Sci-Fi"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/seinen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/seinen",
+                        "Value": "Seinen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/slice-of-life",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/slice-of-life",
+                        "Value": "Slice of Life"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/yokohama-kaidashi-kikou",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/yokohama-kaidashi-kikou",
+                "Value": "Yokohama Kaidashi Kikou"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s2.mangareader.net/cover/death-note/death-note-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s2.mangareader.net/cover/death-note/death-note-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s2.mangareader.net/cover/death-note/death-note-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/mystery",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/mystery",
+                        "Value": "Mystery"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/death-note",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/death-note",
+                "Value": "Death Note"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s2.mangareader.net/cover/great-teacher-onizuka/great-teacher-onizuka-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s2.mangareader.net/cover/great-teacher-onizuka/great-teacher-onizuka-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s2.mangareader.net/cover/great-teacher-onizuka/great-teacher-onizuka-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/ecchi",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/ecchi",
+                        "Value": "Ecchi"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/great-teacher-onizuka",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/great-teacher-onizuka",
+                "Value": "Great Teacher Onizuka"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s2.mangareader.net/cover/hajime-no-ippo/hajime-no-ippo-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s2.mangareader.net/cover/hajime-no-ippo/hajime-no-ippo-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s2.mangareader.net/cover/hajime-no-ippo/hajime-no-ippo-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/sports",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/sports",
+                        "Value": "Sports"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/hajime-no-ippo",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/hajime-no-ippo",
+                "Value": "Hajime no Ippo"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s3.mangareader.net/cover/full-metal-alchemist/full-metal-alchemist-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s3.mangareader.net/cover/full-metal-alchemist/full-metal-alchemist-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s3.mangareader.net/cover/full-metal-alchemist/full-metal-alchemist-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/adventure",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/adventure",
+                        "Value": "Adventure"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/tragedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/tragedy",
+                        "Value": "Tragedy"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/full-metal-alchemist",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/full-metal-alchemist",
+                "Value": "Full Metal Alchemist"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s3.mangareader.net/cover/skip-beat/skip-beat-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s3.mangareader.net/cover/skip-beat/skip-beat-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s3.mangareader.net/cover/skip-beat/skip-beat-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/shoujo",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/shoujo",
+                        "Value": "Shoujo"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/slice-of-life",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/slice-of-life",
+                        "Value": "Slice of Life"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/skip-beat",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/skip-beat",
+                "Value": "Skip Beat"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s3.mangareader.net/cover/rurouni-kenshin/rurouni-kenshin-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s3.mangareader.net/cover/rurouni-kenshin/rurouni-kenshin-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s3.mangareader.net/cover/rurouni-kenshin/rurouni-kenshin-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/historical",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/historical",
+                        "Value": "Historical"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/rurouni-kenshin",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/rurouni-kenshin",
+                "Value": "Rurouni Kenshin"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s4.mangareader.net/cover/slam-dunk/slam-dunk-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s4.mangareader.net/cover/slam-dunk/slam-dunk-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s4.mangareader.net/cover/slam-dunk/slam-dunk-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/sports",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/sports",
+                        "Value": "Sports"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/slam-dunk",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/slam-dunk",
+                "Value": "Slam Dunk"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s4.mangareader.net/cover/the-world-god-only-knows/the-world-god-only-knows-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s4.mangareader.net/cover/the-world-god-only-knows/the-world-god-only-knows-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s4.mangareader.net/cover/the-world-god-only-knows/the-world-god-only-knows-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/romance",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/romance",
+                        "Value": "Romance"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/shounen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/shounen",
+                        "Value": "Shounen"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/the-world-god-only-knows",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/the-world-god-only-knows",
+                "Value": "The World God Only Knows"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s4.mangareader.net/cover/i-accept-you/i-accept-you-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s4.mangareader.net/cover/i-accept-you/i-accept-you-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s4.mangareader.net/cover/i-accept-you/i-accept-you-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/romance",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/romance",
+                        "Value": "Romance"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/shoujo",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/shoujo",
+                        "Value": "Shoujo"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/i-accept-you",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/i-accept-you",
+                "Value": "I Accept You"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s5.mangareader.net/cover/gakuen-alice/gakuen-alice-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s5.mangareader.net/cover/gakuen-alice/gakuen-alice-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s5.mangareader.net/cover/gakuen-alice/gakuen-alice-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/fantasy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/fantasy",
+                        "Value": "Fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/romance",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/romance",
+                        "Value": "Romance"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/shoujo",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/shoujo",
+                        "Value": "Shoujo"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/gakuen-alice",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/gakuen-alice",
+                "Value": "Gakuen Alice"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s5.mangareader.net/cover/dengeki-daisy/dengeki-daisy-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s5.mangareader.net/cover/dengeki-daisy/dengeki-daisy-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s5.mangareader.net/cover/dengeki-daisy/dengeki-daisy-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/romance",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/romance",
+                        "Value": "Romance"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/shoujo",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/shoujo",
+                        "Value": "Shoujo"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/slice-of-life",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/slice-of-life",
+                        "Value": "Slice of Life"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/dengeki-daisy",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/dengeki-daisy",
+                "Value": "Dengeki Daisy"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s5.mangareader.net/cover/21st-century-boys/21st-century-boys-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s5.mangareader.net/cover/21st-century-boys/21st-century-boys-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s5.mangareader.net/cover/21st-century-boys/21st-century-boys-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/mystery",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/mystery",
+                        "Value": "Mystery"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/sci-fi",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/sci-fi",
+                        "Value": "Sci-Fi"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/seinen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/seinen",
+                        "Value": "Seinen"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/21st-century-boys",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/21st-century-boys",
+                "Value": "21st Century Boys"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s1.mangareader.net/cover/vinland-saga/vinland-saga-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s1.mangareader.net/cover/vinland-saga/vinland-saga-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s1.mangareader.net/cover/vinland-saga/vinland-saga-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/adventure",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/adventure",
+                        "Value": "Adventure"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/historical",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/historical",
+                        "Value": "Historical"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/seinen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/seinen",
+                        "Value": "Seinen"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/vinland-saga",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/vinland-saga",
+                "Value": "Vinland Saga"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s1.mangareader.net/cover/pluto/pluto-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s1.mangareader.net/cover/pluto/pluto-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s1.mangareader.net/cover/pluto/pluto-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/mecha",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/mecha",
+                        "Value": "Mecha"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/mystery",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/mystery",
+                        "Value": "Mystery"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/sci-fi",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/sci-fi",
+                        "Value": "Sci-Fi"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/seinen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/seinen",
+                        "Value": "Seinen"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/pluto",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/pluto",
+                "Value": "Pluto"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s1.mangareader.net/cover/nodame-cantabile/nodame-cantabile-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s1.mangareader.net/cover/nodame-cantabile/nodame-cantabile-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s1.mangareader.net/cover/nodame-cantabile/nodame-cantabile-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangareader.net/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/drama",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/drama",
+                        "Value": "Drama"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/josei",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/josei",
+                        "Value": "Josei"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/romance",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/romance",
+                        "Value": "Romance"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangareader.net/popular/slice-of-life",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangareader.net/popular/slice-of-life",
+                        "Value": "Slice of Life"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangareader.net",
+        "Url": "http://www.mangareader.net/nodame-cantabile",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangareader.net/nodame-cantabile",
+                "Value": "Nodame Cantabile"
+            },
+            "Original": null
+        }
+    }
+]

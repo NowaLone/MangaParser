@@ -1,0 +1,113 @@
+{
+    "Covers": [
+        {
+            "Large": {
+                "Url": "http://fmcdn.mfcdn.net/store/manga/11362/cover.jpg?token=89e0634f57792fe53c36d18a3ee828db32b1216e&ttl=1595966400&v=1594082023",
+                "Value": null
+            },
+            "Medium": null,
+            "Small": null
+        }
+    ],
+    "Authors": [
+        {
+            "Url": "https://fanfox.net/search/author/ONE/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/search/author/ONE/",
+                    "Value": "ONE"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Genres": [
+        {
+            "Url": "https://fanfox.net/directory/action/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/directory/action/",
+                    "Value": "Action"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://fanfox.net/directory/comedy/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/directory/comedy/",
+                    "Value": "Comedy"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://fanfox.net/directory/martial-arts/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/directory/martial-arts/",
+                    "Value": "Martial Arts"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://fanfox.net/directory/shounen/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/directory/shounen/",
+                    "Value": "Shounen"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://fanfox.net/directory/supernatural/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/directory/supernatural/",
+                    "Value": "Supernatural"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://fanfox.net/directory/seinen/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://fanfox.net/directory/seinen/",
+                    "Value": "Seinen"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Description": {
+        "Url": "https://fanfox.net/manga/onepunch_man",
+        "Value": "In this new action-comedy, everything about a young man named Saitama screams “AVERAGE,“ from his lifeless expression, to his bald head, to his unimpressive physique. However, this average-looking fellow doesn’t have your average problem... He’s actually a superhero that’s looking for tough opponents! The problem is, every time he finds a promising candidate he beats the snot out of them in one punch. Can Saitama finally find an evil villain strong enough to challenge him? Follow Saitama through his hilarious romps as he searches for new bad guys to challenge!"
+    },
+    "Illustrators": [],
+    "Writers": [],
+    "Magazines": [],
+    "Publishers": [],
+    "ReleaseDate": null,
+    "Volumes": null,
+    "Source": "fanfox.net",
+    "Url": "https://fanfox.net/manga/onepunch_man",
+    "Value": {
+        "Localized": null,
+        "English": {
+            "Url": "https://fanfox.net/manga/onepunch_man",
+            "Value": "Onepunch-Man"
+        },
+        "Original": null
+    }
+}

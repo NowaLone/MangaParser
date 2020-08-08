@@ -1,0 +1,177 @@
+[
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s2.mangapanda.com/cover/onepunch-man/onepunch-man-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s2.mangapanda.com/cover/onepunch-man/onepunch-man-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s2.mangapanda.com/cover/onepunch-man/onepunch-man-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/seinen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/seinen",
+                        "Value": "Seinen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/onepunch-man",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/onepunch-man",
+                "Value": "Onepunch-Man"
+            },
+            "Original": null
+        }
+    },
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "https://s2.mangapanda.com/cover/onepunch-man-one/onepunch-man-one-l0.jpg",
+                    "Value": null
+                },
+                "Medium": {
+                    "Url": "https://s2.mangapanda.com/cover/onepunch-man-one/onepunch-man-one-m0.jpg",
+                    "Value": null
+                },
+                "Small": {
+                    "Url": "https://s2.mangapanda.com/cover/onepunch-man-one/onepunch-man-one-r0.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "http://www.mangapanda.com/popular/action",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/action",
+                        "Value": "Action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/comedy",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/comedy",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/sci-fi",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/sci-fi",
+                        "Value": "Sci-Fi"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/seinen",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/seinen",
+                        "Value": "Seinen"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "http://www.mangapanda.com/popular/supernatural",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "http://www.mangapanda.com/popular/supernatural",
+                        "Value": "Supernatural"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangapanda.com",
+        "Url": "http://www.mangapanda.com/onepunch-man-one",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "http://www.mangapanda.com/onepunch-man-one",
+                "Value": "OnePunch-Man (ONE)"
+            },
+            "Original": null
+        }
+    }
+]

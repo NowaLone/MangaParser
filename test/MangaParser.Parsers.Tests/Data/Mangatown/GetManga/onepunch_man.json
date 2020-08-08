@@ -1,0 +1,117 @@
+{
+    "Covers": [
+        {
+            "Large": {
+                "Url": "http://fmcdn.mangahere.com/store/manga/11912/ocover.jpg?token=c4903ab8dc4e7c93632b5dc856b3c81755668581&ttl=1596394800&v=1575275615",
+                "Value": null
+            },
+            "Medium": null,
+            "Small": null
+        }
+    ],
+    "Authors": [
+        {
+            "Url": "https://www.mangatown.com//www.mangatown.com/author/ONE",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com//www.mangatown.com/author/ONE",
+                    "Value": "ONE"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Genres": [
+        {
+            "Url": "https://www.mangatown.com/directory/seinen-0-0-0-0-0/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com/directory/seinen-0-0-0-0-0/",
+                    "Value": "Seinen"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://www.mangatown.com/directory/0-action-0-0-0-0/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com/directory/0-action-0-0-0-0/",
+                    "Value": "Action"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://www.mangatown.com/directory/0-comedy-0-0-0-0/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com/directory/0-comedy-0-0-0-0/",
+                    "Value": "Comedy"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://www.mangatown.com/directory/0-fantasy-0-0-0-0/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com/directory/0-fantasy-0-0-0-0/",
+                    "Value": "Fantasy"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://www.mangatown.com/directory/0-supernatural-0-0-0-0/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com/directory/0-supernatural-0-0-0-0/",
+                    "Value": "Supernatural"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Description": {
+        "Url": "https://www.mangatown.com/manga/onepunch_man",
+        "Value": "Follows the life of an average hero who manages to win all battles with only one punch. This ability seems to frustrate him as he no longer feels the thrill and adrenaline of fighting a tough battle, which leads to him questioning his past desire of being strong.After all what's so good about having an overwhelming power?"
+    },
+    "Illustrators": [
+        {
+            "Url": "https://www.mangatown.com//www.mangatown.com/artist/MURATA+Yuusuke",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com//www.mangatown.com/artist/MURATA+Yuusuke",
+                    "Value": "MURATA Yuusuke"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Writers": [],
+    "Magazines": [],
+    "Publishers": [],
+    "ReleaseDate": null,
+    "Volumes": null,
+    "Source": "www.mangatown.com",
+    "Url": "https://www.mangatown.com/manga/onepunch_man",
+    "Value": {
+        "Localized": null,
+        "English": {
+            "Url": "https://www.mangatown.com/manga/onepunch_man",
+            "Value": "Onepunch-Man"
+        },
+        "Original": {
+            "Url": "https://www.mangatown.com/manga/onepunch_man",
+            "Value": "ワンパンマン"
+        }
+    }
+}
