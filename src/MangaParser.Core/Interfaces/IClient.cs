@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace MangaParser.Core.Interfaces
 {
@@ -8,29 +9,36 @@ namespace MangaParser.Core.Interfaces
 
         #region AddParser
 
-        public void AddParser(IParser parser);
+        void AddParser(IParser parser);
 
         #endregion AddParser
 
         #region RemoveParser
 
-        public bool RemoveParser(string url);
+        bool RemoveParser(string url);
 
-        public bool RemoveParser(Uri url);
+        bool RemoveParser(Uri url);
 
-        public bool RemoveParser(IParser parser);
+        bool RemoveParser(IParser parser);
 
-        public bool RemoveParser<T>() where T : IParser;
+        bool RemoveParser<T>() where T : IParser;
 
         #endregion RemoveParser
 
         #region GetParser
 
-        public IParser GetParser(string url);
+        IParser GetParser(string url);
 
-        public IParser GetParser(Uri url);
+        IParser GetParser(Uri url);
 
-        public IParser GetParser<T>() where T : IParser;
+        IParser GetParser<T>() where T : IParser;
+
+        /// <summary>
+        /// Returns a collection of <see cref="IParser"/> where <see cref="IParser.BaseUrl"/> host contains <paramref name="name"/> value.
+        /// </summary>
+        /// <param name="name">A part of <see cref="Uri.Host"/> for searching.</param>
+        /// <returns>A collection of <see cref="IParser"/> where <see cref="IParser.BaseUrl"/> host contains <paramref name="name"/> value.</returns>
+        IEnumerable<IParser> GetParsers(string name);
 
         #endregion GetParser
 

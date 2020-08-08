@@ -115,6 +115,11 @@ namespace MangaParser.Core.Client
             return parsers.FirstOrDefault(parser => parser.GetType() == typeof(T));
         }
 
+        public virtual IEnumerable<IParser> GetParsers(string name)
+        {
+            return parsers.Where(p => p.BaseUrl.Host.Contains(name));
+        }
+
         #endregion GetParser
 
         #endregion IClient
