@@ -1,19 +1,20 @@
 ﻿using MangaParser.Core.Client;
 using MangaParser.Core.Interfaces;
-using MangaParser.Parsers.MangaFox;
-using MangaParser.Parsers.Mangapanda;
-using MangaParser.Parsers.Mangareader;
-using MangaParser.Parsers.Mangatown;
-using MangaParser.Parsers.MintManga;
-using MangaParser.Parsers.ReadManga;
+using MangaParser.Parsers.HtmlWebParsers.MangaFox;
+using MangaParser.Parsers.HtmlWebParsers.Mangapanda;
+using MangaParser.Parsers.HtmlWebParsers.Mangareader;
+using MangaParser.Parsers.HtmlWebParsers.Mangatown;
+using MangaParser.Parsers.HtmlWebParsers.MintManga;
+using MangaParser.Parsers.HtmlWebParsers.ReadManga;
 using System;
-using System.Linq;
+using System.CommandLine;
+using System.CommandLine.Invocation;
 
 namespace MangaParser.ConsoleApp
 {
     public class Program
     {
-        private static readonly MangaClient client = new MangaClient(new IParser[]
+        private static readonly IClient client = new MangaClient(new IParser[]
         {
             new ReadMangaParser(),
             new MintMangaParser(),
@@ -23,229 +24,273 @@ namespace MangaParser.ConsoleApp
             new MangatownParser(),
         });
 
-        private static void Main(string[] args)
+        private static int Main(string[] args)
         {
-            if (args.Length > 0)
+            RootCommand rootCommand = new RootCommand("Console client representation for the MangaParser library. The app can search for manga, get detailed info about manga and chapters, and get chapter pages.");
+
+            Command searchCommand = new Command("search", "Search for manga")
             {
-                switch (args[0].ToLower())
+                new Option<string>(new string[] { "-q", "--query" }, "Search query"),
+                new Option<string>(new string[] { "-p", "--parser" }, () => "all", "Use a specific parser for search")
+            };
+            searchCommand.Handler = CommandHandler.Create<string, string>(Search);
+
+            Command getMangaCommand = new Command("manga", "Get a detailed info about manga")
+            {
+                new Option<string>(new string[] { "-u", "--url" }, "Manga url"),
+            };
+            getMangaCommand.Handler = CommandHandler.Create<string>(GetManga);
+
+            Command getChaptersCommand = new Command("chapters", "Get all info about manga chapters")
+            {
+                new Option<string>(new string[] { "-u", "--url" }, "Manga url"),
+            };
+            getChaptersCommand.Handler = CommandHandler.Create<string>(GetChapters);
+
+            Command getPagesCommand = new Command("pages", "Get chapter pages urls")
+            {
+                new Option<string>(new string[] { "-u", "--url" }, "Chapter url"),
+            };
+            getPagesCommand.Handler = CommandHandler.Create<string>(GetPages);
+
+            Command getCommand = new Command("get", "Get data")
+            {
+                getMangaCommand,
+                getChaptersCommand,
+                getPagesCommand,
+            };
+
+            rootCommand.Add(searchCommand);
+            rootCommand.Add(getCommand);
+
+            // Parse the incoming args and invoke the handler
+            return rootCommand.InvokeAsync(args).Result;
+        }
+
+        private static void Search(string query, string parser)
+        {
+            if (parser == "all")
+            {
+                foreach (var item in client.SearchManga(query))
                 {
-                    case "get":
-                        {
-                            if (Uri.TryCreate(args[1], UriKind.Absolute, out Uri uri))
-                            {
-                                Get(uri);
-                            }
-                            else
-                            {
-                                Console.WriteLine("Wrong url: " + args[1]);
-                            }
-                        }
-                        break;
-
-                    case "search":
-                        {
-                            switch (args[1])
-                            {
-                                case "all":
-                                    Search(args[2]);
-                                    break;
-
-                                case "read":
-                                    Search(args[2], client.GetParser<ReadMangaParser>());
-                                    break;
-
-                                case "mint":
-                                    Search(args[2], client.GetParser<MintMangaParser>());
-                                    break;
-
-                                case "fox":
-                                    Search(args[2], client.GetParser<MangaFoxParser>());
-                                    break;
-
-                                case "reader":
-                                    Search(args[2], client.GetParser<MangareaderParser>());
-                                    break;
-
-                                case "panda":
-                                    Search(args[2], client.GetParser<MangapandaParser>());
-                                    break;
-
-                                case "town":
-                                    Search(args[2], client.GetParser<MangatownParser>());
-                                    break;
-
-                                default:
-                                    Search(args[1]);
-                                    break;
-                            }
-                        }
-                        break;
-
-                    case "pages":
-                        {
-                            if (args.Length == 2)
-                            {
-                                if (Uri.TryCreate(args[1], UriKind.Absolute, out Uri uri))
-                                {
-                                    Pages(uri);
-                                }
-                                else
-                                {
-                                    Console.WriteLine("Wrong url: " + args[1]);
-                                }
-                            }
-                            else if (args.Length == 3)
-                            {
-                                if (Uri.TryCreate(args[1], UriKind.Absolute, out Uri uri))
-                                {
-                                    if (int.TryParse(args[2], out int number))
-                                    {
-                                        Pages(uri, number);
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("Wrong number: " + args[2]);
-                                    }
-                                }
-                                else
-                                {
-                                    Console.WriteLine("Wrong url: " + args[1]);
-                                }
-                            }
-                        }
-                        break;
-
-                    case "test":
-                        Test();
-                        break;
-
-                    default:
-                        Console.WriteLine("Wrong command");
-                        break;
+                    WriteSeparator('-');
+                    Write(item);
+                    WriteSeparator('-');
+                }
+            }
+            else
+            {
+                foreach (var p in client.GetParsers(parser))
+                {
+                    foreach (var item in p.SearchManga(query))
+                    {
+                        WriteSeparator('-');
+                        Write(item);
+                        WriteSeparator('-');
+                    }
                 }
             }
         }
 
-        private static IManga Get(Uri uri)
+        private static void GetManga(string url)
         {
-            var manga = client.GetManga(uri);
+            Uri uri = new Uri(url);
 
-            Console.WriteLine(manga);
+            var result = client.GetManga(uri);
 
-            return manga;
+            WriteSeparator('-');
+            Write(result);
+            WriteSeparator('-');
         }
 
-        private static void Search(string query)
+        private static void GetChapters(string url)
         {
-            foreach (var item in client.SearchManga(query))
+            Uri uri = new Uri(url);
+
+            var result = client.GetChapters(uri);
+
+            foreach (var item in result)
             {
-                Console.WriteLine(item);
+                WriteSeparator('-');
+                Write(item);
+                WriteSeparator('-');
             }
         }
 
-        private static void Search(string query, IParser parser)
+        private static void GetPages(string url)
         {
-            foreach (var item in parser.SearchManga(query))
-            {
-                Console.WriteLine(item);
-            }
-        }
+            Uri uri = new Uri(url);
 
-        private static void Pages(Uri uri)
-        {
-            IManga manga = client.GetManga(uri);
-
-            if (manga?.Name.ToString() != null)
-            {
-                Pages(manga);
-                return;
-            }
+            var result = client.GetPages(uri);
 
             int i = 0;
 
-            foreach (var page in client.GetPages(uri))
+            WriteSeparator('-');
+
+            foreach (var item in result)
             {
-                Console.WriteLine($"Page {++i}: {page.PageUri}");
+                Console.WriteLine($"Page {++i}:");
+                Write(item);
             }
+
+            WriteSeparator('-');
         }
 
-        private static void Pages(IChapter chapter)
+        private static void Write(IMangaObject manga)
         {
-            Pages(chapter.ChapterUri);
-        }
+            Console.WriteLine("Name:");
+            Console.WriteLine(manga.Value);
+            Console.WriteLine();
 
-        private static void Pages(IManga manga)
-        {
-            foreach (var item in client.GetChapters(manga.Url))
+            if (manga.ReleaseDate != null)
             {
-                Console.WriteLine("Chapter: " + item.Name);
+                Console.WriteLine("ReleaseDate:");
+                Console.WriteLine(manga.ReleaseDate.Value.ToLongDateString());
+                Console.WriteLine();
+            }
 
-                int i = 0;
+            if (manga.Volumes != null)
+            {
+                Console.WriteLine("Volumes:");
+                Console.WriteLine(manga.Volumes);
+                Console.WriteLine();
+            }
 
-                foreach (var page in client.GetPages(item.ChapterUri))
+            if (!String.IsNullOrWhiteSpace(manga.Description?.Value))
+            {
+                Console.WriteLine("Description:");
+                Console.WriteLine(manga.Description);
+                Console.WriteLine();
+            }
+
+            if (manga.Covers.Count > 0)
+            {
+                Console.WriteLine("Covers:");
+
+                foreach (var item in manga.Covers)
                 {
-                    Console.WriteLine($"Page {++i}: {page.PageUri}");
+                    Console.WriteLine(item);
                 }
 
-                TimeSeparate('.', 2000);
+                Console.WriteLine();
             }
-        }
 
-        private static void Pages(Uri uri, int chapterNumber)
-        {
-            IManga manga = Get(uri);
-
-            if (manga == null)
-                return;
-
-            IChapter chapter = client.GetChapters(manga.Url).ElementAt(chapterNumber - 1);
-
-            Console.WriteLine("Chapter: " + chapter.Name);
-
-            Pages(chapter);
-        }
-
-        private static void Test()
-        {
-            Console.Write("\n" + new string('#', Console.WindowWidth) + "\n");
-
-            foreach (var item in client.SearchManga("a"))
+            if (manga.Genres.Count > 0)
             {
-                Console.WriteLine("\n" + new string('#', Console.WindowWidth) + "\n");
-                Console.WriteLine(item);
+                Console.WriteLine("Genres:");
+
+                Console.WriteLine(String.Join(", ", manga.Genres));
+
+                Console.WriteLine();
             }
 
-            Console.Write(new string('#', Console.WindowWidth) + "\n");
-
-            foreach (var item in client.SearchManga("a"))
+            if (manga.Authors.Count > 0)
             {
-                TimeSeparate('.', 5000);
+                Console.WriteLine("Authors:");
 
-                var manga = Get(item.Url);
+                Console.WriteLine(String.Join(", ", manga.Authors));
 
-                var chapters = client.GetChapters(manga.Url);
+                Console.WriteLine();
+            }
 
-                foreach (var chapter in chapters)
-                {
-                    TimeSeparate('.', 2000);
+            if (manga.Writers.Count > 0)
+            {
+                Console.WriteLine("Writers:");
 
-                    Pages(chapter);
-                }
+                Console.WriteLine(String.Join(", ", manga.Writers));
+
+                Console.WriteLine();
+            }
+
+            if (manga.Illustrators.Count > 0)
+            {
+                Console.WriteLine("Illustrators:");
+
+                Console.WriteLine(String.Join(", ", manga.Illustrators));
+
+                Console.WriteLine();
+            }
+
+            if (manga.Magazines.Count > 0)
+            {
+                Console.WriteLine("Magazines:");
+
+                Console.WriteLine(String.Join(", ", manga.Magazines));
+
+                Console.WriteLine();
+            }
+
+            if (manga.Publishers.Count > 0)
+            {
+                Console.WriteLine("Publishers:");
+
+                Console.WriteLine(String.Join(", ", manga.Publishers));
+
+                Console.WriteLine();
+            }
+
+            Console.WriteLine(manga.Url);
+        }
+
+        private static void Write(IChapter chapter)
+        {
+            Console.WriteLine("Name:");
+            Console.WriteLine(chapter.Value);
+            Console.WriteLine();
+
+            if (chapter.AddedDate != null)
+            {
+                Console.WriteLine("AddedDate:");
+                Console.WriteLine(chapter.AddedDate.ToLongDateString());
+                Console.WriteLine();
+            }
+
+            if (chapter.Cover != null)
+            {
+                Console.WriteLine("Cover:");
+                Console.WriteLine(chapter.Cover);
+                Console.WriteLine();
+            }
+
+            Console.WriteLine(chapter.Url);
+        }
+
+        private static void Write(IDataBase data)
+        {
+            if (data.Value != null)
+            {
+                Console.WriteLine("Value:");
+                Console.WriteLine(data.Value);
+                Console.WriteLine();
+            }
+
+            if (data.Url != null)
+            {
+                Console.WriteLine("Url:");
+                Console.WriteLine(data.Url);
+                Console.WriteLine();
             }
         }
 
-        private static void TimeSeparate(char symbol, int millisecondsTimeout)
+        private static void WriteSeparator(char symbol)
         {
-            Console.WriteLine("Waiting...");
+            WriteSeparator(symbol, 0);
+        }
 
-            int lenght = millisecondsTimeout / Console.WindowWidth;
+        private static void WriteSeparator(char symbol, int millisecondsTimeout)
+        {
+            int lenght = millisecondsTimeout / Console.BufferWidth;
 
-            for (int i = 0; i < Console.WindowWidth; i++)
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            for (int i = 0; i < Console.BufferWidth; i++)
             {
                 Console.Write(symbol);
 
                 System.Threading.Thread.Sleep(lenght);
             }
+
+            Console.ResetColor();
         }
     }
 }
