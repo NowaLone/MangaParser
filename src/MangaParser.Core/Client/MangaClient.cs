@@ -107,7 +107,7 @@ namespace MangaParser.Core.Client
                 throw new ArgumentNullException(nameof(url));
             }
 
-            return parsers.FirstOrDefault(parser => parser.BaseUrl.Equals(url));
+            return parsers.FirstOrDefault(parser => parser.BaseUrl.Host.Equals(url.Host));
         }
 
         public virtual IParser GetParser<T>() where T : IParser
