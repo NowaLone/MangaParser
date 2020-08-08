@@ -133,10 +133,7 @@
                         "Url": "https://readmanga.live/list/genre/school",
                         "Value": "school"
                     },
-                    "Original": {
-                        "Url": "https://readmanga.live/list/genre/school",
-                        "Value": ""
-                    }
+                    "Original": null
                 }
             },
             {
@@ -185,10 +182,7 @@
                 "Url": "https://readmanga.live/ot_liubvi_ne_ubejish",
                 "Value": "От любви не убежишь"
             },
-            "English": {
-                "Url": "https://readmanga.live/ot_liubvi_ne_ubejish",
-                "Value": ""
-            },
+            "English": null,
             "Original": null
         }
     }
