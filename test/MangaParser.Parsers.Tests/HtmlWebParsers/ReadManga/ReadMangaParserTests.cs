@@ -694,7 +694,7 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.ReadManga
 
             for (int i = 0; i < result.Count; i++)
             {
-                Assert.AreEqual(data[i].Url.GetLeftPart(UriPartial.Path), result[i].Url.GetLeftPart(UriPartial.Path));
+                Assert.AreEqual(data[i].Url.LocalPath, result[i].Url.LocalPath);
                 Assert.AreEqual(data[i].Value, result[i].Value);
             }
         }
@@ -735,7 +735,7 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.ReadManga
 
             for (int i = 0; i < result.Count; i++)
             {
-                Assert.AreEqual(data[i].Url.GetLeftPart(UriPartial.Path), result[i].Url.GetLeftPart(UriPartial.Path));
+                Assert.AreEqual(data[i].Url.LocalPath, result[i].Url.LocalPath);
                 Assert.AreEqual(data[i].Value, result[i].Value);
             }
         }
@@ -776,7 +776,7 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.ReadManga
 
             for (int i = 0; i < result.Count; i++)
             {
-                Assert.AreEqual(data[i].Url.GetLeftPart(UriPartial.Path), result[i].Url.GetLeftPart(UriPartial.Path));
+                Assert.AreEqual(data[i].Url.LocalPath, result[i].Url.LocalPath);
                 Assert.AreEqual(data[i].Value, result[i].Value);
             }
         }
@@ -819,7 +819,7 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.ReadManga
 
             for (int i = 0; i < result.Count; i++)
             {
-                Assert.AreEqual(data[i].Url.GetLeftPart(UriPartial.Path), result[i].Url.GetLeftPart(UriPartial.Path));
+                Assert.AreEqual(data[i].Url.LocalPath, result[i].Url.LocalPath);
                 Assert.AreEqual(data[i].Value, result[i].Value);
             }
         }
@@ -860,7 +860,7 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.ReadManga
 
             for (int i = 0; i < result.Count; i++)
             {
-                Assert.AreEqual(data[i].Url.GetLeftPart(UriPartial.Path), result[i].Url.GetLeftPart(UriPartial.Path));
+                Assert.AreEqual(data[i].Url.LocalPath, result[i].Url.LocalPath);
                 Assert.AreEqual(data[i].Value, result[i].Value);
             }
         }
@@ -901,7 +901,7 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.ReadManga
 
             for (int i = 0; i < result.Count; i++)
             {
-                Assert.AreEqual(data[i].Url.GetLeftPart(UriPartial.Path), result[i].Url.GetLeftPart(UriPartial.Path));
+                Assert.AreEqual(data[i].Url.LocalPath, result[i].Url.LocalPath);
                 Assert.AreEqual(data[i].Value, result[i].Value);
             }
         }
