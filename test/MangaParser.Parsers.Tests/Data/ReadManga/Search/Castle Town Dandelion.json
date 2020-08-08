@@ -1,0 +1,97 @@
+[
+    {
+        "Covers": [
+            {
+                "Large": null,
+                "Medium": null,
+                "Small": {
+                    "Url": "https://static.readmanga.live/uploads/pics/00/88/959_p.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [
+            {
+                "Url": "https://readmanga.live/list/person/kasuga_ayumu",
+                "Value": {
+                    "Localized": {
+                        "Url": "https://readmanga.live/list/person/kasuga_ayumu",
+                        "Value": "Касуга Аюму"
+                    },
+                    "English": {
+                        "Url": "https://readmanga.live/list/person/kasuga_ayumu",
+                        "Value": "kasuga_ayumu"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Genres": [
+            {
+                "Url": "https://readmanga.live/list/genre/natural",
+                "Value": {
+                    "Localized": {
+                        "Url": "https://readmanga.live/list/genre/natural",
+                        "Value": "повседневность"
+                    },
+                    "English": {
+                        "Url": "https://readmanga.live/list/genre/natural",
+                        "Value": "natural"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "https://readmanga.live/list/genre/fantasy",
+                "Value": {
+                    "Localized": {
+                        "Url": "https://readmanga.live/list/genre/fantasy",
+                        "Value": "фэнтези"
+                    },
+                    "English": {
+                        "Url": "https://readmanga.live/list/genre/fantasy",
+                        "Value": "fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "https://readmanga.live/list/genre/comedy",
+                "Value": {
+                    "Localized": {
+                        "Url": "https://readmanga.live/list/genre/comedy",
+                        "Value": "комедия"
+                    },
+                    "English": {
+                        "Url": "https://readmanga.live/list/genre/comedy",
+                        "Value": "comedy"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": {
+            "Value": "Аканэ девушка, живущая в обычном городке, в обычном доме, вместе со своей семьей, состоящей из 9 братьев и сестер мамы и папы. Необычно многодетное семейство, правда? Но это не самое необычное; помимо этого её семья ещё и королевская. И за всей семьей повсеместно наблюдают 200 камер, которые транслируют это всё на телевидение, благодаря которому жители могут смотреть и голосовать за потенциальных монархов. Кажется, куда уж страннее? А нет, есть ещё один классный момент, а именно: каждый в их семействе обладает сверх способностями, как символом их принадлежности к королевской крови. Сама Аканэ обладает способностью лишать массы всего, чего коснется (остановите кто-нибудь вертящегося в гробу Эйнштейна!), которой она нередко пользуется, чтобы избежать попадания в ненавистные камеры, ведь она одна из семьи, кто стесняется их. Вот такая вот манга, описывающая повседневные деньки бедняжки, за авторством Аюмы Касуги (полной тёзке героини Адзуманги).",
+            "Url": "https://readmanga.live/castle_town_dandelion"
+        },
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "",
+        "Url": "https://readmanga.live/castle_town_dandelion",
+        "Value": {
+            "Localized": {
+                "Url": "https://readmanga.live/castle_town_dandelion",
+                "Value": "Город-замок Данделион"
+            },
+            "English": {
+                "Url": "https://readmanga.live/castle_town_dandelion",
+                "Value": "Castle Town Dandelion"
+            },
+            "Original": null
+        }
+    }
+]

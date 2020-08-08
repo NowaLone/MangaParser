@@ -1,0 +1,110 @@
+{
+    "Covers": [
+        {
+            "Large": null,
+            "Medium": null,
+            "Small": {
+                "Url": "",
+                "Value": null
+            }
+        }
+    ],
+    "Authors": [
+        {
+            "Url": "",
+            "Value": {
+                "Localized": {
+                    "Url": "",
+                    "Value": ""
+                },
+                "English": {
+                    "Url": "",
+                    "Value": ""
+                },
+                "Original": {
+                    "Url": "",
+                    "Value": ""
+                }
+            }
+        }
+    ],
+    "Genres": [
+        {
+            "Url": "",
+            "Value": {
+                "Localized": {
+                    "Url": "",
+                    "Value": ""
+                },
+                "English": {
+                    "Url": "",
+                    "Value": ""
+                },
+                "Original": {
+                    "Url": "",
+                    "Value": ""
+                }
+            }
+        },
+        {
+            "Url": "",
+            "Value": {
+                "Localized": {
+                    "Url": "",
+                    "Value": ""
+                },
+                "English": {
+                    "Url": "",
+                    "Value": ""
+                },
+                "Original": {
+                    "Url": "",
+                    "Value": ""
+                }
+            }
+        },
+        {
+            "Url": "",
+            "Value": {
+                "Localized": {
+                    "Url": "",
+                    "Value": ""
+                },
+                "English": {
+                    "Url": "",
+                    "Value": ""
+                },
+                "Original": {
+                    "Url": "",
+                    "Value": ""
+                }
+            }
+        }
+    ],
+    "Description": {
+        "Value": "",
+        "Url": ""
+    },
+    "Illustrators": [],
+    "Writers": [],
+    "Magazines": [],
+    "Publishers": [],
+    "ReleaseDate": null,
+    "Volumes": null,
+    "Source": "",
+    "Url": "",
+    "Value": {
+        "Localized": {
+            "Url": "",
+            "Value": ""
+        },
+        "English": {
+            "Url": "",
+            "Value": ""
+        },
+        "Original": {
+            "Url": "",
+            "Value": ""
+        }
+    }
+}

@@ -1,0 +1,68 @@
+[
+    {
+        "Covers": [
+            {
+                "Large": {
+                    "Url": "http://fmcdn.mangahere.com/store/manga/18203/ocover.jpg?token=9a0fdbe89d974e57c464cb8adf542d4e57de7f0c&ttl=1596373200&v=1435807529",
+                    "Value": null
+                },
+                "Medium": null,
+                "Small": null
+            }
+        ],
+        "Authors": [
+            {
+                "Url": "https://www.mangatown.com/author/KASUGA+Ayumu",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "https://www.mangatown.com/author/KASUGA+Ayumu",
+                        "Value": "Kasuga Ayumu"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Genres": [
+            {
+                "Url": "https://www.mangatown.com/directory/0-comedy-0-0-0-0/",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "https://www.mangatown.com/directory/0-comedy-0-0-0-0/",
+                        "Value": "Comedy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "https://www.mangatown.com/directory/0-ecchi-0-0-0-0/",
+                "Value": {
+                    "Localized": null,
+                    "English": {
+                        "Url": "https://www.mangatown.com/directory/0-ecchi-0-0-0-0/",
+                        "Value": "Ecchi"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": null,
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "www.mangatown.com",
+        "Url": "https://www.mangatown.com/manga/joukamachi_no_dandelion/",
+        "Value": {
+            "Localized": null,
+            "English": {
+                "Url": "https://www.mangatown.com/manga/joukamachi_no_dandelion/",
+                "Value": "Joukamachi no Dandelion"
+            },
+            "Original": null
+        }
+    }
+]

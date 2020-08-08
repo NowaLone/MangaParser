@@ -1,0 +1,106 @@
+{
+    "Covers": [
+        {
+            "Large": {
+                "Url": "http://fmcdn.mangahere.com/store/manga/18203/ocover.jpg?token=1abf70996310fa530a24ac413e44af255c5f5e52&ttl=1596394800&v=1435807529",
+                "Value": null
+            },
+            "Medium": null,
+            "Small": null
+        }
+    ],
+    "Authors": [
+        {
+            "Url": "https://www.mangatown.com//www.mangatown.com/author/KASUGA+Ayumu",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com//www.mangatown.com/author/KASUGA+Ayumu",
+                    "Value": "KASUGA Ayumu"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Genres": [
+        {
+            "Url": "https://www.mangatown.com/directory/seinen-0-0-0-0-0/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com/directory/seinen-0-0-0-0-0/",
+                    "Value": "Seinen"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://www.mangatown.com/directory/0-comedy-0-0-0-0/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com/directory/0-comedy-0-0-0-0/",
+                    "Value": "Comedy"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://www.mangatown.com/directory/0-ecchi-0-0-0-0/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com/directory/0-ecchi-0-0-0-0/",
+                    "Value": "Ecchi"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://www.mangatown.com/directory/0-school_life-0-0-0-0/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com/directory/0-school_life-0-0-0-0/",
+                    "Value": "School Life"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Description": {
+        "Url": "https://www.mangatown.com/manga/joukamachi_no_dandelion",
+        "Value": "In the manga's story, the everyday lives of the nine super-powered siblings of the royal family are monitored by more than 200 surveillance cameras and broadcast nationwide. The people of the nation who are watching the broadcast will have the ability to elect the next monarch. The story focuses on Akane, the third-oldest sister who can manipulate gravity. She is shy and desperately does not want to be caught on camera."
+    },
+    "Illustrators": [
+        {
+            "Url": "https://www.mangatown.com//www.mangatown.com/artist/KASUGA+Ayumu",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com//www.mangatown.com/artist/KASUGA+Ayumu",
+                    "Value": "KASUGA Ayumu"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Writers": [],
+    "Magazines": [],
+    "Publishers": [],
+    "ReleaseDate": null,
+    "Volumes": null,
+    "Source": "www.mangatown.com",
+    "Url": "https://www.mangatown.com/manga/joukamachi_no_dandelion",
+    "Value": {
+        "Localized": null,
+        "English": {
+            "Url": "https://www.mangatown.com/manga/joukamachi_no_dandelion",
+            "Value": "Joukamachi no Dandelion"
+        },
+        "Original": {
+            "Url": "https://www.mangatown.com/manga/joukamachi_no_dandelion",
+            "Value": "城下町のダンデライオン"
+        }
+    }
+}

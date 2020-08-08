@@ -1,0 +1,150 @@
+{
+    "Covers": [
+        {
+            "Large": {
+                "Url": "http://fmcdn.mangahere.com/store/manga/9229/ocover.jpg?token=da389d7c902de432386298e45519bb1a0a4ad119&ttl=1596394800&v=1544515787",
+                "Value": null
+            },
+            "Medium": null,
+            "Small": null
+        }
+    ],
+    "Authors": [
+        {
+            "Url": "https://www.mangatown.com//www.mangatown.com/author/Takahiro+(%e3%82%bf%e3%82%ab%e3%83%92%e3%83%ad)",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com//www.mangatown.com/author/Takahiro+(%e3%82%bf%e3%82%ab%e3%83%92%e3%83%ad)",
+                    "Value": "Takahiro (タカヒロ)"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Genres": [
+        {
+            "Url": "https://www.mangatown.com/directory/shounen-0-0-0-0-0/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com/directory/shounen-0-0-0-0-0/",
+                    "Value": "Shounen"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://www.mangatown.com/directory/0-action-0-0-0-0/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com/directory/0-action-0-0-0-0/",
+                    "Value": "Action"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://www.mangatown.com/directory/0-drama-0-0-0-0/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com/directory/0-drama-0-0-0-0/",
+                    "Value": "Drama"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://www.mangatown.com/directory/0-fantasy-0-0-0-0/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com/directory/0-fantasy-0-0-0-0/",
+                    "Value": "Fantasy"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://www.mangatown.com/directory/0-mature-0-0-0-0/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com/directory/0-mature-0-0-0-0/",
+                    "Value": "Mature"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://www.mangatown.com/directory/0-psychological-0-0-0-0/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com/directory/0-psychological-0-0-0-0/",
+                    "Value": "Psychological"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://www.mangatown.com/directory/0-romance-0-0-0-0/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com/directory/0-romance-0-0-0-0/",
+                    "Value": "Romance"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://www.mangatown.com/directory/0-tragedy-0-0-0-0/",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com/directory/0-tragedy-0-0-0-0/",
+                    "Value": "Tragedy"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Description": {
+        "Url": "https://www.mangatown.com/manga/akame_ga_kiru",
+        "Value": "Teenage country bumpkin Tatsumi dreams of earning enough money for his impoverished village by working in the Capital - but his short-lived plans go awry when he’s robbed by a buxom beauty upon arrival! Penniless, Tatsumi is taken in by the lovely Lady Aria, but just when his Capital dreams seem in reach yet again, Lady Aria's mansion is besieged by Night Raid - a team of ruthless assassins who targets high-ranking members of the upper class! As Tatsumi is quick to learn, appearances can be deceiving in the Capital, and this team of assassins just might be… the good guys?!"
+    },
+    "Illustrators": [
+        {
+            "Url": "https://www.mangatown.com//www.mangatown.com/artist/TASHIRO+Tetsuya",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://www.mangatown.com//www.mangatown.com/artist/TASHIRO+Tetsuya",
+                    "Value": "TASHIRO Tetsuya"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Writers": [],
+    "Magazines": [],
+    "Publishers": [],
+    "ReleaseDate": null,
+    "Volumes": null,
+    "Source": "www.mangatown.com",
+    "Url": "https://www.mangatown.com/manga/akame_ga_kiru",
+    "Value": {
+        "Localized": null,
+        "English": {
+            "Url": "https://www.mangatown.com/manga/akame_ga_kiru",
+            "Value": "Akame ga Kiru!"
+        },
+        "Original": {
+            "Url": "https://www.mangatown.com/manga/akame_ga_kiru",
+            "Value": "アカメが斬る!"
+        }
+    }
+}
