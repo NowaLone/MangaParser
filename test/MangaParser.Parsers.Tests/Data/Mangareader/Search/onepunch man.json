@@ -19,44 +19,44 @@
         "Authors": [],
         "Genres": [
             {
-                "Url": "http://www.mangareader.net/popular/action",
+                "Url": "https://www.mangareader.net/popular/action",
                 "Value": {
                     "Localized": null,
                     "English": {
-                        "Url": "http://www.mangareader.net/popular/action",
+                        "Url": "https://www.mangareader.net/popular/action",
                         "Value": "Action"
                     },
                     "Original": null
                 }
             },
             {
-                "Url": "http://www.mangareader.net/popular/comedy",
+                "Url": "https://www.mangareader.net/popular/comedy",
                 "Value": {
                     "Localized": null,
                     "English": {
-                        "Url": "http://www.mangareader.net/popular/comedy",
+                        "Url": "https://www.mangareader.net/popular/comedy",
                         "Value": "Comedy"
                     },
                     "Original": null
                 }
             },
             {
-                "Url": "http://www.mangareader.net/popular/seinen",
+                "Url": "https://www.mangareader.net/popular/seinen",
                 "Value": {
                     "Localized": null,
                     "English": {
-                        "Url": "http://www.mangareader.net/popular/seinen",
+                        "Url": "https://www.mangareader.net/popular/seinen",
                         "Value": "Seinen"
                     },
                     "Original": null
                 }
             },
             {
-                "Url": "http://www.mangareader.net/popular/supernatural",
+                "Url": "https://www.mangareader.net/popular/supernatural",
                 "Value": {
                     "Localized": null,
                     "English": {
-                        "Url": "http://www.mangareader.net/popular/supernatural",
+                        "Url": "https://www.mangareader.net/popular/supernatural",
                         "Value": "Supernatural"
                     },
                     "Original": null
@@ -71,11 +71,11 @@
         "ReleaseDate": null,
         "Volumes": null,
         "Source": "www.mangareader.net",
-        "Url": "http://www.mangareader.net/onepunch-man",
+        "Url": "https://www.mangareader.net/onepunch-man",
         "Value": {
             "Localized": null,
             "English": {
-                "Url": "http://www.mangareader.net/onepunch-man",
+                "Url": "https://www.mangareader.net/onepunch-man",
                 "Value": "Onepunch-Man"
             },
             "Original": null
@@ -85,15 +85,15 @@
         "Covers": [
             {
                 "Large": {
-                    "Url": "https://s2.mangareader.net/cover/onepunch-man-one/onepunch-man-one-l0.jpg",
+                    "Url": "https://s3.mangareader.net/cover/onepunch-man-one/onepunch-man-one-l0.jpg",
                     "Value": null
                 },
                 "Medium": {
-                    "Url": "https://s2.mangareader.net/cover/onepunch-man-one/onepunch-man-one-m0.jpg",
+                    "Url": "https://s3.mangareader.net/cover/onepunch-man-one/onepunch-man-one-m0.jpg",
                     "Value": null
                 },
                 "Small": {
-                    "Url": "https://s2.mangareader.net/cover/onepunch-man-one/onepunch-man-one-r0.jpg",
+                    "Url": "https://s3.mangareader.net/cover/onepunch-man-one/onepunch-man-one-r0.jpg",
                     "Value": null
                 }
             }
@@ -101,55 +101,55 @@
         "Authors": [],
         "Genres": [
             {
-                "Url": "http://www.mangareader.net/popular/action",
+                "Url": "https://www.mangareader.net/popular/action",
                 "Value": {
                     "Localized": null,
                     "English": {
-                        "Url": "http://www.mangareader.net/popular/action",
+                        "Url": "https://www.mangareader.net/popular/action",
                         "Value": "Action"
                     },
                     "Original": null
                 }
             },
             {
-                "Url": "http://www.mangareader.net/popular/comedy",
+                "Url": "https://www.mangareader.net/popular/comedy",
                 "Value": {
                     "Localized": null,
                     "English": {
-                        "Url": "http://www.mangareader.net/popular/comedy",
+                        "Url": "https://www.mangareader.net/popular/comedy",
                         "Value": "Comedy"
                     },
                     "Original": null
                 }
             },
             {
-                "Url": "http://www.mangareader.net/popular/sci-fi",
+                "Url": "https://www.mangareader.net/popular/sci-fi",
                 "Value": {
                     "Localized": null,
                     "English": {
-                        "Url": "http://www.mangareader.net/popular/sci-fi",
+                        "Url": "https://www.mangareader.net/popular/sci-fi",
                         "Value": "Sci-Fi"
                     },
                     "Original": null
                 }
             },
             {
-                "Url": "http://www.mangareader.net/popular/seinen",
+                "Url": "https://www.mangareader.net/popular/seinen",
                 "Value": {
                     "Localized": null,
                     "English": {
-                        "Url": "http://www.mangareader.net/popular/seinen",
+                        "Url": "https://www.mangareader.net/popular/seinen",
                         "Value": "Seinen"
                     },
                     "Original": null
                 }
             },
             {
-                "Url": "http://www.mangareader.net/popular/supernatural",
+                "Url": "https://www.mangareader.net/popular/supernatural",
                 "Value": {
                     "Localized": null,
                     "English": {
-                        "Url": "http://www.mangareader.net/popular/supernatural",
+                        "Url": "https://www.mangareader.net/popular/supernatural",
                         "Value": "Supernatural"
                     },
                     "Original": null
@@ -164,11 +164,11 @@
         "ReleaseDate": null,
         "Volumes": null,
         "Source": "www.mangareader.net",
-        "Url": "http://www.mangareader.net/onepunch-man-one",
+        "Url": "https://www.mangareader.net/onepunch-man-one",
         "Value": {
             "Localized": null,
             "English": {
-                "Url": "http://www.mangareader.net/onepunch-man-one",
+                "Url": "https://www.mangareader.net/onepunch-man-one",
                 "Value": "OnePunch-Man (ONE)"
             },
             "Original": null

@@ -30,44 +30,44 @@
     ],
     "Genres": [
         {
-            "Url": "http://www.mangareader.net/popular/action",
+            "Url": "https://www.mangareader.net/popular/action",
             "Value": {
                 "Localized": null,
                 "English": {
-                    "Url": "http://www.mangareader.net/popular/action",
+                    "Url": "https://www.mangareader.net/popular/action",
                     "Value": "Action"
                 },
                 "Original": null
             }
         },
         {
-            "Url": "http://www.mangareader.net/popular/comedy",
+            "Url": "https://www.mangareader.net/popular/comedy",
             "Value": {
                 "Localized": null,
                 "English": {
-                    "Url": "http://www.mangareader.net/popular/comedy",
+                    "Url": "https://www.mangareader.net/popular/comedy",
                     "Value": "Comedy"
                 },
                 "Original": null
             }
         },
         {
-            "Url": "http://www.mangareader.net/popular/seinen",
+            "Url": "https://www.mangareader.net/popular/seinen",
             "Value": {
                 "Localized": null,
                 "English": {
-                    "Url": "http://www.mangareader.net/popular/seinen",
+                    "Url": "https://www.mangareader.net/popular/seinen",
                     "Value": "Seinen"
                 },
                 "Original": null
             }
         },
         {
-            "Url": "http://www.mangareader.net/popular/supernatural",
+            "Url": "https://www.mangareader.net/popular/supernatural",
             "Value": {
                 "Localized": null,
                 "English": {
-                    "Url": "http://www.mangareader.net/popular/supernatural",
+                    "Url": "https://www.mangareader.net/popular/supernatural",
                     "Value": "Supernatural"
                 },
                 "Original": null
@@ -75,7 +75,7 @@
         }
     ],
     "Description": {
-        "Url": "http://www.mangareader.net/onepunch-man",
+        "Url": "https://www.mangareader.net/onepunch-man",
         "Value": "Follows the life of an average hero who manages to win all battles with only one punch. This ability seems to frustrate him as he no longer feels the thrill and adrenaline of fighting a tough battle, which leads to him questioning his past desire of being strong."
     },
     "Illustrators": [
@@ -100,15 +100,15 @@
     },
     "Volumes": null,
     "Source": "www.mangareader.net",
-    "Url": "http://www.mangareader.net/onepunch-man",
+    "Url": "https://www.mangareader.net/onepunch-man",
     "Value": {
         "Localized": null,
         "English": {
-            "Url": "http://www.mangareader.net/onepunch-man",
+            "Url": "https://www.mangareader.net/onepunch-man",
             "Value": "Onepunch-Man"
         },
         "Original": {
-            "Url": "http://www.mangareader.net/onepunch-man",
+            "Url": "https://www.mangareader.net/onepunch-man",
             "Value": "One Punch Man"
         }
     }

@@ -30,7 +30,7 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
 
         [DataTestMethod]
         [TestMethodCategory("Search")]
-        [TestMethodDelay(5000)]
+        [TestMethodDelay()]
         [DataRow("sakamotodesu", DisplayName = "'sakamotodesu' query")]
         [DataRow("akame", DisplayName = "'akame' query")]
         [DataRow("onepunch man", DisplayName = "Multiple word query")]
@@ -64,7 +64,16 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
             {
                 IMangaObject dataObj = data.First(o => o.Url.Equals(resultObj.Url));
 
-                CollectionAssert.AreEquivalent(dataObj.Covers.ToList(), resultObj.Covers.ToList());
+                var dataCovers = dataObj.Covers.ToList();
+                var resultCovers = resultObj.Covers.ToList();
+
+                for (int i = 0; i < resultCovers.Count; i++)
+                {
+                    Assert.AreEqual(dataCovers[i].Large?.Url?.LocalPath, resultCovers[i].Large?.Url?.LocalPath);
+                    Assert.AreEqual(dataCovers[i].Medium?.Url?.LocalPath, resultCovers[i].Medium?.Url?.LocalPath);
+                    Assert.AreEqual(dataCovers[i].Small?.Url?.LocalPath, resultCovers[i].Small?.Url?.LocalPath);
+                }
+
                 CollectionAssert.AreEquivalent(dataObj.Authors.ToList(), resultObj.Authors.ToList());
                 CollectionAssert.AreEquivalent(dataObj.Genres.ToList(), resultObj.Genres.ToList());
                 Assert.AreEqual(dataObj.Description, resultObj.Description);
@@ -83,7 +92,7 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
 
         [DataTestMethod]
         [TestMethodCategory("Search", "Async")]
-        [TestMethodDelay(5000)]
+        [TestMethodDelay()]
         [DataRow("sakamotodesu", DisplayName = "'sakamotodesu' query")]
         [DataRow("akame", DisplayName = "'akame' query")]
         [DataRow("onepunch man", DisplayName = "Multiple word query")]
@@ -117,7 +126,16 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
             {
                 IMangaObject dataObj = data.First(o => o.Url.Equals(resultObj.Url));
 
-                CollectionAssert.AreEquivalent(dataObj.Covers.ToList(), resultObj.Covers.ToList());
+                var dataCovers = dataObj.Covers.ToList();
+                var resultCovers = resultObj.Covers.ToList();
+
+                for (int i = 0; i < resultCovers.Count; i++)
+                {
+                    Assert.AreEqual(dataCovers[i].Large?.Url?.LocalPath, resultCovers[i].Large?.Url?.LocalPath);
+                    Assert.AreEqual(dataCovers[i].Medium?.Url?.LocalPath, resultCovers[i].Medium?.Url?.LocalPath);
+                    Assert.AreEqual(dataCovers[i].Small?.Url?.LocalPath, resultCovers[i].Small?.Url?.LocalPath);
+                }
+
                 CollectionAssert.AreEquivalent(dataObj.Authors.ToList(), resultObj.Authors.ToList());
                 CollectionAssert.AreEquivalent(dataObj.Genres.ToList(), resultObj.Genres.ToList());
                 Assert.AreEqual(dataObj.Description, resultObj.Description);
@@ -140,11 +158,11 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
 
         [DataTestMethod]
         [TestMethodCategory("GetManga")]
-        [TestMethodDelay(5000)]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' url")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' url")]
-        [DataRow("http://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' url")]
-        [DataRow("http://www.mangareader.net/onepunch-man", DisplayName = "'Onepunch-Man' url")]
+        [TestMethodDelay()]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' url")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' url")]
+        [DataRow("https://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' url")]
+        [DataRow("https://www.mangareader.net/onepunch-man", DisplayName = "'Onepunch-Man' url")]
         public override void GetManga_ByUrlString_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -168,7 +186,16 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
             // assert
             Assert.AreEqual(data, result);
 
-            CollectionAssert.AreEquivalent(data.Covers.ToList(), result.Covers.ToList());
+            var dataCovers = data.Covers.ToList();
+            var resultCovers = result.Covers.ToList();
+
+            for (int i = 0; i < resultCovers.Count; i++)
+            {
+                Assert.AreEqual(dataCovers[i].Large?.Url?.LocalPath, resultCovers[i].Large?.Url?.LocalPath);
+                Assert.AreEqual(dataCovers[i].Medium?.Url?.LocalPath, resultCovers[i].Medium?.Url?.LocalPath);
+                Assert.AreEqual(dataCovers[i].Small?.Url?.LocalPath, resultCovers[i].Small?.Url?.LocalPath);
+            }
+
             CollectionAssert.AreEquivalent(data.Authors.ToList(), result.Authors.ToList());
             CollectionAssert.AreEquivalent(data.Genres.ToList(), result.Genres.ToList());
             Assert.AreEqual(data.Description, result.Description);
@@ -182,11 +209,11 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
 
         [DataTestMethod]
         [TestMethodCategory("GetManga")]
-        [TestMethodDelay(5000)]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' url")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' url")]
-        [DataRow("http://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' url")]
-        [DataRow("http://www.mangareader.net/onepunch-man", DisplayName = "'Onepunch-Man' url")]
+        [TestMethodDelay()]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' url")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' url")]
+        [DataRow("https://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' url")]
+        [DataRow("https://www.mangareader.net/onepunch-man", DisplayName = "'Onepunch-Man' url")]
         public override void GetManga_ByUri_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -212,7 +239,16 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
             // assert
             Assert.AreEqual(data, result);
 
-            CollectionAssert.AreEquivalent(data.Covers.ToList(), result.Covers.ToList());
+            var dataCovers = data.Covers.ToList();
+            var resultCovers = result.Covers.ToList();
+
+            for (int i = 0; i < resultCovers.Count; i++)
+            {
+                Assert.AreEqual(dataCovers[i].Large?.Url?.LocalPath, resultCovers[i].Large?.Url?.LocalPath);
+                Assert.AreEqual(dataCovers[i].Medium?.Url?.LocalPath, resultCovers[i].Medium?.Url?.LocalPath);
+                Assert.AreEqual(dataCovers[i].Small?.Url?.LocalPath, resultCovers[i].Small?.Url?.LocalPath);
+            }
+
             CollectionAssert.AreEquivalent(data.Authors.ToList(), result.Authors.ToList());
             CollectionAssert.AreEquivalent(data.Genres.ToList(), result.Genres.ToList());
             Assert.AreEqual(data.Description, result.Description);
@@ -226,11 +262,11 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
 
         [DataTestMethod]
         [TestMethodCategory("GetManga")]
-        [TestMethodDelay(5000)]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' url")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' url")]
-        [DataRow("http://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' url")]
-        [DataRow("http://www.mangareader.net/onepunch-man", DisplayName = "'Onepunch-Man' url")]
+        [TestMethodDelay()]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' url")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' url")]
+        [DataRow("https://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' url")]
+        [DataRow("https://www.mangareader.net/onepunch-man", DisplayName = "'Onepunch-Man' url")]
         public override void GetManga_ByMangaObject_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -259,7 +295,13 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
             var dataCovers = data.Covers.ToList();
             var resultCovers = result.Covers.ToList();
 
-            CollectionAssert.AreEquivalent(data.Covers.ToList(), result.Covers.ToList());
+            for (int i = 0; i < resultCovers.Count; i++)
+            {
+                Assert.AreEqual(dataCovers[i].Large?.Url?.LocalPath, resultCovers[i].Large?.Url?.LocalPath);
+                Assert.AreEqual(dataCovers[i].Medium?.Url?.LocalPath, resultCovers[i].Medium?.Url?.LocalPath);
+                Assert.AreEqual(dataCovers[i].Small?.Url?.LocalPath, resultCovers[i].Small?.Url?.LocalPath);
+            }
+
             CollectionAssert.AreEquivalent(data.Authors.ToList(), result.Authors.ToList());
             CollectionAssert.AreEquivalent(data.Genres.ToList(), result.Genres.ToList());
             Assert.AreEqual(data.Description, result.Description);
@@ -277,11 +319,11 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
 
         [DataTestMethod]
         [TestMethodCategory("GetManga", "Async")]
-        [TestMethodDelay(5000)]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' url")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' url")]
-        [DataRow("http://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' url")]
-        [DataRow("http://www.mangareader.net/onepunch-man", DisplayName = "'Onepunch-Man' url")]
+        [TestMethodDelay()]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' url")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' url")]
+        [DataRow("https://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' url")]
+        [DataRow("https://www.mangareader.net/onepunch-man", DisplayName = "'Onepunch-Man' url")]
         public override async Task GetMangaAsync_ByUrlString_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -305,7 +347,16 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
             // assert
             Assert.AreEqual(data, result);
 
-            CollectionAssert.AreEquivalent(data.Covers.ToList(), result.Covers.ToList());
+            var dataCovers = data.Covers.ToList();
+            var resultCovers = result.Covers.ToList();
+
+            for (int i = 0; i < resultCovers.Count; i++)
+            {
+                Assert.AreEqual(dataCovers[i].Large?.Url?.LocalPath, resultCovers[i].Large?.Url?.LocalPath);
+                Assert.AreEqual(dataCovers[i].Medium?.Url?.LocalPath, resultCovers[i].Medium?.Url?.LocalPath);
+                Assert.AreEqual(dataCovers[i].Small?.Url?.LocalPath, resultCovers[i].Small?.Url?.LocalPath);
+            }
+
             CollectionAssert.AreEquivalent(data.Authors.ToList(), result.Authors.ToList());
             CollectionAssert.AreEquivalent(data.Genres.ToList(), result.Genres.ToList());
             Assert.AreEqual(data.Description, result.Description);
@@ -319,11 +370,11 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
 
         [DataTestMethod]
         [TestMethodCategory("GetManga", "Async")]
-        [TestMethodDelay(5000)]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' url")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' url")]
-        [DataRow("http://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' url")]
-        [DataRow("http://www.mangareader.net/onepunch-man", DisplayName = "'Onepunch-Man' url")]
+        [TestMethodDelay()]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' url")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' url")]
+        [DataRow("https://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' url")]
+        [DataRow("https://www.mangareader.net/onepunch-man", DisplayName = "'Onepunch-Man' url")]
         public override async Task GetMangaAsync_ByUri_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -352,7 +403,13 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
             var dataCovers = data.Covers.ToList();
             var resultCovers = result.Covers.ToList();
 
-            CollectionAssert.AreEquivalent(data.Covers.ToList(), result.Covers.ToList());
+            for (int i = 0; i < resultCovers.Count; i++)
+            {
+                Assert.AreEqual(dataCovers[i].Large?.Url?.LocalPath, resultCovers[i].Large?.Url?.LocalPath);
+                Assert.AreEqual(dataCovers[i].Medium?.Url?.LocalPath, resultCovers[i].Medium?.Url?.LocalPath);
+                Assert.AreEqual(dataCovers[i].Small?.Url?.LocalPath, resultCovers[i].Small?.Url?.LocalPath);
+            }
+
             CollectionAssert.AreEquivalent(data.Authors.ToList(), result.Authors.ToList());
             CollectionAssert.AreEquivalent(data.Genres.ToList(), result.Genres.ToList());
             Assert.AreEqual(data.Description, result.Description);
@@ -366,11 +423,11 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
 
         [DataTestMethod]
         [TestMethodCategory("GetManga", "Async")]
-        [TestMethodDelay(5000)]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' url")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' url")]
-        [DataRow("http://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' url")]
-        [DataRow("http://www.mangareader.net/onepunch-man", DisplayName = "'Onepunch-Man' url")]
+        [TestMethodDelay()]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' url")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' url")]
+        [DataRow("https://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' url")]
+        [DataRow("https://www.mangareader.net/onepunch-man", DisplayName = "'Onepunch-Man' url")]
         public override async Task GetMangaAsync_ByMangaObject_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -399,7 +456,13 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
             var dataCovers = data.Covers.ToList();
             var resultCovers = result.Covers.ToList();
 
-            CollectionAssert.AreEquivalent(data.Covers.ToList(), result.Covers.ToList());
+            for (int i = 0; i < resultCovers.Count; i++)
+            {
+                Assert.AreEqual(dataCovers[i].Large?.Url?.LocalPath, resultCovers[i].Large?.Url?.LocalPath);
+                Assert.AreEqual(dataCovers[i].Medium?.Url?.LocalPath, resultCovers[i].Medium?.Url?.LocalPath);
+                Assert.AreEqual(dataCovers[i].Small?.Url?.LocalPath, resultCovers[i].Small?.Url?.LocalPath);
+            }
+
             CollectionAssert.AreEquivalent(data.Authors.ToList(), result.Authors.ToList());
             CollectionAssert.AreEquivalent(data.Genres.ToList(), result.Genres.ToList());
             Assert.AreEqual(data.Description, result.Description);
@@ -421,10 +484,10 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
 
         [DataTestMethod]
         [TestMethodCategory("GetChapters")]
-        [TestMethodDelay(5000)]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' chapters")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' chapters")]
-        [DataRow("http://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' chapters")]
+        [TestMethodDelay()]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' chapters")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' chapters")]
+        [DataRow("https://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' chapters")]
         public override void GetChapters_ByUrlString_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -459,10 +522,10 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
 
         [DataTestMethod]
         [TestMethodCategory("GetChapters")]
-        [TestMethodDelay(5000)]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' chapters")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' chapters")]
-        [DataRow("http://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' chapters")]
+        [TestMethodDelay()]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' chapters")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' chapters")]
+        [DataRow("https://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' chapters")]
         public override void GetChapters_ByUri_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -499,10 +562,10 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
 
         [DataTestMethod]
         [TestMethodCategory("GetChapters")]
-        [TestMethodDelay(5000)]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' chapters")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' chapters")]
-        [DataRow("http://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' chapters")]
+        [TestMethodDelay()]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' chapters")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' chapters")]
+        [DataRow("https://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' chapters")]
         public override void GetChapters_ByMangaObject_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -543,10 +606,10 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
 
         [DataTestMethod]
         [TestMethodCategory("GetChapters", "Async")]
-        [TestMethodDelay(5000)]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' chapters")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' chapters")]
-        [DataRow("http://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' chapters")]
+        [TestMethodDelay()]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' chapters")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' chapters")]
+        [DataRow("https://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' chapters")]
         public override async Task GetChaptersAsync_ByUrlString_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -581,10 +644,10 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
 
         [DataTestMethod]
         [TestMethodCategory("GetChapters", "Async")]
-        [TestMethodDelay(5000)]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' chapters")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' chapters")]
-        [DataRow("http://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' chapters")]
+        [TestMethodDelay()]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' chapters")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' chapters")]
+        [DataRow("https://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' chapters")]
         public override async Task GetChaptersAsync_ByUri_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -621,10 +684,10 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
 
         [DataTestMethod]
         [TestMethodCategory("GetChapters", "Async")]
-        [TestMethodDelay(5000)]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' chapters")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' chapters")]
-        [DataRow("http://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' chapters")]
+        [TestMethodDelay()]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga", DisplayName = "'Sakamoto desu ga?' chapters")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru", DisplayName = "'Akame ga Kill!' chapters")]
+        [DataRow("https://www.mangareader.net/nisekoi", DisplayName = "'Nisekoi' chapters")]
         public override async Task GetChaptersAsync_ByMangaObject_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -669,13 +732,13 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
 
         [DataTestMethod]
         [TestMethodCategory("GetPages")]
-        [TestMethodDelay(5000)]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga/1", DisplayName = "'Sakamoto desu ga?' ch1 pages")]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga/16", DisplayName = "'Sakamoto desu ga?' ch16 pages")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru/1", DisplayName = "'Akame ga Kill!' ch1 pages")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru/7", DisplayName = "'Akame ga Kill!' ch7 pages")]
-        [DataRow("http://www.mangareader.net/nisekoi/1", DisplayName = "'Nisekoi' ch1 pages")]
-        [DataRow("http://www.mangareader.net/nisekoi/44", DisplayName = "'Nisekoi' ch44 pages")]
+        [TestMethodDelay()]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga/1", DisplayName = "'Sakamoto desu ga?' ch1 pages")]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga/16", DisplayName = "'Sakamoto desu ga?' ch16 pages")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru/1", DisplayName = "'Akame ga Kill!' ch1 pages")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru/7", DisplayName = "'Akame ga Kill!' ch7 pages")]
+        [DataRow("https://www.mangareader.net/nisekoi/1", DisplayName = "'Nisekoi' ch1 pages")]
+        [DataRow("https://www.mangareader.net/nisekoi/44", DisplayName = "'Nisekoi' ch44 pages")]
         public override void GetPages_ByUrlString_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -701,20 +764,20 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
 
             for (int i = 0; i < result.Count; i++)
             {
-                Assert.AreEqual(data[i].Url, result[i].Url);
+                Assert.AreEqual(data[i].Url.LocalPath, result[i].Url.LocalPath);
                 Assert.AreEqual(data[i].Value, result[i].Value);
             }
         }
 
         [DataTestMethod]
         [TestMethodCategory("GetPages")]
-        [TestMethodDelay(5000)]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga/1", DisplayName = "'Sakamoto desu ga?' ch1 pages")]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga/16", DisplayName = "'Sakamoto desu ga?' ch16 pages")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru/1", DisplayName = "'Akame ga Kill!' ch1 pages")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru/7", DisplayName = "'Akame ga Kill!' ch7 pages")]
-        [DataRow("http://www.mangareader.net/nisekoi/1", DisplayName = "'Nisekoi' ch1 pages")]
-        [DataRow("http://www.mangareader.net/nisekoi/44", DisplayName = "'Nisekoi' ch44 pages")]
+        [TestMethodDelay()]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga/1", DisplayName = "'Sakamoto desu ga?' ch1 pages")]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga/16", DisplayName = "'Sakamoto desu ga?' ch16 pages")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru/1", DisplayName = "'Akame ga Kill!' ch1 pages")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru/7", DisplayName = "'Akame ga Kill!' ch7 pages")]
+        [DataRow("https://www.mangareader.net/nisekoi/1", DisplayName = "'Nisekoi' ch1 pages")]
+        [DataRow("https://www.mangareader.net/nisekoi/44", DisplayName = "'Nisekoi' ch44 pages")]
         public override void GetPages_ByUri_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -742,20 +805,20 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
 
             for (int i = 0; i < result.Count; i++)
             {
-                Assert.AreEqual(data[i].Url, result[i].Url);
+                Assert.AreEqual(data[i].Url.LocalPath, result[i].Url.LocalPath);
                 Assert.AreEqual(data[i].Value, result[i].Value);
             }
         }
 
         [DataTestMethod]
         [TestMethodCategory("GetPages")]
-        [TestMethodDelay(5000)]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga/1", DisplayName = "'Sakamoto desu ga?' ch1 pages")]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga/16", DisplayName = "'Sakamoto desu ga?' ch16 pages")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru/1", DisplayName = "'Akame ga Kill!' ch1 pages")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru/7", DisplayName = "'Akame ga Kill!' ch7 pages")]
-        [DataRow("http://www.mangareader.net/nisekoi/1", DisplayName = "'Nisekoi' ch1 pages")]
-        [DataRow("http://www.mangareader.net/nisekoi/44", DisplayName = "'Nisekoi' ch44 pages")]
+        [TestMethodDelay()]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga/1", DisplayName = "'Sakamoto desu ga?' ch1 pages")]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga/16", DisplayName = "'Sakamoto desu ga?' ch16 pages")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru/1", DisplayName = "'Akame ga Kill!' ch1 pages")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru/7", DisplayName = "'Akame ga Kill!' ch7 pages")]
+        [DataRow("https://www.mangareader.net/nisekoi/1", DisplayName = "'Nisekoi' ch1 pages")]
+        [DataRow("https://www.mangareader.net/nisekoi/44", DisplayName = "'Nisekoi' ch44 pages")]
         public override void GetPages_ByChapter_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -783,7 +846,7 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
 
             for (int i = 0; i < result.Count; i++)
             {
-                Assert.AreEqual(data[i].Url, result[i].Url);
+                Assert.AreEqual(data[i].Url.LocalPath, result[i].Url.LocalPath);
                 Assert.AreEqual(data[i].Value, result[i].Value);
             }
         }
@@ -794,13 +857,13 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
 
         [DataTestMethod]
         [TestMethodCategory("GetPages", "Async")]
-        [TestMethodDelay(5000)]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga/1", DisplayName = "'Sakamoto desu ga?' ch1 pages")]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga/16", DisplayName = "'Sakamoto desu ga?' ch16 pages")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru/1", DisplayName = "'Akame ga Kill!' ch1 pages")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru/7", DisplayName = "'Akame ga Kill!' ch7 pages")]
-        [DataRow("http://www.mangareader.net/nisekoi/1", DisplayName = "'Nisekoi' ch1 pages")]
-        [DataRow("http://www.mangareader.net/nisekoi/44", DisplayName = "'Nisekoi' ch44 pages")]
+        [TestMethodDelay()]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga/1", DisplayName = "'Sakamoto desu ga?' ch1 pages")]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga/16", DisplayName = "'Sakamoto desu ga?' ch16 pages")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru/1", DisplayName = "'Akame ga Kill!' ch1 pages")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru/7", DisplayName = "'Akame ga Kill!' ch7 pages")]
+        [DataRow("https://www.mangareader.net/nisekoi/1", DisplayName = "'Nisekoi' ch1 pages")]
+        [DataRow("https://www.mangareader.net/nisekoi/44", DisplayName = "'Nisekoi' ch44 pages")]
         public override async Task GetPagesAsync_ByUrlString_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -826,20 +889,20 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
 
             for (int i = 0; i < result.Count; i++)
             {
-                Assert.AreEqual(data[i].Url, result[i].Url);
+                Assert.AreEqual(data[i].Url.LocalPath, result[i].Url.LocalPath);
                 Assert.AreEqual(data[i].Value, result[i].Value);
             }
         }
 
         [DataTestMethod]
         [TestMethodCategory("GetPages", "Async")]
-        [TestMethodDelay(5000)]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga/1", DisplayName = "'Sakamoto desu ga?' ch1 pages")]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga/16", DisplayName = "'Sakamoto desu ga?' ch16 pages")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru/1", DisplayName = "'Akame ga Kill!' ch1 pages")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru/7", DisplayName = "'Akame ga Kill!' ch7 pages")]
-        [DataRow("http://www.mangareader.net/nisekoi/1", DisplayName = "'Nisekoi' ch1 pages")]
-        [DataRow("http://www.mangareader.net/nisekoi/44", DisplayName = "'Nisekoi' ch44 pages")]
+        [TestMethodDelay()]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga/1", DisplayName = "'Sakamoto desu ga?' ch1 pages")]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga/16", DisplayName = "'Sakamoto desu ga?' ch16 pages")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru/1", DisplayName = "'Akame ga Kill!' ch1 pages")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru/7", DisplayName = "'Akame ga Kill!' ch7 pages")]
+        [DataRow("https://www.mangareader.net/nisekoi/1", DisplayName = "'Nisekoi' ch1 pages")]
+        [DataRow("https://www.mangareader.net/nisekoi/44", DisplayName = "'Nisekoi' ch44 pages")]
         public override async Task GetPagesAsync_ByUri_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -867,20 +930,20 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
 
             for (int i = 0; i < result.Count; i++)
             {
-                Assert.AreEqual(data[i].Url, result[i].Url);
+                Assert.AreEqual(data[i].Url.LocalPath, result[i].Url.LocalPath);
                 Assert.AreEqual(data[i].Value, result[i].Value);
             }
         }
 
         [DataTestMethod]
         [TestMethodCategory("GetPages", "Async")]
-        [TestMethodDelay(5000)]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga/1", DisplayName = "'Sakamoto desu ga?' ch1 pages")]
-        [DataRow("http://www.mangareader.net/sakamoto-desu-ga/16", DisplayName = "'Sakamoto desu ga?' ch16 pages")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru/1", DisplayName = "'Akame ga Kill!' ch1 pages")]
-        [DataRow("http://www.mangareader.net/akame-ga-kiru/7", DisplayName = "'Akame ga Kill!' ch7 pages")]
-        [DataRow("http://www.mangareader.net/nisekoi/1", DisplayName = "'Nisekoi' ch1 pages")]
-        [DataRow("http://www.mangareader.net/nisekoi/44", DisplayName = "'Nisekoi' ch44 pages")]
+        [TestMethodDelay()]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga/1", DisplayName = "'Sakamoto desu ga?' ch1 pages")]
+        [DataRow("https://www.mangareader.net/sakamoto-desu-ga/16", DisplayName = "'Sakamoto desu ga?' ch16 pages")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru/1", DisplayName = "'Akame ga Kill!' ch1 pages")]
+        [DataRow("https://www.mangareader.net/akame-ga-kiru/7", DisplayName = "'Akame ga Kill!' ch7 pages")]
+        [DataRow("https://www.mangareader.net/nisekoi/1", DisplayName = "'Nisekoi' ch1 pages")]
+        [DataRow("https://www.mangareader.net/nisekoi/44", DisplayName = "'Nisekoi' ch44 pages")]
         public override async Task GetPagesAsync_ByChapter_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -908,7 +971,7 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangareader
 
             for (int i = 0; i < result.Count; i++)
             {
-                Assert.AreEqual(data[i].Url, result[i].Url);
+                Assert.AreEqual(data[i].Url.LocalPath, result[i].Url.LocalPath);
                 Assert.AreEqual(data[i].Value, result[i].Value);
             }
         }
