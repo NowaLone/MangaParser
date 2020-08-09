@@ -5,16 +5,31 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net.Http;
-using System.Threading;
+using System.Text.RegularExpressions;
 
 namespace MangaParser.Parsers.HtmlWebParsers.Mangareader
 {
     public class MangareaderParser : CoreParser
     {
+        #region Fields
+
+        /// <summary>
+        /// Js array name.
+        /// </summary>
+        private const string jsArrayVar = "\"im\":";
+
+        /// <summary>
+        /// Pattern for js array scraping.
+        /// </summary>
+        private const string pattern = "(\"u\":)\\\"(.*?)\\\"";
+
+        private readonly Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
+
+        #endregion Fields
+
         #region Constructors
 
-        public MangareaderParser(string baseUri = "http://www.mangareader.net") : base(baseUri)
+        public MangareaderParser(string baseUri = "https://www.mangareader.net") : base(baseUri)
         {
         }
 
@@ -40,7 +55,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.Mangareader
                 throw new ArgumentNullException(nameof(htmlDoc));
             }
 
-            var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@id='mangaresults']");
+            var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@id='ares']");
 
             return GetSearchResult(mainNode);
         }
@@ -56,7 +71,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.Mangareader
                 throw new ArgumentNullException(nameof(htmlDoc));
             }
 
-            var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@id='wrapper_body']");
+            var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='d14']/div[@class='d36']");
 
             return GetMangaData(mainNode, url);
         }
@@ -72,7 +87,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.Mangareader
                 throw new ArgumentNullException(nameof(htmlDoc));
             }
 
-            var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@id='wrapper_body']");
+            var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//div[@class='d14']/div[@class='d36']/table[@class='d48']");
 
             return GetChapters(mainNode);
         }
@@ -88,9 +103,9 @@ namespace MangaParser.Parsers.HtmlWebParsers.Mangareader
                 throw new ArgumentNullException(nameof(htmlDoc));
             }
 
-            var mainNode = htmlDoc.DocumentNode.SelectSingleNode("//body/div[@id='container']");
+            string scriptText = htmlDoc.DocumentNode?.Descendants()?.Where(n => n.Name == "script" && n.InnerText.Contains(jsArrayVar)).FirstOrDefault()?.InnerText;
 
-            return GetMangaPages(mainNode);
+            return GetMangaPages(scriptText);
         }
 
         #endregion GetPages
@@ -101,23 +116,22 @@ namespace MangaParser.Parsers.HtmlWebParsers.Mangareader
 
         private IEnumerable<MangaObject> GetSearchResult(HtmlNode mainNode)
         {
-            var thumbs = mainNode?.SelectNodes("//div[@class='mangaresultinner']");
+            var thumbs = mainNode?.SelectNodes("//div[@class='d54']");
 
             if (thumbs?.Count > 0)
             {
                 for (int i = 0; i < thumbs.Count; i++)
                 {
-                    Uri url = GetFullUrl(thumbs[i].SelectSingleNode("./div[@class='result_info c5']/div[@class='manga_name']/div/h3/a")?.Attributes["href"]?.Value);
+                    Uri url = GetFullUrl(thumbs[i].SelectSingleNode(".//div[@class='d57']/a")?.Attributes["href"]?.Value);
 
-                    string nameE = Decode(thumbs[i].SelectSingleNode("./div[@class='result_info c5']/div[@class='manga_name']/div/h3/a")?.InnerText);
+                    string nameE = Decode(thumbs[i].SelectSingleNode(".//div[@class='d57']/a")?.InnerText);
                     IDataBase<string> nameDataE = new DataBase<string>(nameE, url);
                     IName name = new Name(english: nameDataE);
 
-                    ICollection<IDataBase<IName>> genres = GetThumbGenres(thumbs[i].SelectSingleNode("./div[@class='result_info c5']/div[@class='manga_genre']"));
+                    ICollection<IDataBase<IName>> genres = GetThumbGenres(thumbs[i].SelectSingleNode(".//div[@class='d60']"));
 
-                    string coverstr = thumbs[i].SelectSingleNode("./div[@class='imgsearchresults']")?.Attributes["style"]?.Value;
-                    string coverS = coverstr.Substring(coverstr.IndexOf("('") + 2, coverstr.IndexOf("')") - coverstr.IndexOf("('") - 2);
-                    Uri[] fullCovers = GetFullCovers(coverS);
+                    string coverstr = "https:" + thumbs[i].SelectSingleNode(".//div[@class='d56 dlz']")?.Attributes["data-src"]?.Value;
+                    Uri[] fullCovers = GetFullCovers(coverstr);
                     ICover cover = new Cover(fullCovers[0], fullCovers[1], fullCovers[2]);
                     ICollection<ICover> covers = new ICover[] { cover };
 
@@ -168,7 +182,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.Mangareader
 
         private MangaObject GetMangaData(HtmlNode mainNode, Uri uri)
         {
-            var infoNode = mainNode?.SelectSingleNode("//div[@id='mangaproperties']/table");
+            var infoNode = mainNode?.SelectSingleNode("./div[@class='d37']/div[@class='d39']/table");
 
             IName name = GetName(infoNode, uri);
 
@@ -237,13 +251,18 @@ namespace MangaParser.Parsers.HtmlWebParsers.Mangareader
 
         private ICollection<ICover> GetCovers(HtmlNode mainNode)
         {
-            var imageNode = mainNode?.SelectSingleNode("//img");
+            var imageNode = mainNode?.SelectSingleNode(".//img");
 
             ICover[] images;
 
             if (imageNode != null)
             {
                 string coverL = imageNode.Attributes["src"]?.Value;
+                if (!coverL.StartsWith("http:") && !coverL.StartsWith("https:"))
+                {
+                    coverL = "https:" + coverL;
+                }
+
                 Uri[] fullCovers = GetFullCovers(coverL);
 
                 ICover cover = new Cover(fullCovers[0], fullCovers[1], fullCovers[2]);
@@ -260,7 +279,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.Mangareader
 
         private IDataBase<string> GetDescription(HtmlNode mainNode, Uri uri)
         {
-            var descNode = mainNode?.SelectSingleNode("./div[@id='readmangasum']/p");
+            var descNode = mainNode?.SelectSingleNode("./div[@class='d46']/p");
 
             if (descNode != null)
             {
@@ -287,7 +306,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.Mangareader
                 {
                     Uri url = base.GetFullUrl(genreNodes[i].Attributes["href"]?.Value);
 
-                    string nameE = Decode(genreNodes[i].SelectSingleNode("./span")?.InnerText);
+                    string nameE = Decode(genreNodes[i].InnerText);
                     IDataBase<string> nameDataE = new DataBase<string>(nameE, url);
                     IName nameData = new Name(english: nameDataE);
 
@@ -304,7 +323,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.Mangareader
 
         private IName GetName(HtmlNode infoNode, Uri uri)
         {
-            var engNameNode = infoNode?.SelectSingleNode("./tr[1]/td[2]/h2[@class='aname']");
+            var engNameNode = infoNode?.SelectSingleNode("./tr[1]/td[2]/span[@class='name']");
             var orgNameNode = infoNode?.SelectSingleNode("./tr[2]/td[2]");
 
             if (orgNameNode != null || engNameNode != null)
@@ -335,7 +354,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.Mangareader
 
         private IEnumerable<IChapter> GetChapters(HtmlNode mainNode)
         {
-            var chapters = mainNode?.SelectNodes("//div[@id='chapterlist']/table/tr[not(@class='table_head')]");
+            var chapters = mainNode?.SelectNodes(".//tr[not(@class='d49')]");
 
             if (chapters?.Count > 0)
             {
@@ -344,7 +363,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.Mangareader
                     Uri url = GetFullUrl(chapters[i].SelectSingleNode("./td/a")?.Attributes["href"]?.Value);
 
                     var nameE = Decode(chapters[i].SelectSingleNode("./td/a")?.InnerText);
-                    var additional = Decode(chapters[i].SelectSingleNode("./td/text()[3]")?.InnerText);
+                    var additional = Decode(chapters[i].SelectSingleNode("./td/text()[2]")?.InnerText);
                     additional = additional == ":" ? String.Empty : additional;
                     IDataBase<string> nameDataE = new DataBase<string>(nameE + additional, url);
                     IName nameData = new Name(english: nameDataE);
@@ -363,27 +382,27 @@ namespace MangaParser.Parsers.HtmlWebParsers.Mangareader
 
         #region Pages methods
 
-        private IEnumerable<IDataBase> GetMangaPages(HtmlNode mainNode)
+        private IEnumerable<IDataBase> GetMangaPages(string scriptText)
         {
-            string imgNodePath = mainNode?.XPath + "//img[@id='img']";
-            string img;
+            int index = scriptText.IndexOf(jsArrayVar);
+            int arrayPosition = index + jsArrayVar.Length;
 
-            img = mainNode.SelectSingleNode(imgNodePath)?.Attributes["src"]?.Value;
-            yield return new DataBase(default, img);
-
-            var Counters = mainNode.SelectNodes("./div[@id='topchapter']/div[@id='navi']/div[@id='selectpage']/select/option");
-
-            if (Counters?.Count > 1)
+            if (index != -1 && (arrayPosition < scriptText.Length))
             {
-                using (HttpClient client = new HttpClient())
+                string array = scriptText.Substring(arrayPosition);
+
+                if (array.Length > 0)
                 {
-                    for (int i = 1; i < Counters.Count; i++)
+                    MatchCollection matchs = regex.Matches(array);
+
+                    if (matchs.Count > 0)
                     {
-                        var doc = Web.Load(GetFullUrl(Counters[i].Attributes["value"]?.Value));
+                        for (int i = 0; i < matchs.Count; i++)
+                        {
+                            string url = "https:" + matchs[i].Groups[2].Value.Replace("\\/", "/");
 
-                        img = doc.DocumentNode.SelectSingleNode(imgNodePath)?.Attributes["src"]?.Value;
-
-                        yield return new DataBase(default, img);
+                            yield return new DataBase(default, url);
+                        }
                     }
                 }
             }
