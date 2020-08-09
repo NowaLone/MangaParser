@@ -113,16 +113,15 @@ namespace MangaParser.Parsers.HtmlWebParsers.ReadManga
             {
                 for (int i = 0; i < thumbs.Count; i++)
                 {
-                    string nameL = Decode(thumbs[i].SelectSingleNode("./div[@class='desc']/h3/a")?.InnerText);
-                    string nameE = Decode(thumbs[i].SelectSingleNode("./div[@class='desc']/h4")?.InnerText);
-
-                    string description = GetThumbDescription(thumbs[i]);
 
                     Uri url = GetFullUrl(thumbs[i].SelectSingleNode("./div[@class='desc']/h3/a")?.Attributes["href"]?.Value);
 
-                    IDataBase<string> nameDataL = new DataBase<string>(nameL, url);
-                    IDataBase<string> nameDataE = new DataBase<string>(nameE, url);
+                    string description = GetThumbDescription(thumbs[i]);
 
+                    string nameL = Decode(thumbs[i].SelectSingleNode("./div[@class='desc']/h3/a")?.InnerText);
+                    string nameE = Decode(thumbs[i].SelectSingleNode("./div[@class='desc']/h4")?.InnerText);
+                    IDataBase<string> nameDataL = new DataBase<string>(nameL, url);
+                    IDataBase<string> nameDataE = !String.IsNullOrWhiteSpace(nameE) ? new DataBase<string>(nameE, url) : null;
                     IName name = new Name(nameDataL, nameDataE);
 
                     ICollection<IDataBase<IName>> authors = GetThumbItems(thumbs[i], "person");

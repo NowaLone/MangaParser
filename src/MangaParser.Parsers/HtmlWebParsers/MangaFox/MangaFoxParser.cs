@@ -133,11 +133,20 @@ namespace MangaParser.Parsers.HtmlWebParsers.MangaFox
                 throw new BaseHostNotMatchException(BaseUrl.Host, url.Host, nameof(url));
             }
 
-            url = PreparePagesUrl(url);
+            var preparedUrl = PreparePagesUrl(url);
 
-            var htmlDoc = Web.Load(url);
+            var htmlDoc = Web.Load(preparedUrl);
 
-            return GetPagesCore(htmlDoc, url);
+            // Check if we received 'Sorry, it’s licensed and not available.' page 
+            if (htmlDoc is null || htmlDoc.DocumentNode is null || htmlDoc.DocumentNode.SelectNodes("/html/body/div[1]/section/div/p") != null)
+            {
+                // Hack: if we remove a '[page number].html' part from an url, we skip the license block and get all the pages
+                var html = Path.GetFileName(preparedUrl.AbsoluteUri);
+                var urlWithoutHtml = preparedUrl.AbsoluteUri.Remove(preparedUrl.AbsoluteUri.Length - html.Length, html.Length);
+                htmlDoc = Web.Load(urlWithoutHtml);
+            }
+
+            return GetPagesCore(htmlDoc, preparedUrl);
         }
 
         public override async Task<IEnumerable<IDataBase>> GetPagesAsync(Uri url)
@@ -152,11 +161,20 @@ namespace MangaParser.Parsers.HtmlWebParsers.MangaFox
                 throw new BaseHostNotMatchException(BaseUrl.Host, url.Host, nameof(url));
             }
 
-            url = PreparePagesUrl(url);
+            var preparedUrl = PreparePagesUrl(url);
 
-            var htmlDoc = await Web.LoadFromWebAsync(url.OriginalString).ConfigureAwait(false);
+            var htmlDoc = await Web.LoadFromWebAsync(preparedUrl.OriginalString).ConfigureAwait(false);
 
-            return GetPagesCore(htmlDoc, url);
+            // Check if we received 'Sorry, it’s licensed and not available.' page 
+            if (htmlDoc is null || htmlDoc.DocumentNode is null || htmlDoc.DocumentNode.SelectNodes("/html/body/div[1]/section/div/p") != null)
+            {
+                // Hack: if we remove a '[page number].html' part from an url, we skip the license block and get all the pages
+                var html = Path.GetFileName(preparedUrl.AbsoluteUri);
+                var urlWithoutHtml = preparedUrl.AbsoluteUri.Remove(preparedUrl.AbsoluteUri.Length - html.Length, html.Length);
+                htmlDoc = await Web.LoadFromWebAsync(urlWithoutHtml).ConfigureAwait(false);
+            }
+
+            return GetPagesCore(htmlDoc, preparedUrl);
         }
 
         protected override IEnumerable<IDataBase> GetPagesCore(HtmlDocument htmlDoc, Uri url)
@@ -489,7 +507,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.MangaFox
                     var doc = Web.Load("https:" + Counters[i].Attributes["value"].Value);
 
                     img = doc.DocumentNode.SelectSingleNode(firstImgNodePath)?.Attributes["src"]?.Value;
-                    
+
                     if (img is null)
                     {
                         i--;
