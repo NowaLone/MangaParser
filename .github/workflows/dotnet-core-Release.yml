@@ -25,7 +25,7 @@ on:
         default: "0"
 
 env:
-  VERSION_REV: ${{env.GITHUB_RUN_NUMBER}}
+  VERSION_REV: ${{GITHUB_RUN_NUMBER}}
   VERSION_SUFFIX: ""
 
 jobs:
