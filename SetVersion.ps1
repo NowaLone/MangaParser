@@ -21,6 +21,13 @@ $minor = $env:VERSION_MINOR
 $build = $env:VERSION_BUILD
 $rev = $env:VERSION_REV
 
+Write-Host "Major version: $major"
+Write-Host "Minor version: $minor"
+Write-Host "Build version: $build"
+Write-Host "Revision version: $rev"
+Write-Host "Release?: $env:Release"
+Write-Host "Branch: $env:GITHUB_REF"
+
 $rc = 'rc'
 $beta = 'beta'
 $alpha = 'alpha'
