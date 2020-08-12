@@ -25,7 +25,7 @@ on:
         default: "0"
 
 env:
-  VERSION_REV: $(GITHUB_RUN_NUMBER)
+  VERSION_REV: ${{env.GITHUB_RUN_NUMBER}}
   VERSION_SUFFIX: ""
 
 jobs:
@@ -48,7 +48,7 @@ jobs:
 
       - name: Echo variables
         run: |
-          echo "Ref $GITHUB_REF Release $RELEASE Major $VERSION_MAJOR Minor $VERSION_MINOR Build $VERSION_BUILD Suffix $VERSION_SUFFIX Revision $VERSION_REV"
+          echo "Ref ${{env.GITHUB_REF}} Release ${{env.RELEASE}} Major ${{env.VERSION_MAJOR}} Minor ${{env.VERSION_MINOR}} Build ${{env.VERSION_BUILD}} Suffix ${{env.VERSION_SUFFIX}} Revision ${{env.VERSION_REV}}"
 
       - uses: actions/checkout@v2
 
