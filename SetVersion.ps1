@@ -16,10 +16,10 @@ $assemblyPattern = '<AssemblyVersion>1.0.0.0</AssemblyVersion>'
 $filePattern = '<FileVersion>1.0.0.0</FileVersion>'
 $nugetPattern = '<Version>1.0.0</Version>'
 
-$major = $(VERSION_MAJOR)
-$minor = $(VERSION_MINOR)
-$build = $(VERSION_BUILD)
-$rev = $(VERSION_REV)
+$major = $env:VERSION_MAJOR
+$minor = $env:VERSION_MINOR
+$build = $env:VERSION_BUILD
+$rev = $env:VERSION_REV
 
 $rc = 'rc'
 $beta = 'beta'
@@ -29,8 +29,8 @@ $newAssemblyPattern = "<AssemblyVersion>$major.0.0.0</AssemblyVersion>"
 $newFilePattern = "<FileVersion>$major.$minor.$build.$rev</FileVersion>"
 $newNugetPattern = "<Version>$major.$minor.$build</Version>"
 
-if ($(RELEASE) -ne $true -Or $(GITHUB_REF) -ne 'master' ) {
-    switch ($(GITHUB_REF)) {
+if ($env:RELEASE -ne $true -Or $env:GITHUB_REF -ne 'master' ) {
+    switch ($env:GITHUB_REF) {
         'master' { $newNugetPattern = "<Version>$major.$minor.$build-$rc.$rev</Version>"; Break }
         'Dev' { $newNugetPattern = "<Version>$major.$minor.$build-$beta.$rev</Version>"; Break }
         Default { $newNugetPattern = "<Version>$major.$minor.$build-$alpha.$rev</Version>"; Break }

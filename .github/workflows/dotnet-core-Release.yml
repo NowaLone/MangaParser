@@ -1,7 +1,7 @@
 name: Release
 
 env:
-  VERSION_REV: ${GITHUB_RUN_NUMBER}
+  VERSION_REV: $(GITHUB_RUN_NUMBER)
 
 on:
   push:
