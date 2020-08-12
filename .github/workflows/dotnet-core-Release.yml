@@ -47,7 +47,11 @@ jobs:
           echo "::set-env name=VERSION_SUFFIX::-alpha"
 
       - name: Branch name
-        run: echo running on branch ${GITHUB_REF##*/}
+        run: |
+          echo Reserved for REPO_NAME=${GITHUB_REPOSITORY##*/}
+          echo GITHUB_REF=${GITHUB_REF}
+          echo EXTRACT_GITHUB_REF=${GITHUB_REF##*/}
+          echo EXTRACT_GITHUB_REF_HEADS=$(echo ${GITHUB_REF#refs/heads/})
         
       - name: Echo variables
         run: |
