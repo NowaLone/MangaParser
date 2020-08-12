@@ -46,6 +46,9 @@ jobs:
         run: |
           echo "::set-env name=VERSION_SUFFIX::-alpha"
 
+      - name: Branch name
+        run: echo running on branch ${GITHUB_REF##*/}
+        
       - name: Echo variables
         run: |
           echo "Ref ${GITHUB_REF} $GITHUB_REF Release ${{github.event.inputs.RELEASE}} Major ${{github.event.inputs.VERSION_MAJOR}} Minor ${{github.event.inputs.VERSION_MINOR}} Build ${{github.event.inputs.VERSION_BUILD}} Suffix ${{env.VERSION_SUFFIX}} Revision ${{env.VERSION_REV}}"
