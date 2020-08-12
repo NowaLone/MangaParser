@@ -1,8 +1,5 @@
 name: Release
 
-env:
-  VERSION_REV: $(GITHUB_RUN_NUMBER)
-
 on:
   push:
     branches:
@@ -27,11 +24,32 @@ on:
         required: true
         default: "0"
 
+env:
+  VERSION_REV: $(GITHUB_RUN_NUMBER)
+  VERSION_SUFFIX: ""
+
 jobs:
   build:
     runs-on: windows-latest
 
     steps:
+      - name: Set suffix to -rc
+        if: ${{GITHUB_REF}} == 'master' && ${{RELEASE}} == 'false'
+        run: |
+          echo "::set-env name=VERSION_SUFFIX::-rc"
+      - name: Set suffix to -beta
+        if: ${{GITHUB_REF}} == 'Dev'
+        run: |
+          echo "::set-env name=VERSION_SUFFIX::-beta"
+      - name: Set suffix to alpha
+        if: ${{GITHUB_REF}} != 'master' && ${{GITHUB_REF}} != 'Dev'
+        run: |
+          echo "::set-env name=VERSION_SUFFIX::-alpha"
+
+      - name: Echo variables
+        run: |
+          echo Ref ${{GITHUB_REF}} Release ${{RELEASE}} Major ${{VERSION_MAJOR}} Minor ${{VERSION_MINOR}} Build ${{VERSION_BUILD}} Suffix ${{VERSION_SUFFIX}} Revision ${{VERSION_REV}}
+
       - uses: actions/checkout@v2
 
       - name: Setup .NET Core
@@ -42,9 +60,9 @@ jobs:
       - name: Install dependencies
         run: dotnet restore
 
-      - name: Set version
-        run: .\SetVersion.ps1 -Path ".\src\*\*.csproj"
-        shell: powershell
+      # - name: Set version
+      #   run: .\SetVersion.ps1 -Path ".\src\*\*.csproj"
+      #   shell: powershell
 
       - name: Build
         run: dotnet build --configuration Release --no-restore
