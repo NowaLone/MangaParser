@@ -48,7 +48,7 @@ jobs:
 
       - name: Echo variables
         run: |
-          echo "Ref $GITHUB_REF Release $env.RELEASE Major ${env.VERSION_MAJOR} Minor ${{github.event.inputs.VERSION_MINOR}} Build $(VERSION_BUILD) Suffix ${{env.VERSION_SUFFIX}} Revision ${{env.VERSION_REV}}"
+          echo "Ref ${{GITHUB_REF}} ${GITHUB_REF}  $(GITHUB_REF) $GITHUB_REF Release ${{github.event.inputs.RELEASE}} Major ${{github.event.inputs.VERSION_MAJOR}} Minor ${{github.event.inputs.VERSION_MINOR}} Build ${{github.event.inputs.VERSION_BUILD}} Suffix ${{env.VERSION_SUFFIX}} Revision ${{env.VERSION_REV}}"
 
       - uses: actions/checkout@v2
 
