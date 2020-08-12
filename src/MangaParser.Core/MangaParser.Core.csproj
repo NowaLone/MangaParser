@@ -1,7 +1,34 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
+
+  <PropertyGroup Label="nuget props">
+    <ContinuousIntegrationBuild Condition=" '$(GITHUB_ACTIONS)' == 'true' ">true</ContinuousIntegrationBuild>
+    <Title>MangaParser.Core</Title>
+    <Authors>Fihs</Authors>
+    <PackageProjectUrl>https://github.com/Fihs/MangaParser</PackageProjectUrl>
+    <PackageTags>manga;parser</PackageTags>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Description>A core library for manga parsing, contains base logic, some models and interfaces. Used in MangaParser.Parsers and MangaParser.ConsoleApp.</Description>
+    <RepositoryBranch Condition=" '$(GITHUB_ACTIONS)' == 'true' ">$(GITHUB_REF)</RepositoryBranch>
+    <!-- Optional: Publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <!-- Optional: Embed source files that are not tracked by the source control manager in the PDB -->
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <!-- Include symbol files (*.pdb) in the built .nupkg -->
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    <!-- Main version -->
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <!-- Real version -->
+    <FileVersion>1.0.0.0</FileVersion>
+    <!-- Nuget version -->
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
 
 </Project>
