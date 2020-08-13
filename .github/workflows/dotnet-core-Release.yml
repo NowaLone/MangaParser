@@ -8,7 +8,7 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v1
       - name: Branch name
-        run: echo "running on branch ${env:GITHUB_REF##*/}"
+        run: echo "running on branch ${env:GITHUB_REF}"
       - name: run number
         run: echo "Build number is ${env:GITHUB_RUN_NUMBER} ${env:GITHUB_REF} actions ${env:GITHUB_ACTIONS} ${env:BUILD_NUMBER} $env:BUILD_BUILDID ${Build.BuildNumber} ${env:Build.BuildNumber} workspace ${env:GITHUB_WORKSPACE}"
       - name: Build
