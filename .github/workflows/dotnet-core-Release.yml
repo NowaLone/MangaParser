@@ -1,6 +1,9 @@
 name: Release
 on: 
   workflow_dispatch
+env:
+  VERSION_REV: $(${env:GITHUB_REF} -replace '.*?/', '')
+  VERSION_SUFFIX: ""
 jobs:
   build:
     runs-on: windows-latest
@@ -8,7 +11,7 @@ jobs:
       - name: Git checkout
         uses: actions/checkout@v1
       - name: Branch name
-        run: Write-Host "running on branch $(${env:GITHUB_REF} -replace '.*?/', '')"
+        run: Write-Host "running on branch ${{env:VERSION_REV}}"
       - name: run number
         run: echo "Build number is ${env:GITHUB_RUN_NUMBER} ${env:GITHUB_REF} actions ${env:GITHUB_ACTIONS} ${env:BUILD_NUMBER} $env:BUILD_BUILDID ${Build.BuildNumber} ${env:Build.BuildNumber} workspace ${env:GITHUB_WORKSPACE}"
       - name: Build
