@@ -10,6 +10,6 @@ jobs:
       - name: Branch name
         run: echo running on branch ${GITHUB_REF##*/}
       - name: run number
-        run: echo "Build number is ${env:BUILD_NUMBER} $(Build.BuildNumber) ${Build.BuildNumber} $(env:Build.BuildNumber) ${env:Build.BuildNumber}"
+        run: echo "Build number is ${env:BUILD_NUMBER} $env:BUILD_BUILDID ${Build.BuildNumber} ${{env:Build.BuildNumber}} ${env:Build.BuildNumber}"
       - name: Build
         run: docker build -t tedmiston/tag-example:${GITHUB_REF##*/} .
