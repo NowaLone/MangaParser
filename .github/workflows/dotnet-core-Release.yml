@@ -1,81 +1,14 @@
 name: Release
 
 on:
-  push:
-    branches:
-      - Dev
-      - master
   workflow_dispatch:
-    inputs:
-      RELEASE:
-        description: "Is it a release?"
-        required: true
-        default: "false"
-      VERSION_MAJOR:
-        description: "Major version"
-        required: true
-        default: "1"
-      VERSION_MINOR:
-        description: "Minor version"
-        required: true
-        default: "0"
-      VERSION_BUILD:
-        description: "Build version"
-        required: true
-        default: "0"
-
-env:
-  VERSION_REV: $GITHUB_RUN_NUMBER
-  VERSION_SUFFIX: ""
-
 jobs:
   build:
-    runs-on: windows-latest
-
+    runs-on: ubuntu-latest
     steps:
-      - name: Set suffix to -rc
-        if: github.ref == 'master' && env.RELEASE == 'false'
-        run: |
-          echo "::set-env name=VERSION_SUFFIX::-rc"
-      - name: Set suffix to -beta
-        if: github.ref == 'Dev'
-        run: |
-          echo "::set-env name=VERSION_SUFFIX::-beta"
-      - name: Set suffix to alpha
-        if: github.ref != 'master' && github.ref != 'Dev'
-        run: |
-          echo "::set-env name=VERSION_SUFFIX::-alpha"
-
+      - name: Git checkout
+        uses: actions/checkout@v1
       - name: Branch name
-        run: |
-          echo Reserved for REPO_NAME=${GITHUB_REPOSITORY##*/}
-          echo GITHUB_REF=${GITHUB_REF}
-          echo EXTRACT_GITHUB_REF=${GITHUB_REF##*/}
-          echo EXTRACT_GITHUB_REF_HEADS=$(echo ${GITHUB_REF#refs/heads/})
-        
-      - name: Echo variables
-        run: |
-          echo "Ref ${github.GITHUB_REF} $GITHUB_REF Release ${{github.event.inputs.RELEASE}} Major ${{github.event.inputs.VERSION_MAJOR}} Minor ${{github.event.inputs.VERSION_MINOR}} Build ${{github.event.inputs.VERSION_BUILD}} Suffix ${{env.VERSION_SUFFIX}} Revision ${{env.VERSION_REV}} $GITHUB_RUN_ID ${GITHUB_RUN_ID##*/}"
-
-      - uses: actions/checkout@v2
-
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 3.1.301
-
-      - name: Install dependencies
-        run: dotnet restore
-
-      # - name: Set version
-      #   run: .\SetVersion.ps1 -Path ".\src\*\*.csproj"
-      #   shell: powershell
-
+        run: echo running on branch ${GITHUB_REF##*/}
       - name: Build
-        run: dotnet build --configuration Release --no-restore
-
-      - name: Pack
-        run: dotnet pack --configuration Release --no-build
-
-      - name: Push
-        run: dotnet nuget push "*.nupkg"
+        run: docker build -t tedmiston/tag-example:${GITHUB_REF##*/} .
