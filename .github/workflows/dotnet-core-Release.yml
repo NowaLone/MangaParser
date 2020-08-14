@@ -50,14 +50,26 @@ jobs:
         run: |
           echo "::set-env name=VERSION_SUFFIX::-alpha"
 
+      - name: Set env VERSION_MAJOR
+        if: github.event.inputs.VERSION_MAJOR != ''
+        run: |
+           echo "::set-env name=VERSION_MAJOR::${{github.event.inputs.VERSION_MAJOR}}"
+
+      - name: Set env VERSION_MINOR
+        if: github.event.inputs.VERSION_MINOR != ''
+        run: |
+           echo "::set-env name=VERSION_MINOR::${{github.event.inputs.VERSION_MINOR}}"
+           
+      - name: Set env VERSION_BUILD
+        if: github.event.inputs.VERSION_BUILD != ''
+        run: |
+           echo "::set-env name=VERSION_BUILD::${{github.event.inputs.VERSION_BUILD}}"
+           
       - name: Set env variables
         run: |
-          echo "::set-env name=VERSION_MAJOR::${{github.event.inputs.VERSION_MAJOR}}"
-          echo "::set-env name=VERSION_MINOR::${{github.event.inputs.VERSION_MINOR}}"
-          echo "::set-env name=VERSION_BUILD::${{github.event.inputs.VERSION_BUILD}}"
           echo "::set-env name=VERSION_REV::${env:GITHUB_RUN_NUMBER}"
           echo "::set-env name=BRANCH_NAME::$(${env:GITHUB_REF} -replace 'refs/heads/', '')"
-
+          
       - name: Echo variables
         run: |
           echo "Ref ${env:GITHUB_REF} branch ${{env.BRANCH_NAME}} Release ${{github.event.inputs.RELEASE}} Major ${{env.VERSION_MAJOR}} Minor ${{env.VERSION_MINOR}} Build ${{env.VERSION_BUILD}} Suffix ${{env.VERSION_SUFFIX}} Revision ${{env.VERSION_REV}}"
