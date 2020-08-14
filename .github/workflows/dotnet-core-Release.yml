@@ -1,11 +1,12 @@
 name: Release
-on: 
+
+on:
   workflow_dispatch:
     inputs:
       RELEASE:
-      description: "Is it a release?"
-      required: true
-      default: "false"
+        description: "Is it a release?"
+        required: true
+        default: "false"
   
 env:
   VERSION_SUFFIX: $(${env:GITHUB_REF} -replace '.*?/', '')
