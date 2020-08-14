@@ -68,7 +68,7 @@ jobs:
 
     steps:
       - name: 1) Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
       - name: 2) Setup .NET Core
         uses: actions/setup-dotnet@v1
