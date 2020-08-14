@@ -1,8 +1,5 @@
 name: Release
 
-env:
-  VERSION_REV: ${GITHUB_RUN_NUMBER}
-
 on:
   push:
     branches:
@@ -27,12 +24,45 @@ on:
         required: true
         default: "0"
 
+env:
+  VERSION_MAJOR: 1
+  VERSION_MINOR: 0
+  VERSION_BUILD: 0
+  VERSION_SUFFIX: ""
+  VERSION_REV: 0
+  BRANCH_NAME: ''
+
 jobs:
   build:
     runs-on: windows-latest
 
     steps:
+      - name: Set suffix to -rc
+        if: endsWith(github.ref, '/master') && github.event.inputs.RELEASE == 'false'
+        run: |
+          echo "::set-env name=VERSION_SUFFIX::-rc"
+      - name: Set suffix to -beta
+        if: endsWith(github.ref, '/Dev')
+        run: |
+          echo "::set-env name=VERSION_SUFFIX::-beta"
+      - name: Set suffix to alpha
+        if: (!endsWith(github.ref, '/master')) && (!endsWith(github.ref, '/Dev'))
+        run: |
+          echo "::set-env name=VERSION_SUFFIX::-alpha"
+    
+      - name: Set env variables
+        run: |
+          echo "::set-env name=VERSION_MAJOR::${{github.event.inputs.VERSION_MAJOR}}"
+          echo "::set-env name=VERSION_MINOR::${{github.event.inputs.VERSION_MINOR}}"
+          echo "::set-env name=VERSION_BUILD::${{github.event.inputs.VERSION_BUILD}}"
+          echo "::set-env name=VERSION_REV::${env:GITHUB_RUN_NUMBER}"
+          echo "::set-env name=BRANCH_NAME::$(${env:GITHUB_RUN_NUMBER} -replace '.*?/', '')"
+      
       - uses: actions/checkout@v2
+
+      - name: Echo variables
+        run: |
+          echo "Ref ${env:GITHUB_REF} branch ${{env.BRANCH_NAME}} Release ${{github.event.inputs.RELEASE}} Major ${{env.VERSION_MAJOR}} Minor ${{env.VERSION_MINOR}} Build ${{env.VERSION_BUILD}} Suffix ${{env.VERSION_SUFFIX}} Revision ${{env.VERSION_REV}}"
 
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
@@ -41,10 +71,6 @@ jobs:
 
       - name: Install dependencies
         run: dotnet restore
-
-      - name: Set version
-        run: .\SetVersion.ps1 -Path ".\src\*\*.csproj"
-        shell: powershell
 
       - name: Build
         run: dotnet build --configuration Release --no-restore
