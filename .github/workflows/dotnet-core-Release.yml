@@ -81,5 +81,8 @@ jobs:
       - name: Pack Parsers
         run: dotnet pack ".\src\MangaParser.Parsers\MangaParser.Parsers.csproj" --configuration Release --no-build
 
-      - name: Push
-        run: dotnet nuget push "**.nupkg" -k ${{secrets.GITHUB_TOKEN}} -s https://nuget.pkg.github.com/Fihs/index.json 
+      - name: Add GitHub Source
+        run: dotnet nuget add source https://nuget.pkg.github.com/Fihs/index.json -n github -u Fihs -p ${{secrets.GITHUB_TOKEN}}
+        
+      - name: Push to GitHub Packages
+        run: dotnet nuget push "**.nupkg" --source "github"
