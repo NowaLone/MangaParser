@@ -38,7 +38,7 @@ jobs:
 
     steps:
       - name: Set suffix to -rc
-        if: endsWith(github.ref, '/master') && github.event.inputs.RELEASE == 'false'
+        if: endsWith(github.ref, '/master') && (github.event.inputs.RELEASE == 'false' || github.event.inputs.RELEASE == '')
         run: |
           echo "::set-env name=VERSION_SUFFIX::-rc"
       - name: Set suffix to -beta
