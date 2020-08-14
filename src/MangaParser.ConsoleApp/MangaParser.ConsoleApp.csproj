@@ -5,10 +5,19 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyName>Client</AssemblyName>
     <Authors>Fihs</Authors>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition=" '$(GITHUB_ACTIONS)' == '' ">
     <!-- Main version -->
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <!-- Real version -->
     <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(GITHUB_ACTIONS)' == 'true' ">
+    <!-- Main version -->
+    <AssemblyVersion>$(VERSION_MAJOR).0.0.0</AssemblyVersion>
+    <!-- Real version -->
+    <FileVersion>$(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_BUILD).$(VERSION_REV)</FileVersion>
   </PropertyGroup>
   
   <ItemGroup>
