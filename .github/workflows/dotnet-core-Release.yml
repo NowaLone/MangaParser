@@ -25,8 +25,11 @@ on:
         default: "0"
 
 env:
-  VERSION_REV: ${env:GITHUB_RUN_NUMBER}
+  VERSION_MAJOR: 1
+  VERSION_MINOR: 0
+  VERSION_BUILD: 0
   VERSION_SUFFIX: ""
+  VERSION_REV: 0
 
 jobs:
   build:
@@ -45,12 +48,19 @@ jobs:
         if: (!endsWith(github.ref, '/master')) && (!endsWith(github.ref, '/Dev'))
         run: |
           echo "::set-env name=VERSION_SUFFIX::-alpha"
-
+    
+      - name: Set env variables
+        run: |
+          echo "::set-env name=VERSION_MAJOR::${{github.event.inputs.VERSION_MAJOR}}"
+          echo "::set-env name=VERSION_MINOR::${{github.event.inputs.VERSION_MINOR}}"
+          echo "::set-env name=VERSION_BUILD::${{github.event.inputs.VERSION_BUILD}}"
+          echo "::set-env name=VERSION_REV::${env:GITHUB_RUN_NUMBER}"
+      
       - uses: actions/checkout@v2
 
       - name: Echo variables
         run: |
-          echo "Ref ${env:GITHUB_REF} Release ${{github.event.inputs.RELEASE}} Major ${{github.event.inputs.VERSION_MAJOR}} Minor ${{github.event.inputs.VERSION_MINOR}} Build ${{github.event.inputs.VERSION_BUILD}} Suffix ${{env.VERSION_SUFFIX}} Revision ${{env.VERSION_REV}}"
+          echo "Ref ${env:GITHUB_REF} Release ${{github.event.inputs.RELEASE}} Major ${{env.VERSION_MAJOR}} Minor ${{env.VERSION_MINOR}} Build ${{env.VERSION_BUILD}} Suffix ${{env.VERSION_SUFFIX}} Revision ${{env.VERSION_REV}}"
 
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
