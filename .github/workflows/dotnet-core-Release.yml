@@ -15,7 +15,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Set env to staging
-        if: endsWith(github.ref, '/add_packages_and_release_in_actions') && && env.RELEASE == 'false'
+        if: endsWith(github.ref, '/add_packages_and_release_in_actions') && env.RELEASE == 'false'
         run: |
          echo "::set-env name=ENVIRONMENT::staging"
       - name: Set env to production
