@@ -30,66 +30,66 @@
     ],
     "Genres": [
         {
-            "Url": "http://www.mangareader.net/popular/action",
+            "Url": "https://www.mangareader.net/popular/action",
             "Value": {
                 "Localized": null,
                 "English": {
-                    "Url": "http://www.mangareader.net/popular/action",
+                    "Url": "https://www.mangareader.net/popular/action",
                     "Value": "Action"
                 },
                 "Original": null
             }
         },
         {
-            "Url": "http://www.mangareader.net/popular/adventure",
+            "Url": "https://www.mangareader.net/popular/adventure",
             "Value": {
                 "Localized": null,
                 "English": {
-                    "Url": "http://www.mangareader.net/popular/adventure",
+                    "Url": "https://www.mangareader.net/popular/adventure",
                     "Value": "Adventure"
                 },
                 "Original": null
             }
         },
         {
-            "Url": "http://www.mangareader.net/popular/fantasy",
+            "Url": "https://www.mangareader.net/popular/fantasy",
             "Value": {
                 "Localized": null,
                 "English": {
-                    "Url": "http://www.mangareader.net/popular/fantasy",
+                    "Url": "https://www.mangareader.net/popular/fantasy",
                     "Value": "Fantasy"
                 },
                 "Original": null
             }
         },
         {
-            "Url": "http://www.mangareader.net/popular/romance",
+            "Url": "https://www.mangareader.net/popular/romance",
             "Value": {
                 "Localized": null,
                 "English": {
-                    "Url": "http://www.mangareader.net/popular/romance",
+                    "Url": "https://www.mangareader.net/popular/romance",
                     "Value": "Romance"
                 },
                 "Original": null
             }
         },
         {
-            "Url": "http://www.mangareader.net/popular/shounen",
+            "Url": "https://www.mangareader.net/popular/shounen",
             "Value": {
                 "Localized": null,
                 "English": {
-                    "Url": "http://www.mangareader.net/popular/shounen",
+                    "Url": "https://www.mangareader.net/popular/shounen",
                     "Value": "Shounen"
                 },
                 "Original": null
             }
         },
         {
-            "Url": "http://www.mangareader.net/popular/tragedy",
+            "Url": "https://www.mangareader.net/popular/tragedy",
             "Value": {
                 "Localized": null,
                 "English": {
-                    "Url": "http://www.mangareader.net/popular/tragedy",
+                    "Url": "https://www.mangareader.net/popular/tragedy",
                     "Value": "Tragedy"
                 },
                 "Original": null
@@ -97,7 +97,7 @@
         }
     ],
     "Description": {
-        "Url": "http://www.mangareader.net/akame-ga-kiru",
+        "Url": "https://www.mangareader.net/akame-ga-kiru",
         "Value": "Tatsumi is a fighter who just got robbed by a pretty girl, but his luck seems to be looking up, as another pretty girl has taken him in. What he doesn’t know is that this girl is about to be visited by a family of assassins (including the girl who robbed him) and they might be the good guys, and be recruiting..."
     },
     "Illustrators": [
@@ -122,15 +122,15 @@
     },
     "Volumes": null,
     "Source": "www.mangareader.net",
-    "Url": "http://www.mangareader.net/akame-ga-kiru",
+    "Url": "https://www.mangareader.net/akame-ga-kiru",
     "Value": {
         "Localized": null,
         "English": {
-            "Url": "http://www.mangareader.net/akame-ga-kiru",
+            "Url": "https://www.mangareader.net/akame-ga-kiru",
             "Value": "Akame ga Kiru!"
         },
         "Original": {
-            "Url": "http://www.mangareader.net/akame-ga-kiru",
+            "Url": "https://www.mangareader.net/akame-ga-kiru",
             "Value": "Akame ga Kill!"
         }
     }

@@ -1,0 +1,79 @@
+[
+    {
+        "Covers": [
+            {
+                "Large": null,
+                "Medium": null,
+                "Small": {
+                    "Url": "https://static.mintmanga.live/uploads/pics/00/14/182_p.jpg",
+                    "Value": null
+                }
+            }
+        ],
+        "Authors": [],
+        "Genres": [
+            {
+                "Url": "https://mintmanga.live/list/genre/action",
+                "Value": {
+                    "Localized": {
+                        "Url": "https://mintmanga.live/list/genre/action",
+                        "Value": "боевик"
+                    },
+                    "English": {
+                        "Url": "https://mintmanga.live/list/genre/action",
+                        "Value": "action"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "https://mintmanga.live/list/genre/fantasy",
+                "Value": {
+                    "Localized": {
+                        "Url": "https://mintmanga.live/list/genre/fantasy",
+                        "Value": "фэнтези"
+                    },
+                    "English": {
+                        "Url": "https://mintmanga.live/list/genre/fantasy",
+                        "Value": "fantasy"
+                    },
+                    "Original": null
+                }
+            },
+            {
+                "Url": "https://mintmanga.live/list/genre/ecchi",
+                "Value": {
+                    "Localized": {
+                        "Url": "https://mintmanga.live/list/genre/ecchi",
+                        "Value": "этти"
+                    },
+                    "English": {
+                        "Url": "https://mintmanga.live/list/genre/ecchi",
+                        "Value": "ecchi"
+                    },
+                    "Original": null
+                }
+            }
+        ],
+        "Description": {
+            "Url": "https://mintmanga.live/antimagicheskaia_akademiia__35_e_eksperimentalnoe_podrazdelenie_",
+            "Value": "Добро пожаловать в 35-е экспериментальное подразделение Таймадоу Гакуэн, или же «Антимагическую академию». Академия является домом для отрядов, которые выслеживают и убивают, уничтожают или иным образом обезвреживают магические артефакты и тех, кто практикует магию. 35-е экспериментальное подразделение — это группа никому не нужных неудачников. Каждый член является специалистом в определенной области, и группа может стать величайшей командой, которая когда-либо существовала, но сперва им нужно преодолеть самую большую преграду: друг друга."
+        },
+        "Illustrators": [],
+        "Writers": [],
+        "Magazines": [],
+        "Publishers": [],
+        "ReleaseDate": null,
+        "Volumes": null,
+        "Source": "mintmanga.live",
+        "Url": "https://mintmanga.live/antimagicheskaia_akademiia__35_e_eksperimentalnoe_podrazdelenie_",
+        "Value": {
+            "Localized": {
+                "Url": "https://mintmanga.live/antimagicheskaia_akademiia__35_e_eksperimentalnoe_podrazdelenie_",
+                "Value": "Антимагическая академия \"35-е экспериментальное подразделение\""
+            },
+            "English": null,
+            "Original": null
+        }
+    }
+]

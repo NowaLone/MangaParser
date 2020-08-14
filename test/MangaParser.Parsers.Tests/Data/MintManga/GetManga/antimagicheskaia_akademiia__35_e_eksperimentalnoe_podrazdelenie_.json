@@ -1,0 +1,227 @@
+{
+    "Covers": [
+        {
+            "Large": {
+                "Url": "https://static.mintmanga.live/uploads/pics/00/14/182_o.jpg",
+                "Value": null
+            },
+            "Medium": {
+                "Url": "https://static.mintmanga.live/uploads/pics/00/14/182.jpg",
+                "Value": null
+            },
+            "Small": {
+                "Url": "https://static.mintmanga.live/uploads/pics/00/14/182_p.jpg",
+                "Value": null
+            }
+        },
+        {
+            "Large": {
+                "Url": "https://static.mintmanga.live/uploads/pics/00/64/112_o.jpg",
+                "Value": null
+            },
+            "Medium": {
+                "Url": "https://static.mintmanga.live/uploads/pics/00/64/112.jpg",
+                "Value": null
+            },
+            "Small": {
+                "Url": "https://static.mintmanga.live/uploads/pics/00/64/112_p.jpg",
+                "Value": null
+            }
+        },
+        {
+            "Large": {
+                "Url": "https://static.mintmanga.live/uploads/pics/00/64/113_o.jpg",
+                "Value": null
+            },
+            "Medium": {
+                "Url": "https://static.mintmanga.live/uploads/pics/00/64/113.jpg",
+                "Value": null
+            },
+            "Small": {
+                "Url": "https://static.mintmanga.live/uploads/pics/00/64/113_p.jpg",
+                "Value": null
+            }
+        }
+    ],
+    "Authors": [],
+    "Genres": [
+        {
+            "Url": "https://mintmanga.live/list/genre/shounen",
+            "Value": {
+                "Localized": {
+                    "Url": "https://mintmanga.live/list/genre/shounen",
+                    "Value": "сёнэн"
+                },
+                "English": {
+                    "Url": "https://mintmanga.live/list/genre/shounen",
+                    "Value": "shounen"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://mintmanga.live/list/genre/romance",
+            "Value": {
+                "Localized": {
+                    "Url": "https://mintmanga.live/list/genre/romance",
+                    "Value": "романтика"
+                },
+                "English": {
+                    "Url": "https://mintmanga.live/list/genre/romance",
+                    "Value": "romance"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://mintmanga.live/list/genre/action",
+            "Value": {
+                "Localized": {
+                    "Url": "https://mintmanga.live/list/genre/action",
+                    "Value": "боевик"
+                },
+                "English": {
+                    "Url": "https://mintmanga.live/list/genre/action",
+                    "Value": "action"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://mintmanga.live/list/genre/drama",
+            "Value": {
+                "Localized": {
+                    "Url": "https://mintmanga.live/list/genre/drama",
+                    "Value": "драма"
+                },
+                "English": {
+                    "Url": "https://mintmanga.live/list/genre/drama",
+                    "Value": "drama"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://mintmanga.live/list/genre/ecchi",
+            "Value": {
+                "Localized": {
+                    "Url": "https://mintmanga.live/list/genre/ecchi",
+                    "Value": "этти"
+                },
+                "English": {
+                    "Url": "https://mintmanga.live/list/genre/ecchi",
+                    "Value": "ecchi"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://mintmanga.live/list/genre/fantasy",
+            "Value": {
+                "Localized": {
+                    "Url": "https://mintmanga.live/list/genre/fantasy",
+                    "Value": "фэнтези"
+                },
+                "English": {
+                    "Url": "https://mintmanga.live/list/genre/fantasy",
+                    "Value": "fantasy"
+                },
+                "Original": null
+            }
+        },
+        {
+            "Url": "https://mintmanga.live/list/genre/harem",
+            "Value": {
+                "Localized": {
+                    "Url": "https://mintmanga.live/list/genre/harem",
+                    "Value": "гарем"
+                },
+                "English": {
+                    "Url": "https://mintmanga.live/list/genre/harem",
+                    "Value": "harem"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Description": {
+        "Url": "https://mintmanga.live/antimagicheskaia_akademiia__35_e_eksperimentalnoe_podrazdelenie_",
+        "Value": "Добро пожаловать в 35-е экспериментальное подразделение Таймадоу Гакуэн, или же «Антимагическую академию». Академия является домом для отрядов, которые выслеживают и убивают, уничтожают или иным образом обезвреживают магические артефакты и тех, кто практикует магию. 35-е экспериментальное подразделение — это группа никому не нужных неудачников. Каждый член является специалистом в определенной области, и группа может стать величайшей командой, которая когда-либо существовала, но сперва им нужно преодолеть самую большую преграду: друг друга."
+    },
+    "Illustrators": [
+        {
+            "Url": "https://mintmanga.live/list/person/hanao_sutarou",
+            "Value": {
+                "Localized": {
+                    "Url": "https://mintmanga.live/list/person/hanao_sutarou",
+                    "Value": "Нанао Сутаро"
+                },
+                "English": {
+                    "Url": "https://mintmanga.live/list/person/hanao_sutarou",
+                    "Value": "hanao_sutarou"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Writers": [
+        {
+            "Url": "https://mintmanga.live/list/person/yanagimi_touki",
+            "Value": {
+                "Localized": {
+                    "Url": "https://mintmanga.live/list/person/yanagimi_touki",
+                    "Value": "Янагими Токи"
+                },
+                "English": {
+                    "Url": "https://mintmanga.live/list/person/yanagimi_touki",
+                    "Value": "yanagimi_touki"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Magazines": [
+        {
+            "Url": "https://mintmanga.live/list/magazine/dragon_age",
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": "https://mintmanga.live/list/magazine/dragon_age",
+                    "Value": "Dragon Age"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "Publishers": [
+        {
+            "Url": null,
+            "Value": {
+                "Localized": null,
+                "English": {
+                    "Url": null,
+                    "Value": "Fujimi Shobou"
+                },
+                "Original": null
+            }
+        }
+    ],
+    "ReleaseDate": {
+        "Url": "https://mintmanga.live/list/year/2012",
+        "Value": "2012-01-01T00:00:00"
+    },
+    "Volumes": {
+        "Url": null,
+        "Value": 3
+    },
+    "Source": "mintmanga.live",
+    "Url": "https://mintmanga.live/antimagicheskaia_akademiia__35_e_eksperimentalnoe_podrazdelenie_",
+    "Value": {
+        "Localized": {
+            "Url": "https://mintmanga.live/antimagicheskaia_akademiia__35_e_eksperimentalnoe_podrazdelenie_",
+            "Value": "Антимагическая академия \"35-е экспериментальное подразделение\""
+        },
+        "English": null,
+        "Original": null
+    }
+}

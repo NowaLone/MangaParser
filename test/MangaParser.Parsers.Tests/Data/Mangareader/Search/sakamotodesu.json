@@ -19,44 +19,44 @@
         "Authors": [],
         "Genres": [
             {
-                "Url": "http://www.mangareader.net/popular/comedy",
+                "Url": "https://www.mangareader.net/popular/comedy",
                 "Value": {
                     "Localized": null,
                     "English": {
-                        "Url": "http://www.mangareader.net/popular/comedy",
+                        "Url": "https://www.mangareader.net/popular/comedy",
                         "Value": "Comedy"
                     },
                     "Original": null
                 }
             },
             {
-                "Url": "http://www.mangareader.net/popular/school-life",
+                "Url": "https://www.mangareader.net/popular/school-life",
                 "Value": {
                     "Localized": null,
                     "English": {
-                        "Url": "http://www.mangareader.net/popular/school-life",
+                        "Url": "https://www.mangareader.net/popular/school-life",
                         "Value": "School Life"
                     },
                     "Original": null
                 }
             },
             {
-                "Url": "http://www.mangareader.net/popular/seinen",
+                "Url": "https://www.mangareader.net/popular/seinen",
                 "Value": {
                     "Localized": null,
                     "English": {
-                        "Url": "http://www.mangareader.net/popular/seinen",
+                        "Url": "https://www.mangareader.net/popular/seinen",
                         "Value": "Seinen"
                     },
                     "Original": null
                 }
             },
             {
-                "Url": "http://www.mangareader.net/popular/slice-of-life",
+                "Url": "https://www.mangareader.net/popular/slice-of-life",
                 "Value": {
                     "Localized": null,
                     "English": {
-                        "Url": "http://www.mangareader.net/popular/slice-of-life",
+                        "Url": "https://www.mangareader.net/popular/slice-of-life",
                         "Value": "Slice of Life"
                     },
                     "Original": null
@@ -71,11 +71,11 @@
         "ReleaseDate": null,
         "Volumes": null,
         "Source": "www.mangareader.net",
-        "Url": "http://www.mangareader.net/sakamoto-desu-ga",
+        "Url": "https://www.mangareader.net/sakamoto-desu-ga",
         "Value": {
             "Localized": null,
             "English": {
-                "Url": "http://www.mangareader.net/sakamoto-desu-ga",
+                "Url": "https://www.mangareader.net/sakamoto-desu-ga",
                 "Value": "Sakamoto desu ga?"
             },
             "Original": null
