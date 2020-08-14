@@ -35,7 +35,7 @@
     <!-- Real version -->
     <FileVersion>$(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_BUILD).$(VERSION_REV)</FileVersion>
     <!-- Nuget version -->
-    <Version>$(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_BUILD)$(VERSION_SUFFIX).$(VERSION_REV)</Version>
+    <Version>$(env.VERSION_MAJOR).$(env:VERSION_MINOR).$(github.event.inputs.VERSION_BUILD)$(VERSION_SUFFIX).$(VERSION_REV)</Version>
   </PropertyGroup>
 
   <ItemGroup>
