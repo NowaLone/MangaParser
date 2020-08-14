@@ -75,8 +75,11 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release --no-restore
 
-      - name: Pack
-        run: dotnet pack --configuration Release --no-build
+      - name: Pack Core
+        run: dotnet pack ".\src\MangaParser.Core\MangaParser.Core.csproj" --configuration Release --no-build
+
+      - name: Pack Parsers
+        run: dotnet pack ".\src\MangaParser.Parsers\MangaParser.Parsers.csproj" --configuration Release --no-build
 
       - name: Push
-        run: dotnet nuget push "*.nupkg" -k ${secrets:GITHUB_TOKEN} -s https://nuget.pkg.github.com/Fihs/index.json
+        run: dotnet nuget push "*.nupkg" ${secrets:GITHUB_TOKEN} -Source https://nuget.pkg.github.com/Fihs/index.json
