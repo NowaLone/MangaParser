@@ -12,7 +12,7 @@
     <PackageTags>manga;parser</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
     <Description>A core library for manga parsing, contains base logic, some models and interfaces. Used in MangaParser.Parsers and MangaParser.ConsoleApp.</Description>
-    <!--<RepositoryBranch Condition=" '$(GITHUB_ACTIONS)' == 'true' ">$(BRANCH_NAME)</RepositoryBranch>-->
+    <RepositoryBranch Condition=" '$(GITHUB_ACTIONS)' == 'true' ">$(BRANCH_NAME)</RepositoryBranch>
     <!-- Optional: Publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <!-- Optional: Embed source files that are not tracked by the source control manager in the PDB -->

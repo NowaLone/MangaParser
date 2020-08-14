@@ -16,7 +16,7 @@
     <PackageTags>manga;parser</PackageTags>
     <NeutralLanguage>en</NeutralLanguage>
     <Description>A collection of manga website parsers. Currently can be used for manga search and manga info parsing, manga chapters parsing and get chapter pages.</Description>
-    <!--<RepositoryBranch Condition=" '$(GITHUB_ACTIONS)' == 'true' ">$(BRANCH_NAME)</RepositoryBranch>-->
+    <RepositoryBranch Condition=" '$(GITHUB_ACTIONS)' == 'true' ">$(BRANCH_NAME)</RepositoryBranch>
     <!-- Optional: Publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <!-- Optional: Embed source files that are not tracked by the source control manager in the PDB -->
