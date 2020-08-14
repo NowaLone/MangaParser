@@ -30,7 +30,7 @@ env:
   VERSION_BUILD: 0
   VERSION_SUFFIX: ""
   VERSION_REV: 0
-  BRANCH_NAME: ''
+  BRANCH_NAME: ""
 
 jobs:
   build:
@@ -49,7 +49,7 @@ jobs:
         if: (!endsWith(github.ref, '/master')) && (!endsWith(github.ref, '/Dev'))
         run: |
           echo "::set-env name=VERSION_SUFFIX::-alpha"
-    
+
       - name: Set env variables
         run: |
           echo "::set-env name=VERSION_MAJOR::${{github.event.inputs.VERSION_MAJOR}}"
@@ -57,17 +57,18 @@ jobs:
           echo "::set-env name=VERSION_BUILD::${{github.event.inputs.VERSION_BUILD}}"
           echo "::set-env name=VERSION_REV::${env:GITHUB_RUN_NUMBER}"
           echo "::set-env name=BRANCH_NAME::$(${env:GITHUB_REF} -replace 'refs/heads/', '')"
-      
-      - uses: actions/checkout@v2
 
       - name: Echo variables
         run: |
           echo "Ref ${env:GITHUB_REF} branch ${{env.BRANCH_NAME}} Release ${{github.event.inputs.RELEASE}} Major ${{env.VERSION_MAJOR}} Minor ${{env.VERSION_MINOR}} Build ${{env.VERSION_BUILD}} Suffix ${{env.VERSION_SUFFIX}} Revision ${{env.VERSION_REV}}"
 
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: 3.1.301
+          dotnet-version: '3.1.x'
 
       - name: Install dependencies
         run: dotnet restore
@@ -83,6 +84,6 @@ jobs:
 
       - name: Add GitHub Source
         run: dotnet nuget add source https://nuget.pkg.github.com/Fihs/index.json -n github -u Fihs -p ${{secrets.GITHUB_TOKEN}}
-        
+
       - name: Push to GitHub Packages
         run: dotnet nuget push "**.nupkg" --source "github"
