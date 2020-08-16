@@ -20,8 +20,8 @@
     <!-- Include symbol files (*.pdb) in the built .nupkg -->
     <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
   </PropertyGroup>
-  
-  <PropertyGroup Condition=" '$(GITHUB_ACTIONS)' == '' ">
+
+  <PropertyGroup Condition=" '$(GITHUB_ACTIONS)' == '' Or $(VERSION_MAJOR) != '' Or $(VERSION_MAJOR) != '' ">
     <!-- Main version -->
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <!-- Real version -->
