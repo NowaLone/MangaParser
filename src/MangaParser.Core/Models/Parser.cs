@@ -355,7 +355,7 @@ namespace MangaParser.Core.Models
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(BaseUrl);
+            return -1440343791 + EqualityComparer<Uri>.Default.GetHashCode(BaseUrl);
         }
 
         public override string ToString()

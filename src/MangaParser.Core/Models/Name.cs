@@ -77,7 +77,11 @@ namespace MangaParser.Core.Models
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Localized, English, Original);
+            int hashCode = -1585762065;
+            hashCode = hashCode * -1521134295 + EqualityComparer<IDataBase<string>>.Default.GetHashCode(Localized);
+            hashCode = hashCode * -1521134295 + EqualityComparer<IDataBase<string>>.Default.GetHashCode(English);
+            hashCode = hashCode * -1521134295 + EqualityComparer<IDataBase<string>>.Default.GetHashCode(Original);
+            return hashCode;
         }
 
         /// <summary>

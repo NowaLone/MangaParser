@@ -133,7 +133,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.Mangapanda
 
         private ICollection<IDataBase<IName>> GetThumbGenres(HtmlNode node)
         {
-            var items = node?.InnerText.Split(", ");
+            var items = node?.InnerText.Split(new string[] { ", " }, StringSplitOptions.RemoveEmptyEntries);
 
             IDataBase<IName>[] genres;
 
@@ -313,7 +313,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.Mangapanda
 
                 if (!String.IsNullOrWhiteSpace(orgNameNode.InnerText))
                 {
-                    var orgNames = orgNameNode.InnerText.Split(", ");
+                    var orgNames = orgNameNode.InnerText.Split(new string[] { ", " }, StringSplitOptions.RemoveEmptyEntries);
                     if (orgNames.Length > 0)
                     {
                         nameO = Decode(orgNames[0]);
