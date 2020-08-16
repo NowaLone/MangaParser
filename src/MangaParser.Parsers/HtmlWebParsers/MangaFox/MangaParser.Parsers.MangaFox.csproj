@@ -4,8 +4,43 @@
     <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Label="nuget props">
+    <ContinuousIntegrationBuild Condition=" '$(GITHUB_ACTIONS)' == 'true' ">true</ContinuousIntegrationBuild>
+    <Title>MangaParser.Parsers.MangaFox</Title>
+    <Authors>Fihs</Authors>
+    <PackageProjectUrl>https://github.com/Fihs/MangaParser</PackageProjectUrl>
+    <PackageTags>manga;parser;mangafox</PackageTags>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Description>Parser realization for MangaFox. Uses libraries MangaParser.Core and MangaParser.Parsers.</Description>
+    <RepositoryBranch Condition=" '$(GITHUB_ACTIONS)' == 'true' ">$(BRANCH_NAME)</RepositoryBranch>
+    <!-- Optional: Publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <!-- Optional: Embed source files that are not tracked by the source control manager in the PDB -->
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <!-- Include symbol files (*.pdb) in the built .nupkg -->
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(GITHUB_ACTIONS)' == '' ">
+    <!-- Main version -->
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <!-- Real version -->
+    <FileVersion>1.0.0.0</FileVersion>
+    <!-- Nuget version -->
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(GITHUB_ACTIONS)' == 'true' ">
+    <!-- Main version -->
+    <AssemblyVersion>$(VERSION_MAJOR).0.0.0</AssemblyVersion>
+    <!-- Real version -->
+    <FileVersion>$(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_BUILD).$(VERSION_REV)</FileVersion>
+    <!-- Nuget version -->
+    <Version>$(VERSION_MAJOR).$(VERSION_MINOR).$(VERSION_BUILD)$(VERSION_SUFFIX).$(VERSION_REV)</Version>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="HtmlAgilityPack" Version="1.11.24" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
   </ItemGroup>
 
   <ItemGroup>
