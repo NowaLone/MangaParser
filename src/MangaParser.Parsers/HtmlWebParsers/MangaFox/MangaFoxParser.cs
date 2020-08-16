@@ -439,7 +439,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.MangaFox
                 string name = Path.GetFileName(path);
 
                 MatchCollection matchs = regex.Matches(name);
-                var match = matchs.Last();
+                var match = matchs[matchs.Count - 1];
                 var number = match.Value;
 
                 // Trying to parse page number

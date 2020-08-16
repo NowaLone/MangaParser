@@ -69,7 +69,10 @@ namespace MangaParser.Core.Models
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Url, Value);
+            int hashCode = 1596033240;
+            hashCode = hashCode * -1521134295 + EqualityComparer<Uri>.Default.GetHashCode(Url);
+            hashCode = hashCode * -1521134295 + EqualityComparer<T>.Default.GetHashCode(Value);
+            return hashCode;
         }
 
         /// <summary>
