@@ -145,6 +145,7 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangapanda
         [DataRow("http://www.mangapanda.com/akame-ga-kiru", DisplayName = "'Akame ga Kill!' url")]
         [DataRow("http://www.mangapanda.com/nisekoi", DisplayName = "'Nisekoi' url")]
         [DataRow("http://www.mangapanda.com/onepunch-man", DisplayName = "'Onepunch-Man' url")]
+        [DataRow("http://www.mangapanda.com/shoujotachi-no-kaidan", DisplayName = "Manga with multiple authors")]
         public override void GetManga_ByUrlString_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -187,6 +188,7 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangapanda
         [DataRow("http://www.mangapanda.com/akame-ga-kiru", DisplayName = "'Akame ga Kill!' url")]
         [DataRow("http://www.mangapanda.com/nisekoi", DisplayName = "'Nisekoi' url")]
         [DataRow("http://www.mangapanda.com/onepunch-man", DisplayName = "'Onepunch-Man' url")]
+        [DataRow("http://www.mangapanda.com/shoujotachi-no-kaidan", DisplayName = "Manga with multiple authors")]
         public override void GetManga_ByUri_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -231,6 +233,7 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangapanda
         [DataRow("http://www.mangapanda.com/akame-ga-kiru", DisplayName = "'Akame ga Kill!' url")]
         [DataRow("http://www.mangapanda.com/nisekoi", DisplayName = "'Nisekoi' url")]
         [DataRow("http://www.mangapanda.com/onepunch-man", DisplayName = "'Onepunch-Man' url")]
+        [DataRow("http://www.mangapanda.com/shoujotachi-no-kaidan", DisplayName = "Manga with multiple authors")]
         public override void GetManga_ByMangaObject_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -282,6 +285,7 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangapanda
         [DataRow("http://www.mangapanda.com/akame-ga-kiru", DisplayName = "'Akame ga Kill!' url")]
         [DataRow("http://www.mangapanda.com/nisekoi", DisplayName = "'Nisekoi' url")]
         [DataRow("http://www.mangapanda.com/onepunch-man", DisplayName = "'Onepunch-Man' url")]
+        [DataRow("http://www.mangapanda.com/shoujotachi-no-kaidan", DisplayName = "Manga with multiple authors")]
         public override async Task GetMangaAsync_ByUrlString_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -324,6 +328,7 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangapanda
         [DataRow("http://www.mangapanda.com/akame-ga-kiru", DisplayName = "'Akame ga Kill!' url")]
         [DataRow("http://www.mangapanda.com/nisekoi", DisplayName = "'Nisekoi' url")]
         [DataRow("http://www.mangapanda.com/onepunch-man", DisplayName = "'Onepunch-Man' url")]
+        [DataRow("http://www.mangapanda.com/shoujotachi-no-kaidan", DisplayName = "Manga with multiple authors")]
         public override async Task GetMangaAsync_ByUri_ShouldReturn_CorrectData(string url)
         {
             // arrange
@@ -371,6 +376,7 @@ namespace MangaParser.Parsers.Tests.HtmlWebParsers.Mangapanda
         [DataRow("http://www.mangapanda.com/akame-ga-kiru", DisplayName = "'Akame ga Kill!' url")]
         [DataRow("http://www.mangapanda.com/nisekoi", DisplayName = "'Nisekoi' url")]
         [DataRow("http://www.mangapanda.com/onepunch-man", DisplayName = "'Onepunch-Man' url")]
+        [DataRow("http://www.mangapanda.com/shoujotachi-no-kaidan", DisplayName = "Manga with multiple authors")]
         public override async Task GetMangaAsync_ByMangaObject_ShouldReturn_CorrectData(string url)
         {
             // arrange

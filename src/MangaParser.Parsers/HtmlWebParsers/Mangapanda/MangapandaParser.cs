@@ -195,26 +195,36 @@ namespace MangaParser.Parsers.HtmlWebParsers.Mangapanda
         {
             var dataNode = infoNode?.SelectSingleNode($"./tr[{trNumber}]/td[2]");
 
-            IDataBase<T>[] data;
+            IDataBase<T>[] data = Array.Empty<DataBase<T>>();
 
             if (dataNode != null)
             {
-                data = new IDataBase<T>[1];
-
                 string value = Decode(dataNode.InnerText);
 
                 if (typeof(T) == typeof(IName))
                 {
-                    string nameE = value;
+                    var names = value.Split(new string[] { ", " }, StringSplitOptions.RemoveEmptyEntries);
 
-                    IDataBase<string> nameDataE = new DataBase<string>(nameE, default(Uri));
+                    if (names.Length > 0)
+                    {
+                        data = new IDataBase<T>[names.Length];
 
-                    IName nameData = new Name(english: nameDataE);
+                        for (int i = 0; i < names.Length; i++)
+                        {
+                            string nameE = names[i];
 
-                    data[0] = new DataBase<T>((T)nameData, default(Uri));
+                            IDataBase<string> nameDataE = new DataBase<string>(nameE, default(Uri));
+
+                            IName nameData = new Name(english: nameDataE);
+
+                            data[i] = new DataBase<T>((T)nameData, default(Uri));
+                        }
+                    }
                 }
                 else if (typeof(T) == typeof(DateTime))
                 {
+                    data = new IDataBase<T>[1];
+
                     if (DateTime.TryParseExact(value, "yyyy", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out var result))
                     {
                         // Oh no! boxing! What to do? Nothing!
@@ -225,10 +235,6 @@ namespace MangaParser.Parsers.HtmlWebParsers.Mangapanda
                         data[0] = new DataBase<T>(default, default(Uri));
                     }
                 }
-            }
-            else
-            {
-                data = Array.Empty<DataBase<T>>();
             }
 
             return data;

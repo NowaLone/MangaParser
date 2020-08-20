@@ -8,6 +8,7 @@ namespace MangaParser.Core.Models
     /// Provides an object representation of a manga parameter with its own url.
     /// </summary>
     /// <typeparam name="T">The type of the <see cref="Value"/>.</typeparam>
+    [Serializable]
     public class DataBase<T> : IDataBase<T>, IEquatable<DataBase<T>>
     {
         #region Constructors
@@ -90,6 +91,7 @@ namespace MangaParser.Core.Models
     }
 
     /// <inheritdoc cref="DataBase{T}"/>
+    [Serializable]
     public class DataBase : DataBase<object>, IDataBase
     {
         #region Constructors
