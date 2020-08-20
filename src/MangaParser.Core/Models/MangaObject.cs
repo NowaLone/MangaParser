@@ -7,6 +7,7 @@ namespace MangaParser.Core.Models
     /// <summary>
     /// Provides an object representation of a manga with some information.
     /// </summary>
+    [Serializable]
     public class MangaObject : DataBase<IName>, IMangaObject
     {
         #region Constructors

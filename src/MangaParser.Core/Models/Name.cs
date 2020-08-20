@@ -7,6 +7,7 @@ namespace MangaParser.Core.Models
     /// <summary>
     ///  Provides an object representation of the name of a manga, chapter, etc.
     /// </summary>
+    [Serializable]
     public class Name : IName, IEquatable<Name>
     {
         #region Constructors
