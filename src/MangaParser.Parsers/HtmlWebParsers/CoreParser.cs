@@ -143,7 +143,7 @@ namespace MangaParser.Parsers.HtmlWebParsers
                 throw new BaseHostNotMatchException(BaseUrl.Host, url.Host, nameof(url));
             }
 
-            var htmlDoc = await Web.LoadFromWebAsync(url.OriginalString).ConfigureAwait(false);
+            var htmlDoc = await Web.LoadFromWebAsync(url.AbsoluteUri).ConfigureAwait(false);
 
             return GetMangaCore(htmlDoc, url);
         }
@@ -164,7 +164,7 @@ namespace MangaParser.Parsers.HtmlWebParsers
                 throw new BaseHostNotMatchException(BaseUrl.Host, url.Host, nameof(url));
             }
 
-            var htmlDoc = await Web.LoadFromWebAsync(url.OriginalString).ConfigureAwait(false);
+            var htmlDoc = await Web.LoadFromWebAsync(url.AbsoluteUri).ConfigureAwait(false);
 
             return GetChaptersCore(htmlDoc, url);
         }
@@ -185,7 +185,7 @@ namespace MangaParser.Parsers.HtmlWebParsers
                 throw new BaseHostNotMatchException(BaseUrl.Host, url.Host, nameof(url));
             }
 
-            var htmlDoc = await Web.LoadFromWebAsync(url.OriginalString).ConfigureAwait(false);
+            var htmlDoc = await Web.LoadFromWebAsync(url.AbsoluteUri).ConfigureAwait(false);
 
             return GetPagesCore(htmlDoc, url);
         }

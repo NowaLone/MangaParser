@@ -100,7 +100,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.MangaFox
 
             url = PrepareChaptersUrl(url);
 
-            var htmlDoc = await Web.LoadFromWebAsync(url.OriginalString).ConfigureAwait(false);
+            var htmlDoc = await Web.LoadFromWebAsync(url.AbsoluteUri).ConfigureAwait(false);
 
             return GetChaptersCore(htmlDoc, url);
         }
@@ -163,7 +163,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.MangaFox
 
             var preparedUrl = PreparePagesUrl(url);
 
-            var htmlDoc = await Web.LoadFromWebAsync(preparedUrl.OriginalString).ConfigureAwait(false);
+            var htmlDoc = await Web.LoadFromWebAsync(preparedUrl.AbsoluteUri).ConfigureAwait(false);
 
             // Check if we received 'Sorry, it’s licensed and not available.' page 
             if (htmlDoc is null || htmlDoc.DocumentNode is null || htmlDoc.DocumentNode.SelectNodes("/html/body/div[1]/section/div/p") != null)
