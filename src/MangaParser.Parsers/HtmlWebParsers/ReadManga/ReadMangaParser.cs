@@ -215,7 +215,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.ReadManga
                 {
                     string nameL = Decode(chapters[i].SelectSingleNode("./td/a/text()")?.InnerText);
 
-                    Uri url = GetFullUrl(chapters[i].SelectSingleNode("./td/a")?.Attributes["href"]?.Value + "?mtr=1");
+                    Uri url = GetFullUrl(chapters[i].SelectSingleNode("./td/a")?.Attributes["href"]?.Value, "mtr=1");
 
                     IDataBase<string> nameDataL = new DataBase<string>(nameL, url);
 
@@ -475,6 +475,16 @@ namespace MangaParser.Parsers.HtmlWebParsers.ReadManga
         #endregion Pages methods
 
         #endregion Private Methods
+
+        protected virtual Uri GetFullUrl(string path, string query)
+        {
+            UriBuilder uriBuilder = new UriBuilder(base.GetFullUrl(path))
+            {
+                Query = query,
+            };
+
+            return uriBuilder.Uri;
+        }
 
         #endregion Methods
     }
