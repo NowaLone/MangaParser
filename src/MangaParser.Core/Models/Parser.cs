@@ -306,17 +306,21 @@ namespace MangaParser.Core.Models
 
         #endregion IParserAsync
 
+        /// <inheritdoc cref="System.Net.WebUtility.HtmlDecode(string)"/>
+        /// <param name="htmlText">The string to decode.</param>
         protected virtual string Decode(string htmlText)
         {
-            if (!String.IsNullOrEmpty(htmlText))
+            if (!String.IsNullOrWhiteSpace(htmlText))
             {
-                var text = System.Net.WebUtility.HtmlDecode(htmlText).Trim();
+                string text = System.Net.WebUtility.HtmlDecode(htmlText).Trim();
 
                 // Remove all whitespaces
                 return String.Join(" ", text.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries));
             }
             else
+            {
                 return String.Empty;
+            }
         }
 
         /// <summary>
@@ -331,12 +335,15 @@ namespace MangaParser.Core.Models
         /// <returns>A full url with a <see cref="BaseUrl"/> part.</returns>
         protected virtual Uri GetFullUrl(string path)
         {
-            UriBuilder uriBuilder = new UriBuilder(BaseUrl)
-            {
-                Path = path ?? String.Empty,
-                Port = -1
-            };
+            UriBuilder uriBuilder = new UriBuilder(BaseUrl.Scheme, BaseUrl.Host, -1, path);
+            return uriBuilder.Uri;
+        }
 
+        /// <inheritdoc cref="GetFullUrl(string)"/>
+        /// <param name="query">A query string. Should begins with a question mark (?).</param>
+        protected virtual Uri GetFullUrl(string path, string query)
+        {
+            UriBuilder uriBuilder = new UriBuilder(BaseUrl.Scheme, BaseUrl.Host, -1, path, query);
             return uriBuilder.Uri;
         }
 
