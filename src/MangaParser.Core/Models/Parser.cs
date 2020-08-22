@@ -360,7 +360,7 @@ namespace MangaParser.Core.Models
 
         public override string ToString()
         {
-            return BaseUrl.OriginalString;
+            return BaseUrl.AbsoluteUri;
         }
 
         #endregion Default overrides

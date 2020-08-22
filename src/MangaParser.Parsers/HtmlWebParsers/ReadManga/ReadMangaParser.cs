@@ -161,7 +161,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.ReadManga
                     Uri url = base.GetFullUrl(items[i].Attributes["href"]?.Value);
 
                     string nameL = base.Decode(items[i].InnerText);
-                    string nameE = Path.GetFileName(url.OriginalString);
+                    string nameE = Path.GetFileName(url.AbsoluteUri);
 
                     IDataBase<string> nameDataL = new DataBase<string>(nameL, url);
                     IDataBase<string> nameDataE = new DataBase<string>(nameE, url);
@@ -215,7 +215,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.ReadManga
                 {
                     string nameL = Decode(chapters[i].SelectSingleNode("./td/a/text()")?.InnerText);
 
-                    Uri url = GetFullUrl(chapters[i].SelectSingleNode("./td/a")?.Attributes["href"]?.Value + "?mtr=1");
+                    Uri url = GetFullUrl(chapters[i].SelectSingleNode("./td/a")?.Attributes["href"]?.Value, "mtr=1");
 
                     IDataBase<string> nameDataL = new DataBase<string>(nameL, url);
 
@@ -345,7 +345,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.ReadManga
                         if (typeof(T) == typeof(IName))
                         {
                             string nameL = value;
-                            string nameE = Path.GetFileName(url.OriginalString);
+                            string nameE = Path.GetFileName(url.AbsoluteUri);
 
                             IDataBase<string> nameDataL = new DataBase<string>(nameL, url);
                             IDataBase<string> nameDataE = new DataBase<string>(nameE, url);
@@ -475,6 +475,16 @@ namespace MangaParser.Parsers.HtmlWebParsers.ReadManga
         #endregion Pages methods
 
         #endregion Private Methods
+
+        protected virtual Uri GetFullUrl(string path, string query)
+        {
+            UriBuilder uriBuilder = new UriBuilder(base.GetFullUrl(path))
+            {
+                Query = query,
+            };
+
+            return uriBuilder.Uri;
+        }
 
         #endregion Methods
     }

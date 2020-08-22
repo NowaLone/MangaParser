@@ -113,7 +113,7 @@ namespace MangaParser.Parsers.HtmlWebParsers.Mangatown
 
             url = PreparePagesUri(url);
 
-            var htmlDoc = await Web.LoadFromWebAsync(url.OriginalString).ConfigureAwait(false);
+            var htmlDoc = await Web.LoadFromWebAsync(url.AbsoluteUri).ConfigureAwait(false);
 
             return GetPagesCore(htmlDoc, url);
         }
