@@ -17,13 +17,13 @@ namespace MangaParser.Core.Models
         /// </summary>
         public MangaObject() : base()
         {
-            Covers = new List<ICover>();
-            Authors = new List<IDataBase<IName>>();
-            Genres = new List<IDataBase<IName>>();
-            Illustrators = new List<IDataBase<IName>>();
-            Writers = new List<IDataBase<IName>>();
-            Magazines = new List<IDataBase<IName>>();
-            Publishers = new List<IDataBase<IName>>();
+            Covers = Array.Empty<ICover>();
+            Authors = Array.Empty<IDataBase<IName>>();
+            Genres = Array.Empty<IDataBase<IName>>();
+            Illustrators = Array.Empty<IDataBase<IName>>();
+            Writers = Array.Empty<IDataBase<IName>>();
+            Magazines = Array.Empty<IDataBase<IName>>();
+            Publishers = Array.Empty<IDataBase<IName>>();
         }
 
         /// <summary>
@@ -33,25 +33,25 @@ namespace MangaParser.Core.Models
         /// <param name="url">An url to the manga.</param>
         public MangaObject(IName value, Uri url) : base(value, url)
         {
-            Covers = new List<ICover>();
-            Authors = new List<IDataBase<IName>>();
-            Genres = new List<IDataBase<IName>>();
-            Illustrators = new List<IDataBase<IName>>();
-            Writers = new List<IDataBase<IName>>();
-            Magazines = new List<IDataBase<IName>>();
-            Publishers = new List<IDataBase<IName>>();
+            Covers = Array.Empty<ICover>();
+            Authors = Array.Empty<IDataBase<IName>>();
+            Genres = Array.Empty<IDataBase<IName>>();
+            Illustrators = Array.Empty<IDataBase<IName>>();
+            Writers = Array.Empty<IDataBase<IName>>();
+            Magazines = Array.Empty<IDataBase<IName>>();
+            Publishers = Array.Empty<IDataBase<IName>>();
         }
 
         /// <inheritdoc cref="MangaObject(IName, Uri)"/>
         public MangaObject(IName value, string url) : base(value, url)
         {
-            Covers = new List<ICover>();
-            Authors = new List<IDataBase<IName>>();
-            Genres = new List<IDataBase<IName>>();
-            Illustrators = new List<IDataBase<IName>>();
-            Writers = new List<IDataBase<IName>>();
-            Magazines = new List<IDataBase<IName>>();
-            Publishers = new List<IDataBase<IName>>();
+            Covers = Array.Empty<ICover>();
+            Authors = Array.Empty<IDataBase<IName>>();
+            Genres = Array.Empty<IDataBase<IName>>();
+            Illustrators = Array.Empty<IDataBase<IName>>();
+            Writers = Array.Empty<IDataBase<IName>>();
+            Magazines = Array.Empty<IDataBase<IName>>();
+            Publishers = Array.Empty<IDataBase<IName>>();
         }
 
         #endregion Constructors
