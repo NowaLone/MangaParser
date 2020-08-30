@@ -1,0 +1,5 @@
+# Empty dir for zyborg/dotnet-tests-report@v1.0.0
+# Ignore everything in this directory
+*
+# Except this file
+!.gitignore
