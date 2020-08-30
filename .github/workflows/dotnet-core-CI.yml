@@ -32,6 +32,7 @@ jobs:
         uses: zyborg/dotnet-tests-report@v1.0.0
         with:
           test_results_path: TestResults\test-results.trx
+          skip_check_run: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
           gist_name: mangaparser_tests.md
           gist_badge_label: 'Tests: %Counters_passed%/%Counters_total%'
