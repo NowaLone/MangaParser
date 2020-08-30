@@ -23,13 +23,11 @@ jobs:
 
       - name: Build
         run: dotnet build --configuration Release --no-restore
-
-      - name: Test
-        run: dotnet test --no-restore --verbosity normal --logger trx
         
-      - name: Test report
+      - name: Test
         if: ${{ always() }}
         uses: zyborg/dotnet-tests-report@v1.0.0
         with:
-          test_results_path: test\MangaParser.Parsers.Tests\TestResults\*.trx
+          no_restore: true
+          msbuild_verbosity: normal
           github_token: ${{ secrets.GITHUB_TOKEN }}
