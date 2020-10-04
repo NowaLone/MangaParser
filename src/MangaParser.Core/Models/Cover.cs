@@ -110,11 +110,11 @@ namespace MangaParser.Core.Models
         public override string ToString()
         {
             return Large?.Url != null
-                ? Large.Url.OriginalString
+                ? Large.Url.AbsoluteUri
                 : Medium?.Url != null
-                ? Medium.Url.OriginalString
+                ? Medium.Url.AbsoluteUri
                 : Small?.Url != null
-                ? Small.Url.OriginalString
+                ? Small.Url.AbsoluteUri
                 : default;
         }
 

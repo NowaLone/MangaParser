@@ -9,6 +9,7 @@ namespace MangaParser.Core.Interfaces
     /// </summary>
     public interface IParserAsync
     {
+        //TODO: add System.Threading.CancellationToken to methods
         #region Methods
 
         #region Search
